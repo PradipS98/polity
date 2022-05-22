@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 014'
+let questions = [
+	{
+	numb: 1,
+	question: 'At the time of emergency in 1975, who was serving as the President of India?  ' ,
+	answer: 'Fakhruddin Ali Ahmed' ,
+	options: [
+		"Morarji Desai",
+		"Fakhruddin Ali Ahmed",
+		"V P Singh",
+		"Indira Gandhi"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which year did President declare National emergency on internal dispute-  ' ,
+	answer: '1975' ,
+	options: [
+		"1962",
+		"1965",
+		"1971",
+		"1975"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The National Emergency in India can be declared by the President of India due to the external aggression or armed revolt through-  ' ,
+	answer: 'Article-352' ,
+	options: [
+		"Article-352",
+		"Article-356",
+		"Article-360",
+		"Article-368"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In India, which kind of emergency has been imposed only once-  ' ,
+	answer: 'Internal disturbance emergency' ,
+	options: [
+		"Internal disturbance emergency",
+		"President&apos;s rule",
+		"External situation emergency",
+		"Financial emergency"
+		]
+	},
+	{
+	numb: 5,
+	question: 'What is the period within which a proclamation of national emergency made by the President is to be placed before each house of the Parliament for approval?  ' ,
+	answer: 'Within one month' ,
+	options: [
+		"Within one month",
+		"Within two months",
+		"Within four months",
+		"Within six months"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In case State emergency is declared, it needs Parliamentary approval after every-  ' ,
+	answer: '6 months' ,
+	options: [
+		"6 months",
+		"1 year",
+		"2 years",
+		"5 years"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Under which Article of the constitution can an Emergency be declared in India on account of war or external aggression?  ' ,
+	answer: 'Article-353' ,
+	options: [
+		"Article-356",
+		"Article-353",
+		"Article-352",
+		"Article-354"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Under which Article was Emergency in India declared in 1975?  ' ,
+	answer: 'Article-352' ,
+	options: [
+		"Article-1",
+		"Article-152",
+		"Article-286",
+		"Article-352"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Under which Article of the constitution, the President of India can declare the financial emergency-  ' ,
+	answer: 'Article 360' ,
+	options: [
+		"Article 360",
+		"Article 356",
+		"Article 364",
+		"Article 352"
+		]
+	},
+	{
+	numb: 10,
+	question: '_______ amends the Constitution.  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Ministry of Defence",
+		"Prime Minister&apos;s Office",
+		"Parliament",
+		"Securities and Exchange Board of India"
+		]
+	},
+	{
+	numb: 11,
+	question: 'A proclamation of emergency, under Article-352, on account of war or aggression requires approval of the parliament within-  ' ,
+	answer: 'One month' ,
+	options: [
+		"One month",
+		"Two months",
+		"Four months",
+		"Six months"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Under which article, President of India can proclaim constitutional emergency?  ' ,
+	answer: 'Article 356' ,
+	options: [
+		"Article 32",
+		"Article 349",
+		"Article 356",
+		"Article 360"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Under which article of constitution, proclamation of National Emergency is declared-  ' ,
+	answer: 'Article 352' ,
+	options: [
+		"Article 352",
+		"Article 356",
+		"Article 360",
+		"Article 361"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The States reorganization in 1956 created-  ' ,
+	answer: '14 States and 6 Union Territories' ,
+	options: [
+		"17 States and 6 Union Territories",
+		"17 States and 9 Union Territories",
+		"14 States and 6 Union Territories",
+		"15 States and 9 Union Territories"
+		]
+	},
+	{
+	numb: 15,
+	question: 'How many times have the President declared National emergency-  ' ,
+	answer: 'Thrice' ,
+	options: [
+		"Once",
+		"Twice",
+		"Thrice",
+		"Never"
+		]
+	},
+	{
+	numb: 16,
+	question: ' Which of the following pair is correctly matched-  ' ,
+	answer: 'ADM Jabalpur - rights ofcitizens in emergency' ,
+	options: [
+		"Indra Sawhney case - rights ofwomen at work place",
+		"ADM Jabalpur - rights ofcitizens in emergency",
+		"Kartar singh case - rights of minorities",
+		"Vishakha case - centre state relation"
+		]
+	},
+	{
+	numb: 17,
+	question: 'What is the maximum period upto which a proclamation issued by the President under Article-356 of the Constitution and approved/extended by the Parliament may, normally, remain in force?  ' ,
+	answer: 'Six months' ,
+	options: [
+		"Six months",
+		"One year",
+		"Two years",
+		"Untill it is repealed by the Parliament"
+		]
+	},
+	{
+	numb: 18,
+	question: 'In which year were the Indian states reorganised on the linguistic basis?  ' ,
+	answer: '1956' ,
+	options: [
+		"1947",
+		"1951",
+		"1956",
+		"1966"
+		]
+	},
+	{
+	numb: 19,
+	question: 'By which of the following modes can citizenship be acquired in India?i. By birth, ii. Hereditary, iii. By Registration, iv. By Request  ' ,
+	answer: 'i, ii, and iii' ,
+	options: [
+		"i and ii",
+		"i, ii, and iii",
+		"ii and iii",
+		"iv, ii and iii"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which Article of the Indian Constitution empowers the Parliament to regulate right of citizenship?  ' ,
+	answer: 'Article-11' ,
+	options: [
+		"Article-8",
+		"Article-9",
+		"Article-10",
+		"Article-11"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which period below depicts internal emergency in India under article 352?  ' ,
+	answer: '25th June, 1975 to 21st March, 1977' ,
+	options: [
+		"26th June, 1974 to 23rd March, 1976",
+		"25th June, 1975 to 21st March, 1977",
+		"20th June, 1975 to 20th March, 1977",
+		"21st June, 1976 to 21st March, 1974"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following feature of the Indian constitution cannot be amended under article 368-  ' ,
+	answer: 'Sovereignty, Territorial integrity, Federal system, Judicial review, and Parliamentary form' ,
+	options: [
+		"Sovereignty, Territorial integrity, Redel&apos;al system, Judicial review",
+		"Sovereignty, Territorial integrity, Parliamentary form of government",
+		"Judicial review, and Federal system",
+		"Sovereignty, Territorial integrity, Federal system, Judicial review, and Parliamentary form"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following categories of citizens of the prescribed age may be registered as a voter?  ' ,
+	answer: 'Non-resident citizens' ,
+	options: [
+		"Bankrupt",
+		"Convicted for certain crimes or corruption",
+		"Non-resident citizens",
+		"Mentally unsound"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The majority of the provisions of the Indian Constitution can be amended-  ' ,
+	answer: 'By the Parliament alone' ,
+	options: [
+		"By the State Legislatures acting together",
+		"By the Parliament alone",
+		"With the joint approval of the Parliament and State Legislatures",
+		"Only on ratification by half of the States"
+		]
+	},
+	{
+	numb: 25,
+	question: 'By which Amendment were &apos;Fundamental Duties&apos; added to the Constitution?  ' ,
+	answer: '42nd Amendment' ,
+	options: [
+		"40th Amendment",
+		"42nd Amendment",
+		"44th Amendment",
+		"45th Amendment"
+		]
+	},
+	{
+	numb: 26,
+	question: 'When was the comprehensive reorganisation of Indian States completed in accordance with the recommendations of States Reorganisation Commission?  ' ,
+	answer: '1956' ,
+	options: [
+		"1953",
+		"1956",
+		"1960",
+		"1966"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Financial Emergency can be declared by applying-  ' ,
+	answer: 'Article-360' ,
+	options: [
+		"Article-360",
+		"Article-361",
+		"Artilce-370",
+		"Article-371"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which is the competent body to prescribe conditions for acquisition of citizenship?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Election Commission",
+		"President",
+		"Parliament",
+		"Parliament & Assemblies"
+		]
+	},
+	{
+	numb: 29,
+	question: 'If the President declares emergency then this proclamation must be approved by the Parliament within-  ' ,
+	answer: '1 Months' ,
+	options: [
+		"1 year",
+		"6 Months",
+		"3 Months",
+		"1 Months"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which State enjoys the distinction of being the first linguistic state of India?  ' ,
+	answer: 'Andhra Pradesh' ,
+	options: [
+		"West Bangal",
+		"Andhra Pradesh",
+		"Tamil Nadu",
+		"Kerala"
+		]
+	},
+]</script><script src="./script.js"></script></html>

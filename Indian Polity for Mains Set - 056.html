@@ -1,0 +1,311 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 056'
+let questions = [
+	{
+	numb: 1,
+	question: 'On whose written recommendation the President can declare national emergency according to 42nd Constitutional Amendment?  ' ,
+	answer: 'Cabinet' ,
+	options: [
+		"Prime Minister",
+		"Cabinet",
+		"Parliament",
+		"None of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following is out of the purview of article 21 of the Constitution?  ' ,
+	answer: 'Capital punishment' ,
+	options: [
+		"Capital punishment",
+		"Pollution of quality of water",
+		"Sexual Harassment of women at work place",
+		"Medical aid to injured by a doctor"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The Attorney of India submits his resignation to which of the following?  ' ,
+	answer: 'President' ,
+	options: [
+		"Chief Justice of India",
+		"President",
+		"Prime Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following amendment is related to the formation of cooperative societies?  ' ,
+	answer: '97th Amendment Act of 2011' ,
+	options: [
+		"97th Amendment Act of 2011",
+		"42nd Amendment Act of 1976",
+		"44th Amendment Act of 1974",
+		"86th Amendment Act of 2002"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who is the chairman of NITI Aayog?  ' ,
+	answer: 'Prime Minister' ,
+	options: [
+		"President",
+		"Vice President",
+		"Prime Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The Conservation of Foreign Exchange and Prevention of Smuggling Activities Act was passed in which year?  ' ,
+	answer: '1974' ,
+	options: [
+		"1971",
+		"1972",
+		"1973",
+		"1974"
+		]
+	},
+	{
+	numb: 7,
+	question: 'In which year the Government of India decided to create new category of languages called as “classical languages”?  ' ,
+	answer: '2004' ,
+	options: [
+		"2000",
+		"2002",
+		"2004",
+		"2006"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which committee recommended the establishment of the scheme of ‘democratic decentralisation’?  ' ,
+	answer: 'Balwant Rai Mehta Committee' ,
+	options: [
+		"Balwant Rai Mehta Committee",
+		"Committee on Rationalisation of Panchayat Statistics",
+		"Study Team on Nyaya Panchayats",
+		"Study Team on Panchayati Raj Administration"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following are the function of the National Commission for Protection of Child Rights?1. Inquire into violation of child rights and recommend initiation of proceedings in such cases.2. Examine and review the safeguards provided by or under any law for the protection of child rights and recommend measures for their   effective implementation.3. Undertake and promote research in the field of child rights.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following is correct with respect to power of Judicial Review of Supreme Court?  ' ,
+	answer: 'Supreme Court can declare illegal any law of the State' ,
+	options: [
+		"Supreme Court can charge allegations against Prime Minister",
+		"Supreme Court has final authority over all issues",
+		"Supreme Court can review the issues decided by High Courts",
+		"Supreme Court can declare illegal any law of the State"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which states have designated their officials as Lokpal?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Punjab",
+		"Odisha",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who is the current chairman of the review committee for Fiscal Responsibility and Budget Management Act, 2003?  ' ,
+	answer: 'N.K. Singh' ,
+	options: [
+		"Raghuram Rajan",
+		"Urjit Patel",
+		"N.K. Singh",
+		"None of the above"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following included in free legal services?1. Payment of court fee, process fees and all other charges payable or incurred in connection with any legal proceedings.2. Providing service of lawyers in legal proceedings.3. Preparation of appeal, paper book including printing and translation of documents in legal proceedings.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which among the following parts of constitution of India, includes the concept of welfare states?  ' ,
+	answer: 'Directive principles' ,
+	options: [
+		"Preamble",
+		"Fundamental rights",
+		"Directive principles",
+		"Fourth Schedule"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Essential Commodities Act was enacted in which year?  ' ,
+	answer: '1995' ,
+	options: [
+		"1992",
+		"1993",
+		"1994",
+		"1995"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The governor consults which of the following in matters of appointment, posting and promotion of district judges?  ' ,
+	answer: 'High Court' ,
+	options: [
+		"Supreme Court",
+		"President",
+		"High Court",
+		"Tribunals"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following are affected due to National Emergency?1. Centre-state relations2. Life of the Lok Sabha and State assembly3. Fundamental RightsSelect the correct option from the codes given below:  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'In which case the constitutional validity of First Amendment Act was questioned?  ' ,
+	answer: 'Shankari Prasad case' ,
+	options: [
+		"Shankari Prasad case",
+		"Kesavananda Bharati case",
+		"Indira Nehru Gandhi case",
+		"None above the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'What is the meaning of ‘judicial restraint’?  ' ,
+	answer: 'Judges should not indulge in lawmaking' ,
+	options: [
+		"Judges should expand their role in social policy making",
+		"Judges should overstep to protect the rights of the individual",
+		"Judges should not indulge in lawmaking",
+		"Progressive political values should influence judicial opinion"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following are the ex-officio members of National Human Rights Commission?1. Chairperson of the National Commission for Minorities2. Chairperson of the National Commission for SCs3. Chairperson of the National Commission for Protection of Child RightsSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who notifies the dates and schedules of elections in India?  ' ,
+	answer: 'Election Commission' ,
+	options: [
+		"Parliament",
+		"Prime Minister",
+		"President",
+		"Election Commission"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Why are deputy chief ministers are appointed?  ' ,
+	answer: 'For local political reasons' ,
+	options: [
+		"To function as Chief Minister when he is absent",
+		"To look into environmental issues",
+		"For local political reasons",
+		"None of the above"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following rejected the idea of making voting compulsory?  ' ,
+	answer: 'Dr. B.R. Ambedkar' ,
+	options: [
+		"K.M. Munshi",
+		"Jawaharlal Nehru",
+		"Dr. B.R. Ambedkar",
+		"Mahatma Gandhi"
+		]
+	},
+	{
+	numb: 25,
+	question: 'In which year, the Government of India had set up the Sarkaria Commission on Centre-State relations?  ' ,
+	answer: '1983' ,
+	options: [
+		"1980",
+		"1983",
+		"1987",
+		"1992"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following has been defined in the Constitution of India?  ' ,
+	answer: 'Anglo-Indian' ,
+	options: [
+		"Scheduled Caste",
+		"Scheduled Tribe",
+		"Other Backward Classes",
+		"Anglo-Indian"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following statements are true for the UTs?  ' ,
+	answer: 'None of the above' ,
+	options: [
+		"Their relationship with Centre is federal",
+		"They have autonomy",
+		"Their executive head is the governor",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who among the following coined the term zero hour?  ' ,
+	answer: 'Press' ,
+	options: [
+		"Constitution assembly",
+		"Dr. B R Ambedkar",
+		"Indira Gandhi",
+		"Press"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who among the following is the chairperson of the GST council?  ' ,
+	answer: 'Union Finance Minister' ,
+	options: [
+		"Prime Minister of India",
+		"Union Finance Minister",
+		"Finance Secretary of India",
+		"Comproller and Auditor General of India"
+		]
+	},
+]</script><script src="./script.js"></script></html>

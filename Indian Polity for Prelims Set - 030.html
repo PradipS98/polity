@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 030'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who appoints the members of Union Public Service Commission-  ' ,
+	answer: 'President' ,
+	options: [
+		"Law Minister",
+		"President",
+		"Prime Minister",
+		"Chief Justice"
+		]
+	},
+	{
+	numb: 2,
+	question: 'In India, no government expenditure can be made without approval of -  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"Prime Minister",
+		"President",
+		"Supreme court"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Who elects the members of Rajya Sabha?  ' ,
+	answer: 'Elected members of the Legislative Assembly' ,
+	options: [
+		"Elected members of the Legislative Council",
+		"The People",
+		"Elected members of the Legislative Assembly",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 4,
+	question: 'What is the maximum number of Members of the Rajya Sabha?  ' ,
+	answer: '250' ,
+	options: [
+		"150",
+		"200",
+		"250",
+		"300"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who is competent to dissolve the Rajya Sabha?  ' ,
+	answer: 'None of these' ,
+	options: [
+		"The Chairman of Rajya Sabha",
+		"The President",
+		"The Joint-session of Parliament",
+		"None of these"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In Lok Sabha the total number of members from States are-  ' ,
+	answer: '530' ,
+	options: [
+		"630",
+		"530",
+		"430",
+		"330"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Parliament includes-  ' ,
+	answer: 'President, Lok Sabha and Rajya Sabha' ,
+	options: [
+		"President, Lok Sabha and Rajya Sabha",
+		"Lok Sabha and Rajya Sabha",
+		"Lok Sabha and Legislative Assembly",
+		"Legislative Assembly, Legislative Council and Lok Sabha"
+		]
+	},
+	{
+	numb: 8,
+	question: 'How many members of Anglo-Indian community can be nominated for the Parliament by the President-  ' ,
+	answer: '4' ,
+	options: [
+		"2",
+		"4",
+		"8",
+		"Depends on President&apos;s will"
+		]
+	},
+	{
+	numb: 9,
+	question: 'What is the meaning of "Prorogation" in terms of Parliament-  ' ,
+	answer: 'End of session of Parliament' ,
+	options: [
+		"End of session of Parliament",
+		"Prevention of discussion on any proposal",
+		"End of daily working of house",
+		"None of these"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who decides the salary and allowances of the Speaker of the Lok Sabha?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Pay Commission",
+		"Cabinet",
+		"Parliament"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who is the custodian of Consolidated Fund of India-  ' ,
+	answer: 'Legislature' ,
+	options: [
+		"Executive",
+		"Judiciary",
+		"Legislature",
+		"Civil officers"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The salaries and allowances payable to the Members of the Parliament are decided by the-  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Cabinet",
+		"Parliament",
+		"Finance Commission"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What is the maximum number of members in Lok Sabha?  ' ,
+	answer: '552' ,
+	options: [
+		"512",
+		"542",
+		"552",
+		"532"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Union public service commission ______ employees of All India Services-  ' ,
+	answer: 'Selects' ,
+	options: [
+		"Suspends",
+		"Elects",
+		"Selects",
+		"Appoints"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who is the Chairman of the Rajya Sabha?  ' ,
+	answer: 'Vice President of India' ,
+	options: [
+		"President of India",
+		"Prime Minister of India",
+		"Vice President of India",
+		"Speaker of Lok Sabha"
+		]
+	},
+	{
+	numb: 16,
+	question: 'United Progressive Alliance was founded in?  ' ,
+	answer: '2004' ,
+	options: [
+		"1951",
+		"19987",
+		"2004",
+		"1980"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who can initiate the process of removal of the President before the expiry of his term?  ' ,
+	answer: 'Lok Sabha' ,
+	options: [
+		"Lok Sabha",
+		"Supreme Court",
+		"Common man",
+		"Member of Parliament"
+		]
+	},
+	{
+	numb: 18,
+	question: 'How can a new All India Service be introduced-  ' ,
+	answer: 'By passing a Resolution under Article-312' ,
+	options: [
+		"By doing Amendment in the Constitution",
+		"By Legislative Command",
+		"By passing a Resolution under Article-312",
+		"By Law"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which bill cannot originate in Rajya Sabha ?  ' ,
+	answer: 'Money Bill' ,
+	options: [
+		"Constitutional Amendment Bill",
+		"Ordinary Bill",
+		"Fundamental Bill",
+		"Money Bill"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Rajya Sabha is dissolved-  ' ,
+	answer: 'None of these' ,
+	options: [
+		"After every five year",
+		"After every six year",
+		"On the advice of Prime Minister",
+		"None of these"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The discussion on any matter of urgent public importance, presented by any member of house is known as-  ' ,
+	answer: 'Adjoumment motion' ,
+	options: [
+		"Adjoumment motion",
+		"Confidence motion",
+		"Censure motion",
+		"None of these"
+		]
+	},
+	{
+	numb: 22,
+	question: 'What is the minimum age to qualify for Lok Sabha Elections?  ' ,
+	answer: '25' ,
+	options: [
+		"25",
+		"30",
+		"21",
+		"18"
+		]
+	},
+	{
+	numb: 23,
+	question: '_______can give the Union parliament power to make lawson matters included in the State list.  ' ,
+	answer: 'Rajya Sabha' ,
+	options: [
+		"Ministry of Defence",
+		"Prime Minister&apos;s Office",
+		"Securities and Exchange Board of India",
+		"Rajya Sabha"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Lok Sabha is the House of the________ Parliament of India-  ' ,
+	answer: 'Lower' ,
+	options: [
+		"Lower",
+		"Upper",
+		"Left",
+		"Right"
+		]
+	},
+	{
+	numb: 25,
+	question: 'What is the name of Upper house of Indian Parliament?  ' ,
+	answer: 'Rajya Sabha' ,
+	options: [
+		"Senate",
+		"Rajya Sabha",
+		"House of Lords",
+		"Legislative Assembly"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Urdu is the official language of-  ' ,
+	answer: 'Jammu & Kashmir' ,
+	options: [
+		"Andhra Pradesh",
+		"Arunachal Pradesh",
+		"West Bengal",
+		"Jammu & Kashmir"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The number of parliamentary seats (Lok Sabha) of Andhra Pradesh is -  ' ,
+	answer: '25' ,
+	options: [
+		"2",
+		"13",
+		"20",
+		"25"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who approves a bill as money bill in Lok Sabha-  ' ,
+	answer: 'Speaker' ,
+	options: [
+		"President",
+		"Finance Minister",
+		"Prime Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 29,
+	question: 'To become a member of the Rajya Sabha a person must be at least_____ years old.  ' ,
+	answer: '30' ,
+	options: [
+		"18",
+		"30",
+		"36",
+		"24"
+		]
+	},
+	{
+	numb: 30,
+	question: ' What is the total number of members in Rajya Sabha from States and Union Territories?  ' ,
+	answer: '12' ,
+	options: [
+		"6",
+		"10",
+		"12",
+		"15"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,311 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 020'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which schedule of constitution deals with the administration and control of scheduled areas and scheduled tribes in any state except the fourstates of Assam, Meghalaya, Tripura and Mizoram?  ' ,
+	answer: 'Fifth Schedule' ,
+	options: [
+		"Third Schedule",
+		"Fourth Schedule",
+		"Fifth Schedule",
+		"Sixth Schedule"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following are correctly matched?   State                 Official Language1. Andhra Pradesh           Telugu2. Kerala                   Malayalam3. Assam                   Bodo4. Uttar Pradesh             HindiSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The main purpose of FRBM Act, 2003 was to bring down the fiscal deficit to a manageable limit of how much percentage of the GDP by March 2008?  ' ,
+	answer: '3%' ,
+	options: [
+		"1%",
+		"2%",
+		"3%",
+		"4%"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following corporation is totally subjected to private audit?  ' ,
+	answer: 'Reserve Bank of India' ,
+	options: [
+		"Indian Airlines Corporation",
+		"Reserve Bank of India",
+		"Oil and Natural Gas Commission",
+		"Air India"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The Mental Health Act was passed in which year?  ' ,
+	answer: '1987' ,
+	options: [
+		"1977",
+		"1987",
+		"1997",
+		"2007"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which year was the Planning Commission established?  ' ,
+	answer: '1950' ,
+	options: [
+		"1949",
+		"1950",
+		"1951",
+		"1952"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Banking Regulation Act was enacted in which year ?  ' ,
+	answer: '1949' ,
+	options: [
+		"1947",
+		"1948",
+		"1949",
+		"1950"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The administrative expenses of the office of the CAG are charged upon which of the following?  ' ,
+	answer: 'Consolidated Fund of India' ,
+	options: [
+		"Contingency Fund of India",
+		"Consolidated Fund of India",
+		"Public Accounts of India",
+		"Contingency Fund of State"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which among the following State taxes are subsumed under GST?1. State VAT2. Purchase Tax3. Entertainment and Amusement Tax4. Octroi and Entry TaxChoose the correct option from the codes given below :  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"1 & 2",
+		"1, 2 & 3",
+		"1, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 10,
+	question: 'In which year was the Appellate Tribunal for Electricity created?  ' ,
+	answer: '2005' ,
+	options: [
+		"2000",
+		"2003",
+		"2004",
+		"2005"
+		]
+	},
+	{
+	numb: 11,
+	question: 'What is the maximum fine under Whistle Blowers Protection Act (2014) for false or frivolous complaints?  ' ,
+	answer: '30,000 rupees' ,
+	options: [
+		"10,000 rupees",
+		"20,000 rupees",
+		"30,000 rupees",
+		"40,000 rupees"
+		]
+	},
+	{
+	numb: 12,
+	question: 'What is an Ombudsman in India called?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Lokpal",
+		"Lokayukta",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 13,
+	question: 'In which of the following cases the distinction between the sovereign and non-sovereign functions of the Government in India and the immunity of the government in respect of its sovereign functions was established?  ' ,
+	answer: 'P and O Steam Navigation Company case' ,
+	options: [
+		"S.R. Bommai case",
+		"P and O Steam Navigation Company case",
+		"Keshvananda Bharti case",
+		"Minerva Mills Case"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which section of the Hindu Marriage Act specifies the guardianship for marriage?  ' ,
+	answer: 'Section 6' ,
+	options: [
+		"Section 6",
+		"Section 7",
+		"Section 8",
+		"Section 9"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which type of body is the Competition Commission of India (CCI)?  ' ,
+	answer: 'Statutory body' ,
+	options: [
+		"Statutory body",
+		"Constitutional body",
+		"Executive body",
+		"Private Institution"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which article contains provisions regarding control of the Union over the administration of scheduled areas and the welfare of scheduled tribes?  ' ,
+	answer: 'Article 339' ,
+	options: [
+		"Article 337",
+		"Article 338",
+		"Article 339",
+		"Article 340"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following statement is correct regarding Attorney General of India?1. He is a fulltime counsel for the Government.2. He falls in the category for government servants.3. He is not debarred from private legal practice.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following UTs have been created for their strategic importance?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Andaman and Nicobar Islands",
+		"Lakshadweep",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The Hindu Succession (Amendment) Act got assent from the President of India in which year?  ' ,
+	answer: '2005' ,
+	options: [
+		"2004",
+		"2005",
+		"2006",
+		"2007"
+		]
+	},
+	{
+	numb: 20,
+	question: 'In which year NITI Aayog came into being?  ' ,
+	answer: '2015' ,
+	options: [
+		"2014",
+		"2015",
+		"2016",
+		"2017"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following statements regarding Lokayukta are correct?  ' ,
+	answer: 'None of the above' ,
+	options: [
+		"Lokayukta has no accountability to the governor",
+		"He cannot ask for relevant files and documents from the state government departments",
+		"Recommendations made by the lokayukta are mandatory",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'TheBiological Diversity Act, 2002 was enacted to meet the obligations under which of the following conventions?  ' ,
+	answer: 'Convention on Biological Diversity' ,
+	options: [
+		"Convention to Combat Desertification",
+		"Climate Change Convention",
+		"Convention on Biological Diversity",
+		"None of the above"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which article of the constitution contains special provision with respect to educational grants for the benefit of Anglo-Indian community?  ' ,
+	answer: 'Article 337' ,
+	options: [
+		"Article 335",
+		"Article 337",
+		"Article 339",
+		"Article 341"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Maternity leave of how many weeks is available to mothers adopting a child below the age of three months from the date of adoption under Maternity Benefit Amendment Act?  ' ,
+	answer: '12 weeks' ,
+	options: [
+		"3 weeks",
+		"6 weeks",
+		"9 weeks",
+		"12 weeks"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which article of the Constitution envisages a special system of administration for certain areas designated as ‘scheduled areas’ and ‘tribal areas’?  ' ,
+	answer: 'Article 244' ,
+	options: [
+		"Article 243",
+		"Article 244",
+		"Article 245",
+		"Article 246"
+		]
+	},
+	{
+	numb: 27,
+	question: 'An act of a person incapable of judgment by reason of intoxication caused against his will is defined in which section of IPC?  ' ,
+	answer: 'Section 85' ,
+	options: [
+		"Section 85",
+		"Section 86",
+		"Section 87",
+		"Section 88"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The Drugs and Magic Remedies (Objectionable Advertisements) Act was passed in which year?  ' ,
+	answer: '1954' ,
+	options: [
+		"1949",
+		"1950",
+		"1951",
+		"1954"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following are the seven pillars of effective governance of NITI Aayog?1. Pro-active in anticipating and responding to citizen needs.2. Equality of opportunity for the youth.3. Empowering women in all aspects.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 1 & 2",
+		"1, 2 & 3"
+		]
+	},
+]</script><script src="./script.js"></script></html>

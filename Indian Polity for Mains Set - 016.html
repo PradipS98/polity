@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 016'
+let questions = [
+	{
+	numb: 1,
+	question: 'The bills related to territorial rearrangement of Indian States and Union Territories under articles 2 & 3 need which of the following kind of majority in Parliament?  ' ,
+	answer: 'Simple Majority' ,
+	options: [
+		"Simple Majority",
+		"Effective Majority",
+		"Absolute Majority",
+		"Special Majority"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who make the electoral college for election of the Vice President of India?  ' ,
+	answer: 'Only members of Parliament' ,
+	options: [
+		"Only members of Parliament",
+		"Members of Parliament & members of Legislative Assemblies",
+		"Members of Parliament, Members of Legislative assemblies and Members of legislative councils",
+		"Members of Rajya Sabha only"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which among the following does not come under Fundamental Duties of a citizen in India?  ' ,
+	answer: 'To strive towards abolition of untouchability' ,
+	options: [
+		"To protect and Improve Natural Environment",
+		"To develop scientific temper, humanism and spirit of inquiry and reform",
+		"To strive towards abolition of untouchability",
+		"All are comes under fundamental duities"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following Article promotes the formation of village panchayats?  ' ,
+	answer: 'Article 40' ,
+	options: [
+		"Article 39",
+		"Article 40",
+		"Article 41",
+		"Article 42"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which form of government is also known as ‘responsible government’?  ' ,
+	answer: 'Parliamentary government' ,
+	options: [
+		"Presidential government",
+		"Autocracy",
+		"Parliamentary government",
+		"None of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The Articles associated with the Fundamental Rights in Indian Constitution are?  ' ,
+	answer: 'Article 12 to 35' ,
+	options: [
+		"Article 11 to 34",
+		"Article 12 to 35",
+		"Article 12 to 36",
+		"Article 11 to 25"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following writs guarantee personal freedom?  ' ,
+	answer: 'Habeas Corpus' ,
+	options: [
+		"Quo-Warranto",
+		"Prohibition",
+		"Habeas Corpus",
+		"Mandamus"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Constitution (103rd) Act, 2019 has made amendments to which of the following parts of the Constitution of India?  ' ,
+	answer: 'Fundamental Rights' ,
+	options: [
+		"Fundamental Rights",
+		"Fundamental Duties",
+		"Directive Principles of State Policy",
+		"Temporary Provisions"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following described the British system of government as ‘prime ministerial government’?  ' ,
+	answer: 'Mackintosh' ,
+	options: [
+		"K.M. Munshi",
+		"Jennings",
+		"Mackintosh",
+		"None of the above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which act of British India was one of the main sources of Constitution of India?  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Government of India Act, 1919",
+		"Indian Councils Act, 1909",
+		"Government of India Act, 1935",
+		"Indian Independence Act, 1947"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which amendment made it obligatory on the President to give his assent to a Constitutional Amendment Bill?  ' ,
+	answer: '24th' ,
+	options: [
+		"21st",
+		"24th",
+		"29th",
+		"31st"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who can dismiss the Governor from office?  ' ,
+	answer: 'President' ,
+	options: [
+		"State Legislative Assembly",
+		"Parliament",
+		"President",
+		"Council of ministers"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who described India as a “quasi federal state”?  ' ,
+	answer: 'K.C. Wheare' ,
+	options: [
+		"Lord Bryee",
+		"K.C. Wheare",
+		"Harold Laski",
+		"G. Austin"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which Articles of the Constitution deal with the parliamentary system at the Centre?  ' ,
+	answer: 'Articles 74 and 75' ,
+	options: [
+		"Articles 163 and 164",
+		"Articles 74 and 75",
+		"Articles 73 and 74",
+		"Article 67 and 68"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The concept of privy purses and privileges of the Rulers of former Indian States was terminated through:  ' ,
+	answer: 'Twenty-sixth Amendment Act' ,
+	options: [
+		"First Amendment Act",
+		"Twenty-sixth Amendment Act",
+		"Fifty-second Amendment Act",
+		"Ninety-first Amendment Act"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following was not the member of Fazl Ali Commission formed in December 1953?  ' ,
+	answer: 'Vallabhbhai Patel' ,
+	options: [
+		"Vallabhbhai Patel",
+		"Fazl Ali",
+		"KM Panikar",
+		"HN Kunzru"
+		]
+	},
+	{
+	numb: 17,
+	question: 'How many members can be nominated by the president to the Rajya Sabha & Lok Sabha Respectively?  ' ,
+	answer: '12 & 0' ,
+	options: [
+		"12 & 0",
+		"10 & 2",
+		"10 & 0",
+		"12 & 6"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The Chairman of the Finance Commission is the ex-officio Chairman of:Monetary Policy CommitteeTax Policy CouncilTax Policy Research Unit (TPRU) Select the correct answer from options given below:  ' ,
+	answer: 'None' ,
+	options: [
+		"1 & 3 Only",
+		"2 Only",
+		"2 & 3 Only",
+		"None"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which act provided for the establishment of Public Service Commission?  ' ,
+	answer: 'Government of India Act, 1919' ,
+	options: [
+		"Indian Councils Act, 1909",
+		"Government of India Act, 1919",
+		"Government of India act, 1935",
+		"Independence of India act, 1947"
+		]
+	},
+	{
+	numb: 20,
+	question: 'In which year was the first linguistic State formed?  ' ,
+	answer: '1953' ,
+	options: [
+		"1952",
+		"1953",
+		"1954",
+		"1956"
+		]
+	},
+	{
+	numb: 21,
+	question: 'It is not possible to obtain Indian citizenship by which of the following ways?  ' ,
+	answer: 'Depositing money in Indian Banks' ,
+	options: [
+		"Naturalization",
+		"Birth",
+		"Depositing money in Indian Banks",
+		"Incorporation of new territory by India"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The Mandal Commission was constituted during the tenure of which among the following prime ministers?  ' ,
+	answer: 'Morarji Desai' ,
+	options: [
+		"Indira Gandhi",
+		"Morarji Desai",
+		"Rajiv Gandhi",
+		"V P Singh"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Via which of the following acts, Burma got separated from India?  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Indian Councils Act, 1961",
+		"Government of India Act, 1909",
+		"Government of India Act, 1919",
+		"Government of India Act, 1935"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following provisions in Directive Principles of State Policy reflect the Gandhian Principles?  ' ,
+	answer: 'Organise village panchayats' ,
+	options: [
+		"To promote equal justice and to provide free legal aid to the poor",
+		"Equitable distribution of material resources of the community for the common good",
+		"Uniform civil code",
+		"Organise village panchayats"
+		]
+	},
+	{
+	numb: 25,
+	question: 'On which date the government of India adopted the National Anthem of the country?  ' ,
+	answer: 'January 24, 1950' ,
+	options: [
+		"July 22, 1947",
+		"January 24, 1950",
+		"January 26, 1950",
+		"November 24, 1949"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In which year Manipur and Tripura became full-fledged state of India?  ' ,
+	answer: '1972' ,
+	options: [
+		"1962",
+		"1968",
+		"1972",
+		"1980"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of following articles constitute the Directive Principles of State Policy in the Indian Constitution?  ' ,
+	answer: 'Article 36 to 51' ,
+	options: [
+		"Article 12 to 35",
+		"Article 36 to 51",
+		"Article 35 to 51",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following provisions cannot be amended by simple majority?  ' ,
+	answer: 'Directive Principles of State Policy' ,
+	options: [
+		"Admission or establishment of new states",
+		"Abolition or creation of legislative councils in states",
+		"Directive Principles of State Policy",
+		"Sixth Schedule–administration of tribal areas"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The power to declare an area as “Scheduled Area” lies with the:  ' ,
+	answer: 'President' ,
+	options: [
+		"Ministry of Tribal Affairs",
+		"Legislative Assembly of a state",
+		"Parliament",
+		"President"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who headed the committee on Chief Commissioners’ Provinces in the Constituent Assembly?  ' ,
+	answer: 'B. Pattabhi Sitaramayya' ,
+	options: [
+		"B. Pattabhi Sitaramayya",
+		"Jawaharlal Nehru",
+		"K M Munshi",
+		"Alladi Krishnaswamy Ayyar"
+		]
+	},
+]</script><script src="./script.js"></script></html>

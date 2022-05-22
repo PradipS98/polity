@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 040'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which among the following Central taxes are subsumed under GST?1. Central excise duty2. Service tax3. Additional custom duty4. Special Additional Duty of CustomsChoose the correct option from the codes given below :  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"1 & 2",
+		"1, 2 & 3",
+		"1, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The Minimum Wages Act was enacted in which year?  ' ,
+	answer: '1948' ,
+	options: [
+		"1948",
+		"1949",
+		"1950",
+		"1951"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Who appoints the advocate general of the state?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Parliament",
+		"Prime Minister",
+		"Governor"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The 38th Amendment Act of 1975 made the declaration of emergency by whom non-justiciable?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Parliament",
+		"Cabinet"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who was the chairman of the Advisory Planning Board constituted in 1946 which recommended for the creation of Planning Commission?  ' ,
+	answer: 'K.C. Neogi' ,
+	options: [
+		"K.C. Neogi",
+		"K.M. Munshi",
+		"Dr. Rajendra Prasad",
+		"Mahatma Gandhi"
+		]
+	},
+	{
+	numb: 6,
+	question: 'What is the upper limit of election expense in a parliamentary constituency?  ' ,
+	answer: '70 lakhs' ,
+	options: [
+		"10 lakhs",
+		"25 lakhs",
+		"70 lakhs",
+		"1 cr"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which amendment to the Constitution of India provides for making of any provision in favour of the SCs and STs for relaxation in qualifying marks in any examination or lowering the standards of evaluation?  ' ,
+	answer: '82nd' ,
+	options: [
+		"82nd",
+		"83rd",
+		"84th",
+		"85th"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which determines the strength of the High Court?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Parliament",
+		"Supreme Court",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The 42nd Amendment Act of 1976 added which of the following part to the Constitution of India?  ' ,
+	answer: 'Part XIV-A' ,
+	options: [
+		"Part XI",
+		"Part XIII",
+		"Part XIV-A",
+		"Part XIV-B"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Many key features of the constitution such as the federal structure of government, provincial autonomy, a bicameral central legislature and the principle of separation of powers, are directly taken from:  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Nehru Report of 1928",
+		"Government of India Act, 1919",
+		"Government of India Act, 1935",
+		"Indian Independence Act, 1947"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following from time to time summons each House of state legislature to meet?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Chief Minister",
+		"Governor"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The State Finance Commission makes which of the following recommendations to the Governor of the state?1. The principles governing determination of taxes, duties, tolls and fees that may be assigned to the panchayats.2. The measures needed to improve the financial position of the panchayats.3. The grants in aid to the panchayats from the consolidated fund of the state.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who administers oath to the Comptroller and Auditor General of India (CAG)?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Chief Justice of India",
+		"Vice-President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Via which of the following amendments, the term “Socialist” was inserted in Preamble of Indian constitution?  ' ,
+	answer: '42nd Amendment Act' ,
+	options: [
+		"38th Amendment Act",
+		"42nd Amendment Act",
+		"49th Amendment Act",
+		"52nd Amendment Act"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the given statements are true regarding the power of CBI for conducting investigation?  ' ,
+	answer: 'No prior sanction required to conduct a probe against senior bureaucrats under Prevention of Corruption Act' ,
+	options: [
+		"It requires prior approval of Central Government for investigating officers of the rank of joint secretary",
+		"No prior sanction required to conduct a probe against senior bureaucrats under Prevention of Corruption Act",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which section of IPC states that if the accused himself takes and consumes intoxicated thing or material with knowledge or intention and under intoxication he commits any offence he is liable for punishment?  ' ,
+	answer: 'Section 86' ,
+	options: [
+		"Section 86",
+		"Section 87",
+		"Section 88",
+		"Section 89"
+		]
+	},
+	{
+	numb: 17,
+	question: 'In which year the Supreme Court ruled that a council of ministers must always exist to advise the governor, even after the dissolution of the state legislative assembly or resignation of a council of ministers?  ' ,
+	answer: '1971' ,
+	options: [
+		"1970",
+		"1971",
+		"1972",
+		"1973"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following can include or exclude any caste or tribe from Presidential notification?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Supreme Court",
+		"President",
+		"Parliament",
+		"National Commission for minorities"
+		]
+	},
+	{
+	numb: 19,
+	question: 'In which year was the legislative council of Andhra Pradesh created for the first time?  ' ,
+	answer: '1957' ,
+	options: [
+		"1950",
+		"1951",
+		"1955",
+		"1957"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The Chairperson of the National Commission for women submits his/her resignation to?  ' ,
+	answer: 'Central government' ,
+	options: [
+		"Rajya Sabha",
+		"President",
+		"Central government",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which year Prevention of Money Laundering Act was passed?  ' ,
+	answer: '2002' ,
+	options: [
+		"2000",
+		"2001",
+		"2002",
+		"2003"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who is empowered to direct that an act of Parliament does not apply to a scheduled area in the state?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Governor",
+		"President",
+		"Prime Minister",
+		"Members of Lok sabha"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who is empowered to remove the advocate general of the state?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief Justice of India",
+		"President",
+		"Governor",
+		"Chief Minister"
+		]
+	},
+	{
+	numb: 24,
+	question: 'How many members can the governor nominate in the state legislative assembly from Anglo-Indian community?  ' ,
+	answer: '1' ,
+	options: [
+		"1",
+		"2",
+		"3",
+		"None"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which amendment of the Constitution abolished the special privileges of ICS officers and empowered the Parliament to determine their service conditions?  ' ,
+	answer: 'Twenty-eighth Amendment Act, 1972' ,
+	options: [
+		"Twenty-eighth Amendment Act, 1972",
+		"Twenty-fourth Amendment Act, 1971",
+		"Twenty-ninth Amendment Act, 1972",
+		"Twenty-sixth Amendment Act, 1971"
+		]
+	},
+	{
+	numb: 26,
+	question: 'What is the term of appointment of a Swedish ombudsman?  ' ,
+	answer: '4 years' ,
+	options: [
+		"5 years",
+		"2 years",
+		"4 years",
+		"3 years"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which system of government is also known as Westminster model of government?  ' ,
+	answer: 'Parliamentary system' ,
+	options: [
+		"Presidential system",
+		"Monarchy",
+		"Parliamentary system",
+		"Oligarchy"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Under which article the President is empowered to provide for the creation of a committee of the Assam Legislative Assembly?  ' ,
+	answer: '371 B' ,
+	options: [
+		"271",
+		"371",
+		"371 A",
+		"371 B"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which year Andhra Pradesh was created?  ' ,
+	answer: '1956' ,
+	options: [
+		"1950",
+		"1952",
+		"1956",
+		"1960"
+		]
+	},
+	{
+	numb: 30,
+	question: 'In which year the Central Vigilance Commission (CVC) was given statutory status?  ' ,
+	answer: '2003' ,
+	options: [
+		"2001",
+		"2003",
+		"2006",
+		"2008"
+		]
+	},
+]</script><script src="./script.js"></script></html>

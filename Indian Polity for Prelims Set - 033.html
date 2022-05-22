@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 033'
+let questions = [
+	{
+	numb: 1,
+	question: 'The Chairman of Public Accounts Committee in Indian Parliament is-  ' ,
+	answer: 'Leader ofopposition' ,
+	options: [
+		"Leader ofopposition",
+		"Speaker of Lok Sabha",
+		"Deputy Chairman of Lok Sabha",
+		"Chairman of Rajya Sabha"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The number of parliamentary seats (Lok Sabha) of Punjab is -  ' ,
+	answer: '13' ,
+	options: [
+		"2",
+		"13",
+		"20",
+		"25"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Lok Sabha Secretariat comes under the direct control of-  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"Ministry of Home Affairs",
+		"Ministry of Parliamentary Affairs",
+		"Speaker of Lok Sabha",
+		"President"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The number of parliamentary seats (Lok Sabha) of Kamataka is-  ' ,
+	answer: '28' ,
+	options: [
+		"10",
+		"26",
+		"28",
+		"48"
+		]
+	},
+	{
+	numb: 5,
+	question: 'How many members of the Rajya Sabha are elected every two years ?  ' ,
+	answer: 'One third' ,
+	options: [
+		"All",
+		"One fourth",
+		"Half",
+		"One third"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The persons, who can speak in Rajya Sabha and Lok Sabha being a member of Rajya Sabha, are-  ' ,
+	answer: 'The Ministers who are members in Rajya Sabha' ,
+	options: [
+		"Deputy Chairman of Rajya Sabha",
+		"Leader of Rajya Sabha",
+		"Nominated members of Rajya Sabha",
+		"The Ministers who are members in Rajya Sabha"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The number of parliamentary seats (Lok Sabha) of Chandigarh is-  ' ,
+	answer: '1' ,
+	options: [
+		"1",
+		"6",
+		"11",
+		"15"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following procession has not been adopted from the world&apos;s Parliamentary system-  ' ,
+	answer: 'Zero hour' ,
+	options: [
+		"Question hour",
+		"Zero hour",
+		"Oath",
+		"Motion of thanks"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The number of parliamentary seats (Rajya Sabha) of Tamil Nadu is-  ' ,
+	answer: '18' ,
+	options: [
+		"12",
+		"16",
+		"18",
+		"31"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The maximum number of elected members of Lok Sabha can be-  ' ,
+	answer: '550' ,
+	options: [
+		"530",
+		"545",
+		"540",
+		"550"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The Speaker&apos;s vote in the Lok Sabha is called-  ' ,
+	answer: 'Casting vote' ,
+	options: [
+		"Casting vote",
+		"Sound vote",
+		"Direct vote",
+		"Indirect vote"
+		]
+	},
+	{
+	numb: 12,
+	question: 'What is the maximum gap period between two sessions of Parliament-  ' ,
+	answer: '6 months' ,
+	options: [
+		"4 months",
+		"6 months",
+		"8 months",
+		"9 months"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who will be elected as the Deputy Chairman of Rajya Sabha-  ' ,
+	answer: 'Any member who is working as a member of Rajya Sabha' ,
+	options: [
+		"Any person who is eligible for member of Rajya Sabha",
+		"Any member who is working as a member of Rajya Sabha",
+		"Any member of the Parliament",
+		"A person nominated to Rajya Sabha by the President"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which language, Lok Sabha debates are printed?  ' ,
+	answer: 'Both Hindi & English' ,
+	options: [
+		"Hindi",
+		"English",
+		"Sanskrit",
+		"Both Hindi & English"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The number of parliamentary seats (Rajya Sabha) of Uttar Pradesh is-  ' ,
+	answer: '31' ,
+	options: [
+		"12",
+		"16",
+		"18",
+		"31"
+		]
+	},
+	{
+	numb: 16,
+	question: 'A money bill passed by the Lok Sabha is deemed to have been passed by the Rajya Sabha also, when no action is taken by the Upper House within-  ' ,
+	answer: '20 days' ,
+	options: [
+		"10 days",
+		"20 days",
+		"14 days",
+		"30 days"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The Chairman of Public Accounts Committee of Parliament is appointed by-  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"Speaker of Lok Sabha",
+		"Prime Minister of India",
+		"President of India",
+		"Chairman of Rajya Sabha"
+		]
+	},
+	{
+	numb: 18,
+	question: 'There are total parliamentary seats (Rajya Sabha constituency) in Sikkim-  ' ,
+	answer: '1' ,
+	options: [
+		"11",
+		"19",
+		"10",
+		"1"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The Secretary General of the Lok Sabha is the Chief of its Secretariat and is-  ' ,
+	answer: 'Appointed by the Speaker' ,
+	options: [
+		"Elected by the Lok Sabha",
+		"Elected by both Houses of Parliament",
+		"Appointed by the Speaker",
+		"Appointed by the President"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which Parliamentary Committee in India is normally chaired by a prominent member of the opposition?  ' ,
+	answer: 'Public Accounts Committee' ,
+	options: [
+		"Committee on Government Assurances",
+		"Estimates Committee",
+		"Privileges Committee",
+		"Public Accounts Committee"
+		]
+	},
+	{
+	numb: 21,
+	question: 'How many seats are reserved for representatives of Scheduled Castes and Scheduled Tribes in Lok Sabha?  ' ,
+	answer: '131' ,
+	options: [
+		"39",
+		"85",
+		"109",
+		"131"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Indian Parliament is capable of making any law for any state, if-  ' ,
+	answer: '1 and 2 both' ,
+	options: [
+		"Emergency is enforced under Article-352",
+		"Two or more states request for that",
+		"President sends a message to the Parliament",
+		"1 and 2 both"
+		]
+	},
+	{
+	numb: 23,
+	question: 'There are total parliamentary seats (Rajya Sabha constituency) in Punjab-  ' ,
+	answer: '7' ,
+	options: [
+		"7",
+		"1",
+		"18",
+		"10"
+		]
+	},
+	{
+	numb: 24,
+	question: 'There are total parliamentary seats (Rajya Sabha constituency) in Tripura-  ' ,
+	answer: '1' ,
+	options: [
+		"7",
+		"1",
+		"18",
+		"10"
+		]
+	},
+	{
+	numb: 25,
+	question: 'For what duration, the election of member of Rajya Sabha is done?  ' ,
+	answer: 'Six years' ,
+	options: [
+		"Two years",
+		"Four years",
+		"Five years",
+		"Six years"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In Indian parliamentary functioning, "Zero Hour" means-  ' ,
+	answer: 'Time immediately following question hour' ,
+	options: [
+		"Time before question hour",
+		"First hour of the session",
+		"Time immediately following question hour",
+		"Acceptance of privilege motion"
+		]
+	},
+	{
+	numb: 27,
+	question: 'There are total parliamentary seats (LokSabha constituency) in West Bengal-  ' ,
+	answer: '42' ,
+	options: [
+		"42",
+		"2",
+		"14",
+		"40"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Rajya Sabha is assisted by the Secretary General, who holds the rank equivalent to?  ' ,
+	answer: 'Cabinet Secretary to the Government of India' ,
+	options: [
+		"Cabinet Minister of the Government of India",
+		"Member of Parliament",
+		"Member of Legislature",
+		"Cabinet Secretary to the Government of India"
+		]
+	},
+	{
+	numb: 29,
+	question: 'There are total parliamentary seats (Rajya Sabha constituency) in Odisha-  ' ,
+	answer: '10' ,
+	options: [
+		"11",
+		"19",
+		"10",
+		"1"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The number of parliamentary seats (Lok Sabha) of Haryana is-  ' ,
+	answer: '10' ,
+	options: [
+		"10",
+		"26",
+		"28",
+		"48"
+		]
+	},
+]</script><script src="./script.js"></script></html>

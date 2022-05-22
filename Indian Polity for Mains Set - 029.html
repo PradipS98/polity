@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 029'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who appoints the members of National Commission for SCs?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Supreme Court",
+		"High Court"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who is the chief executive authority of the municipal corporation?  ' ,
+	answer: 'Municipal Commissioner' ,
+	options: [
+		"Mayor",
+		"Municipal Commissioner",
+		"IAS Officer",
+		"None of the above"
+		]
+	},
+	{
+	numb: 3,
+	question: 'With respect to the criminal liability of a child, which of the following statements are valid?  ' ,
+	answer: 'Infants are not endowed with the discretion to distinguish between right from wrong' ,
+	options: [
+		"An act of a child under ten years is no offence",
+		"Infants are not endowed with the discretion to distinguish between right from wrong",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Lok Adalats are based on the principles of?  ' ,
+	answer: 'M.K. Gandhi' ,
+	options: [
+		"B.R. Amedkar",
+		"M.K. Gandhi",
+		"Jai Prakash Narayan",
+		"Subhash Chandra Bose"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following schedules of the Wildlife Protection Act of 1972 provides absolute protection – offences under these are prescribed the highest penalties?  ' ,
+	answer: 'Part II of Schedule II' ,
+	options: [
+		"Part II of Schedule II",
+		"Schedule III",
+		"Schedule IV",
+		"Schedule V"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Article 371-J contains special provisions with respect to which state?  ' ,
+	answer: 'Karnataka' ,
+	options: [
+		"Mizoram",
+		"Karnataka",
+		"Tripura",
+		"Nagaland"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The National Commission for SCs presents an annual report to which of the following?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Vice President",
+		"Governor",
+		"Parliament"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Who appoints the chairperson and members of National Human Rights Commission?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Supreme Court",
+		"Parliament"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who decides the salaries and allowances of the Speaker and the Deputy Speaker of the assembly?  ' ,
+	answer: 'State Legislature' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"State Legislature",
+		"Parliament"
+		]
+	},
+	{
+	numb: 10,
+	question: 'In which year, Balwant Rai Mehta Committee was appointed to examine the working of the Community Development Programme?  ' ,
+	answer: '1957' ,
+	options: [
+		"1951",
+		"1954",
+		"1957",
+		"1960"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following is not a required qualification for the post of Vice-President?  ' ,
+	answer: 'He should be qualified for election as a member of the Lok Sabha' ,
+	options: [
+		"He should have completed 35 years of age",
+		"He should be qualified for election as a member of the Lok Sabha",
+		"He should not hold any office of profit",
+		"He should be a citizen of India"
+		]
+	},
+	{
+	numb: 12,
+	question: 'How much majority is required to amend federal provisions in the Constitution of India?  ' ,
+	answer: 'Special majority of each house of Parliament plus ratification by half of the states with simple majority' ,
+	options: [
+		"Simple majority of each house of Parliament",
+		"Special majority of each house of Parliament",
+		"One-fourth majority of each house of Parliament",
+		"Special majority of each house of Parliament plus ratification by half of the states with simple majority"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following come both in the jurisdiction of Supreme Court and High Courts?  ' ,
+	answer: 'Protection of Fundamental Rights' ,
+	options: [
+		"Protection from violation of the Constitution",
+		"Dispute between Centre And States",
+		"Protection of Fundamental Rights",
+		"Mutual disputes among states"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year the Election Commission made the earliest attempt to regulate opinion polls?  ' ,
+	answer: '1998' ,
+	options: [
+		"1998",
+		"2000",
+		"2002",
+		"2005"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who appoints the chairman and members of the Joint State Public Service Commission?  ' ,
+	answer: 'The President' ,
+	options: [
+		"The President",
+		"The Governor",
+		"The Prime Minister",
+		"The Chief Justice of India"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following languages conferred with Classical Language status?1. Tamil2. Sanskrit3. Kannada4. MalayalamSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who headed the National Commission on Urbanisation?  ' ,
+	answer: 'C.M. Correa' ,
+	options: [
+		"Girijapati Mukharji",
+		"Rafiq Zakaria",
+		"C.M. Correa",
+		"K.N. Sahaya"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Consumer Protection Act applies to which of the following?  ' ,
+	answer: 'All goods and services' ,
+	options: [
+		"Immovable goods",
+		"Moveable goods",
+		"Specific goods and services",
+		"All goods and services"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which Schedule of the Constitution deals with the administration of the tribal areas in the four northeastern states of Assam, Meghalaya, Tripura and Mizoram?  ' ,
+	answer: 'Sixth Schedule' ,
+	options: [
+		"Sixth Schedule",
+		"Seventh Schedule",
+		"Eighth Schedule",
+		"Ninth Schedule"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The Cigarettes and Other Tobacco Products Act, 2003 prohibits smoking of tobacco in which of the following places?1. Auditoriums2. Movie theaters3. Hospitals4. Public transportSelect the correct the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following Articles promote the idea of equal justice and to provide free legal aid to the poor?  ' ,
+	answer: 'Article 39 A' ,
+	options: [
+		"Article 38",
+		"Article 39",
+		"Article 39 A",
+		"Article 41"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The law of criminal conspiracy has been provided in which Sections of IPC?1. 120 A 2. 120 BSelect the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who is the present governor of Reserve Bank of India?  ' ,
+	answer: 'Shaktikanta Das' ,
+	options: [
+		"Urjit Patel",
+		"Raghuram Rajan",
+		"Bimal Jalan",
+		"Shaktikanta Das"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What does Qisas mean in the Islamic criminal law?  ' ,
+	answer: 'Retaliation' ,
+	options: [
+		"Limit or barrier",
+		"Blood-money",
+		"Retaliation",
+		"None of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following become the first country in South Asia to statutorily prohibit discrimination against people diagnosed with HIV/AIDS?  ' ,
+	answer: 'India' ,
+	options: [
+		"India",
+		"Sri Lanka",
+		"Maldives",
+		"Bangladesh"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The Parliament can create new all India services under which article of the constitution of India?  ' ,
+	answer: 'Article 312' ,
+	options: [
+		"Article 115",
+		"Article 300",
+		"Article 312",
+		"Article 320"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which committee recommended that the minimum age of voting should be 18 years?  ' ,
+	answer: 'Tarkunde committee' ,
+	options: [
+		"Tarkunde committee",
+		"Goswami committee",
+		"Indrajit Gupta committee",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The Transplantation of Human Organs and Tissues Act was passed in which year?  ' ,
+	answer: '1994' ,
+	options: [
+		"1992",
+		"1993",
+		"1994",
+		"1995"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which article mentions about the oath or affirmation by judges of High Courts?  ' ,
+	answer: '219' ,
+	options: [
+		"216",
+		"217",
+		"218",
+		"219"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following Articles deals with the bills reserved by the Governor for consideration of the President?  ' ,
+	answer: '201' ,
+	options: [
+		"201",
+		"202",
+		"203",
+		"204"
+		]
+	},
+]</script><script src="./script.js"></script></html>

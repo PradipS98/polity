@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 009'
+let questions = [
+	{
+	numb: 1,
+	question: 'Implementing laws is the function of-  ' ,
+	answer: 'Executive' ,
+	options: [
+		"Executive",
+		"Legislature",
+		"Judiciary",
+		"Local list"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Narendra Modi is the Prime Minister of India-  ' ,
+	answer: '10th' ,
+	options: [
+		"5th",
+		"10th",
+		"14th",
+		"18th"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Articles-74 and 75 ofIndian Constitution deal with matters of-  ' ,
+	answer: 'Council of Ministers' ,
+	options: [
+		"Council of Ministers",
+		"Speaker of Lok Sabha",
+		"President of India",
+		"Cabinet Ministers"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The Vice-President is the ex-officio chaiman of-  ' ,
+	answer: 'Rajya Sabha' ,
+	options: [
+		"Rajya Sabha",
+		"Lok sabha",
+		"Planning commission",
+		"National development council"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The Council of Ministers does not include-  ' ,
+	answer: 'Cabinet Secretary' ,
+	options: [
+		"Cabinet Minister",
+		"State Minister",
+		"Cabinet Secretary",
+		"Minister without ministry"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In single transferable voting system, each member can Express its verdict by-  ' ,
+	answer: 'Voting for all' ,
+	options: [
+		"Two options",
+		"Only one option",
+		"One less than the filled members",
+		"Voting for all"
+		]
+	},
+	{
+	numb: 7,
+	question: 'In Pocket Veto, the President of India can keep a bill for how much duration?  ' ,
+	answer: 'Indefinite period' ,
+	options: [
+		"1 month",
+		"6 month",
+		"12 month",
+		"Indefinite period"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Who completed two successive regimes of the Vice-President of India?  ' ,
+	answer: 'S.Radhakrishnan' ,
+	options: [
+		"S.Radhakrishnan",
+		"V.V.Giri",
+		"B.D.Jatti",
+		"M.Hidaytullah"
+		]
+	},
+	{
+	numb: 9,
+	question: 'According to Indian constitution, Central Minister will hold his post at the will of-  ' ,
+	answer: 'President of India' ,
+	options: [
+		"President of India",
+		"Prime Minister of India",
+		"Parliament",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 10,
+	question: 'President of India can be removed from his office by-  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Prime Minister of India",
+		"Chief Justice of India",
+		"Parliament",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who held the post of President twice?  ' ,
+	answer: 'Dr. Rajendra Prasad' ,
+	options: [
+		"S.Radhakrishnan",
+		"K.R.Narayanan",
+		"Neelam Sanjeev Reddy",
+		"Dr. Rajendra Prasad"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following person was elected unopposed for the post of president?  ' ,
+	answer: 'N.Sanjeev Reddy' ,
+	options: [
+		"Rajendra Prasad",
+		"S.Radhakrishanan",
+		"N.Sanjeev Reddy",
+		"Shankar Dayal Sharma"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following appointment is not in the Jurisdiction of President?  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"Chief justice of India",
+		"Chairman of finance commission",
+		"Chief of army",
+		"Speaker of Lok Sabha"
+		]
+	},
+	{
+	numb: 14,
+	question: 'President can forward his resignation to whom?  ' ,
+	answer: 'Vice-president' ,
+	options: [
+		"Speaker of Lok Sabha",
+		"Prime Minister",
+		"Vice-president",
+		"Chief justice of supreme court"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following appointments are not made by President of India?  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"Speaker of Lok Sabha",
+		"Chief justice of India",
+		"Chief of air force",
+		"Chief of army"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The second most senior office in the country is of-  ' ,
+	answer: 'Office of the Vice President of India' ,
+	options: [
+		"Office of the President of India",
+		"Office of the Prime Minister of India",
+		"Office of the Vice President of India",
+		"Office of the Chief Justice of India"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Attorney General of India has the right to audience in-  ' ,
+	answer: 'any Court of law within the territory of India' ,
+	options: [
+		"any Session Court",
+		"High Court",
+		"Supreme Court",
+		"any Court of law within the territory of India"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Who has served maximum time as the Prime Minister of India?  ' ,
+	answer: 'Jawaharlal Nehru' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Indira Gandhi",
+		"Manmohan Singh",
+		"Lal Bahadur Shastri"
+		]
+	},
+	{
+	numb: 19,
+	question: 'According to Article-75(3) of the Constitution of India the Council of Ministers are collectively responaible to the-  ' ,
+	answer: 'Lok Sabha' ,
+	options: [
+		"President",
+		"Parliament",
+		"Lok Sabha",
+		"Rajya Sabha"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following statement is not correct?  ' ,
+	answer: 'When Vice-President acts as the President, the duties of President are performed by a person nominated by President in consultation with Prime Minister' ,
+	options: [
+		"Vice-President is the chairman of Rajya Sabha",
+		"Vice-President of India acts as President at the time of a vacancy is occurred suddenly",
+		"While acting as President, Vice-president does not perform the duties of the office of",
+		"When Vice-President acts as the President, the duties of President are performed by a person nominated by President in consultation with Prime Minister"
+		]
+	},
+	{
+	numb: 21,
+	question: 'How many maximum terms, a person can serve as Prime Minister of India?  ' ,
+	answer: 'No Limit' ,
+	options: [
+		"3",
+		"5",
+		"7",
+		"No Limit"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who is the chairman of planning commission?  ' ,
+	answer: 'Prime Minister' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Finance Minister",
+		"Vice President"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The Attorney General of India has the power to appear in-  ' ,
+	answer: 'Any Court in India' ,
+	options: [
+		"Supreme Court",
+		"Any High Court",
+		"Any Session Court",
+		"Any Court in India"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who is the Supreme Civil Officer of Central Government-  ' ,
+	answer: 'Cabinet Secretary' ,
+	options: [
+		"Attorney General",
+		"Cabinet Secretary",
+		"Home Secretary",
+		"Principle Secretary of Prime Minister"
+		]
+	},
+	{
+	numb: 25,
+	question: 'For whom, the Comptroller and Auditor General of India works as a friend, philosopher and guide?  ' ,
+	answer: 'Public Accounts Committee' ,
+	options: [
+		"Public Accounts Committee",
+		"Estimates Committee",
+		"Finance Ministry",
+		"Committee on Public Undertakings"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The Vice President of India is elected by-  ' ,
+	answer: 'The members of Parliament' ,
+	options: [
+		"The members of Parliament",
+		"Members of Rajya Sabha",
+		"Elected members of Parliament",
+		"Members of State Legislature and Parliament"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which among the following is not appointed by the President of India?  ' ,
+	answer: 'Vice President of India' ,
+	options: [
+		"Vice President of India",
+		"Judge of Supreme Court",
+		"Attorney General of India",
+		"Chief Justice of India"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who is the first law officer of the country?  ' ,
+	answer: 'Attorney General' ,
+	options: [
+		"Chief Justice of India",
+		"Attorney General",
+		"Law Minister",
+		"Solicitor General"
+		]
+	},
+	{
+	numb: 29,
+	question: 'What is the retirement age of the Prime Minister of India?  ' ,
+	answer: 'No Limit' ,
+	options: [
+		"60 years",
+		"70 years",
+		"80 years",
+		"No Limit"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The Comptroller and Auditor General of India acts as the chief accountant and auditor for the-  ' ,
+	answer: 'State Government' ,
+	options: [
+		"Union Government",
+		"State Government",
+		"Union and State Governments",
+		"Neither Union nor State Governments"
+		]
+	},
+]</script><script src="./script.js"></script></html>

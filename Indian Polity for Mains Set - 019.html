@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 019'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following comes under the territory of India?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"States",
+		"Union Territories",
+		"Any other area for the time being included in the territory of India",
+		"All of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'How many members of the Rajya Sabha are nominated by the President?  ' ,
+	answer: '12' ,
+	options: [
+		"25",
+		"16",
+		"12",
+		"18"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The 41st Amendment Act, 1976 raised the retirement age of members of State Public Service Commission and Joint Public Service Commission from 60 10?  ' ,
+	answer: '62' ,
+	options: [
+		"62",
+		"65",
+		"67",
+		"70"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who said the following words about the Preamble of Indian Constitution? The Preamble is the most precious part of the Constitution. It is the Soul of the Constitution. It is the key to the Constitution. It is a jewel set in the Constitution. It is a proper yardstick with which one can measure the worth of the constitution.  ' ,
+	answer: 'Pandit Thakur Das Bhargava' ,
+	options: [
+		"Sir Alladi Krishnaswami Iyer",
+		"Jawaharlal Nehru",
+		"Pandit Thakur Das Bhargava",
+		"K. M. Munshi"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The recommendations of the Simon Commission were incorporated in which of the following?  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Government of India Act, 1935",
+		"Mountbatten Plan",
+		"Indian Independence Act, 1947",
+		"August Offer"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which Article states that there shall be a council of ministers with the Prime Minister at the head to aid and advise the President?  ' ,
+	answer: 'Article 74' ,
+	options: [
+		"Article 73",
+		"Article 74",
+		"Article 75",
+		"Article 76"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following is not the recommendation of the Simon Commission?  ' ,
+	answer: 'Discontinuation of communal electorate' ,
+	options: [
+		"Abolition of dyarchy",
+		"Extension of responsible government in the provinces",
+		"Establishment of federation of British India and princely states",
+		"Discontinuation of communal electorate"
+		]
+	},
+	{
+	numb: 8,
+	question: 'In which year did the Supreme Court declare the National Judicial Appointments Commission (NJAC) Act unconstitutional and void?  ' ,
+	answer: '2015' ,
+	options: [
+		"2010",
+		"2013",
+		"2015",
+		"2018"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The members of which of the following can be appointed as ministers?1. State Legislative Assembly2. State Legislative Council3. Panchayat4. MunicipalitySelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1, 2 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who appoints the parliamentary secretaries?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Governor",
+		"President",
+		"Chief Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Right to property is include in which part of Indian Constitution?  ' ,
+	answer: 'Part XII' ,
+	options: [
+		"Part III",
+		"Part X",
+		"Part XII",
+		"Part XIV"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which Schedules contain the provisions regarding administration of Scheduled areas and Tribal areas?  ' ,
+	answer: '5th and 6th Schedules' ,
+	options: [
+		"4th and 5th Schedules",
+		"5th and 6th Schedules",
+		"6th and 7th Schedules",
+		"5th and 7th Schedules"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following persons are eligible for getting free legal services?1. Women and children2. Members of SC/ST3. Farmers whose annual income does not exceed 5 lakhs.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 1 & 2",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Gram Nyayalaya exercise the power of?1. Civil Court2. Criminal CourtSelect the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 15,
+	question: 'On which date was the resolution for giving effect to Constitution of India adopted?  ' ,
+	answer: '22nd January, 1947' ,
+	options: [
+		"21st March, 1946",
+		"22 January, 1946",
+		"20th February, 1947",
+		"22nd January, 1947"
+		]
+	},
+	{
+	numb: 16,
+	question: 'What was the original strength of Supreme Court of India?  ' ,
+	answer: '8' ,
+	options: [
+		"8",
+		"12",
+		"15",
+		"20"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following is not a source from which the Speaker of the Lok Sabha derives his powers and duties?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Constitution of India",
+		"President of India",
+		"Rules of Procedure and Conduct of Business of Lok Sabha",
+		"Parliamentary Conventions"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which act of Parliament abolished the Jammu and Kashmir Legislative Council?  ' ,
+	answer: 'J & K Reorganisation Act, 2019' ,
+	options: [
+		"J & K Reorganisation Act, 2017",
+		"J & K Reorganisation Act, 2018",
+		"J & K Reorganisation Act, 2019",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following is not appointed by the President of India?  ' ,
+	answer: 'Vice-President' ,
+	options: [
+		"Prime Minister",
+		"Chief Election Commissioner",
+		"Vice-President",
+		"Governor"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following are one of the authorities of municipal corporation?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"The Council",
+		"The Standing Committees",
+		"The Municipal Commissioner",
+		"All of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following does not come under Fundamental Rights of the Constitution of India?  ' ,
+	answer: 'Equal Pay for Equal Work' ,
+	options: [
+		"Right to Freedom of Religion",
+		"Right Against Exploitation",
+		"Equal Pay for Equal Work",
+		"Equality Before Law"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The pension of a retired judge of High Court is charged on:  ' ,
+	answer: 'Consolidated Fund of India' ,
+	options: [
+		"Consolidated Fund of India",
+		"Consolidated Fund of State",
+		"Contingency Fund of India",
+		"Contingency Fund of State"
+		]
+	},
+	{
+	numb: 23,
+	question: 'To which of the following areas, the provisions of municipality do not apply?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Scheduled areas",
+		"Tribal areas",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 24,
+	question: 'In which of the following cases the Supreme Court has used its power of judicial review?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Kesavananda Bharati case (1973)",
+		"Privy Purses Abolition case (1971)",
+		"Minerva Mills case (1980)",
+		"All of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'What is the minimum number of Judges of the Supreme Court required for hearing any case involving interpretation of the Constitution?  ' ,
+	answer: '5' ,
+	options: [
+		"10",
+		"8",
+		"7",
+		"5"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which article of the Indian Constitution enumerates the Residuary powers of legislation?  ' ,
+	answer: '248' ,
+	options: [
+		"247",
+		"248",
+		"249",
+		"250"
+		]
+	},
+	{
+	numb: 27,
+	question: 'On which date, first meeting of the Constituent Assembly was held?  ' ,
+	answer: '9th December, 1946' ,
+	options: [
+		"9th December, 1946",
+		"9th November, 1946",
+		"26th December, 1946",
+		"26th November, 1946"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who can make regulations for the peace, progress good government of the Tuensang district under Article 371 A of the Constitution?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Parliament",
+		"Governor",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Against which judge of Supreme Court the first case of impeachment initiated?  ' ,
+	answer: 'V. Ramaswami' ,
+	options: [
+		"V. Ramaswami",
+		"Arun Mishra",
+		"Uday Umesh Lalit",
+		"Sanjay Kishan Kaul"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who has the power to appoint the officers and servants of the Supreme Court?  ' ,
+	answer: 'Chief Justice of India' ,
+	options: [
+		"Chief Justice of India",
+		"Parliament",
+		"Prime Minister",
+		"President"
+		]
+	},
+]</script><script src="./script.js"></script></html>

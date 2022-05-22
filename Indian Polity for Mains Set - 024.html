@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 024'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following acts led to the formation of State Information Commission?  ' ,
+	answer: 'Right to Information Act of 2005' ,
+	options: [
+		"Right to Information Act of 2005",
+		"Right to Information Act of 2010",
+		"Right to Information Act of 2012",
+		"Right to Information Act of 2015"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following were the reasons for the establishment of Gram Nyayalayas?1. Access to justice by the poor and disadvantaged.2. Law Commission of India in its 114th Report on Gram Nyayalaya suggested establishment of Gram Nyayalayas.3. Justice to the poor at their door step.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Puducherry comes under the jurisdiction of which High Court?  ' ,
+	answer: 'Madras' ,
+	options: [
+		"Karnataka",
+		"Kerala",
+		"Madras",
+		"None of the above"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which article of the constitution authorities the Parliament to prescribe the duties and powers of the CAG in relation to the accounts of the Union and of the states and of any other authority or body?  ' ,
+	answer: 'Article 149' ,
+	options: [
+		"Article 147",
+		"Article 148",
+		"Article 149",
+		"Article 150"
+		]
+	},
+	{
+	numb: 5,
+	question: 'In which year the institution of high court originated in India?  ' ,
+	answer: '1862' ,
+	options: [
+		"1852",
+		"1860",
+		"1862",
+		"1870"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Committee to review the existing Administrative Arrangements for Rural Development and Poverty Alleviation Programmes was constituted under the chairmanship of?  ' ,
+	answer: 'G.V.K. Rao' ,
+	options: [
+		"Ashok Mehta",
+		"G.V.K. Rao",
+		"Balwant Rai",
+		"L M Singhvi"
+		]
+	},
+	{
+	numb: 7,
+	question: 'How much majority is required in each of house of parliament for removal of a High Court judge?  ' ,
+	answer: 'Special majority' ,
+	options: [
+		"Special majority",
+		"Special majority with ratification by half of the states by simple majority",
+		"Simple majority",
+		"Absolute majority"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Who does the Finance Commission make recommendations to with regards to the financial position of the municipalities?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief Minister",
+		"MLA",
+		"Governor",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which schedule of the Wildlife Protection Act, 1972 specifies endemic plants which are prohibited from cultivation and planting?  ' ,
+	answer: 'VI' ,
+	options: [
+		"III",
+		"IV",
+		"V",
+		"VI"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following appoints the chairman and members of the State Administrative Tribunals (SATs)?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Governor",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which document is often referred to as ‘Magna Carta’ of local self-government?  ' ,
+	answer: 'Lord Ripon’s Resolution of 1882' ,
+	options: [
+		"Lord Ripon’s Resolution of 1882",
+		"Lord Mayo’s Resolution of 1870",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 12,
+	question: 'What is the maximum term of chairman of Central Administrative Tribunal (CAT)?  ' ,
+	answer: '5 years' ,
+	options: [
+		"3 years",
+		"4 years",
+		"5 years",
+		"6 years"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What kind of municipalities are provided for in Part IX-A to the Constitution of India?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Nagar panchayat",
+		"Municipal council",
+		"Municipal corporation",
+		"All of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year Central Information Commission was established?  ' ,
+	answer: '2005' ,
+	options: [
+		"2000",
+		"2002",
+		"2005",
+		"2007"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Whose prior recommendation is mandatory for grant of concession for the exploitation of minor minerals by auction under PESA Act?  ' ,
+	answer: 'Gram Sabha' ,
+	options: [
+		"Governor",
+		"State Legislature",
+		"High Court",
+		"Gram Sabha"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The Unique Identification Authority of India was constituted in which year as an attached office under the aegis of Planning Commission?  ' ,
+	answer: '2009' ,
+	options: [
+		"2005",
+		"2007",
+		"2009",
+		"2011"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following Union Territories has a High Court of its own?  ' ,
+	answer: 'Delhi' ,
+	options: [
+		"Jammu & Kashmir",
+		"Lakdhadweep",
+		"Delhi",
+		"Andaman & Nicobar"
+		]
+	},
+	{
+	numb: 18,
+	question: 'From where are the deputy election commissioners drawn?  ' ,
+	answer: 'They drawn from the civil service' ,
+	options: [
+		"They are nominated by the President",
+		"They drawn from the civil service",
+		"They elected by a committee formed for same purpose",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The Clinical Establishments (Registration and Regulation) Act was passed in which year?  ' ,
+	answer: '2010' ,
+	options: [
+		"2010",
+		"2011",
+		"2012",
+		"2013"
+		]
+	},
+	{
+	numb: 20,
+	question: 'How many languages have been granted classical language status?  ' ,
+	answer: '6' ,
+	options: [
+		"5",
+		"6",
+		"7",
+		"8"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which committee has been constituted to administer and implement the legal services programme in India?  ' ,
+	answer: 'Supreme Court Legal Services Committee' ,
+	options: [
+		"CJI Legal Services Committee",
+		"Supreme Court Legal Services Committee",
+		"High Court Legal Services Committee",
+		"Legal Services Committee"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following can be the chairman of Permanent Lok Adalat?1. A person has been a district judge2. A person who has held the post of additional district judge3. A person who has held judicial office higher in rank than that of the district judgeSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which article of the constitution states the tenure of the members of the defence services, the civil services of the Centre and the all-India services?  ' ,
+	answer: 'Article 310' ,
+	options: [
+		"Article 310",
+		"Article 311",
+		"Article 312",
+		"Article 313"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The Indian Forest Act was enacted in which year?  ' ,
+	answer: '1927' ,
+	options: [
+		"1927",
+		"1950",
+		"1967",
+		"1986"
+		]
+	},
+	{
+	numb: 25,
+	question: 'How many states have unicameral system?  ' ,
+	answer: '22' ,
+	options: [
+		"20",
+		"22",
+		"24",
+		"26"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Constitution has fixed the maximum and the minimum limits of state legislative councils but who decides the actual strength of a Council?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Parliament",
+		"State Legislative Assembly",
+		"Governor"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who compiles and maintains the accounts of state governments?  ' ,
+	answer: 'Comptroller and Auditor Genera of India' ,
+	options: [
+		"State government",
+		"State Ministry of Finance",
+		"Union Cabinet",
+		"Comptroller and Auditor Genera of India"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following are the functions performed by Chief Vigilance Officer (CVO)?1. Collecting intelligence about corrupt practices of the employees of his organisation.2. Investigating verifiable allegations reported to him.3. Processing investigation reports for further consideration of the disciplinary authority concerned.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 29,
+	question: 'TheIndian Evidence Act was enacted in which year?  ' ,
+	answer: '1872' ,
+	options: [
+		"1872",
+		"1880",
+		"1921",
+		"1949"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which article empowers the Parliament to provide for the establishment of a Central University in the state of Andhra Pradesh?  ' ,
+	answer: 'Article 371 E' ,
+	options: [
+		"Article 371 A",
+		"Article 371 C",
+		"Article 371 E",
+		"Article 371 F"
+		]
+	},
+]</script><script src="./script.js"></script></html>

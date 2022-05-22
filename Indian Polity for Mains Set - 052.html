@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 052'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which article states that the Goa Legislative Assembly is to consist of not less than 30 members?  ' ,
+	answer: '371-I' ,
+	options: [
+		"371-F",
+		"371-G",
+		"371-H",
+		"371-I"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which among the following Article deals with the rights of citizenships of certain persons of Indian origin residing outside of India?  ' ,
+	answer: 'Article 8' ,
+	options: [
+		"Article 6",
+		"Article 7",
+		"Article 8",
+		"Article 9"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The “Bill of Rights” and “Judicial Review” are features of which of the following countries constitution?  ' ,
+	answer: 'USA' ,
+	options: [
+		"USA",
+		"UK",
+		"Germany",
+		"Australia"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who among the following presidents of India was the first Chief Minister of Modern states in India?  ' ,
+	answer: 'Neelam Sanjeeva Reddy' ,
+	options: [
+		"Dr. Shankar Dayal Sharma",
+		"Neelam Sanjeeva Reddy",
+		"Dr. Rajendra Prasad",
+		"Dr. BD Jatti"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who can dissolve the Lok Sabha prior to completion of its tenure?  ' ,
+	answer: 'President on recommendation of Council of Ministers' ,
+	options: [
+		"President on recommendation of Council of Ministers",
+		"President on recommendation of the Speaker",
+		"Speaker",
+		"President on his own will"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who said that the “The Cabinet is the pivot around which the whole political machinery revolves”?  ' ,
+	answer: 'Sir John Marriott' ,
+	options: [
+		"Barker",
+		"Bagehot",
+		"Sir Ivor Jennings",
+		"Sir John Marriott"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following committee made a recommendation that election commission should be a three member body ?  ' ,
+	answer: 'Tarkunde Committee' ,
+	options: [
+		"Tarkunde Committee",
+		"Ashok Mehta Committee",
+		"Jeevan Reddy Committee",
+		"JP Committee"
+		]
+	},
+	{
+	numb: 8,
+	question: 'At the time of commencement of Indian constitution, the all states of Union of India were put in four parts A, B, C, D, later reorganized and reduced to 2 categories ‘states and union territories’ in 1956. Which of the following was only one member of D?  ' ,
+	answer: 'Andaman & Nicobar Islands' ,
+	options: [
+		"Vindhya Pradesh",
+		"Bombay",
+		"Madras",
+		"Andaman & Nicobar Islands"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who was the interim president of First Constituent assembly ?  ' ,
+	answer: 'Sachidanand Sinha' ,
+	options: [
+		"Dr. Rajendra Prasad",
+		"Sachidanand Sinha",
+		"BR Ambedkar",
+		"Jawharlal Nehru"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who appoints the Chief Information Commissioner of the Central Information Commission?  ' ,
+	answer: 'President' ,
+	options: [
+		"Rajya Sabha",
+		"A committee of Lok Sabha",
+		"President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who can appoint a commission to report on the administration of the scheduled areas and the welfare of the scheduled tribes in the states?  ' ,
+	answer: 'President' ,
+	options: [
+		"Supreme Court",
+		"President",
+		"Governor",
+		"Parliament"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following committees of parliament considers the question of contempt of the House?  ' ,
+	answer: 'Committee on privileges' ,
+	options: [
+		"Select Committee",
+		"Committee on privileges",
+		"Committee on petitions",
+		"None of them"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What is the maximum period for which an M.P. can be absent in the House of people?  ' ,
+	answer: 'Two months' ,
+	options: [
+		"Two months",
+		"Six months",
+		"Three months",
+		"One year"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who is empowered to direct that any particular act of Parliament or the state legislature does not apply to a scheduled area or apply with specified modifications and exceptions?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Parliament",
+		"President",
+		"Rajya Sabha",
+		"Governor"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which among the following comprises the motto of the CBI?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Impartiality",
+		"Industry",
+		"Integrity",
+		"All of the above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'A panchayat constituted upon the dissolution of a panchayat before the expiration of its duration continues for how much time?  ' ,
+	answer: 'Only for the remainder of the period for which the dissolved panchayat would have continued had it not been so dissolved' ,
+	options: [
+		"Only for the remainder of the period for which the dissolved panchayat would have continued had it not been so dissolved",
+		"5 years",
+		"Term is decided by the Governor",
+		"Term is decided by the state legislature"
+		]
+	},
+	{
+	numb: 17,
+	question: 'By which article the President is authorized to provide for the creation of a committee of the Manipur Legislative Assembly consisting of themembers elected from the Hill Areas of the state?  ' ,
+	answer: 'Article 371 C' ,
+	options: [
+		"Article 371 A",
+		"Article 371 B",
+		"Article 371 C",
+		"Article 371 D"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The Article 371-F contains special provisions with respect to which state?  ' ,
+	answer: 'Sikkim' ,
+	options: [
+		"Sikkim",
+		"Nagaland",
+		"Manipur",
+		"Andhra Pradesh"
+		]
+	},
+	{
+	numb: 19,
+	question: 'How many members of Rajya Sabha are nominated by President of India?  ' ,
+	answer: '12' ,
+	options: [
+		"2",
+		"10",
+		"12",
+		"15"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who said that the “The Cabinet is the central directing instrument of Government”?  ' ,
+	answer: 'L.S. Amery' ,
+	options: [
+		"Gladstone",
+		"Barker",
+		"L.S. Amery",
+		"Sir Ivor Jennings"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following is not a Fundamental Duty?  ' ,
+	answer: 'To protect monuments and places of public importance' ,
+	options: [
+		"To protect monuments and places of public importance",
+		"To respect National Anthem",
+		"To protect and improve the natural environment",
+		"To safeguard public property"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following statements are true about Ombudsman system?  ' ,
+	answer: 'In New Zealand, judiciary is outside the purview of ombudsman.' ,
+	options: [
+		"In New Zealand, judiciary is outside the purview of ombudsman.",
+		"In Sweden, judiciary is outside the purview of ombudsman.",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 23,
+	question: 'How many states are part of the North eastern Council ?  ' ,
+	answer: '8' ,
+	options: [
+		"5",
+		"6",
+		"7",
+		"8"
+		]
+	},
+	{
+	numb: 24,
+	question: 'By which amendment of the Constitution, Article 323A (Administrative tribunals) & Article 323B (Tribunals for other matters) in a new part XIV A was inserted in the Indian Constitution?  ' ,
+	answer: 'Constitution 42nd Amendment Act' ,
+	options: [
+		"Constitution 40th Amendment Act",
+		"Constitution 41st Amendment Act",
+		"Constitution 42nd Amendment Act",
+		"Constitution 43rd Amendment Act"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Under the Constitution of India, which one of the following is NOT a specific ground on which the state can place restriction on freedom of religion?  ' ,
+	answer: 'Social Justice' ,
+	options: [
+		"Public Order",
+		"Social Justice",
+		"Morality",
+		"Public Health"
+		]
+	},
+	{
+	numb: 26,
+	question: 'What is the tenure of individual Rajya Sabha members?  ' ,
+	answer: '6 years' ,
+	options: [
+		"3 years",
+		"4 years",
+		"5 years",
+		"6 years"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Where is the headquarters of National Biodiversity Authority (NBA)?  ' ,
+	answer: 'Chennai' ,
+	options: [
+		"Chennai",
+		"Hyderabad",
+		"Nasik",
+		"Nagpur"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which act discontinued the appointment to civil services and reservation of posts by the Secretary of State?  ' ,
+	answer: 'Independence of India Act, 1947' ,
+	options: [
+		"Independence of India Act, 1947",
+		"Government of India Act, 1935",
+		"Government of India Act, 1919",
+		"None of the Above"
+		]
+	},
+	{
+	numb: 29,
+	question: 'For how long, a joint sitting of both the houses of Parliament may be convened to consider a bill which was passed by one house and pending in another house?  ' ,
+	answer: '6 Months' ,
+	options: [
+		"3 Months",
+		"6 Months",
+		"9 Months",
+		"12 Months"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which Amendment empowered the president to declare different proclamations of national emergency on different grounds simultaneously?  ' ,
+	answer: '38th Amendment Act, 1975' ,
+	options: [
+		"38th Amendment Act, 1975",
+		"39th Amendment Act, 1975",
+		"40th Amendment Act, 1976",
+		"41st Amendment Act, 1976"
+		]
+	},
+]</script><script src="./script.js"></script></html>

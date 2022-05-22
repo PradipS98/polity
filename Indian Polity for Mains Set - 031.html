@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 031'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which article of the Indian Constitution provides for the office of the advocate general for the states?  ' ,
+	answer: 'Article 165' ,
+	options: [
+		"Article 165",
+		"Article 170",
+		"Article 175",
+		"Article 180"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which Commission was appointed to investigate the circumstances that warranted the declaration of an Emergency in1975?  ' ,
+	answer: 'Shah Commission' ,
+	options: [
+		"Shah Commission",
+		"Khosla Commission",
+		"Sarkaria Commission",
+		"Nanavati Commission"
+		]
+	},
+	{
+	numb: 3,
+	question: 'What is the strength of judges of Supreme Court at present?  ' ,
+	answer: '34' ,
+	options: [
+		"29",
+		"31",
+		"34",
+		"35"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In which year was the Reserve Bank of India established?  ' ,
+	answer: '1935' ,
+	options: [
+		"1934",
+		"1935",
+		"1949",
+		"1950"
+		]
+	},
+	{
+	numb: 5,
+	question: 'When was the National Commission for Minorities established?  ' ,
+	answer: '1992' ,
+	options: [
+		"1992",
+		"1993",
+		"1994",
+		"1995"
+		]
+	},
+	{
+	numb: 6,
+	question: 'How many times delimitation commissions have been set up so far?  ' ,
+	answer: '4' ,
+	options: [
+		"2",
+		"4",
+		"6",
+		"8"
+		]
+	},
+	{
+	numb: 7,
+	question: 'First general election in India on the basis of adult franchise was held in which year?  ' ,
+	answer: '1952' ,
+	options: [
+		"1949",
+		"1950",
+		"1951",
+		"1952"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What are the financial powers of the Governor amongst the following options?  ' ,
+	answer: 'All of them' ,
+	options: [
+		"He sees that the Annual Financial Statement is laid before the state legislature",
+		"No demand for a grant can be made except on his recommendation",
+		"He can make advances out of the Contingency Fund of the state to meet any unforeseen expenditure.",
+		"All of them"
+		]
+	},
+	{
+	numb: 9,
+	question: 'An appeal in criminal cases of Gram Nyayalaya lies to?  ' ,
+	answer: 'Court of Session' ,
+	options: [
+		"Supreme Court",
+		"High Court",
+		"District Court",
+		"Court of Session"
+		]
+	},
+	{
+	numb: 10,
+	question: 'As per the Supreme Court guidelines, what category of petitions are to be entertained as Public Interest Litigation?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Neglected children",
+		"Petitions from riot-victims",
+		"Petition against harassment by police",
+		"All of the above"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who has the power to remove the President of India?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"Lok Sabha",
+		"Rajya Sabha",
+		"Chief Justice of India"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following appointments are made by the Governor?1. He appoints the chief minister and other ministers.2. He appoints the state election commissioner.3. He appoints the advocate general of a state.4. He appoints the chairman of the state public service commission.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 and 4' ,
+	options: [
+		"Only 1 and 2",
+		"Only 2 and 4",
+		"Only 2 and 3",
+		"1, 2, 3 and 4"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What is the maximum term of Comptroller and Auditor General of India (CAG)?  ' ,
+	answer: '6 years' ,
+	options: [
+		"2 years",
+		"3 years",
+		"5 years",
+		"6 years"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who launched Systematic Voter’s Education and Electoral Participation (SVEEP)?  ' ,
+	answer: 'Election Commission' ,
+	options: [
+		"Election Commission",
+		"President",
+		"Prime Minister",
+		"Ministry of Parliamentary Affairs"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who was the chairman of the first Finance Commission?  ' ,
+	answer: 'K.C. Neogy' ,
+	options: [
+		"K. Santhanam",
+		"A.K. Chanda",
+		"K.C. Neogy",
+		"Mahavir Tyagi"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who has the right to make provisions for the incorporation, regulation and winding-up of co-operative societies?  ' ,
+	answer: 'State Legislature' ,
+	options: [
+		"Lok Sabha",
+		"Rajya Sabha",
+		"Parliament",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 17,
+	question: 'In which states, lokayuktas are supposed to investigate corruption and not maladministration?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Himachal Pradesh",
+		"Andhra Pradesh",
+		"Gujarat",
+		"All of the above"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following High Courts have provision for intra-court appeals?1. Calcutta2. Bombay3. Madras4. DelhiSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 4",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Criminal conspiracy is a distinct and substantive offence added to the Indian Penal Code in which year?  ' ,
+	answer: '1913' ,
+	options: [
+		"1912",
+		"1913",
+		"1914",
+		"1915"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following is the essential element of crime?1. Actus Reus (Guilty act)2. Mens Rea (Guilty mind)Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Forwards Market Commission is which type of body?  ' ,
+	answer: 'Statutory body' ,
+	options: [
+		"Statutory body",
+		"Constitutional body",
+		"Executive body",
+		"Legislative body"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which Article of the Constitution deals with the definition of money bills?  ' ,
+	answer: 'Article 110' ,
+	options: [
+		"Article 109",
+		"Article 110",
+		"Article 112",
+		"Article 113"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The CAG’s (Duties, Powers and Conditions of Service) Act was amended in which year to separate accounts from audit in the Central government?  ' ,
+	answer: '1976' ,
+	options: [
+		"1975",
+		"1976",
+		"1977",
+		"1978"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which committee recommended the establishment of a three-tier panchayati raj system?  ' ,
+	answer: 'Balwant Rai Mehta Committee' ,
+	options: [
+		"Study Team on Panchayati Raj Administration",
+		"Balwant Rai Mehta Committee",
+		"Ashok Mehta Committee",
+		"G.V.K. Rao Committee"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which Article states that It shall be the duty of the Chief Minister to communicate to the governor of the state all decisions of the council of ministers relating to the administration of the affairs of the state and proposals for legislation?  ' ,
+	answer: 'Article 167' ,
+	options: [
+		"Article 157",
+		"Article 167",
+		"Article 177",
+		"Article 187"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which Constitutional Amendment changed the procedure of election of the vice-president?  ' ,
+	answer: '11th Amendment Act' ,
+	options: [
+		"1st Amendment Act",
+		"7th Amendment Act",
+		"9th Amendment Act",
+		"11th Amendment Act"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which part of the Constitution deals with the organisation, composition, duration, officers, procedures, privileges, powers and so on of the Parliament?  ' ,
+	answer: 'Part V' ,
+	options: [
+		"Part IV",
+		"Part V",
+		"Part VI",
+		"Part VII"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which article provides for free legal aid to the poor and weaker sections of the society and ensures justice for all?  ' ,
+	answer: 'Article 39A' ,
+	options: [
+		"Article 38",
+		"Article 39",
+		"Article 39A",
+		"Article 40"
+		]
+	},
+	{
+	numb: 29,
+	question: 'According to which Constitutional Amendment defectors have no more protection on grounds of splits?  ' ,
+	answer: '91st' ,
+	options: [
+		"91st",
+		"96th",
+		"99th",
+		"100th"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who wrote the book “The Spirit of Laws”?  ' ,
+	answer: 'Montesquieu' ,
+	options: [
+		"Machiavelli",
+		"Montesquieu",
+		"Thomas Hobbes",
+		"Jean-Jacques Rousseau"
+		]
+	},
+]</script><script src="./script.js"></script></html>

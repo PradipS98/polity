@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 003'
+let questions = [
+	{
+	numb: 1,
+	question: 'What is the basis of recognition of minorities in Indian constitution?  ' ,
+	answer: 'Religion' ,
+	options: [
+		"Religion",
+		"Caste",
+		"Ratio of the community to total population",
+		"Colour"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Article-31(C) of the Indian Constitution "Saving of laws giving effect to certain directive principles" deals with?  ' ,
+	answer: 'The fundamental rights of the Indian Citizen' ,
+	options: [
+		"The fundamental rights of the Indian Citizen",
+		"The State Government",
+		"The Union Government",
+		"The directive principles of state policy"
+		]
+	},
+	{
+	numb: 3,
+	question: 'What is the literal meaning of &apos;Certiorari&apos;?  ' ,
+	answer: 'To be certified (or) to be informed' ,
+	options: [
+		"We command",
+		"To have the body of",
+		"To forbid",
+		"To be certified (or) to be informed"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which Article of the Constitution of India lays down that any section of the citizens shall have the right to conserve its distinct language, script or culture?  ' ,
+	answer: 'Article 29' ,
+	options: [
+		"Article 21",
+		"Article 29",
+		"Article 39",
+		"Article 49"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The citizenship Act 1955 prescribes way of losing citizenship whether acquired under the Act or prior to it under the Constitution, viz :  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Renunciation",
+		"Termination",
+		"Deprivation",
+		"All of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Fundamental duties are included in the Indian Constitution by the Amendment-  ' ,
+	answer: '42nd' ,
+	options: [
+		"44th",
+		"42nd",
+		"26th",
+		"25th"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Under which of the following article of Indian constitution, the fundamental rights of defence forces&apos; personnel can be restricted specially?  ' ,
+	answer: 'Article-33' ,
+	options: [
+		"Article-21",
+		"Article-25",
+		"Article-33",
+		"Article-19"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Article-31(B) of the Indian Constitution "Validation of certain Acts and Regulations" deals with the-  ' ,
+	answer: 'Fundamental rights of the Indian Citizen' ,
+	options: [
+		"State Government",
+		"Union Government",
+		"Directive Principles of State Policy",
+		"Fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The concept of martial law has been borrowed in India from  ' ,
+	answer: 'The English Common Law' ,
+	options: [
+		"Government of India Act, 1935",
+		"US Constitution",
+		"Canadian Constitution",
+		"The English Common Law"
+		]
+	},
+	{
+	numb: 10,
+	question: 'By which act a nation wince network to provide free and competent legal aid to the poor and to organize lok adalats for promoting equal justice has been established  ' ,
+	answer: 'The Legal Services Authorities Act (1987)' ,
+	options: [
+		"The Legal Services Authorities Act (1987)",
+		"The Protection of Civil Rights Act, 1955",
+		"Prevention of Atrocities Act, 1989",
+		"None of these"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The writ which literally means ‘by what authority or warrant’ and is issued by the court to enquire the legality of a claim of a person to public office is called  ' ,
+	answer: 'Quo Warranto' ,
+	options: [
+		"Ad hoc",
+		"Quo Warranto",
+		"Statute",
+		"Sub judice"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who is the custodian of the implementation of the fundamental rights?  ' ,
+	answer: 'Both A and B' ,
+	options: [
+		"High courts",
+		"Supreme court",
+		"All courts",
+		"Both A and B"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The Administrative Head of the Cabinet Secretariat is  ' ,
+	answer: 'Cabinet Secretary' ,
+	options: [
+		"Cabinet Minister",
+		"The Prime Minister",
+		"Cabinet Secretary",
+		"The President"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Article-31(A) of the Indian Constitution "Saving of Laws providing for acquisition of estates etc" deals with?  ' ,
+	answer: 'The fundamental rights of the Indian Citizen' ,
+	options: [
+		"The State Government",
+		"The Union Government",
+		"The fundamental rights of the Indian Citizen",
+		"The Directive Principles of State Policy"
+		]
+	},
+	{
+	numb: 15,
+	question: 'According to Indian constitution, Right to life is-  ' ,
+	answer: 'Fundamental right' ,
+	options: [
+		"Political right",
+		"Economic right",
+		"Fundamental right",
+		"Religious right"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Article-21 of the Indian Constitution "Protection of life and personal liberty" deals with?  ' ,
+	answer: 'The fundamental rights of the Indian Citizen' ,
+	options: [
+		"The Union Government",
+		"The fundamental rights of the Indian Citizen",
+		"The State Government",
+		"The Directive Principles of State Policy"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The Union Executive consists of  ' ,
+	answer: 'All of above' ,
+	options: [
+		"The President, and the Council of Ministers",
+		"The Prime Minister",
+		"Attorney General of India",
+		"All of above"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Prohibitation of traffic in human being and forced labour is laid down in:  ' ,
+	answer: 'Article 23' ,
+	options: [
+		"Article 23",
+		"Article 33",
+		"Article 63",
+		"Article 83"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which Article specifies the Fundamental Duties of every citizen?  ' ,
+	answer: 'Article-51(A)' ,
+	options: [
+		"Article-80",
+		"Article-343",
+		"Article-51(A)",
+		"Article-356"
+		]
+	},
+	{
+	numb: 20,
+	question: 'No person can be employed in factories or mines unless he is above the age of -  ' ,
+	answer: '14 years' ,
+	options: [
+		"12 years",
+		"14 years",
+		"18 years",
+		"20 years"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The Directive Principles of State Policy are enshrined in  ' ,
+	answer: 'Part IV of the Constitution' ,
+	options: [
+		"Part V of the Constitution",
+		"Part VI of the Constitution",
+		"Part III of the Constitution",
+		"Part IV of the Constitution"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Article 24 of the Indian Constitution "Prohibition of employment of children in factories etc" deals with?  ' ,
+	answer: 'The fundamental rights of the Indian citizen' ,
+	options: [
+		"The fundamental rights of the Indian citizen",
+		"The Union Government",
+		"The State Government",
+		"The Directive Principles of State Policy"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Article 27 of the Indian Constitution "Freedom as to payment of taxes for promotion of any particular religion" deals with?  ' ,
+	answer: 'The fundamental rights of the Indian Citizen' ,
+	options: [
+		"The Union Government",
+		"The State Government",
+		"The Directive Principles of State Policy",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 24,
+	question: 'In which of the following articles the interests of minorities are covered?  ' ,
+	answer: '29' ,
+	options: [
+		"14",
+		"19",
+		"29",
+		"32"
+		]
+	},
+	{
+	numb: 25,
+	question: 'When were the fundamental duties inserted in Indian constitution?  ' ,
+	answer: '1976' ,
+	options: [
+		"1971",
+		"1972",
+		"1975",
+		"1976"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Article 20 of the Indian Constitution "Protection inrespect of conviction for offences" deals with?  ' ,
+	answer: 'The fundamental rights of the Indian Citizen' ,
+	options: [
+		"The fundamental rights of the Indian Citizen",
+		"The Union Government",
+		"The State Government",
+		"The Directive Principles of State Policy"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The provisions of financial emergency have been laid down in:  ' ,
+	answer: 'Article 360' ,
+	options: [
+		"Article 351",
+		"Article 360",
+		"Article 377",
+		"Article 370"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Article 19 of the Indian Constitution provides-  ' ,
+	answer: '6 freedoms' ,
+	options: [
+		"6 freedoms",
+		"7 freedoms",
+		"8 freedoms",
+		"9 freedoms"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Article-19 of the Indian Constitution "Protection of certain rights regarding freedom of speech etc" deals with?  ' ,
+	answer: 'The fundamental rights of the Indian Citizen' ,
+	options: [
+		"The Union Government",
+		"The State Government",
+		"The directive principles of state policy",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the followings issues a writ?  ' ,
+	answer: 'Any High Court and Supreme Court' ,
+	options: [
+		"Any High Court and Supreme Court",
+		"Any Court",
+		"District Court",
+		"Administrative Tribunal"
+		]
+	},
+]</script><script src="./script.js"></script></html>

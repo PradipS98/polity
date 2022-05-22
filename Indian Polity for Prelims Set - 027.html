@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 027'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following is not a good argument in favour of democracy?1. Democracy enhances the dignity of citizensII. Democracies are more prosperous than othersIII. Democracies resolve conflicts in a better way  ' ,
+	answer: 'Only II' ,
+	options: [
+		"I and II",
+		"Only III",
+		"Only II",
+		"II and III"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Marathi is the official language of-  ' ,
+	answer: 'Dadra and Nagar Haveli' ,
+	options: [
+		"Chandigarh",
+		"Dadra and Nagar Haveli",
+		"Daman and Diu",
+		"Delhi"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The National Green Tribunal looks after the cases related with-  ' ,
+	answer: 'Environment and Forest Conservation' ,
+	options: [
+		"Criminal Cases",
+		"Cases related to conservation and security of historical sites",
+		"Civil Cases",
+		"Environment and Forest Conservation"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which was the first state in India to conduct the Election during delimitation-  ' ,
+	answer: 'Karnataka' ,
+	options: [
+		"Tamilnadu",
+		"Andhra Pradesh",
+		"Kerala",
+		"Karnataka"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who is the Chairman of National Integration Council-  ' ,
+	answer: 'Prime Minister' ,
+	options: [
+		"Prime Minister",
+		"Finance Minister",
+		"Home Minister",
+		"President of India"
+		]
+	},
+	{
+	numb: 6,
+	question: '_______ recommended change in the structure and working of BCCI.  ' ,
+	answer: 'Lodha committee' ,
+	options: [
+		"Lodha committee",
+		"Parekh committee",
+		"Sena committee",
+		"Akhil committee"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who are included in National Development Council-  ' ,
+	answer: 'All Central Cabinet Ministers and Chief Ministers of States' ,
+	options: [
+		"All members of Central Cabinet",
+		"Chief Minister of all States",
+		"All members of Cabinet of States and Centre",
+		"All Central Cabinet Ministers and Chief Ministers of States"
+		]
+	},
+	{
+	numb: 8,
+	question: 'According to United Nations, which is not a right under Child Rights-  ' ,
+	answer: 'Marriage' ,
+	options: [
+		"Clean drinking water",
+		"Better life style",
+		"Education",
+		"Marriage"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Since Independence, India has been ruled by the Indian National Congress for how many years?  ' ,
+	answer: '49' ,
+	options: [
+		"18",
+		"26",
+		"39",
+		"49"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which was the first non-communist country to recognize communist China in 1950?  ' ,
+	answer: 'India' ,
+	options: [
+		"Pakistan",
+		"India",
+		"Sri Lanka",
+		"Nepal"
+		]
+	},
+	{
+	numb: 11,
+	question: '"The soul of India lives in villages" whose statement is this-  ' ,
+	answer: 'Mahatma Gandhi' ,
+	options: [
+		"Vinobha Bhave",
+		"Jay Prakash Narayan",
+		"Jawahr Lal Nehru",
+		"Mahatma Gandhi"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who was the second Chief Election Commissioner of India-  ' ,
+	answer: 'K.V.K.Sundaram' ,
+	options: [
+		"Sukumar Sen",
+		"S.P.Sen Verma",
+		"K.V.K.Sundaram",
+		"T.Swaminathan"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The President of USA appoints the judges of Supreme Court, how-  ' ,
+	answer: 'Approval of Senate' ,
+	options: [
+		"Approval of Senate",
+		"At his discretion",
+		"Approval of House of Representatives",
+		"None of these"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who said &apos;The God, who gave us life, gave us the liberty at the same time&apos;?  ' ,
+	answer: 'Jefferson' ,
+	options: [
+		"Marx",
+		"Plato",
+		"Jefferson",
+		"Locke"
+		]
+	},
+	{
+	numb: 15,
+	question: 'What occurs under direct democracy in Switzerland-  ' ,
+	answer: 'Natural growth' ,
+	options: [
+		"Natural growth",
+		"Disorganized growth",
+		"Artificial growth",
+		"None of these"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who is the father of &apos;Utilitarian School of Thought&apos;?  ' ,
+	answer: 'Bentham' ,
+	options: [
+		"Hegel",
+		"Bentham",
+		"James Mill",
+		"Locke"
+		]
+	},
+	{
+	numb: 17,
+	question: 'As per John Locke, an English philosopher and physician, which is Dot a Natural Right?  ' ,
+	answer: 'Right to Vote' ,
+	options: [
+		"Liberty",
+		"Equality",
+		"Property",
+		"Right to Vote"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The states of India are demanding more autonomy than centre in the areas of-  ' ,
+	answer: 'All of these' ,
+	options: [
+		"Legislative",
+		"Administrative",
+		"Financial",
+		"All of these"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of these languages is generally not spoken in Southern part of India?  ' ,
+	answer: 'Maithili' ,
+	options: [
+		"Telugu",
+		"Konkani",
+		"Maithili",
+		"Malayalam"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Martial law is-  ' ,
+	answer: 'A system of rules that takes effect when a military authority takes control of normal administration of justice' ,
+	options: [
+		"Sudden overthrow of a government illegally",
+		"A system of rules that takes effect when a military authority takes control of normal administration of justice",
+		"Territory under the immediate political control of another state",
+		"None of these"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Konkani is the official language of -  ' ,
+	answer: 'Daman and Diu' ,
+	options: [
+		"Chandigarh",
+		"Dadra and Nagar Haveli",
+		"Daman and Diu",
+		"Delhi"
+		]
+	},
+	{
+	numb: 22,
+	question: ' What is the full form of the Indian Political Party "NCP"?  ' ,
+	answer: 'Nationalist Congress Party' ,
+	options: [
+		"Nationalist Congress Party",
+		"National Congress Party",
+		"National Communist Party",
+		"Nationalist Communist Party"
+		]
+	},
+	{
+	numb: 23,
+	question: 'In which year, there was dominance of one party in India-  ' ,
+	answer: '1977' ,
+	options: [
+		"1971",
+		"1977",
+		"1962",
+		"1967"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Malayalam is the official language of-  ' ,
+	answer: 'Lakshadweep' ,
+	options: [
+		"Puducherry",
+		"Lakshadweep",
+		"Daman and Diu",
+		"Delhi"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Malayalam is the offcial language of-  ' ,
+	answer: 'Kerala' ,
+	options: [
+		"Haryana",
+		"Jharkhand",
+		"Kerala",
+		"Uttarakhand"
+		]
+	},
+	{
+	numb: 26,
+	question: 'A system of rules that takes effect when a military authority takes control of the normal administration of justice is called as-  ' ,
+	answer: 'Martial law' ,
+	options: [
+		"Coup",
+		"Strike",
+		"Martial law",
+		"Political prisoner"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Indian National Congress is a part of which political group?  ' ,
+	answer: 'United Progressive Alliance' ,
+	options: [
+		"United Progressive Alliance",
+		"National Democratic Alliance",
+		"Janata Parivar",
+		"Rashtra Parivar"
+		]
+	},
+	{
+	numb: 28,
+	question: 'What is the name of two chambers of Swiss federal chambers-  ' ,
+	answer: 'National Council and Council of States' ,
+	options: [
+		"Senate and House of representatives",
+		"House of Lords and House of Commons",
+		"National Council and Council of States",
+		"None of these"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following recommended three language formula-  ' ,
+	answer: 'Kothari Commission' ,
+	options: [
+		"Raj Committee",
+		"Rajamannar Committee",
+		"Dutta Committee",
+		"Kothari Commission"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Nationalist Congress Party was founded in-  ' ,
+	answer: '1999' ,
+	options: [
+		"1925",
+		"1955",
+		"1984",
+		"1999"
+		]
+	},
+]</script><script src="./script.js"></script></html>

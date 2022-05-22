@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 020'
+let questions = [
+	{
+	numb: 1,
+	question: 'The lengthiest Constitution of the world is :  ' ,
+	answer: 'the constitution of India' ,
+	options: [
+		"the constitution of India",
+		"the constitution of Ireland",
+		"the constitution of Australia",
+		"the constitution of Japan"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The pardoning power of the president in India as enshrined in the Article 72 of the constitution of India includes :  ' ,
+	answer: 'pardon, commutation, remission, respite, reprieve' ,
+	options: [
+		"remission, respite, reprieve",
+		"pardon, commutation",
+		"pardon, commutation, remission, respite, reprieve",
+		"commutation"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The duties of a chief minister with regard to the furnishing of information to governor are provided in :  ' ,
+	answer: 'Article 167' ,
+	options: [
+		"Article 166",
+		"Article 165",
+		"Article 167",
+		"Article 168       E.   Article 169"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In order to put a check on terrorist activities in India, Terrorist and Disruptive Activities (Prevention) Act (TADA) was passed in :  ' ,
+	answer: '1985' ,
+	options: [
+		"1985",
+		"1989",
+		"1995",
+		"1998"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The president of the constituent assembly of India was:  ' ,
+	answer: 'Dr. Rajendra Prasad.' ,
+	options: [
+		"Dr. Rajendra Prasad.",
+		"Jawahar Lal Nehru",
+		"Sachidanand Sahu",
+		"Hakim Ajmal Khan"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Under which article of the constitution does the governor of state possess the pardoning power?  ' ,
+	answer: 'Article 161.' ,
+	options: [
+		"Article 161.",
+		"Article 162",
+		"Article 163",
+		"Article 164"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The provision to separate the judiciary from the executive in the public services of the state has been given in :  ' ,
+	answer: 'Directive Principles of State Policy' ,
+	options: [
+		"Fundamental Rights",
+		"Fundamental Duties",
+		"Directive Principles of State Policy",
+		"None of the above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The Constitution of India has divided the powers between the Centre and the States in terms of:  ' ,
+	answer: 'The Union List, State List and Concurrent List' ,
+	options: [
+		"Concurrent list",
+		"State list",
+		"The Union List, State List and Concurrent List",
+		"Union list"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The Indian National Congress adopted a resolution to establish a socialistic pattern of society in :  ' ,
+	answer: 'Avadi session in 1955.' ,
+	options: [
+		"Avadi session in 1955.",
+		"Bombay Session of 1953",
+		"Calcutta session of 1957",
+		"Nagpur session of 1959"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The provision of writs as enshrined in the constitution of India is borrowed from:  ' ,
+	answer: 'English law' ,
+	options: [
+		"English law",
+		"Irish law",
+		"Australian law",
+		"Japanese law"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The concept of Procedure established by Law as incorporated in the constitution of India is borrowed from :  ' ,
+	answer: 'Japanese constitution.' ,
+	options: [
+		"Irish constitution",
+		"American constitution",
+		"English constitution",
+		"Japanese constitution."
+		]
+	},
+	{
+	numb: 12,
+	question: 'Article 1 describes India that is Bharat as :  ' ,
+	answer: 'union of states' ,
+	options: [
+		"union of states",
+		"federal state with unitary features",
+		"unitary state with federal features",
+		"federal state"
+		]
+	},
+	{
+	numb: 13,
+	question: 'To be eligible as Vice-president a person should have completed:  ' ,
+	answer: '35 years of age' ,
+	options: [
+		"30 years of age",
+		"20 years of age",
+		"25 years of age",
+		"35 years of age"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The provision of suspension of Fundamental Rights is borrowed from :  ' ,
+	answer: 'Weimer Constitution of Germany.' ,
+	options: [
+		"Weimer Constitution of Germany.",
+		"Australian constitution",
+		"American constitution",
+		"Canadian constitution"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Constitutional Advisor of the Constituent Assembly was :  ' ,
+	answer: 'Sachchidananda Sinha' ,
+	options: [
+		"Sachchidananda Sinha",
+		"B. N. Rao",
+		"Gopalaswamy Ayyangar",
+		"H. N. Kunzru"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The three words which were added in the preamble to the Constitution of India by the 42nd Constitutional Amendment Act 1976 are :  ' ,
+	answer: 'socialist, secular and integrity' ,
+	options: [
+		"socialist, secular and integrity",
+		"sovereign, secular and socialist",
+		"sovereign, republic and democratic",
+		"sovereign, secular and republic"
+		]
+	},
+	{
+	numb: 17,
+	question: 'In which schedule to the constitution of India is the division of powers between the union and the states in terms of the union list and the state list laid down?  ' ,
+	answer: 'Seventh schedule' ,
+	options: [
+		"Fifth schedule",
+		"Sixth schedule",
+		"Seventh schedule",
+		"Fourth schedule"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which provision made in the Constitution of India is the bedrock of the democratic system in the country?  ' ,
+	answer: 'Fundamental Rights' ,
+	options: [
+		"Directive Principles of State Policy",
+		"Fundamental Rights",
+		"Fundamental Duties",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'About which feature of the Constitution is it said that “it is a cheque on a bank payable only when the resources of the bank permit?”  ' ,
+	answer: 'Directive Principle of State Policy' ,
+	options: [
+		"Directive Principle of State Policy",
+		"Fundamental Duties",
+		"Fundamental Rights",
+		"None of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which Article of the constitution empowers the High court to issue writs including habeas corpus, mandamus, certiorari, prohibition and quo warranto for the enforcement of fundamental rights of the citizens and for any other purpose ?  ' ,
+	answer: 'Article 226' ,
+	options: [
+		"Article 226",
+		"Article 227",
+		"Article 228",
+		"Article 229"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Under which article is the right to freedom of conscience and free profession, practice and propagation of religion mentioned?  ' ,
+	answer: 'Article 25' ,
+	options: [
+		"Article 24",
+		"Article 25",
+		"Article 26",
+		"Article 27"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which article of the constitution was called by Dr. B.R. Ambedkar as the most important article?  ' ,
+	answer: 'Article 32' ,
+	options: [
+		"Article 19",
+		"Article 356",
+		"Article 32",
+		"Article 14"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which constitutional Amendment Act facilitates the appointment of the same person as a governor for two or more states?  ' ,
+	answer: '7th Constitutional Amendment Act, 1956' ,
+	options: [
+		"1st Constitutional Amendment Act, 1951",
+		"7th Constitutional Amendment Act, 1956",
+		"15th Constitutional Amendment Act, 1963",
+		"4th Constitutional Amendment Act, 1955"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Part XX of the constitution of India covered by article 368 mentions:  ' ,
+	answer: 'Amendments of the constitution' ,
+	options: [
+		"Temporary, Transitional and Special provisions",
+		"Amendments of the constitution",
+		"Elections",
+		"Official Language"
+		]
+	},
+	{
+	numb: 25,
+	question: 'As per the Preamble of the Constitution of India, the nature of Indian State is of :  ' ,
+	answer: 'A sovereign, socialist, secular, democratic and republican polity' ,
+	options: [
+		"Sovereign",
+		"Socialist",
+		"Republic",
+		"A sovereign, socialist, secular, democratic and republican polity"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In which case did the Supreme Court hold that the preamble is not the part of the constitution?  ' ,
+	answer: 'The Berubari union case' ,
+	options: [
+		"The Berubari union case",
+		"Golak Nath case",
+		"Kesavananda Bharati case",
+		"none of the above"
+		]
+	},
+	{
+	numb: 27,
+	question: '“The state does not owe loyalty to any particular religion as such; it is not irreligious or anti-religious; it gives equal freedom to all religious.” The definition as given by P. B. Gajendra-Gadkara - former Chief Justice of India is of :  ' ,
+	answer: 'Secularism' ,
+	options: [
+		"Sovereignty",
+		"Socialism",
+		"Democracy",
+		"Secularism"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The major writs as enshrined in the Constitution of India are :  ' ,
+	answer: 'habeas corpus, mandamus, prohibition, certiorari and quo warranto' ,
+	options: [
+		"habeas corpus, mandamus, prohibition, certiorari and quo warranto",
+		"habeas corpus and mandamus",
+		"certiorari and quo warranto",
+		"Habeas corpus, mandamus and prohibition"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Concurrent list freedom of trade commerce and joint sitting of the two houses of parliament are the provisions mentioned in Indian constitution. They have been borrowed from:  ' ,
+	answer: 'Australian constitution' ,
+	options: [
+		"Australian constitution",
+		"American constitution",
+		"Irish constitution",
+		"Japanese constitution"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The right to equal opportunity for all citizens in matter of public employment has been enshrined in :  ' ,
+	answer: 'Article 16' ,
+	options: [
+		"Article 16",
+		"Article 17",
+		"Article 18",
+		"Article 19"
+		]
+	},
+]</script><script src="./script.js"></script></html>

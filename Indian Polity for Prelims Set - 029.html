@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 029'
+let questions = [
+	{
+	numb: 1,
+	question: 'In which form of government priests rule in the name of God?  ' ,
+	answer: 'Theocracy' ,
+	options: [
+		"Fascism",
+		"Monarchy",
+		"Theocracy",
+		"Oligarchy"
+		]
+	},
+	{
+	numb: 2,
+	question: 'To which the Mandal commission report is related-  ' ,
+	answer: 'Other backward classes' ,
+	options: [
+		"Other backward classes",
+		"Scheduled tribes",
+		"Minority",
+		"Scheduled castes"
+		]
+	},
+	{
+	numb: 3,
+	question: 'In which of the following, there is possibility of Arbitrary Rule-  ' ,
+	answer: 'Single-party system' ,
+	options: [
+		"Single-party system",
+		"Two-party system",
+		"Multi-party system",
+		"Two and multi-party system"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following had signed with President Ayub Khan on Tashkent agreement-  ' ,
+	answer: 'Lal Bahadur Shashtri' ,
+	options: [
+		"Pt. Jawaharlal Nehru",
+		"Dr. Rajendra Prasad",
+		"Lal Bahadur Shashtri",
+		"Indira Gandhi"
+		]
+	},
+	{
+	numb: 5,
+	question: '"Shimla Pact" between India and Pakistan is in-  ' ,
+	answer: '1972' ,
+	options: [
+		"1972",
+		"2001",
+		"1965",
+		"1971"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The success of Democracy depends on-  ' ,
+	answer: 'The right to oppose' ,
+	options: [
+		"The right to oppose",
+		"Right to unity",
+		"Right to individual liberty",
+		"Right to property"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The decision on procedural matters in United Nations will be taken by positive votes-  ' ,
+	answer: '9' ,
+	options: [
+		"11",
+		"10",
+		"8",
+		"9"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Under which ministry, Central Pollution Control Bureau werks-  ' ,
+	answer: 'Environment and forest' ,
+	options: [
+		"Health and family welfare",
+		"Oil and petroleum",
+		"Social welfare",
+		"Environment and forest"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The total number of judges in International Court of Justice are-  ' ,
+	answer: '15' ,
+	options: [
+		"11",
+		"15",
+		"18",
+		"7"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Telugu is the official language of -  ' ,
+	answer: 'Andhra Pradesh' ,
+	options: [
+		"Andhra Pradesh",
+		"Arunachal Pradesh",
+		"Assam",
+		"Bihar"
+		]
+	},
+	{
+	numb: 11,
+	question: 'What is the term of nonpermanent members of United Nations Security Council-  ' ,
+	answer: '2 year' ,
+	options: [
+		"1 year",
+		"2 year",
+		"3 year",
+		"6 year"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the country has single-party system-  ' ,
+	answer: 'China' ,
+	options: [
+		"Mongolia",
+		"Spain",
+		"Chile",
+		"China"
+		]
+	},
+	{
+	numb: 13,
+	question: 'In which state, the Bodoland territorial council,an autonomous governing body was established-  ' ,
+	answer: 'Assam' ,
+	options: [
+		"Assam",
+		"Mizoram",
+		"Nagaland",
+		"Meghalaya"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following law is in favour of the betterment of women-  ' ,
+	answer: 'Human trafficking (prevention) act' ,
+	options: [
+		"Equal pay act",
+		"Protection of civil rights act",
+		"Human trafficking (prevention) act",
+		"None of these"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The five permanent members of United Nations Security Council are-  ' ,
+	answer: 'China, France, Russia, UK, USA' ,
+	options: [
+		"China, Germany, Russia, UK, USA",
+		"China, Germany, USA, UK, Canada",
+		"China, France, Russia, UK, USA",
+		"China, Canada, France, USA, Germany"
+		]
+	},
+	{
+	numb: 16,
+	question: 'In which of the following state matter, centre can formulate any law with prior discussion with the state-  ' ,
+	answer: 'Jammu and Kashmir' ,
+	options: [
+		"Assam",
+		"Rajasthan",
+		"Jammu and Kashmir",
+		"Kerala"
+		]
+	},
+	{
+	numb: 17,
+	question: 'When was the Lokpal bill passed in Lok Sabha and Rajya Sabha with more strict provisions-  ' ,
+	answer: '2013' ,
+	options: [
+		"2012",
+		"2013",
+		"2009",
+		"2011"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following is not correctly matched-  ' ,
+	answer: 'Domestic violence on Women Act - 1990' ,
+	options: [
+		"Hindu marriage Act - 1955",
+		"Medical termination of Pregnancy Act - 1971",
+		"Domestic violence on Women Act - 1990",
+		"Violence against Women Act - 1995"
+		]
+	},
+	{
+	numb: 19,
+	question: 'When was National Commission for Minorities established-  ' ,
+	answer: '1992' ,
+	options: [
+		"1980",
+		"1989",
+		"1990",
+		"1992"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following resist Liberty and Freedom-  ' ,
+	answer: 'Centralization' ,
+	options: [
+		"Centralization",
+		"Decentralization",
+		"Privatization",
+		"Nationalization"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Who was the President of Chinese Communist Party at the time of freedom of China-  ' ,
+	answer: 'Mao Zedong' ,
+	options: [
+		"Zhou enlai",
+		"Den Xiaoping",
+		"Mao Zedong",
+		"Liu Shaoqi"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The main cause of growth of communalism in India is-  ' ,
+	answer: 'Economic and Educational backwardness of minority groups' ,
+	options: [
+		"Economic and Educational backwardness of minority groups",
+		"Political awareness",
+		"Social inequalities",
+		"Ban on communalistic organizations"
+		]
+	},
+	{
+	numb: 23,
+	question: 'What is the main objective of Marxism?  ' ,
+	answer: 'Stateless society' ,
+	options: [
+		"Dictatorship",
+		"Stateless society",
+		"To establish strong centre",
+		"Protection of weaker sections"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who appoints chairman of Union Public Service Commission?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Prime Minister of India",
+		"President of India",
+		"Judge of Supreme Court",
+		"Judge of High Court"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following committee had recommended a report for forming the institution of Lokpal and Lokayukta-  ' ,
+	answer: 'First Administrative Reform Commission' ,
+	options: [
+		"First Administrative Reform Commission",
+		"Gorwala Report",
+		"Ashok Mehta Committee",
+		"The Appleby Report"
+		]
+	},
+	{
+	numb: 26,
+	question: 'CTBT denotes-  ' ,
+	answer: 'Arms control measures' ,
+	options: [
+		"Arms control measures",
+		"Drug control measures",
+		"Financial control measures",
+		"Trade control and regulation"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The First Finance Commission was constituted in-  ' ,
+	answer: '1951' ,
+	options: [
+		"1950",
+		"1951",
+		"1952",
+		"1954"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who has been assigned with the responsibility of world peace and security by the member of United Nation Organization-  ' ,
+	answer: 'Security Council' ,
+	options: [
+		"General Council",
+		"Economic and Social Council",
+		"Security Council",
+		"International Court of Justice"
+		]
+	},
+	{
+	numb: 29,
+	question: 'What is the term of President of Switzerland-  ' ,
+	answer: '1 year' ,
+	options: [
+		"1 year",
+		"2 year",
+		"3 year",
+		"4 year"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who supported the concept of "Public desire"-  ' ,
+	answer: 'Rousseau' ,
+	options: [
+		"Hume",
+		"Hegal",
+		"Kant",
+		"Rousseau"
+		]
+	},
+]</script><script src="./script.js"></script></html>

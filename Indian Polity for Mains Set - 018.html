@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 018'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following statements is not correct about the Rajya Sabha?  ' ,
+	answer: 'One-third of its members retire every year' ,
+	options: [
+		"Rajya Sabha is a permanent body",
+		"It was duly constituted for the first time on April 3, 1952",
+		"Twelve of Rajya Sabha members are nominated by the President",
+		"One-third of its members retire every year"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The constitution of India mandates that State may reserve any post or appointment in favour of any backward class of citizens who are not adequately represented in the services under that State. Who decides whether such class of citizens is adequately represented or not?  ' ,
+	answer: 'State itself' ,
+	options: [
+		"Governor",
+		"President of India",
+		"Supreme Court of India",
+		"State itself"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following writs is also known as wakening call?  ' ,
+	answer: 'Mandamus' ,
+	options: [
+		"Mandamus",
+		"Prohibition",
+		"Certiorari",
+		"Quo Warranto"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Rape is defined in which section of the Indian Penal Code?  ' ,
+	answer: 'Section 375' ,
+	options: [
+		"Section 374",
+		"Section 375",
+		"Section 376",
+		"Section 377"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which section of the Criminal Procedure Code provides for the procedure if offences is committed outside the territorial jurisdiction of our country India?  ' ,
+	answer: 'Section 188' ,
+	options: [
+		"Section 188",
+		"Section 189",
+		"Section 190",
+		"Section 191"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Freedom of Press is implicit under which article of Constitution of India?  ' ,
+	answer: 'Article 19' ,
+	options: [
+		"Article 19",
+		"Article 20",
+		"Article 21",
+		"Article 22"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following reviews the progress of investigations conducted by the Delhi Special Police Establishment into offences alleged tohave been committed under the prevention of Corruption Act, 1988?  ' ,
+	answer: 'Central Vigilance Commission' ,
+	options: [
+		"Central Vigilance Commission",
+		"Central Bureau of Investigation",
+		"Lokpal",
+		"High Court"
+		]
+	},
+	{
+	numb: 8,
+	question: 'In which year, first general elections to Lok Sabha were held in India?  ' ,
+	answer: '1951' ,
+	options: [
+		"1948",
+		"1949",
+		"1950",
+		"1951"
+		]
+	},
+	{
+	numb: 9,
+	question: 'In which of the following circumstances, the speaker and deputy speaker of the Lok Sabha have to vacate their offices?  ' ,
+	answer: 'when they are no longer members of parliament' ,
+	options: [
+		"at wish of the President",
+		"when ruling party loses confidence",
+		"when they are no longer members of parliament",
+		"immediately after dissolution of Lok Sabha"
+		]
+	},
+	{
+	numb: 10,
+	question: 'What is the limitation period for filing complaints under the Lokpal and Lokayuktas Act, 2013?  ' ,
+	answer: '7' ,
+	options: [
+		"5",
+		"3",
+		"7",
+		"1"
+		]
+	},
+	{
+	numb: 11,
+	question: 'TheRight of Children to Free and Compulsory Education ActorRight to Education Act(RTE) was enacted in which year?  ' ,
+	answer: '2009' ,
+	options: [
+		"2009",
+		"2010",
+		"2011",
+		"2013"
+		]
+	},
+	{
+	numb: 12,
+	question: 'In which year Sati was first banned under Bengal Sati Regulation?  ' ,
+	answer: '1829' ,
+	options: [
+		"1829",
+		"1830",
+		"1831",
+		"1832"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The advocate general of state submits his resignation to which of the following?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Governor",
+		"Chief Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following articles deal with the administrative tribunals?  ' ,
+	answer: 'Article 323 A' ,
+	options: [
+		"Article 323 A",
+		"Article 323 B",
+		"Article 324",
+		"Article 325"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following acts introduced the principle of constitutional autocracy?  ' ,
+	answer: 'Government of India act, 1935' ,
+	options: [
+		"Indian Councils Act, 1891",
+		"Government of India Act, 1919",
+		"Government of India act, 1935",
+		"Independence of India Act, 1947"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The Banking Regulation Act, 1949 was amended in which year to include cooperative banks under its purview?  ' ,
+	answer: '1965' ,
+	options: [
+		"1961",
+		"1962",
+		"1964",
+		"1965"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The Citizenship (Amendment) Act, 2019 relaxed the residence requirement for naturalisation of migrants of six religious minorities from Pakistan, Bangladesh and Afghanistan from twelve years to how many years?  ' ,
+	answer: '6 years' ,
+	options: [
+		"3 years",
+		"4 years",
+		"6 years",
+		"9 years"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following assist the Attorney General in the fulfilment of his official responsibilities?1. Solicitor General of India2. Additional Solicitor General of India3. Chief Justice of IndiaSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following appoints the chairman and members of Joint Administrative Tribunal (JAT)?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Governor",
+		"Chief Minister"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which among the following is also called as lengthiest amendment to Indian Constitution?  ' ,
+	answer: '42nd' ,
+	options: [
+		"24th",
+		"30th",
+		"40th",
+		"42nd"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which among the following are the features of the Goods and Services Tax?1. Uniform Tax Rates2. No cascading effect3. Four-tier Tax Structure4. No differentiation in Goods or ServicesChoose the correct option from the codes given below :  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"1 & 2",
+		"1, 2 & 3",
+		"2, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following is / are correct statements about the Port Trusts in India?A port trust is created by an Act of state legislaturesEach port trust has an status of a Urban body such as Municipalities for providing civic amenitiesSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 2 is correct' ,
+	options: [
+		"Only 1 is correct",
+		"Only 2 is correct",
+		"Both 1 & 2 are correct",
+		"Neither 1 nor 2 is correct"
+		]
+	},
+	{
+	numb: 23,
+	question: '10th schedule of the Constitution was added by which amendment of the constitution?  ' ,
+	answer: '52nd Amendment Act' ,
+	options: [
+		"24th Amendment Act",
+		"52nd Amendment Act",
+		"61st Amendment Act",
+		"85th Amendment Act"
+		]
+	},
+	{
+	numb: 24,
+	question: 'In context of our constitution the date of 13 December 1946 is known for which of the following?  ' ,
+	answer: 'Objective Resolution was moved' ,
+	options: [
+		"Cabinet Mission Plan",
+		"Setting up of Constituent Assembly",
+		"First meeting of Constituent Assembly",
+		"Objective Resolution was moved"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following are the stages of criminal offence?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Intention",
+		"Preparation",
+		"Attempt",
+		"All of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The 102nd Amendment Act of 2018 empowered which of the following to specify the socially and educationally backward classes in relation to a state or union territory?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Governor",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The Right to Free & Compulsory Education (RTE) Act, 2009 that was enacted in 2010 provides a justiciable legal framework for providing free and compulsory education to children in the age group of _?  ' ,
+	answer: '6-14 years' ,
+	options: [
+		"0-6 years",
+		"0-14 years",
+		"6-14 years",
+		"6-18 years"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who among the following was the main rival candidate against India’s first President Dr. Rajendra Prasad?  ' ,
+	answer: 'K T Shah' ,
+	options: [
+		"NN Das",
+		"K T Shah",
+		"CH Ram",
+		"S Radhakrishnan"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Criminal Law of India is codified in which of the following?1. Indian Penal Code, 18602. Criminal Procedure Code, 1973Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which among the following are considered essential for the realization of the highest good of India’s citizens?  ' ,
+	answer: 'Fundamental rights' ,
+	options: [
+		"Fundamental rights",
+		"Fundamental duities",
+		"DPSP",
+		"Preamble"
+		]
+	},
+]</script><script src="./script.js"></script></html>

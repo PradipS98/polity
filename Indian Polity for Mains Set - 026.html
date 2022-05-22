@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 026'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following UTs have a Lieutenant Governor?  ' ,
+	answer: 'Puducherry' ,
+	options: [
+		"Puducherry",
+		"Chandigarh",
+		"Dadra and Nagar Haveli",
+		"Daman and Diu"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following constitute the divisions of CBI?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Directorate of Prosecution",
+		"Special Crimes Division",
+		"Anti-Corruption Division",
+		"All of the above"
+		]
+	},
+	{
+	numb: 3,
+	question: 'In which year the Indian Forest Service was established as the third all-India service?  ' ,
+	answer: '1966' ,
+	options: [
+		"1966",
+		"1968",
+		"1970",
+		"1972"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following statements are correct about the Lokpal?  ' ,
+	answer: 'None of them' ,
+	options: [
+		"Lokpal can suo motu proceed against any public servant.",
+		"The institution does not provide adequate protection for honest and upright public servants",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 5,
+	question: 'From where do the urban local bodies raise loans to meet their expenses?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"State government",
+		"Financial institutions",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who opined that, “The emergency power of the President is a fraud with the Constitution”?  ' ,
+	answer: 'K.M. Nambiar' ,
+	options: [
+		"B.N. Rao",
+		"H.N. Kunjru",
+		"K.M. Munshi",
+		"K.M. Nambiar"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The rights of ministers with respects to the Houses are enshrined in which Article?  ' ,
+	answer: 'Article 177' ,
+	options: [
+		"Article 171",
+		"Article 173",
+		"Article 175",
+		"Article 177"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following are the different Verticals of NITI Aayog that provide the requisite coordination and support framework for NITI Aayog to carry out its mandate?1. Agriculture2. Data Management & Analysis3. Health4. Human Resource DevelopmentSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following are regional training centres of CBI?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Kolkata",
+		"Mumbai",
+		"Chennai",
+		"All of the above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'A regulation repealing or amending any act of Parliament or the state legislature, which is applicable to a scheduled area requires the assent of which of the following?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Governor",
+		"Chief Minister"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Where has the Constitution declared the seat of the Supreme Court of India?  ' ,
+	answer: 'Delhi' ,
+	options: [
+		"Mumbai",
+		"Hyderabad",
+		"Delhi",
+		"Chennai"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who establishes a river board on the request of the State government?  ' ,
+	answer: 'The Central government' ,
+	options: [
+		"The Lok Sabha",
+		"The President",
+		"The Prime Minister",
+		"The Central government"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The State Public Service Commission presents a report on its performance to which of the following?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Parliament",
+		"State Legialature",
+		"President",
+		"Governor"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year the Supreme Court held that even after the dissolution of the Lok Sabha, the council of ministers does not cease to hold office?  ' ,
+	answer: '1971' ,
+	options: [
+		"1970",
+		"1971",
+		"1972",
+		"1973"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Intellectual Property Appellate Board has been established under which Ministry?  ' ,
+	answer: 'Ministry of Commerce and Industry' ,
+	options: [
+		"Ministry of Finance",
+		"Ministry of Home Affairs",
+		"Ministry of Commerce and Industry",
+		"Ministry of External Affairs"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following statements are correct with respect to the functions of the Chief Minister?1. He acts as a vice-chairman of the concerned zonal council by rotation, holding office for a period of one year at a time.2. He is the chief spokesman of the state government.3. He is the crisis manager-in-chief at the political level during emergencies.Select the correct option from the codes given below:  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Development Monitoring and Evaluation Office (DMEO) had how many regional offices?  ' ,
+	answer: '15' ,
+	options: [
+		"9",
+		"11",
+		"15",
+		"17"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Who has the power to establish municipalities in Union Territories?  ' ,
+	answer: 'Parliament of India' ,
+	options: [
+		"State legislature",
+		"Parliament of India",
+		"Governor",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following Articles of the Constitution deal with the legislative relations between the Centre and the states?  ' ,
+	answer: 'Articles 245 to 255' ,
+	options: [
+		"Article 235 to 245",
+		"Articles 245 to 255",
+		"Article 255 to 265",
+		"None of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who is the Chairman of the Central Council of Local Government?  ' ,
+	answer: 'Union minister' ,
+	options: [
+		"Governor",
+		"Prime Minister",
+		"Union minister",
+		"None of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following statements are correct regarding NITI Aayog?  ' ,
+	answer: 'NITI Aayog is a policy think tank of the Government of India' ,
+	options: [
+		"NITI Aayog was Formed 24 January 2015",
+		"NITI Aayog comes under the Ministry of Parliamentary Affairs",
+		"NITI Aayog is a policy think tank of the Government of India",
+		"All of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'On whose advice President’s Rule is imposed in a State?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Legislative Assembly",
+		"Chief Justice of High Court",
+		"Chief Minister",
+		"Governor"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which article of the Constitution of India provides for a Finance Commission?  ' ,
+	answer: 'Article 280' ,
+	options: [
+		"Article 250",
+		"Article 260",
+		"Article 270",
+		"Article 280"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following statements are correct with respect to National Emergency?1. President can declare a national emergency even before the actual occurrence of war or external aggression or armed    rebellion2. President can also issue different proclamations whether or not there is a proclamation already issued by him and      such proclamation is in operation   Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Zonal Councils are which type of bodies?  ' ,
+	answer: 'Statutory bodies' ,
+	options: [
+		"Constitution bodies",
+		"Statutory bodies",
+		"Non Statutory bodies",
+		"Extra Constitutional bodies"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who administers the oath of office to the Governor?  ' ,
+	answer: 'Chief Justice of the state high court' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Chief Minister",
+		"Chief Justice of the state high court"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which Article of the Constitution imposes a duty on the Centre to ensure that the government of every state is carried on in accordance with the provisions of the Constitution?  ' ,
+	answer: 'Article 355' ,
+	options: [
+		"Article 352",
+		"Article 353",
+		"Article 354",
+		"Article 355"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following statements are incorrect with respect to National Emergency?1. A resolution for disapproval of is required to be passed by both the Houses of Parliament2. Resolution for disapproval is to be adopted by a simple majority onlySelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who was appointed as the Chairman of six-member Administrative Reforms Commission (ARC) in 1966?  ' ,
+	answer: 'Morarji Desai' ,
+	options: [
+		"Jawaharlal Nehru",
+		"H.C. Mathur",
+		"V. Shankar",
+		"Morarji Desai"
+		]
+	},
+	{
+	numb: 30,
+	question: 'In what situation, the Governor is supposed to reserve a bill for the consideration of the President?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"If it is against the provisions of the Constitution",
+		"If it endangers the position of the state high court",
+		"If it deals with compulsory acquisition of property under Article 31A",
+		"All of the above"
+		]
+	},
+]</script><script src="./script.js"></script></html>

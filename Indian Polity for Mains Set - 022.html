@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 022'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following are the functions of the State Public Service Commission?1. It conducts examinations for appointments to the services of the state.2. It is consulted on matters related to personnel management.Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who can be the chair of Finance Commission in India?  ' ,
+	answer: 'A person having experience in public affairs' ,
+	options: [
+		"A person having experience in economoics",
+		"A person having experience in accountancy",
+		"A person having experience in public affairs",
+		"A person having experience in finance"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which Article contains special provisions for the state of Mizoram?  ' ,
+	answer: 'Article 371 G' ,
+	options: [
+		"Article 371 E",
+		"Article 371 F",
+		"Article 371 G",
+		"Article 372 H"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The central Consumer Protection Authority will have which of the following powers?1. The power to recall goods or withdrawal of services that are “dangerous, hazardous or unsafe.2. The power to pass an order for refund of the prices of goods or services so recalled to purchasers of such goods or services.3. Power of discontinuation of practices which are unfair and prejudicial to consumer’s interest.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following items are included in the Essential Commodities Act?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Drugs",
+		"Fertilisers",
+		"Pulses",
+		"All of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The Article 371-D contains special provisions with regard to which of the following states?  ' ,
+	answer: 'Andhra Pradesh' ,
+	options: [
+		"Manipur",
+		"Andhra Pradesh",
+		"Tripura",
+		"Maharashtra"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Pre-Conception and Pre-Natal Diagnostic Techniques (PCPNDT) Act was passed in which year?  ' ,
+	answer: '1994' ,
+	options: [
+		"1992",
+		"1994",
+		"1996",
+		"1998"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following are the tribal areas located in Mizoram?1. The Chakma District2. The Mara District3. The Lai District4. Jaintia Hills DistrictSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 9,
+	question: 'First session of Lok Sabha was held in which among the following years?  ' ,
+	answer: '1952' ,
+	options: [
+		"1950",
+		"1951",
+		"1952",
+		"1953"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which article empowers the Parliament and the state legislatures to regulate the recruitment and the conditions of service of the persons appointed to public services?  ' ,
+	answer: '309' ,
+	options: [
+		"306",
+		"307",
+		"308",
+		"309"
+		]
+	},
+	{
+	numb: 11,
+	question: 'In which of the following matters does the Governor has constitutional discretion?1. Reservation of a bill for the consideration of the President.2. Recommendation for the imposition of the President’s Rule in the state.3. Seeking information from the chief minister with regard to the administrative and legislative matters of the state.Select the correct option from the codes given below:  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Chhattisgarh Food Security Act was passed in which year?  ' ,
+	answer: '2012' ,
+	options: [
+		"2011",
+		"2012",
+		"2013",
+		"2014"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Epidemic Diseases Act was passed in which year?  ' ,
+	answer: '1897' ,
+	options: [
+		"1890",
+		"1893",
+		"1895",
+		"1897"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year the Benami Transactions (Prohibition) Act was passed?  ' ,
+	answer: '1988' ,
+	options: [
+		"1986",
+		"1987",
+		"1988",
+		"1990"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which section of IPC deals with Intra-territorial jurisdiction of the courts?  ' ,
+	answer: 'Section 2' ,
+	options: [
+		"Section 1",
+		"Section 2",
+		"Section 3",
+		"Section 4"
+		]
+	},
+	{
+	numb: 16,
+	question: 'For how many times, a person can become President of India?  ' ,
+	answer: 'No limit' ,
+	options: [
+		"Once",
+		"Twice",
+		"Thrice",
+		"No limit"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who is responsible for the administration of Union Territories?  ' ,
+	answer: 'Central government' ,
+	options: [
+		"State government",
+		"Central government",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which article of the Indian Constitution provides for Vice-President of India?  ' ,
+	answer: 'Article 63' ,
+	options: [
+		"Article 61",
+		"Article 62",
+		"Article 63",
+		"Article 65"
+		]
+	},
+	{
+	numb: 19,
+	question: 'On what criteria, urban bodies like Special Purpose Agency are set up?  ' ,
+	answer: 'Function' ,
+	options: [
+		"Area",
+		"Function",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The deputy chairman submits his resignation to?  ' ,
+	answer: 'Chairman' ,
+	options: [
+		"Chief Minister",
+		"Chairman",
+		"Speaker",
+		"Governor"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In how many states the State Administrative Tribunals (SATs) have been established?  ' ,
+	answer: '9' ,
+	options: [
+		"9",
+		"10",
+		"15",
+		"20"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following words is not included in the Preamble of the Constitution of India?  ' ,
+	answer: 'Sanctity' ,
+	options: [
+		"Equality",
+		"Liberty",
+		"Sanctity",
+		"Justice"
+		]
+	},
+	{
+	numb: 23,
+	question: 'In which year was the State Information Commission created?  ' ,
+	answer: '2005' ,
+	options: [
+		"2000",
+		"2005",
+		"2010",
+		"2015"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following bills the Governor cannot return back for the reconsideration of the state legislature?  ' ,
+	answer: 'Money Bill' ,
+	options: [
+		"Constitutional Amendment Bill",
+		"Money Bill",
+		"Ordinary Bill",
+		"Finance Bill"
+		]
+	},
+	{
+	numb: 25,
+	question: 'What can be the maximum gap between the two sessions of state legislature?  ' ,
+	answer: '6 months' ,
+	options: [
+		"1 month",
+		"3 months",
+		"6 months",
+		"9 months"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Inw hich year was the Family Courts Act enacted?  ' ,
+	answer: '1984' ,
+	options: [
+		"1983",
+		"1984",
+		"1985",
+		"1986"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who conducts of all elections to the panchayats?1. Election Commission of India2. State Election CommissionSelect the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 28,
+	question: 'In 2004 which High Court held that when a person in custody is disqualified from voting, he or she must be disqualified from contesting in elections too?  ' ,
+	answer: 'Patna High Court' ,
+	options: [
+		"Delhi High Court",
+		"Patna High Court",
+		"Bombay High Court",
+		"Chennai High Court"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following states is not included in the sixth schedule of Indian Constitution?  ' ,
+	answer: 'Manipur' ,
+	options: [
+		"Meghalaya",
+		"Tripura",
+		"Mizoram",
+		"Manipur"
+		]
+	},
+	{
+	numb: 30,
+	question: 'How may ex-officio members are there in National Human Rights Commission?  ' ,
+	answer: '7' ,
+	options: [
+		"5",
+		"6",
+		"7",
+		"8"
+		]
+	},
+]</script><script src="./script.js"></script></html>

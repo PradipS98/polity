@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 002'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which schedule of the constitution of India deals with powers, authority and responsibilities of municipalities?  ' ,
+	answer: 'Twelfth schedule' ,
+	options: [
+		"Fifth schedule",
+		"Twelfth schedule",
+		"Seventh schedule",
+		"Tenth schedule"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The idea of Directive Principles of state policy in the constitution of India has been borrowed from  ' ,
+	answer: 'The Irish constitution' ,
+	options: [
+		"The Irish constitution",
+		"The French Constitution",
+		"The Japanese Constitution",
+		"The Canadian Constitution"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which article declares that all laws that are inconsistent with or in derogation of any of the fundamental rights shall be void?  ' ,
+	answer: 'Article 13' ,
+	options: [
+		"Article 3",
+		"Article 23",
+		"Article 33",
+		"Article 13"
+		]
+	},
+	{
+	numb: 4,
+	question: 'A person to be eligible for election as president of India should have completed  ' ,
+	answer: '35 years' ,
+	options: [
+		"25 years",
+		"21 years",
+		"30 years",
+		"35 years"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which article authorizes the Parliament to form a new state by separation of territory from any state?  ' ,
+	answer: 'Articles 3' ,
+	options: [
+		"Articles 13",
+		"Articles 3",
+		"Articles 23",
+		"Articles 33"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The ideals of liberty, equality and fraternity as enshrined in the Preamble to the constitution of India have been taken from  ' ,
+	answer: 'The French Revolution, 1789' ,
+	options: [
+		"The French Revolution, 1789",
+		"Russia Revolution, 1917",
+		"Irish Revolution, 1865",
+		"None of these"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Linguistic Provinces commission appointed under the chairmanship of S.K. Dhar in 1948 recommended the reorganization of states on the basis of  ' ,
+	answer: 'Administrative convenience rather than linguistic factor.' ,
+	options: [
+		"Demographic convenience rather than linguistic factor.",
+		"Religious convenience rather than linguistic factor.",
+		"Administrative convenience rather than linguistic factor.",
+		"None of these"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Granville Austin has described the Directive principles and the fundamental rights as  ' ,
+	answer: 'The conscience of the Constitution' ,
+	options: [
+		"The heart of the Constitution",
+		"The conscience of the Constitution",
+		"The back bone of the Constitution",
+		"None of these"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Under the citizenship act of 1955 the ways prescribed for acquiring citizenship are  ' ,
+	answer: 'All of above' ,
+	options: [
+		"By birth and by descent",
+		"By registration and by naturalization",
+		"by incorporation of territory",
+		"All of above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Whose remarks are these – the Preamble is the horoscope of our sovereign democratic republic?  ' ,
+	answer: 'K.M. Munshi' ,
+	options: [
+		"Indra Gandhi",
+		"Jawaharlal Nehru",
+		"Granville Austin",
+		"K.M. Munshi"
+		]
+	},
+	{
+	numb: 11,
+	question: 'In which historic case did the supreme court of India hold that the preamble to the constitution of India is a part of the constitution and hence can be amended ?  ' ,
+	answer: 'Kesavananda Bharti Vs. State of Kerala (1973)' ,
+	options: [
+		"S. R. Bommai Vs. Union of India",
+		"Kesavananda Bharti Vs. State of Kerala (1973)",
+		"L.M.Singhvi Vs. Union of India",
+		"None of Above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'India is a republic, that means:  ' ,
+	answer: 'The head of state in India is indirectly elected for a fixed period.' ,
+	options: [
+		"The head of state in India is indirectly elected for life time.",
+		"The head of state in India is directly elected for a fixed period.",
+		"The head of state in India is indirectly elected for a fixed period.",
+		"The head of state in India is directly elected for life time."
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which act provides for the disqualification of members of the Parliament or State Legislature for indulging in corrupt practices?  ' ,
+	answer: 'The Representation of People Act, 1951' ,
+	options: [
+		"Quo Warranto",
+		"Government of India Act, 1935",
+		"The Representation of People Act, 1951",
+		"None of these"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The duties of chief minister of a state with regard to furnishing of information to the Governor is enshrined in:  ' ,
+	answer: 'Article 167.' ,
+	options: [
+		"Article 167.",
+		"Article 170.",
+		"Article 180.",
+		"Article 190."
+		]
+	},
+	{
+	numb: 15,
+	question: 'Article 360 to constitution of India deals with the provisions as to :  ' ,
+	answer: 'Financial Emergency.' ,
+	options: [
+		"Official Language",
+		"Temporary, Transitional and Special Provisions",
+		"Amendment of the Constitution",
+		"Financial Emergency."
+		]
+	},
+	{
+	numb: 16,
+	question: 'Right to Life and Liberty is ensured under:  ' ,
+	answer: 'Article 21 of the constitution of India.' ,
+	options: [
+		"Article 12 of the constitution of India.",
+		"Article 17of the constitution of India.",
+		"Article 15 of the constitution of India.",
+		"Article 21 of the constitution of India."
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which Article of the constitution defines the term state in Indian context?  ' ,
+	answer: 'Article 12' ,
+	options: [
+		"Article 15",
+		"Article 12",
+		"Article 17",
+		"Article 20"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The procedure for the amendment of the Constitution is laid down in:  ' ,
+	answer: 'Article 368.' ,
+	options: [
+		"Article 368.",
+		"Article 262",
+		"Article 351",
+		"Article 332"
+		]
+	},
+	{
+	numb: 19,
+	question: 'How many times has the Preamble to the constitution of India been amended ?  ' ,
+	answer: '1' ,
+	options: [
+		"5",
+		"4",
+		"1",
+		"2"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The governor of a state is empowered to grant pardons etc. and to suspend, remit or commute sentences in certain cases under:  ' ,
+	answer: 'Article 161.' ,
+	options: [
+		"Article 167.",
+		"Article 161.",
+		"Article 151.",
+		"Article 163."
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which Article of the Constitution of India has defined the term ‘State’?  ' ,
+	answer: 'Article 12' ,
+	options: [
+		"Article 12",
+		"Article 19",
+		"Article 51",
+		"Article 77"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The state which is neutral in matter of religion and dies not uphold any particular region as the state religion is called  ' ,
+	answer: 'Secular state' ,
+	options: [
+		"Independent state",
+		"Democratic state",
+		"Secular state",
+		"None of these"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The right to property was deleted from the list of fundamental rights by  ' ,
+	answer: '44th constitutional Act' ,
+	options: [
+		"42nd constitutional Act",
+		"43rd constitutional Act",
+		"44th constitutional Act",
+		"47th constitutional Act"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which part of Indian constitution is described the Magna Carta of India?  ' ,
+	answer: 'Part III containing Fundamental Rights (Article 12 to 35)' ,
+	options: [
+		"Part III containing Fundamental Rights (Article 12 to 35)",
+		"Part IV Directive principles of state policy",
+		"Part II Citizenship",
+		"Part IV Fundamental Duties"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The fifth schedule to the constitution of India deals with administration and control of :  ' ,
+	answer: 'Scheduled areas and Scheduled Tribes.' ,
+	options: [
+		"Scheduled areas and Scheduled Tribes.",
+		"The Forms of Oaths or Affirmations.",
+		"The Union list, State list and the concurrent list.",
+		"Provisions as to disqualification on ground of defection."
+		]
+	},
+	{
+	numb: 26,
+	question: 'The provisions as covered by Article 343 to 351 under Part XVII of the constitution of India deals with  ' ,
+	answer: 'Official Language' ,
+	options: [
+		"Religion",
+		"Official Language",
+		"President",
+		"Emergency"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The provision of adjudication of disputes relating to waters of inter-state rivers or river valleys is laid down in  ' ,
+	answer: 'Article 262.' ,
+	options: [
+		"Article 237",
+		"Article 268",
+		"Article 272",
+		"Article 262."
+		]
+	},
+	{
+	numb: 28,
+	question: 'The only state in the Indian union which used to have its own separate state constitution is  ' ,
+	answer: 'Jammu & Kashmir' ,
+	options: [
+		"Nagaland",
+		"Jammu & Kashmir",
+		"Sikkim",
+		"Goa"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The idea of Republic and the ideals of liberty, equality and fraternity as laid down in the preamble to the constitution of India have been borrowed from :  ' ,
+	answer: 'French constitution' ,
+	options: [
+		"USA constitution",
+		"Canada constitution",
+		"French constitution",
+		"The UK constitution"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The state Reorganization commission was appointed in 1953 under the chairmanship of :  ' ,
+	answer: 'Fazl Ali' ,
+	options: [
+		"Fazl Ali",
+		"Kelkar",
+		"Mondal",
+		"Zakir Husain"
+		]
+	},
+]</script><script src="./script.js"></script></html>

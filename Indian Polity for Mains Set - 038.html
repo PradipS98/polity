@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 038'
+let questions = [
+	{
+	numb: 1,
+	question: 'The Constitution empowers a high court to issue writs under which Article?  ' ,
+	answer: 'Article 226' ,
+	options: [
+		"Article 32",
+		"Article 76",
+		"Article 144",
+		"Article 226"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who said “It is not a change of name. The Planning Commission is being abolished because they (government) don’t believe in planning,”?  ' ,
+	answer: 'Gurudas Dasgupta' ,
+	options: [
+		"Abhishek Manu Singhvi",
+		"Sitaram Yechury",
+		"Md Selim",
+		"Gurudas Dasgupta"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which article of the constitution contains provisions regarding the reservation of seats for scheduled castes and scheduled tribes in the legislative assemblies of the states?  ' ,
+	answer: 'Article 332' ,
+	options: [
+		"Article 332",
+		"Article 340",
+		"Article 342",
+		"Article 345"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which amendment facilitated the appointment of the same person as a governor for two or more states?  ' ,
+	answer: '7th Constitutional Amendment Act of 1956' ,
+	options: [
+		"1st Constitutional Amendment Act of 1951",
+		"7th Constitutional Amendment Act of 1956",
+		"4th Constitutional Amendment Act of 1955",
+		"6th Constitutional Amendment Act of 1956"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which part of the Constitution of India deals with the official languages?  ' ,
+	answer: 'Part XVII' ,
+	options: [
+		"Part XV",
+		"Part XVII",
+		"Part XIX",
+		"Part XX"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which article of the Indian Constitution makes provision for delimitation of the electoral boundaries?  ' ,
+	answer: 'Article 82' ,
+	options: [
+		"Article 72",
+		"Article 75",
+		"Article 80",
+		"Article 82"
+		]
+	},
+	{
+	numb: 7,
+	question: 'What are the reasons given for the practice of judicial activism?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Failure of Legislature and Executive to discharge their function",
+		"Citizens look up to the judiciary for the protection of their rights",
+		"Legislative Vacuum",
+		"All of the above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'A House of the state legislature can declare the seat of a member vacant if he absents himself from all its meeting for aperiod of how many days?  ' ,
+	answer: '60 days' ,
+	options: [
+		"20 days",
+		"30 days",
+		"45 days",
+		"60 days"
+		]
+	},
+	{
+	numb: 9,
+	question: 'A death sentence awarded by a sessions court or an additional sessions court should be confirmed by which of the following?  ' ,
+	answer: 'High Court' ,
+	options: [
+		"High Court",
+		"Supreme Court",
+		"President",
+		"Chief Justice of India"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which Articles deal with the parliamentary system government at the level of states?  ' ,
+	answer: 'Articles 163 and 164' ,
+	options: [
+		"Articles 163 and 164",
+		"Articles 165 and 166",
+		"Articles 175 and 176",
+		"Articles 177 and 178"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who is the ex-officio President of all the Parliamentary Forums?  ' ,
+	answer: 'Speaker' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Speaker",
+		"Chairman of Rajya Sabha"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The Supreme Court would issue a writ of nature of Habeas Corpus generally when there is a violation of rights given by which article?  ' ,
+	answer: 'Article 21' ,
+	options: [
+		"Article 14",
+		"Article 15",
+		"Article 19",
+		"Article 21"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following UTs come under the Bombay High Court?  ' ,
+	answer: 'None of them' ,
+	options: [
+		"Andaman and Nicobar Islands",
+		"Lakshadweep",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 14,
+	question: 'What is the meaning of adjournment ‘sine die’?  ' ,
+	answer: 'Terminating a sitting of the state legislature for an indefinite period' ,
+	options: [
+		"Terminating a sitting of the state legislature for an indefinite period",
+		"Terminating a sitting of the state legislature for some hours",
+		"Terminating a sitting of the state legislature for some days",
+		"Terminating a sitting of the state legislature for some months"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who decides civil cases of small pecuniary stake?  ' ,
+	answer: 'Munsiff' ,
+	options: [
+		"District judge",
+		"Munsiff",
+		"Judicial magistrate",
+		"None of the above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'In which year Sikkim became a protectorate state of India?  ' ,
+	answer: '1947' ,
+	options: [
+		"1948",
+		"1950",
+		"1947",
+		"1949"
+		]
+	},
+	{
+	numb: 17,
+	question: 'In which year Indian National Congress put forward the demand for a Constituent Assembly?  ' ,
+	answer: '1935' ,
+	options: [
+		"1929",
+		"1935",
+		"1932",
+		"1946"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Within how much time the state legislative assembly should be re-elected after the revocation of national emergency?  ' ,
+	answer: '6 months' ,
+	options: [
+		"2 months",
+		"3 months",
+		"6 months",
+		"1 year"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which constitutional amendment affirmed the power of Parliament to amend any part of the constitution including fundamental rights?  ' ,
+	answer: '24th Amendment Act, 1971' ,
+	options: [
+		"22nd Amendment Act,1969",
+		"23rd Amendment Act, 1969",
+		"24th Amendment Act, 1971",
+		"25th Amendment Act, 1971"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which act provided for right to vote to women?  ' ,
+	answer: 'Government of India Act, 1919' ,
+	options: [
+		"Indian Councils Act, 1909",
+		"Government of India Act, 1919",
+		"Government of India Act, 1935",
+		"Indian Independence Act, 1947"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following articles contain provisions to regulate the organization of subordinate courts?  ' ,
+	answer: 'Articles 233 to 237' ,
+	options: [
+		"Articles 233 to 237",
+		"Articles 211 to 222",
+		"Articles 200 to 210",
+		"Articles 181 to 200"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Central Vigilance Commission (CVC) was established in which year?  ' ,
+	answer: '1964' ,
+	options: [
+		"1962",
+		"1963",
+		"1964",
+		"1965"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The decision of an inferior court or tribunal can be quashed when there is an error of law, by issuing a writ of which of the following nature?  ' ,
+	answer: 'Certiorari' ,
+	options: [
+		"Mandamus",
+		"Prohibition",
+		"Certiorari",
+		"None of them"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What is the maximum term of the members of National Commission for Women?  ' ,
+	answer: '3 years' ,
+	options: [
+		"1 year",
+		"3 years",
+		"5 years",
+		"6 years"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following statements is incorrect about Government of India Act, 1935?  ' ,
+	answer: 'It separated provincial budget from the central budget' ,
+	options: [
+		"It introduced dyarchy at central level",
+		"It proposed to set up an All India Federation",
+		"It established a Central Federal Bank",
+		"It separated provincial budget from the central budget"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who was the first Governor General of India?  ' ,
+	answer: 'Lord William Bentinck' ,
+	options: [
+		"Warren Hastings",
+		"Lord William Bentinck",
+		"Lord Clive",
+		"Lord Macaulay"
+		]
+	},
+	{
+	numb: 27,
+	question: 'What is the minimum strength of state legislative assembly?  ' ,
+	answer: '60' ,
+	options: [
+		"40",
+		"50",
+		"60",
+		"70"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which among the following is true regarding amendments of the constitution with provisions which affect the federal character of the constitution?  ' ,
+	answer: 'They can be amended by not only a 2/3 majority of the parliament but also ratification by at least 1/2 of the states' ,
+	options: [
+		"They can be amended by a simple majority",
+		"They can be amended by a 2/3 majority of both the houses of parliament",
+		"They can be amended by not only a 2/3 majority of the parliament but also ratification by at least 1/2 of the states",
+		"All are correct"
+		]
+	},
+	{
+	numb: 29,
+	question: 'How much majority in the state assembly is required for creation or abolition of legislative council of state?  ' ,
+	answer: 'Special Majority' ,
+	options: [
+		"Simple Majority",
+		"Special Majority",
+		"Special Majority with ratification from half of the states",
+		"Absolute Majority"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who among the following headed the Advisory Committee on Fundamental Rights, Minorities and Tribal and Excluded Areas a committee under the Constituent Assembly?  ' ,
+	answer: 'Vallabhbhai Patel' ,
+	options: [
+		"Jawahar Lal Nehru",
+		"Vallabhbhai Patel",
+		"H C Mukherjee",
+		"Maulana Azad"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 036'
+let questions = [
+	{
+	numb: 1,
+	question: 'Sovereign Parliament is a contribution of-  ' ,
+	answer: 'England' ,
+	options: [
+		"England",
+		"India",
+		"France",
+		"Japan"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The method of amending the constitution by popular veto is found in-  ' ,
+	answer: 'Switzerland' ,
+	options: [
+		"Britain",
+		"Switzerland",
+		"Russia",
+		"India"
+		]
+	},
+	{
+	numb: 3,
+	question: 'From which of the following nations,we have taken the provision of judicial review?  ' ,
+	answer: 'USA' ,
+	options: [
+		"England",
+		"USA",
+		"Canada",
+		"Australia"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following was a popular slogan of French revolution?  ' ,
+	answer: 'Liberty, Equality, Fraternity' ,
+	options: [
+		"Sovereign Democratic Republic",
+		"Liberty, Equality, Fraternity",
+		"Freedom, Equality and Justice",
+		"Freedom, Equality and Accountability"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The parliament of India has bassed the environment (conservation) bill in-  ' ,
+	answer: '1986' ,
+	options: [
+		"1972",
+		"1984",
+		"1981",
+		"1986"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following country has an Non-written constitution-  ' ,
+	answer: 'UK' ,
+	options: [
+		"USA",
+		"UK",
+		"Pakistan",
+		"India"
+		]
+	},
+	{
+	numb: 7,
+	question: 'In Presidential Government, the President is-  ' ,
+	answer: 'Independent of the Legislature' ,
+	options: [
+		"Independent of the Legislature",
+		"Dependent on the Legislature",
+		"Dependent on the Judiciary",
+		"Bound by the advice of the Council of Ministers"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What is the basis of classification of governments as unitary and federal?  ' ,
+	answer: 'Relationship between the centre and states' ,
+	options: [
+		"Relationship between legislature and executive",
+		"Relationship between executive and judiciary",
+		"Relationship between the centre and states",
+		"Relationship between the legislature, executive and judicial wings of government"
+		]
+	},
+	{
+	numb: 9,
+	question: 'What does the wheel in the National Flag represent?  ' ,
+	answer: 'Truth' ,
+	options: [
+		"Speed",
+		"Truth",
+		"Growth",
+		"Future"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following judgements stated that &apos;Secularism&apos; and &apos;Federalism are the basic features of the Indian Constitution?  ' ,
+	answer: 'S.R. Bommai case' ,
+	options: [
+		"Keshavanada Bharati case",
+		"S.R. Bommai case",
+		"Indira Sawhney case",
+		"Minerva Mills case"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who described Constitution of India as &apos;quasi-federal&apos;?  ' ,
+	answer: 'K. C. Wheare' ,
+	options: [
+		"Granville Austin",
+		"Ione Jennings",
+		"Morris Jones",
+		"K. C. Wheare"
+		]
+	},
+	{
+	numb: 12,
+	question: 'How many members were in the interim Parliament of India-  ' ,
+	answer: '296' ,
+	options: [
+		"296",
+		"313",
+		"318",
+		"316"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The National Anthem was adopted by the Constituent Assembly in-  ' ,
+	answer: '24th January 1950' ,
+	options: [
+		"24th May 1949",
+		"24th November 1949",
+		"24th January 1950",
+		"24th June 1950"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who among the following was the first &apos;Minister of Finance&apos; in independent India?  ' ,
+	answer: 'R.K. Shanmukham Chetty' ,
+	options: [
+		"R.K. Shanmukham Chetty",
+		"Liaquat Ali Khan",
+		"John Mathai",
+		"Satya Narayan Sinha"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Presidential Government operates on the principles of-  ' ,
+	answer: 'Separation of powers' ,
+	options: [
+		"Division of powers between centre and states",
+		"Centralisation of Powers",
+		"Balance of Powers",
+		"Separation of powers"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following is the inalienable attribute of the parliamentary system of government?  ' ,
+	answer: 'Fusion of Executive and Legislature' ,
+	options: [
+		"Flexibility of the Constitution",
+		"Fusion of Executive and Legislature",
+		"Judicial Supremacy",
+		"Parliamentary Sovereignty"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The system of nomination of members of Rajya Sabha has been borrowed from the constitution-  ' ,
+	answer: 'Ireland' ,
+	options: [
+		"United States of America",
+		"Ireland",
+		"South Africa",
+		"France"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The original constitution of India was published in?  ' ,
+	answer: 'Dehradun' ,
+	options: [
+		"Delhi",
+		"Srinagar",
+		"Ajmer",
+		"Dehradun"
+		]
+	},
+	{
+	numb: 19,
+	question: 'From where have we borrowed the parliamentary form of government?  ' ,
+	answer: 'Britain' ,
+	options: [
+		"Russia",
+		"Ireland",
+		"Britain",
+		"America"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The directive principle of state policy has been adopted from which constitution?  ' ,
+	answer: 'Irish Constitution' ,
+	options: [
+		"U.S. Constitution",
+		"British Constitution",
+		"Irish Constitution",
+		"French Constitution"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the folowing was not a member of the drafting committee of the constitution-  ' ,
+	answer: 'Rajendra Prasad' ,
+	options: [
+		"B.R Ambedkar",
+		"Alladi Krishnaswamy",
+		"Gopalaswami Ayyangar",
+		"Rajendra Prasad"
+		]
+	},
+	{
+	numb: 22,
+	question: 'In India single citizenship has been adopted from-  ' ,
+	answer: 'England' ,
+	options: [
+		"England",
+		"USA",
+		"Canada",
+		"France"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who among the following proposed the suggestion for a Constituent Assembly first in 1935?  ' ,
+	answer: 'M.N. Roy' ,
+	options: [
+		"Nehru",
+		"Gandhi",
+		"J.P. Narayan",
+		"M.N. Roy"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The "Rule of law" is the speciality of which of the following-  ' ,
+	answer: 'Britain' ,
+	options: [
+		"Britain",
+		"USA",
+		"France",
+		"Switzerland"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The most important feature of Cabinet system of Government is-  ' ,
+	answer: 'Collective responsibility' ,
+	options: [
+		"Individual responsibility",
+		"Collective responsibility",
+		"Responsibility to none",
+		"Non-responsibility"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following exercised the most profound inference in framing of Indian constitution?  ' ,
+	answer: 'GOI act, 1935' ,
+	options: [
+		"British constitution",
+		"U.S. constitution",
+		"Irish constitution",
+		"GOI act, 1935"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The Constituent Assembly which enacted the Constitution of Indian, its members were-  ' ,
+	answer: 'Elected by the Legislative Assemblies of different provinces' ,
+	options: [
+		"Nominated by Political Parties",
+		"Elected by the Legislative Assemblies of different provinces",
+		"Directly elected by People",
+		"Nominated by Governer General"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Fundamental Rights of Indian constitution have been adopted from which of the following nation-  ' ,
+	answer: 'America' ,
+	options: [
+		"America",
+		"UK",
+		"Soviet Russia",
+		"None of these"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Objective resolution was moved in constituent assembly by-  ' ,
+	answer: 'Jawaharlal Nehru' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Kiran Desai",
+		"K. Natwar Singh",
+		"K. M.Munshi"
+		]
+	},
+	{
+	numb: 30,
+	question: 'In the National Flag of India, Ashoka Chakra is a ____ spoked wheel.  ' ,
+	answer: '24' ,
+	options: [
+		"8",
+		"12",
+		"16",
+		"24"
+		]
+	},
+]</script><script src="./script.js"></script></html>

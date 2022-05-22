@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 037'
+let questions = [
+	{
+	numb: 1,
+	question: 'National Law Commission is which type of body?  ' ,
+	answer: 'Executive body' ,
+	options: [
+		"Constitutional body",
+		"Statutory body",
+		"Executive body",
+		"None of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'In which of the following year the President of India appointed an Official Language Commission under the chairmanship of B.G. Kher?  ' ,
+	answer: '1955' ,
+	options: [
+		"1950",
+		"1955",
+		"1957",
+		"1965"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following statements are correct regarding the appointments made by the Governor?  ' ,
+	answer: 'None of them' ,
+	options: [
+		"Appoints an eminent personality to preside over its proceedings when the offices of Speaker and the Deputy Speaker are vacant",
+		"Appoints a non-member of state legislature council to preside over its proceedings when offices of Chairman and Deputy Chairman are vacant",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Both the additional or acting judge cannot hold office after attaining the age?  ' ,
+	answer: '62' ,
+	options: [
+		"62",
+		"65",
+		"70",
+		"None of the above"
+		]
+	},
+	{
+	numb: 5,
+	question: 'What are the powers of the Governor with respect to the state election commissioner?  ' ,
+	answer: 'He decides the tenure of the office of state election commissioner' ,
+	options: [
+		"He can remove the state election commissioner",
+		"He decides the tenure of the office of state election commissioner",
+		"He cannot appoint the state election commissioner",
+		"None of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following article is related to succession to property, assets, rights, liabilities and obligations in certain cases?  ' ,
+	answer: 'Article 294' ,
+	options: [
+		"Article 294",
+		"Article 295",
+		"Article 296",
+		"Article 297"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The CAMPA ActorCompensatory Afforestation Fund Act was enacted in which year?  ' ,
+	answer: '2016' ,
+	options: [
+		"2014",
+		"2015",
+		"2016",
+		"2017"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which article of the Constitution of India deals with the suits by or against the Government in India?  ' ,
+	answer: 'Article 300' ,
+	options: [
+		"Article 250",
+		"Article 270",
+		"Article 300",
+		"Article 310"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Gram Nyayalayas Act was enacted in which year?  ' ,
+	answer: '2008' ,
+	options: [
+		"2006",
+		"2007",
+		"2008",
+		"2009"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The Transgender Persons (Protection of Rights) Act was passed in which year?  ' ,
+	answer: '2019' ,
+	options: [
+		"2017",
+		"2018",
+		"2019",
+		"2020"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Election Commission is constituted under which article of the Constitution of India?  ' ,
+	answer: 'Article 324' ,
+	options: [
+		"Article 324",
+		"Article 325",
+		"Article 326",
+		"Article 327"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following states that the amount of the demand be reduced by ₹100?  ' ,
+	answer: 'Token Cut Motion' ,
+	options: [
+		"Policy Cut Motion",
+		"Economy Cut Motion",
+		"Token Cut Motion",
+		"Budget Cut Motion"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What is the process followed for judicial review as per Indian Constitution?  ' ,
+	answer: 'Procedure established by law' ,
+	options: [
+		"Due process of law",
+		"Rule of law",
+		"Procedure established by law",
+		"None of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The Director of Prosecution under the Directorate of Prosecution in CBI is appointed by the recommendation of which of the following?  ' ,
+	answer: 'Central Vigilance Commission' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Central Vigilance Commission",
+		"Parliament"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which article makes special provisions for the state of Nagaland?  ' ,
+	answer: '371 A' ,
+	options: [
+		"370",
+		"371",
+		"371 A",
+		"371 I"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following matches of Parts of the Constitution and their respective titles is not correct?  ' ,
+	answer: 'Part XII – Relations between the union and the states' ,
+	options: [
+		"Part XII – Relations between the union and the states",
+		"Part XVIII – Emergency provisions",
+		"Part XX – Amending the constitution",
+		"Part XXI – Temporary, transitional and special provisions"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which type of procedure is involved in the impeachment of the President of India?  ' ,
+	answer: 'Quasi-Judicial Procedure' ,
+	options: [
+		"Legislative Procedure",
+		"Executive Procedure",
+		"Judicial Procedure",
+		"Quasi-Judicial Procedure"
+		]
+	},
+	{
+	numb: 18,
+	question: 'What all crimes can CBI investigate?  ' ,
+	answer: 'Economic offences' ,
+	options: [
+		"Terrorist attacks",
+		"Economic offences",
+		"Funding of terrorism",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which State has the largest number of members in Lok Sabha?  ' ,
+	answer: 'Uttar Pradesh' ,
+	options: [
+		"Maharashtra",
+		"West Bengal",
+		"Uttar Pradesh",
+		"Madhya Pradesh"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which Articles of the Indian Constitution deal with the Union executive?  ' ,
+	answer: 'Articles 52 to 78' ,
+	options: [
+		"Articles 42 to 68",
+		"Articles 48 to 60",
+		"Articles 52 to 78",
+		"Articles 82 to 98"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which of the following cases the Supreme Court ruled that the sole opinion of the chief justice of India does not constitute the ‘consultation’ process in case of transfer of judges?  ' ,
+	answer: 'Third Judges case (1998)' ,
+	options: [
+		"First Judges case (1981)",
+		"Second Judges case (1993)",
+		"Third Judges case (1998)",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who appoints the Central Vigilance Commissioner?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Parliament",
+		"Supreme court",
+		"Speaker"
+		]
+	},
+	{
+	numb: 23,
+	question: 'What is the minimum strength of state legislative council?  ' ,
+	answer: '40' ,
+	options: [
+		"30",
+		"40",
+		"45",
+		"50"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following statements are correct with respect to the role of cabinet?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"It is the highest decision-making authority",
+		"It is the chief policy formulating body",
+		"It is the chief coordinator of Central administration",
+		"All of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Creation of new state or change in name of state needs amendment in which of the following schedules?  ' ,
+	answer: 'First' ,
+	options: [
+		"First",
+		"Second",
+		"Third",
+		"Fourth"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following are the individual privileges of members of state legislature?1. They cannot be arrested during the session of the state legislature.2. They have freedom of speech in the state legislature.3. They are exempted from jury service.4. They have right to publish its reports, debates and proceedings.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who is the common chairman of the five zonal councils?  ' ,
+	answer: 'Union Home Minister' ,
+	options: [
+		"Union Home Minister",
+		"Prime Minister",
+		"President",
+		"Governor"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who appoints the chief electoral officer who assists the Election Commission at state level?  ' ,
+	answer: 'Chief election commissioner' ,
+	options: [
+		"Chief election commissioner",
+		"President",
+		"Parliament",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The personnel of state services work under the jurisdiction of?  ' ,
+	answer: 'State government' ,
+	options: [
+		"Central government",
+		"State government",
+		"Both central & state government",
+		"None of the above"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following articles of the Constitution of India prescribes eligibility conditions for re-election to the post of the President of India?  ' ,
+	answer: 'Article 57' ,
+	options: [
+		"Article 57",
+		"Article 54",
+		"Article 55",
+		"Article 52"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 025'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following does not fall under the jurldiction of Election Commission-  ' ,
+	answer: 'Election of Prime Minister of India' ,
+	options: [
+		"Election of Prime Minister of India",
+		"Election of the President",
+		"Recognition to political parties",
+		"Allocation of signs to poltical parties"
+		]
+	},
+	{
+	numb: 2,
+	question: 'What is the full form of the Indian Political Party "BSP"?  ' ,
+	answer: 'Bahujan Samaj Party' ,
+	options: [
+		"Bharatiya Samaj Party",
+		"Bahujan Samaj Party",
+		"Bharatiya Sangh Party",
+		"Bahujan Sangh Party"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The ballot papers were used firstly in-  ' ,
+	answer: 'Ancient Greece' ,
+	options: [
+		"Ancient Greece",
+		"England",
+		"Australia",
+		"USA"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The Article-343 of the Indian Constitution is about-  ' ,
+	answer: 'Hindi as official language' ,
+	options: [
+		"Number of seats for the Lok Sabha",
+		"Number of seats for the Rajya Sabha",
+		"Hindi as official language",
+		"Special status to Kashmir"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who said political science as "Metrology"-  ' ,
+	answer: 'Bryce' ,
+	options: [
+		"Blunashi",
+		"Bryce",
+		"Bodin",
+		"Bachil"
+		]
+	},
+	{
+	numb: 6,
+	question: 'How many percent votes should a party get to be registered as a National Party-  ' ,
+	answer: '6%' ,
+	options: [
+		"1%",
+		"3%",
+		"6%",
+		"7%"
+		]
+	},
+	{
+	numb: 7,
+	question: ' Bahujan Samaj Party was founded in-  ' ,
+	answer: '1984' ,
+	options: [
+		"1925",
+		"1955",
+		"1984",
+		"2001"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Bharatiya Janata Party is a part of which political group?  ' ,
+	answer: 'National Democratic Alliance' ,
+	options: [
+		"United Progressive Alliance",
+		"National Democratic Alliance",
+		"Janata Parivar",
+		"Rashtra Parivar"
+		]
+	},
+	{
+	numb: 9,
+	question: 'On which principle, the General Indian Election is based on-  ' ,
+	answer: 'Regional Representation' ,
+	options: [
+		"Proportional Representation",
+		"Regional Representation",
+		"Executive Representation",
+		"General Representation"
+		]
+	},
+	{
+	numb: 10,
+	question: 'How many years after a Finance Commission is constituted by the President-  ' ,
+	answer: '5 years' ,
+	options: [
+		"4 years",
+		"5 years",
+		"6 years",
+		"None of these"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Any member of Union Public Service Commission can be removed by-  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Chief Justice of Supreme Court",
+		"Chairman of UPSC"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Is a form of government in which the rulers are elected by the people-  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Autocratic",
+		"Monarchic",
+		"Democratic",
+		"Authoritarian"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following is a feature of civil services India-  ' ,
+	answer: 'Neutrality and unbiasedness' ,
+	options: [
+		"Neutrality and unbiasedness",
+		"Temporary political executive relations",
+		"Partiality",
+		"All of these"
+		]
+	},
+	{
+	numb: 14,
+	question: 'National Democratic Alliance was founded in?  ' ,
+	answer: '1998' ,
+	options: [
+		"1951",
+		"1998",
+		"2004",
+		"1980"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who does the financial distribution of the resources between Centre and States-  ' ,
+	answer: 'Finance Commission' ,
+	options: [
+		"Planning Commission",
+		"Interstate Council",
+		"Finance Commission",
+		"Finance Minister"
+		]
+	},
+	{
+	numb: 16,
+	question: 'What is the term of office of Chief Election Commissioner of India?  ' ,
+	answer: 'Six years or 65 years of age' ,
+	options: [
+		"five years",
+		"Six years",
+		"Five years or 60 years of age",
+		"Six years or 65 years of age"
+		]
+	},
+	{
+	numb: 17,
+	question: 'To be a voter in India, what is the minimum qualifying age?  ' ,
+	answer: '18 Years' ,
+	options: [
+		"24 Years",
+		"22 Years",
+		"20 Years",
+		"18 Years"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Under which of the following Article of Indian constitution, the verdict of Central Administrative Tribunal can be challenged in Supreme Court-  ' ,
+	answer: '323 A' ,
+	options: [
+		"323 A",
+		"329",
+		"343 C",
+		"343 K"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The National Political Party is one which has attained 6% of total vote in-  ' ,
+	answer: 'Four or more states' ,
+	options: [
+		"Two or more states",
+		"Capital",
+		"Four or more states",
+		"All states"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following is CORRECT about coalition form of government?  ' ,
+	answer: 'Sharing of power by two or more political parties' ,
+	options: [
+		"Sharing of power at different levels",
+		"Sharing of power by different social groups",
+		"Sharing of power by two or more political parties",
+		"None of these"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following crops is banned by the Supreme Court of India-  ' ,
+	answer: 'Genetically modified brinjal' ,
+	options: [
+		"Lathairus",
+		"Genetically modified brinjal",
+		"Bt cotton for export",
+		"Bt cotton for domestic usages"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Article-370 of constitution is applicable on which state-  ' ,
+	answer: 'Jammu and Kashmir' ,
+	options: [
+		"Nagaland",
+		"Mizoram",
+		"Manipur",
+		"Jammu and Kashmir"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who constitutes the Finance Commission-  ' ,
+	answer: 'President' ,
+	options: [
+		"Finance Minister",
+		"Prime Minister",
+		"Speaker of Lok Sabha",
+		"President"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Communist Party of India was founded in-  ' ,
+	answer: '1925' ,
+	options: [
+		"1835",
+		"1885",
+		"1925",
+		"1964"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Under which of the following article the Election Commission was established-  ' ,
+	answer: 'Article-324' ,
+	options: [
+		"Article-355",
+		"Article-356",
+		"Article-324",
+		"Article-320"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The term of members of Union Public Service Commission is-  ' ,
+	answer: '6 years or upto the age of 65' ,
+	options: [
+		"3 years or upto the age of 58",
+		"5 years or up to the age of 60",
+		"6 years or upto the age of 65",
+		"6 years"
+		]
+	},
+	{
+	numb: 27,
+	question: 'M&apos; in BIMARU stands for which state?  ' ,
+	answer: 'Madhya Pradesh' ,
+	options: [
+		"Maharashtra",
+		"Manipur",
+		"Madhya Pradesh",
+		"Mizoram"
+		]
+	},
+	{
+	numb: 28,
+	question: 'President constftutea which of the folloWing bodies for the distribution of resources between Centre and States-  ' ,
+	answer: 'Finance Commission' ,
+	options: [
+		"Finance Commission",
+		"Planning Commission",
+		"Taxation Commission",
+		"Tariff Commission"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who was the first Chief Election Commissioner of India?  ' ,
+	answer: 'Sukurnar Sen' ,
+	options: [
+		"Morarji Desai",
+		"Sukurnar Sen",
+		"Sardar Patel",
+		"V.S Ramadevi"
+		]
+	},
+	{
+	numb: 30,
+	question: 'On the recommendations of which of the followings, the Grants-in-aid is provided to States by Centre-  ' ,
+	answer: 'Finance Commission' ,
+	options: [
+		"Planning Commission",
+		"Finance Minister",
+		"Finance Commission",
+		"National Development Council"
+		]
+	},
+]</script><script src="./script.js"></script></html>

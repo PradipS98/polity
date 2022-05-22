@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 047'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following part of Indian Constitution resembles the standard-setting Charter of the United Nations and the Universal Declaration of Human Rights of 1948?  ' ,
+	answer: 'Part III' ,
+	options: [
+		"Part II",
+		"Part III",
+		"Part IV",
+		"Part V"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The 31st Amendment Act, 1972 increased the number of Lok Sabha seats from 525 to?  ' ,
+	answer: '545' ,
+	options: [
+		"535",
+		"545",
+		"550",
+		"555"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following is also known as the “Super-Cabinet”?  ' ,
+	answer: 'Political Affairs Committee' ,
+	options: [
+		"Political Affairs Committee",
+		"Economic Affairs Committee",
+		"Appointments Committee",
+		"Parliamentary Affairs Committee"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following personalities was not a member of the Constituent Assembly?  ' ,
+	answer: 'Mahatma Gandhi' ,
+	options: [
+		"K. M. Munshi",
+		"Dr. Rajendra Prasad",
+		"G. V. Mavalankar",
+		"Mahatma Gandhi"
+		]
+	},
+	{
+	numb: 5,
+	question: 'In which of the following cases the President can appoint duly qualified persons as additional judges of a high court for a temporary period?1. When there is a temporary increase in the business of the high court.2. When there are arrears of work in the high court.Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who is authorized to extend the jurisdiction of a High Court?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"Supreme Court",
+		"President",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following sections of IPC protects judges from any criminal liability for their judicial acts?  ' ,
+	answer: 'Section 77' ,
+	options: [
+		"Section 75",
+		"Section 76",
+		"Section 77",
+		"Section 78"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which among the following acts, incorporated 11th Fundamental duty in Indian Constitution?  ' ,
+	answer: '86th Amendment Act' ,
+	options: [
+		"42nd Amendment Act",
+		"44th Amendment Act",
+		"86th Amendment Act",
+		"100th Amendment Act"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following statements are correct about the Governor of the state?  ' ,
+	answer: 'The governor is the chief executive head of the state' ,
+	options: [
+		"The governor is the chief executive head of the state",
+		"Governor acts independent of the central government",
+		"One person can be appointed governor only for one state",
+		"Governor is not a titular head of the state"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following statements are correct about of the purpose of Public Interest Litigation?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"It allows meaningful realisation of the fundamental rights",
+		"It is a vindication of the rule of law",
+		"It facilitates effective access to justice",
+		"All of the above"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Pyithu Hluttaw is the lower house of the parliament of which among the following countries?  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Britan",
+		"Canada",
+		"Both 1 & 2",
+		"USA"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following are the characteristics of the Swedish institution of Ombudsman?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Independence of action from the executive",
+		"Suo moto power to start investigations",
+		"Impartial and objective investigation of complaints",
+		"All of the above"
+		]
+	},
+	{
+	numb: 13,
+	question: 'In which states the Governor appoints the Tribal Affairs Minister?1. Chattisgarh2. Uttar Pradesh3. Jharkhand4. Arunachal PradeshSelect the correct code from the options given below:  ' ,
+	answer: 'Only 1 and 3' ,
+	options: [
+		"Only 1 and 2",
+		"Only 1, 3 and 4",
+		"Only 1 and 3",
+		"1, 2, 3 and 4"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who announced the Communal Award in August 1932?  ' ,
+	answer: 'MacDonald' ,
+	options: [
+		"Lord Mountbatten",
+		"Lord Irwin",
+		"MacDonald",
+		"Clement Attlee"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following statements are correct regarding Inter-State water disputes?1. Parliament may provide for the adjudication of any dispute or complaint with respect to the use, distribution and control of waters of any inter-state river2. Parliament may also stop the Supreme Court and any other court is to exercise jurisdiction in respect of any such dispute or complaint.Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 16,
+	question: 'What can a President do when a money bill is presented to him?1. Return the bill2. Reject the bill3. Give assent to the bill4. Recommend changes to the billSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following Schedules of the Constitution of India and their provisions not correct?  ' ,
+	answer: '6th Schedule – Scheduled Areas' ,
+	options: [
+		"9th Schedule – Acts beyond Judicial Review",
+		"6th Schedule – Scheduled Areas",
+		"8th Schedule – Languages",
+		"3rd Schedule – Oaths"
+		]
+	},
+	{
+	numb: 18,
+	question: 'What makes Directive Principles of State Policy different from Fundamental Rights?  ' ,
+	answer: 'Directive Principles are not enforceable whereas Fundamental Rights can be enforced' ,
+	options: [
+		"Directive Principles are not enforceable whereas Fundamental Rights can be enforced",
+		"Former is for the Union and later is for state government",
+		"Former is part of the Constitution whereas later is not",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following Statements are correct with respect to National Emergency?1. The Centre becomes entitled to give executive directions to a state on ‘any’ matter2. Parliament becomes empowered to make laws on any subject mentioned in the State List3. Prime Minister can modify the constitutional distribution of revenues between the centre and the statesSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1, 2 & 4",
+		"All of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'What was the number of state in India after the States Reorganization Act 1956, which reorganized the boundaries of different states on linguistic basis?  ' ,
+	answer: '14' ,
+	options: [
+		"13",
+		"14",
+		"15",
+		"20"
+		]
+	},
+	{
+	numb: 21,
+	question: 'What is the maximum life of an ordinance?  ' ,
+	answer: 'Six months and six weeks' ,
+	options: [
+		"Four months and six weeks",
+		"Six months and six weeks",
+		"Three months and three weeks",
+		"One month and three weeks"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who decides whether a bill is a Money Bill or not in the state legislative assembly?  ' ,
+	answer: 'Speaker' ,
+	options: [
+		"Governor",
+		"President",
+		"Speaker",
+		"Chairman"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The chairman of the Committee on Public Accounts is nominated by which among the following?  ' ,
+	answer: 'Lok Sabha Speaker' ,
+	options: [
+		"President",
+		"Lok Sabha Speaker",
+		"Lok Sabha Secretary",
+		"Cabinet Committee on Parliamentary Affairs"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following articles grant the ‘Right to Equality’ to citizens of India?  ' ,
+	answer: 'Article 14-18' ,
+	options: [
+		"Article 13-17",
+		"Article 14-18",
+		"Article 16-20",
+		"Article 15-19"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which among the following is empowered to notify a transaction to be a supply of goods or supply of services?  ' ,
+	answer: 'Centre or State Government on the recommendations of the GST Council' ,
+	options: [
+		"Central government alone",
+		"State government alone",
+		"GST council",
+		"Centre or State Government on the recommendations of the GST Council"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In which year the Protection of Plant Variety and Farmers Right Act was enacted?  ' ,
+	answer: '2001' ,
+	options: [
+		"2000",
+		"2001",
+		"2002",
+		"2003"
+		]
+	},
+	{
+	numb: 27,
+	question: 'According to which section of IPC says if anyone commits any offence by accident or misfortune without malafide or without knowledge in performance of his legal duty in legal manner with proper care and caution is no offence?  ' ,
+	answer: 'Section 80' ,
+	options: [
+		"Section 79",
+		"Section 80",
+		"Section 81",
+		"Section 82"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following has the power to transfer any case anywhere in India?  ' ,
+	answer: 'Supreme Court' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Supreme Court",
+		"Parliament"
+		]
+	},
+	{
+	numb: 29,
+	question: 'For removal of a Governor from office, the President seeks advice from __:  ' ,
+	answer: 'None of them' ,
+	options: [
+		"Council of Ministers",
+		"Supreme Court",
+		"Chief Minister of the concerned state",
+		"None of them"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which State published a memorandum on Centre-state relations and sent it to the Central government in 1977?  ' ,
+	answer: 'West Bengal' ,
+	options: [
+		"Andhra Pradesh",
+		"Orissa",
+		"Tamil Nadu",
+		"West Bengal"
+		]
+	},
+]</script><script src="./script.js"></script></html>

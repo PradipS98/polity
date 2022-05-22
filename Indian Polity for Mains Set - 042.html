@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 042'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who all are in the Selection Committee meant for the selection of the Chairperson and the members of Lokpal?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Prime Minister",
+		"Speaker of the Lok Sabha",
+		"Chief Justice of India",
+		"All of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The original constitution of India had included 14 languages in the 8th schedule. Which of the following was the 15th language to be included in this schedule?  ' ,
+	answer: 'Sindhi' ,
+	options: [
+		"Konkani",
+		"Dogri",
+		"Sindhi",
+		"Manipuri"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Who among the following was the chairman of the Special Committee to examine the Draft Constitution of India ?  ' ,
+	answer: 'Sir Alladi Krishnaswami Ayyer' ,
+	options: [
+		"Dr. B R Ambedkar",
+		"Sir Alladi Krishnaswami Ayyer",
+		"Sardar Patel",
+		"Sardar Balvant Singh"
+		]
+	},
+	{
+	numb: 4,
+	question: 'A bill for the creation of new State in India is required to be passed in Parliament by?  ' ,
+	answer: 'Simple majority' ,
+	options: [
+		"Simple majority",
+		"Two-third majority",
+		"Two-third majority plus ratification by half of all states",
+		"None of the above"
+		]
+	},
+	{
+	numb: 5,
+	question: 'In which year legislative council of Tamilnadu was abolished?  ' ,
+	answer: '1986' ,
+	options: [
+		"1983",
+		"1985",
+		"1986",
+		"1987"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which amendment states that the total number of ministers, including the Prime Minister, in the Central Council of Ministers shall not exceed 15% of the total strength of the Lok Sabha?  ' ,
+	answer: '91st' ,
+	options: [
+		"87th",
+		"89th",
+		"91st",
+		"93rd"
+		]
+	},
+	{
+	numb: 7,
+	question: 'What is the penalty for nondisclosure of foreign income or assets under Black Money (Undisclosed Foreign Income and Assets) and Imposition of Tax Act, 2015?  ' ,
+	answer: 'Equal to three times the amount of tax payable, in addition to tax payable at 30%.' ,
+	options: [
+		"Equal to two times the amount of tax payable, in addition to tax payable at 30%.",
+		"Equal to three times the amount of tax payable, in addition to tax payable at 30%.",
+		"Equal to three times the amount of tax payable, in addition to tax payable at 20%.",
+		"Equal to three times the amount of tax payable, in addition to tax payable at 10%."
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following writs issue a command to a public official asking him to perform his official duties that he has failed or refused to perform?  ' ,
+	answer: 'Mandamus' ,
+	options: [
+		"Certiorari",
+		"Mandamus",
+		"Habeas Corpus",
+		"Quo-Warranto"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which committee was formed for the determination of boundary of India and Pakistan?  ' ,
+	answer: 'Radcliffe committee' ,
+	options: [
+		"Hartog committee",
+		"Radcliffe committee",
+		"Zakir Hussain committee",
+		"Lee commission"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which act makes it mandatory for any association of the individuals calling itself a political party to make application to Election Commission for registration as a political party within 30 days following the date of its formation?  ' ,
+	answer: 'Representation of People Act, 1951' ,
+	options: [
+		"Representation of People Act, 1950",
+		"Representation of People Act, 1951",
+		"Representation of People Act, 1952",
+		"Representation of People Act, 1953"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which amendment empowered the president to send back once, the advice of cabinet for reconsideration?  ' ,
+	answer: '44th' ,
+	options: [
+		"42nd",
+		"44th",
+		"46th",
+		"48th"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following writs is issued to prevent a lower court from exceeding its jurisdiction?  ' ,
+	answer: 'Prohibition' ,
+	options: [
+		"Mandamus",
+		"Habeas Corpus",
+		"Prohibition",
+		"Certiorari"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who described Prime Minister as “the steersman of steering wheel of the ship of the state”?  ' ,
+	answer: 'Ramsay Muir' ,
+	options: [
+		"Jennings",
+		"H.R.G. Greaves",
+		"Ramsay Muir",
+		"Munro"
+		]
+	},
+	{
+	numb: 14,
+	question: 'At which among the following times, vote on account is passed by Lok Sabha?  ' ,
+	answer: 'After general discussion and before discussion on demands for grants' ,
+	options: [
+		"Before general discussion on budget",
+		"After general discussion and before discussion on demands for grants",
+		"After discussion on demands for grants and before passing the appropriation bill",
+		"After passing the appropriation bill"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who decides the salaries, allowances, privileges, leave and pension of the judges of the Supreme Court?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Prime MInister",
+		"Parliament",
+		"Council of Ministers"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Goswami committee was appointed in which year?  ' ,
+	answer: '1990' ,
+	options: [
+		"1980",
+		"1985",
+		"1990",
+		"1995"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following can be amended by special majority of Parliament and consent of states?  ' ,
+	answer: 'Election of the President and its manner' ,
+	options: [
+		"Election of the President and its manner",
+		"Citizenship–acquisition and termination",
+		"Use of official language",
+		"Rules of procedure in Parliament"
+		]
+	},
+	{
+	numb: 18,
+	question: 'In which year a new Ministry of Tribal Affairs was created?  ' ,
+	answer: '1999' ,
+	options: [
+		"1999",
+		"2002",
+		"2005",
+		"2010"
+		]
+	},
+	{
+	numb: 19,
+	question: 'According to which of the following committee the district should be the first point for decentralisation under popular supervision below the state level?  ' ,
+	answer: 'Ashok Mehta Committee' ,
+	options: [
+		"Ashok Mehta Committee",
+		"G.V.K. Rao Committee",
+		"L M Singhvi Committee",
+		"Thungon Committee"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who can make laws on any matter in the State List for implementing the international treaties, agreements or conventions?  ' ,
+	answer: 'The Parliament' ,
+	options: [
+		"The Parliament",
+		"The Council of Ministers",
+		"The Prime Minister",
+		"The Vice President"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which among the following is/ are correct about the status of Tobacco and Tobacco products under the Goods and Services Tax?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Taxes can be levied on those products under GST",
+		"Central excise duty can be levied on those products",
+		"Both of them",
+		"Tobacco products are excluded from GST"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following are the guiding principles of NITI Aayog?1. Antyodaya2. Exclusion3. People’s Participation4. GovernanceSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who shall be consulted before making the acquisition of land in the Scheduled Areas for development projects?  ' ,
+	answer: 'Gram Sabha' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"Gram Sabha",
+		"None of the above"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following are the objectives of NITI Aayog?1. To evolve a shared vision of national development priorities, sectors and strategies with the active involvement of States.2. To foster cooperative federalism.3. To focus on technology upgradation and capacity building for implementation of programmes and initiatives.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Where was thefourth high court was established in the year 1866?  ' ,
+	answer: 'Allahabad' ,
+	options: [
+		"Calcutta",
+		"Allahabad",
+		"Madras",
+		"Kolkata"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following statements are correct regarding Constitutional Amendment Bill?1. The President must give his assent to a Constitutional Amendment Bill2. In case of disagreement between two houses of Parliament there is a provision for joint sittingSelect the correct statement from the options given below:  ' ,
+	answer: 'Only 1' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 27,
+	question: 'In which year was the National Consumer Disputes Redressal Commission (NCDRC) established?  ' ,
+	answer: '1986' ,
+	options: [
+		"1966",
+		"1975",
+		"1986",
+		"1990"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following parts of Indian constitution has only one article?  ' ,
+	answer: 'Part XX' ,
+	options: [
+		"Part XVII",
+		"Part XVIII",
+		"Part XIX",
+		"Part XX"
+		]
+	},
+	{
+	numb: 29,
+	question: 'How many sections are there in the Benami Transactions (Prohibition) Act, 1988?  ' ,
+	answer: '9' ,
+	options: [
+		"7",
+		"8",
+		"9",
+		"10"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The National Commission for Scheduled Tribes (STs) is constituted under which article of the Indian Constitution?  ' ,
+	answer: 'Article 338 A' ,
+	options: [
+		"Article 338",
+		"Article 338 A",
+		"Article 339",
+		"Article 340"
+		]
+	},
+]</script><script src="./script.js"></script></html>

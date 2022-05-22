@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 053'
+let questions = [
+	{
+	numb: 1,
+	question: 'In which year the National Green Tribunal Act was enacted?  ' ,
+	answer: '2010' ,
+	options: [
+		"2005",
+		"2009",
+		"2010",
+		"2011"
+		]
+	},
+	{
+	numb: 2,
+	question: 'For which of the following offences mens rea is not essential?  ' ,
+	answer: 'Waging war' ,
+	options: [
+		"Waging war",
+		"Robbery",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which among the following constitutional amendment act, reduced the age of voting from 21 years to 18 years?  ' ,
+	answer: '61st Amendment Act' ,
+	options: [
+		"59th Amendment Act",
+		"60th Amendment Act",
+		"61st Amendment Act",
+		"62nd Amendment Act"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who said that the CAG shall be the most important Officer under the Constitution of India?  ' ,
+	answer: 'B.R. Ambedkar' ,
+	options: [
+		"K.M. Munshi",
+		"Jawaharlal Nehru",
+		"B.R. Ambedkar",
+		"Sardar Vallabhbhai Patel"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Special Marriage Act was passed in which year?  ' ,
+	answer: '1954' ,
+	options: [
+		"1952",
+		"1953",
+		"1954",
+		"1955"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who can specify a transitional area, a smaller urban area or a larger urban area in a state?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief Minister",
+		"Governor",
+		"Prime Minister",
+		"None of the above"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who is the chief executive head of the state?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief minister",
+		"Governor",
+		"President",
+		"None of the above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which among the following is NOT a fundamental duty of a citizen?  ' ,
+	answer: 'Respect for the government' ,
+	options: [
+		"Respect for the constitution",
+		"Respect for the National Flag",
+		"Respect for the National Anthem",
+		"Respect for the government"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which amendment provided for reservation of seats in the Lok Sabha for STs in Meghalaya, Arunachal Pradesh, Nagaland and Mizoram?  ' ,
+	answer: '51st' ,
+	options: [
+		"42nd",
+		"44th",
+		"51st",
+		"69th"
+		]
+	},
+	{
+	numb: 10,
+	question: 'What is the maximum age till which UPSC chairman and members can hold office?  ' ,
+	answer: '65' ,
+	options: [
+		"60",
+		"62",
+		"65",
+		"70"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who appoints the chairman and members of a Joint State Public Service Commission?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"State Legislatures",
+		"Governor"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which among the following article throws all public places to all citizens?  ' ,
+	answer: 'Article 15 (2)' ,
+	options: [
+		"Article 15 (2)",
+		"Article 16 (2)",
+		"Article 17",
+		"Article 18"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The Panchayats (Extension to Scheduled Areas) Act (PESA) does not authorize the States give the Gram Sabhas power to regulate and restrict which of the following?  ' ,
+	answer: 'Manage mineral resources' ,
+	options: [
+		"Sale/consumption of liquor",
+		"Minor Forest Produce",
+		"Identify the beneficiary of the schemes",
+		"Manage mineral resources"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year the Parliament of India enacted the Official Languages Act?  ' ,
+	answer: '1963' ,
+	options: [
+		"1963",
+		"1964",
+		"1965",
+		"1966"
+		]
+	},
+	{
+	numb: 15,
+	question: 'What is the tenure of members of Rajya Sabha?  ' ,
+	answer: '6 years' ,
+	options: [
+		"2 years",
+		"3 years",
+		"5 years",
+		"6 years"
+		]
+	},
+	{
+	numb: 16,
+	question: 'At which stage of discussion a Bill is published in the gazette of India?  ' ,
+	answer: 'First Reading' ,
+	options: [
+		"First Reading",
+		"Second Reading",
+		"Third Reading",
+		"When the Bill becomes an Act"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The Consumer Disputes Redressal Commission (CDRCs) will hear complaints worth?  ' ,
+	answer: 'more than Rs. 10 crores' ,
+	options: [
+		"more than Rs. 10 lakhs",
+		"less than Rs. 10 lakhs",
+		"more than Rs. 10 crores",
+		"less than Rs. 10 crores"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Who can can punish any person for the contempt of Supreme Court?  ' ,
+	answer: 'Supreme Court' ,
+	options: [
+		"President",
+		"Parliament",
+		"Council of ministers",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which inter-state water tribunal was constituted for the states of Odisha and Chhattisgarh?  ' ,
+	answer: 'Mahanadi Water Disputes Tribunal' ,
+	options: [
+		"Mahadayi Water Disputes Tribunal",
+		"Vansadhara Water Disputes Tribunal",
+		"Cauvery Water Disputes Tribunal",
+		"Mahanadi Water Disputes Tribunal"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following is NOT a correct statement with respect to Freedom of speech and expression in India?  ' ,
+	answer: 'It can not be curtailed by legislation' ,
+	options: [
+		"It is enshrined in Part III of the Constitution",
+		"It is not an absolute right to express one’s thoughts freely",
+		"It can not be curtailed by legislation",
+		"It can be suspended in emergency"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following is not one of the essential qualification for the candidature of President?  ' ,
+	answer: 'Tenth pass' ,
+	options: [
+		"Citizen of India",
+		"Qualified for election as a member of the house of people",
+		"Completion of 35 years of age",
+		"Tenth pass"
+		]
+	},
+	{
+	numb: 22,
+	question: 'In which year National Commission for Protection of Child Rights was set up?  ' ,
+	answer: '2007' ,
+	options: [
+		"2000",
+		"2002",
+		"2007",
+		"2010"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Preamble of the Indian Constitution based on which of the following previous documents / Laws?  ' ,
+	answer: 'Objectives Resolution' ,
+	options: [
+		"Nehru Report",
+		"Objectives Resolution",
+		"Government of India Act, 1935",
+		"Indian Independence Act, 1947"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which act during British India gave the power to President to issue ordinances?  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Government of India Act, 1919",
+		"Government of India Act, 1909",
+		"Government of India Act, 1935",
+		"Indian Independence act, 1947"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act was passed in which year ?  ' ,
+	answer: '2006' ,
+	options: [
+		"2003",
+		"2004",
+		"2005",
+		"2006"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following is the largest Lok Sabha constituency of India in terms of Area?  ' ,
+	answer: 'Ladakh' ,
+	options: [
+		"Arunachal West",
+		"Ladakh",
+		"Barmer",
+		"Kutch"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who can hear the first appeals from the orders and judgments of the district courts, additional district courts and other subordinate courts?1. Supreme Court2. High CourtSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following represents the disapproval of the policy underlying the demand?  ' ,
+	answer: 'Policy Cut Motion' ,
+	options: [
+		"Policy Cut Motion",
+		"Economy Cut Motion",
+		"Token Cut Motion",
+		"None of the above"
+		]
+	},
+	{
+	numb: 29,
+	question: 'With reference to the Keshavananda Bharati Case, the Supreme Court of India mandated that __:Basic features of the constitution of India are not amendable at allFundamental Rights are counted in the basic featuresWhich among the above statements is / are correct?  ' ,
+	answer: 'Only 1' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 nor 2"
+		]
+	},
+	{
+	numb: 30,
+	question: 'How many inter-state water tribunals have been set up so far?  ' ,
+	answer: '9' ,
+	options: [
+		"7",
+		"8",
+		"9",
+		"12"
+		]
+	},
+]</script><script src="./script.js"></script></html>

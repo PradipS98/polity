@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 016'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following state had never a Lady Chief Minister-  ' ,
+	answer: 'Maharashtra' ,
+	options: [
+		"Tamilnadu",
+		"Rajasthan",
+		"Uttar Pradesh",
+		"Maharashtra"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The ordinance by Governor will be valid in case of non-approval in State Legislature for a period of-  ' ,
+	answer: 'Six weeks' ,
+	options: [
+		"Six months",
+		"Six weeks",
+		"One year",
+		"One weeks"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Governor is sworn by-  ' ,
+	answer: 'Chief Justice of High Court' ,
+	options: [
+		"Chief Justice of High Court",
+		"President",
+		"Speaker of assembly",
+		"Chief Justice of India"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Article-187 of the Indian constitution "Secretariat of State Legislature" deals with?  ' ,
+	answer: 'The State Government' ,
+	options: [
+		"The State Government",
+		"The Directive Principles of State Policy",
+		"The Union Government",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following tatement is not correct about Governor-  ' ,
+	answer: 'Minimum age required for a person to become Governor of a state is 30 years' ,
+	options: [
+		"A person can be appointed as Governor for two or more states",
+		"Governor can be tranferred from one state to another during their tenure",
+		"President appoints Governor by warrant, under his hand and seal",
+		"Minimum age required for a person to become Governor of a state is 30 years"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The maximum time a person can continue to be the minister of the State Government without being a member the state legislature-  ' ,
+	answer: 'Six months' ,
+	options: [
+		"One year",
+		"Three months",
+		"Six months",
+		"No time limit"
+		]
+	},
+	{
+	numb: 7,
+	question: 'How many members are nominated by Governor in legislative council?  ' ,
+	answer: '1/6th of total strength of house' ,
+	options: [
+		"12",
+		"6",
+		"1/6th of total strength of house",
+		"1/12th of total strength of house"
+		]
+	},
+	{
+	numb: 8,
+	question: 'How many members of the State Legislative Council are elected. by the Assembly?  ' ,
+	answer: '1/3 of the members' ,
+	options: [
+		"1/6 of the members",
+		"1/3 of the members",
+		"1/12 of the membets",
+		"5/6 of the members"
+		]
+	},
+	{
+	numb: 9,
+	question: 'What can be the maximum strength of state legislative council?  ' ,
+	answer: '1/3rd of concemed legislative assembly' ,
+	options: [
+		"Half of concerned legislative assembly",
+		"1/3rd of concemed legislative assembly",
+		"4th of concerned legislative assembly",
+		"500"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The Legislative Council in a State in India may be created or abolished by the-  ' ,
+	answer: 'Parliament after the State Legislative Assembly passes a resolution to that effect' ,
+	options: [
+		"President on the recommendation of the Govemor",
+		"Parliament",
+		"Parliament after the State Legislative Assembly passes a resolution to that effect",
+		"Governor on a recommendation by the State Cabinet"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The ordinance by the Governor are subject to approval of-  ' ,
+	answer: 'State Legislature' ,
+	options: [
+		"President",
+		"State Legislature",
+		"Council of Ministers of State",
+		"Parliament"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who among the following is the first woman Chief minister of Punjab?  ' ,
+	answer: 'Rajinder Kaur Bhattal' ,
+	options: [
+		"Sucheta Kriplani",
+		"Mehbooba Mufti",
+		"Draupadi Murmu",
+		"Rajinder Kaur Bhattal"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Article-173 of the Indian Constitution "Qualification for membership of the State Legislature" deals with?  ' ,
+	answer: 'The State Government' ,
+	options: [
+		"The Directive Principles of State Policy",
+		"The State Government",
+		"The Union Government",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In case no party enjoys absolute majority in the Legislative Assembly of a state, the Governor will go by-  ' ,
+	answer: 'His own discretion' ,
+	options: [
+		"The advice of former Chief Minister",
+		"The advice of the Prime Minister",
+		"The advice of the President of India",
+		"His own discretion"
+		]
+	},
+	{
+	numb: 15,
+	question: 'What is the full form of MLA in the Indian Constitution?  ' ,
+	answer: 'Member of Legislative Assembly' ,
+	options: [
+		"Member of Legislative Assembly",
+		"Master of Legislative Assembly",
+		"Member of Left Assembly",
+		"Master of Left Assembly"
+		]
+	},
+	{
+	numb: 16,
+	question: 'According to which article, state council can be formed or dissolved-  ' ,
+	answer: 'Article 169' ,
+	options: [
+		"Article 167",
+		"Article 168",
+		"Article 170",
+		"Article 169"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who works as the chairman of State Planning Board-  ' ,
+	answer: 'Chief Minister' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"Leader of Opposition",
+		"Speaker"
+		]
+	},
+	{
+	numb: 18,
+	question: ' Which Article of the Indian constitution defines the duties of the Chief Minister?  ' ,
+	answer: 'Article-167' ,
+	options: [
+		"Article-166",
+		"Article-163",
+		"Article-167",
+		"Article-164"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The minimum age limit for the membership of the Vidhan Parishad is-  ' ,
+	answer: '30 years' ,
+	options: [
+		"21 years",
+		"25 years",
+		"30 years",
+		"35 years"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who appoints Governor of a State in India?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Prime Minister of India",
+		"Council of Minister",
+		"Judge of Supreme Court",
+		"President of India"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which State does the Governor nominate woman to the Assembly?  ' ,
+	answer: 'Jammu & Kashmir' ,
+	options: [
+		"Jammu & Kashmir",
+		"Sikkim",
+		"Manipur",
+		"Nagaland"
+		]
+	},
+	{
+	numb: 22,
+	question: 'In which of the following matters, Governor can make recommendations to President-1.Dismissal of Council of Ministers2.Suspension of Judges of High Court3.Dissolution of State Assembly4.Declaration of failure of Constitutional Machinery in State  ' ,
+	answer: '1,3 and 4' ,
+	options: [
+		"2,3 and 4",
+		"1,2 and 3",
+		"1,2 and 4",
+		"1,3 and 4"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who uses the real Executionary Powers of State-  ' ,
+	answer: 'Chief Minister' ,
+	options: [
+		"Chief Minister",
+		"Council of Ministers",
+		"Governor",
+		"Chief Justice of High Court"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What is maximum determined numbers for the members of the State Legislative Assemblies-  ' ,
+	answer: '500' ,
+	options: [
+		"350",
+		"600",
+		"500",
+		"750"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The Chief Minister is appointed by-  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Governor",
+		"President",
+		"Chief Justice of Supreme Court",
+		"Chief Justice of High Court"
+		]
+	},
+	{
+	numb: 26,
+	question: 'How many member of Anglo-Indian Community can be nominated by Governor in State Assembly-  ' ,
+	answer: '1' ,
+	options: [
+		"1",
+		"2",
+		"12",
+		"6"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The constitution does not have the provision to impeach-  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief Justice of Supreme Court",
+		"Chief Justice of Any High Court",
+		"Governor",
+		"President"
+		]
+	},
+	{
+	numb: 28,
+	question: 'What is the minimum age for becoming a Governor of state in India?  ' ,
+	answer: '35 years' ,
+	options: [
+		"30 years",
+		"25 years",
+		"35 years",
+		"45 years"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who served for the longest period of time as the Chief Minister of a state-  ' ,
+	answer: 'Jyoti Basu' ,
+	options: [
+		"Pratap Singh Kairon",
+		"Bhairon Singh Shekhavat",
+		"Jyoti Basu",
+		"Devi Lal"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Article-211 of the Indian Constitution "Restriction on discussion in the Legislature" deals with?  ' ,
+	answer: 'The State Government' ,
+	options: [
+		"The Directive Principles of State Policy",
+		"The Union Government",
+		"The fundamental rights of the Indian Citizen",
+		"The State Government"
+		]
+	},
+]</script><script src="./script.js"></script></html>

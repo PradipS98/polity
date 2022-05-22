@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 005'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following statements are correct about judicial activism?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"It is the process of lawmaking by judges",
+		"It is the practice in the judiciary of protecting individual rights",
+		"Judges depart from strict adherence to judicial precedents",
+		"All of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following list prevails when there is a conflict between the Concurrent List and the State List?  ' ,
+	answer: 'Concurrent List' ,
+	options: [
+		"Concurrent List",
+		"State List",
+		"Union List",
+		"Residuary List"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Who was the first Chief election commissioner of India ?  ' ,
+	answer: 'Sukumar Sen' ,
+	options: [
+		"KVK Sundaram",
+		"SP Sen Verma",
+		"Sukumar Sen",
+		"Rajmannar"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In which year was Goa was conferred statehood?  ' ,
+	answer: '1987' ,
+	options: [
+		"1967",
+		"1987",
+		"1995",
+		"1992"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who among the following can suspend the fundamental rights?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Prime minister",
+		"Supreme court"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The constitutional position of President of India is most closely similar to __:  ' ,
+	answer: 'British Monarch' ,
+	options: [
+		"British Monarch",
+		"US President",
+		"Russian President",
+		"British Prime Minister"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which Article of Indian Constitution contains special provisions with regard to the state of Maharashtra?  ' ,
+	answer: '371' ,
+	options: [
+		"371",
+		"371 A",
+		"371 B",
+		"371 D"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What is the meaning of Judicial Enthusiasm?  ' ,
+	answer: 'Judges like to participate in the social reforms' ,
+	options: [
+		"Judges like to maintain restraint",
+		"Judges like to participate in the social reforms",
+		"Judges like to follow judicial precedent",
+		"None of the above"
+		]
+	},
+	{
+	numb: 9,
+	question: 'In which year was the Legal Services Authorities Act, 1987 was amended to provide for the establishment of the Permanent Lok Adalats?  ' ,
+	answer: '2002' ,
+	options: [
+		"2001",
+		"2002",
+		"2003",
+		"2004"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following are the advantages of ADR (Alternative Dispute Resolution) summarized by the Law Commission of India?1. Less expensive2. Time-consuming & effective3. Parties are free to discuss their differences of opinion4. Parties have the feeling that there is no losing or winning sideSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 1, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 11,
+	question: 'On which basis the President cannot declare National Emergency?  ' ,
+	answer: 'Threat to internal peace' ,
+	options: [
+		"War",
+		"External attack",
+		"Threat to internal peace",
+		"Armed Rebellion"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who is authorized to increase the number of judges in the Supreme Court of India?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Chief Justice of India",
+		"Parliament",
+		"President",
+		"The Law Commission"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who elects the members in the Nagaland Legislative Assembly from Tuensang district?  ' ,
+	answer: 'Elected by regional council' ,
+	options: [
+		"Members are nominated by Governor",
+		"Directly elected by people",
+		"Elected by regional council",
+		"None of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following are the grounds on which National Emergency can be declared?1. External aggression2. Internal disturbances3. Armed rebellion4. Communal riotsSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 3 & 4",
+		"Only 1 & 3"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which institution reviews the financial position of the municipalities?  ' ,
+	answer: 'Finance Commission' ,
+	options: [
+		"Planning Commission",
+		"Finance Commission",
+		"National Statistical Commission",
+		"None of the above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'In terms of Parliamentary terminology, What do we call a rule of legislative procedure under which a further debate on a motion can be stopped?  ' ,
+	answer: 'Closure' ,
+	options: [
+		"Closure",
+		"Gullitone",
+		"Expunction",
+		"Recess"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The President can suspend enforcement of Fundamental Rights under which of the following Articles?  ' ,
+	answer: 'Article 359' ,
+	options: [
+		"Article 13",
+		"Article 359",
+		"Article 358",
+		"Article 356"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following can be judicially reviewed?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Constitutional amendments",
+		"Legislation of the Parliament",
+		"Legislation of the State Legislature",
+		"All of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which among the following constitution is similar to Indian Constitution because of a strong centre?  ' ,
+	answer: 'Canada' ,
+	options: [
+		"USA",
+		"Canada",
+		"England",
+		"Japan"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The provision relating to the reservation of seats in panchayats for the scheduled castes is not applicable to which of the following states?  ' ,
+	answer: 'Arunachal Pradesh' ,
+	options: [
+		"Assam",
+		"Arunachal Pradesh",
+		"Nagaland",
+		"Manipur"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which year, Constitution of India was amended for the first time?  ' ,
+	answer: '1951' ,
+	options: [
+		"1950",
+		"1951",
+		"1952",
+		"1953"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following Schedules is associated with the items falling under the governing power of municipalities?  ' ,
+	answer: 'Twelfth Schedule' ,
+	options: [
+		"Eleventh Schedule",
+		"Fifth Schedule",
+		"Eighth Schedule",
+		"Twelfth Schedule"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who can make extraterritorial legislation among the following?  ' ,
+	answer: 'The Parliament' ,
+	options: [
+		"The Parliament",
+		"The Judiciary",
+		"The President",
+		"The Prime Minister"
+		]
+	},
+	{
+	numb: 24,
+	question: 'For which of the following purpose,Rajamanar Committeewas constituted ?  ' ,
+	answer: 'Centre State Fiscal Relations' ,
+	options: [
+		"Industrial Licensing",
+		"Direct taxes",
+		"Centre State Fiscal Relations",
+		"InDirect taxes"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following is correct with respect to removal of a judge of Supreme Court?  ' ,
+	answer: 'He can be removed by the President on the recommendation of Chief Justice of India' ,
+	options: [
+		"He can be removed by the President on the recommendation of the Parliament",
+		"He can be removed by the President",
+		"He can be removed by Chief Justice of India",
+		"He can be removed by the President on the recommendation of Chief Justice of India"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The minimum and maximum age for a candidate to contest elections for President of India’s office?  ' ,
+	answer: '35 years , no limit' ,
+	options: [
+		"25 years, 65 years",
+		"35 years, 65 years",
+		"35 years , no limit",
+		"25 years, no limit"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which committee called the Panchayati Raj institutions as ‘grass without roots’?  ' ,
+	answer: 'G.V.K. Rao Committee' ,
+	options: [
+		"G.V.K. Rao Committee",
+		"Dantwala Committee",
+		"Hanumantha Rao Committee",
+		"L M Singhvi Committee"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which among the following is the official language of Union Territory of Lakshadweep ?  ' ,
+	answer: 'Malayalam' ,
+	options: [
+		"Tamil",
+		"Malayalam",
+		"Great Andamanese",
+		"Sinhala"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following can organize Lok Adalats?1. State Legal Services Authority2. District Legal Services Authority3. Supreme Court Legal Services Committee4. Taluk Legal Services CommitteeSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 ,3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1, 2 & 3",
+		"Only 1, 3 & 4",
+		"1, 2 ,3 & 4"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following articles contain special provisions with regard to certain states?  ' ,
+	answer: 'Articles 371 to 371-J' ,
+	options: [
+		"Articles 371 to 371-J",
+		"Articles 271 to 271-J",
+		"Articles 171 to 171-J",
+		"None of the above"
+		]
+	},
+]</script><script src="./script.js"></script></html>

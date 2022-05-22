@@ -1,0 +1,300 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 057'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which amendment authorised the Parliament to establish a common high court for two or more states or for two or more states and a union territory?  ' ,
+	answer: '7th' ,
+	options: [
+		"5th",
+		"6th",
+		"7th",
+		"8th"
+		]
+	},
+	{
+	numb: 2,
+	question: 'In which year a study team on Panchayati Raj Finances under K. Santhanam constituted?  ' ,
+	answer: '1963' ,
+	options: [
+		"1963",
+		"1964",
+		"1965",
+		"1966"
+		]
+	},
+	{
+	numb: 3,
+	question: 'In which of the following months Quami Ekta Week or National Integration Week is celebrated every year ?  ' ,
+	answer: 'November' ,
+	options: [
+		"October",
+		"November",
+		"December",
+		"January"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following statements is true regarding Fundamental Rights?  ' ,
+	answer: 'They may be suspended during Emergency' ,
+	options: [
+		"They cannot be suspended",
+		"They may be suspended on the will of President",
+		"They can be suspended by an order of Prime Minister",
+		"They may be suspended during Emergency"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following statements are correct with respect to Prime Minister?1. He recommends persons who can be appointed as ministers by the president.2. He presides over the meeting of council of ministers.3. He can bring about the collapse of the council of ministers by resigning from office.Select the correct option from the codes given below:  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following is an outcome of judicial activism?1. Judicial Review2. Public Interest LitigationSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following constitute the All-India services?1. Indian Administrative Service (IAS)2. Indian Police Service (IPS)3. Indian Forest Service (IFS)4. Indian Economic Service (IES)  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The total number of ministers, including the Prime Minister, in the Council of Ministers shall not exceed?  ' ,
+	answer: '15%' ,
+	options: [
+		"5%",
+		"10%",
+		"15%",
+		"20%"
+		]
+	},
+	{
+	numb: 10,
+	question: 'In which year National Commission for Women was set up?  ' ,
+	answer: '1992' ,
+	options: [
+		"1992",
+		"1995",
+		"2002",
+		"2005"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Indrajit Gupta committee on state funding of elections was appointed in which year?  ' ,
+	answer: '1988' ,
+	options: [
+		"1988",
+		"1989",
+		"1990",
+		"1991"
+		]
+	},
+	{
+	numb: 12,
+	question: 'In which year was the first commission to report on the administration of the scheduled areas and the welfare of the scheduled tribes in the state constituted?  ' ,
+	answer: '1960' ,
+	options: [
+		"1950",
+		"1960",
+		"1970",
+		"1980"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which among the following fundamental rights has been to subject to maximum litigation after inauguration of the Constitution of India?  ' ,
+	answer: 'Right to Property' ,
+	options: [
+		"Right to Freedom",
+		"Right to Constitutional remedies",
+		"Right to Property",
+		"Right against exploitation"
+		]
+	},
+	{
+	numb: 14,
+	question: 'What are the principles of doctrine of private defence?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Anybody whose life is threatened by a grave danger need not wait for the state aid",
+		"It is not punitive",
+		"The right cannot be availed of for the sake of self gratification",
+		"All of the above"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which amendment of the constitution is related to reorganization of states on a linguistic basis?  ' ,
+	answer: '7th' ,
+	options: [
+		"1st",
+		"7th",
+		"10th",
+		"15th"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following articles under Part IV (Article 36-51) contain the directive principles of state policy that include scope of Gandhian principles?  ' ,
+	answer: 'Article 40, 47, 48' ,
+	options: [
+		"Article 40, 43, 44",
+		"Article 40, 47, 48",
+		"Article 47 only",
+		"Article 50 only"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following was given the status of state by Thirteenth Amendment Act, 1962?  ' ,
+	answer: 'Nagaland' ,
+	options: [
+		"Sikkim",
+		"Nagaland",
+		"Assam",
+		"Tripura"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The constitution of India is considered federal in nature, and unitary in spirit. Which of the following is not a federal feature?  ' ,
+	answer: 'Appointment of state governors by the central government' ,
+	options: [
+		"Three-tier governmental structure",
+		"Independent Judiciary",
+		"Bicameralism",
+		"Appointment of state governors by the central government"
+		]
+	},
+	{
+	numb: 19,
+	question: 'How many months of advance notice is given for civil proceedings against civil servants for anything done in their official capacity?  ' ,
+	answer: '2 months' ,
+	options: [
+		"1 month",
+		"2 months",
+		"3 months",
+		"4 months"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The constitution of India derives its ultimate authority from ____?  ' ,
+	answer: 'People of India' ,
+	options: [
+		"Supreme Court of India",
+		"Parliament of India",
+		"People of India",
+		"Constituent Assembly of India"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which articles of the Constitution deal with the organisation, independence, jurisdiction, powers, procedures and so on of the Supreme Court of India?  ' ,
+	answer: 'Articles 124 to 147' ,
+	options: [
+		"Articles 111 to 123",
+		"Articles 124 to 147",
+		"Articles 167 to 185",
+		"Articles 224 to 267"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which Constitutional Amendment increased the retirement age of high court judges from 60 to 62 years?  ' ,
+	answer: '15th' ,
+	options: [
+		"15th",
+		"16th",
+		"17th",
+		"18th"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which section of the Protection of Women from Domestic Violence Act 2005 defines domestic violence?  ' ,
+	answer: 'Section 3' ,
+	options: [
+		"Section 3",
+		"Section 4",
+		"Section 5",
+		"Section 6"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What is the function of Pro-Tem Speaker?  ' ,
+	answer: 'Administer oath to members' ,
+	options: [
+		"Administer oath to members",
+		"Check if the election certificates of the members are in order",
+		"Conduct proceeding of the House in absence of the Speaker",
+		"Select the Deputy Speaker"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Under which among the following articles, President has pardoning power?  ' ,
+	answer: 'Article 72' ,
+	options: [
+		"Article 70",
+		"Article 72",
+		"Article 74",
+		"Article 73"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following statements are correct about the term ‘Equality’ mentioned in the Preamble of the Constitution of India?It refers to absence of any special privileges to any section of the societyThe preamble embraces only civic and economic equality Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 1 & 2",
+		"Neither 1 nor 2"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Environment Protection Act, 1986 consists of how many sections?  ' ,
+	answer: '26' ,
+	options: [
+		"25",
+		"26",
+		"27",
+		"28"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Where did the concept of Public Interest Litigation originate?  ' ,
+	answer: 'USA' ,
+	options: [
+		"Britain",
+		"India",
+		"USA",
+		"Canada"
+		]
+	},
+]</script><script src="./script.js"></script></html>

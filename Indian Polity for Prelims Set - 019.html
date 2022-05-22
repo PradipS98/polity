@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 019'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which Article grants protection to persons who are arrested or detained?  ' ,
+	answer: 'Article 22' ,
+	options: [
+		"Article 23",
+		"Article 24",
+		"Article 25",
+		"Article 22"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which part of the constitution relates with the directive principles of the state policy?  ' ,
+	answer: 'Part-IV' ,
+	options: [
+		"Part-III",
+		"Part-IV",
+		"Part-I",
+		"Part-II"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The right to acquire, hold and dispose of property was deleted from the chapter of fundamental right by  ' ,
+	answer: 'The 44th Constitutional Amendment Act' ,
+	options: [
+		"The 44th Constitutional Amendment Act",
+		"The 42th Constitutional Amendment Act",
+		"The 88th Constitutional Amendment Act",
+		"The 48th Constitutional Amendment Act"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The suppression of Immoral Traffic in women and Girls Act was passed in :  ' ,
+	answer: 'The year 1956' ,
+	options: [
+		"The year 1950",
+		"The year 1958",
+		"The year 1956",
+		"The year 1962"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which article declares that a constitutional amendment is not a law and hence cannot be challenged?  ' ,
+	answer: 'Article 13' ,
+	options: [
+		"Article 13",
+		"Article 14",
+		"Article 15",
+		"Article 16"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The most important law enforcing Article 24 prohibiting the employment of children below the age of 14 years in any factory of other hazardous activities is :  ' ,
+	answer: 'The Child Labour (Prohibition and Regulation) Act 1986' ,
+	options: [
+		"The Child Labour (Prohibition and Regulation) Act 1986",
+		"The Unlawful Activities Act 1967",
+		"The Legal Services Authorities Act 1987",
+		"Prevention of Atrocities Act, 1989"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which part of the constitution of India ensures the Social and Economic democracy?  ' ,
+	answer: 'Directive principles of state policy' ,
+	options: [
+		"Provision of emergency",
+		"Centrestate relation",
+		"Directive principles of state policy",
+		"None of these"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The right to move the Supreme Court for the enforcement of fundamental rights including the writs of habeas corpus, mandamus, prohibition, certiorari and quo warranto are the parts of  ' ,
+	answer: 'Right to Constitutional Remedies' ,
+	options: [
+		"Fundamentals Rights",
+		"Right to Constitutional Remedies",
+		"Directive Principle",
+		"Right to freedom"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Articles 17 abolishes:  ' ,
+	answer: 'untouchability' ,
+	options: [
+		"untouchability",
+		"discrimination",
+		"equality",
+		"titles"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who said about "Ram rule through village rule"?  ' ,
+	answer: 'Mahatma Gandhi' ,
+	options: [
+		"Mahatma Gandhi",
+		"Vinobha bhave",
+		"Jayaprakash Narayan",
+		"Jawaharlal Nehru"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Dr. B. R. Ambedkar described Directive Principles of state Policy as :  ' ,
+	answer: 'novel features of the constitution' ,
+	options: [
+		"heart of the constitution",
+		"novel features of the constitution",
+		"conscience of the constitution",
+		"backbone of the constitution"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The committee which was appointed to identify the creamy layer among the OBCs was :  ' ,
+	answer: 'Ram Nandan Committee' ,
+	options: [
+		"M K Lodha Commitee",
+		"Sardar Swaran Singh Committee",
+		"Ram Nandan Committee",
+		"None of these"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following ensures economic justice to Indian citizens?  ' ,
+	answer: 'Directive principles of state policy' ,
+	options: [
+		"Fundamental rights",
+		"Fundamental duties",
+		"Preamble",
+		"Directive principles of state policy"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The Protection of Civil Rights Act 1955 and Schedules Castes and Scheduled Tribes (Prevention of Atrocities) Act, 1989 have been enacted to protect  ' ,
+	answer: 'Both (A) and (B)' ,
+	options: [
+		"Scheduled Tribes from Social Injustice and Exploitation",
+		"Scheduled Castes from Social Injustice and Exploitation",
+		"Both (A) and (B)",
+		"None of these"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Cultural and Educational Rights are enshrines in:  ' ,
+	answer: 'Article 29-30' ,
+	options: [
+		"Article 15",
+		"Article 29-30",
+		"Article 18",
+		"Article 14"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Ideas of welfare state are contained in-  ' ,
+	answer: 'Directive Principles of State Policy' ,
+	options: [
+		"Fundamental Rights",
+		"Directive Principles of State Policy",
+		"Preamble of the constitution",
+		"Part-VIII"
+		]
+	},
+	{
+	numb: 17,
+	question: 'In which state of India is there a uniform civil code?  ' ,
+	answer: 'Goa' ,
+	options: [
+		"Meghalaya",
+		"Kerala",
+		"Haryana",
+		"Goa"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The Citizen Act 1955, prescribes the way of losing citizenship acquired under the Act prior to it under the constitution viz. :  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Deprivation.",
+		"Renunciation",
+		"Termination",
+		"All of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Part XVIII of the Constitution deals with  ' ,
+	answer: 'Emergency Provisions' ,
+	options: [
+		"Directive Principal",
+		"Fundamental Duties",
+		"Fundamental Rights",
+		"Emergency Provisions"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The foremost basic features of the Constitution of India include  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Supremacy of the Constitution",
+		"Independence of Judiciary",
+		"Rule of Law, Principal of Equality",
+		"All of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In 1987, three new States of Mizoram, Arunachal Pradesh and Goa came into being as  ' ,
+	answer: 'The 23rd , 24th, and 25th states of the Indian Union' ,
+	options: [
+		"The 24rd , 25th, and 26th states of the Indian Union",
+		"The !7th, 18th and 19th states of the Indian Union",
+		"The 23rd , 24th, and 25th states of the Indian Union",
+		"The 25rd , 26th, and 27th states of the Indian Union"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Right to freedom of religion as enshrined in Article 25-28 includes  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Freedom of Conscience",
+		"Free profession",
+		"Practice and propagation of religion",
+		"All of the above"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The inclusion of a separate chapter on fundamental duties in the Constitution was recommended by  ' ,
+	answer: 'Sardar Swaran Singh Committee' ,
+	options: [
+		"Sardar Swaran Singh Committee",
+		"Ram Nandan Committee",
+		"Mondal Commitee",
+		"None of the above"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The Fundamental Duties in the Indian Constitution are inspired by  ' ,
+	answer: 'The Constitution of erstwhile USSR' ,
+	options: [
+		"Australian Constitution",
+		"British Constitution",
+		"The Constitution of erstwhile USSR",
+		"Canadian Constitution"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The Article 40 which requires the state to organize village panchayats and authority to enable them to function as units of self government is part of  ' ,
+	answer: 'Directive Principles of States Policy' ,
+	options: [
+		"Directive Principles of States Policy",
+		"Right to Constitutional Remedies",
+		"Right to Freedom of Conscience",
+		"None of these"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The constitution provides prohibition of traffic in human beings and forced labour under  ' ,
+	answer: 'Article 23' ,
+	options: [
+		"Article 23",
+		"Article 43",
+		"Article 33",
+		"Article 231"
+		]
+	},
+	{
+	numb: 27,
+	question: 'President of India can be re-elected  ' ,
+	answer: 'For any number of terms' ,
+	options: [
+		"For any number of terms",
+		"Two terms",
+		"Three Terms",
+		"Five Terms"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The Cabinet is the nucleus of power in  ' ,
+	answer: 'Parliamentary System' ,
+	options: [
+		"Panchromatic Raj",
+		"Parliamentary System",
+		"Patriarchy",
+		"Anarchy"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The law which aims at protecting the monuments, places and objects of national importance is  ' ,
+	answer: 'The Ancient and Historical Monument and Archaeological Sites and Remains Act' ,
+	options: [
+		"Save and protect monuments act",
+		"Protection Remains Act",
+		"The Ancient and Historical Monument and Archaeological Sites and Remains Act",
+		"None of these"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The Unlawful Activities (Prevention) Act was passed in :  ' ,
+	answer: 'The year 1967' ,
+	options: [
+		"The year 1968",
+		"The year 1970",
+		"The year 1969",
+		"The year 1967"
+		]
+	},
+]</script><script src="./script.js"></script></html>

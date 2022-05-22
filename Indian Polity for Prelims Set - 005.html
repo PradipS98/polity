@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 005'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which one of the following is an item included in the list of Fundamental Duties of an Indian citizen in the Constitution?  ' ,
+	answer: 'To develop scientific temper humanism and the spirit of enquiry and reform' ,
+	options: [
+		"To practice secularism",
+		"To develop scientific temper humanism and the spirit of enquiry and reform",
+		"To pay all taxes to government regularly and correctly",
+		"Not to assault any public servant during performance of his duties"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Under which Article of the Constitution can an individual move to the Supreme Court directly in case of any violation of Fundamental Rights?  ' ,
+	answer: 'Article-32' ,
+	options: [
+		"Article-32",
+		"Article-28",
+		"Article-29",
+		"Article-31"
+		]
+	},
+	{
+	numb: 3,
+	question: 'How many writs can be issued by supreme court?  ' ,
+	answer: '5' ,
+	options: [
+		"2",
+		"3",
+		"5",
+		"6"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Right to education in our country is a _____ right.  ' ,
+	answer: 'Fundamental' ,
+	options: [
+		"Political",
+		"Fundamental",
+		"Social",
+		"Legal"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which Fundamental Right in the Indian Constitution includes abolition of untouchability?  ' ,
+	answer: 'Right to Equality' ,
+	options: [
+		"Right to Liberty and Personal Freedom",
+		"Right to Freedom of Religion",
+		"Right to Equality",
+		"Cultural and Educational Rights"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The chapter on Fundamental Duties includes-  ' ,
+	answer: 'Duty to cherish and follow the noble ideals which inspired our freedom movement' ,
+	options: [
+		"Duty to cherish and follow the noble ideals which inspired our freedom movement",
+		"Duty to vote in General Election",
+		"Duty to promote the sense of fraternity among the people",
+		"Duty to stick to the political party on whose ticket one contested election"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which Fundamental Right in the Indian Constitution states that all persons shall be equally protected by the laws of the country?  ' ,
+	answer: 'Right to Equality' ,
+	options: [
+		"Right to Equality",
+		"Right to Freedom",
+		"Right against exploitation",
+		"Right to Freedom of Religion"
+		]
+	},
+	{
+	numb: 8,
+	question: 'According to Indian constitution Right to property is-  ' ,
+	answer: 'Legal right' ,
+	options: [
+		"Fundamental right",
+		"Natural right",
+		"Legal right",
+		"Moral right"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The Certain fundamental rights are not given to-  ' ,
+	answer: 'Foreigner' ,
+	options: [
+		"Insolvent persons",
+		"Foreigner",
+		"Deceased person",
+		"Political victims"
+		]
+	},
+	{
+	numb: 10,
+	question: 'How many fundamental rights were there in the beginning?  ' ,
+	answer: 'Seven' ,
+	options: [
+		"Six",
+		"Seven",
+		"Four",
+		"Five"
+		]
+	},
+	{
+	numb: 11,
+	question: 'What is the literal meaning of the term "Quo-Warranto"?  ' ,
+	answer: 'By what authority (or) warrant' ,
+	options: [
+		"We command",
+		"To forbid",
+		"By what authority (or) warrant",
+		"None of these"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Right to property was deleted from the list fundamental rights in the regime of which of the followings-  ' ,
+	answer: 'Morarji Desai government' ,
+	options: [
+		"Indira Gandhi government",
+		"Morarji Desai government",
+		"Narsimha Rao government",
+		"Vajpayee government"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Point out which from the following is not a right enumerated in the Constitution of India but has been articulated by the Supreme Court to be a Fundamental Right?  ' ,
+	answer: 'Right to privacy' ,
+	options: [
+		"Right to privacy",
+		"Equality before law",
+		"Abolition of untouchability",
+		"Right to form associations or unions"
+		]
+	},
+	{
+	numb: 14,
+	question: 'By which of the following constitutional amendment act the Right to property ceases to be a fundamental right?  ' ,
+	answer: '44th' ,
+	options: [
+		"44th",
+		"42th",
+		"43th",
+		"45th"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Constitution of India considers free and compulsory education to children up to-  ' ,
+	answer: '14 years' ,
+	options: [
+		"10 years",
+		"14 years",
+		"18 years",
+		"21 years"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which among the following is not a preventive detention act?  ' ,
+	answer: 'Foreign Exchange Regulation Act (FERA)' ,
+	options: [
+		"Terrorism and Disruptive Activities (Prevention) act (TADA)",
+		"Prevention of Terrorism Act (POTA)",
+		"Conservation of Foreign Exchange and Prevention of Smuggling Activities Act (COFEPOSA)",
+		"Foreign Exchange Regulation Act (FERA)"
+		]
+	},
+	{
+	numb: 17,
+	question: 'When was the &apos;Right to Information&apos; enacted in India?  ' ,
+	answer: '15 June 2005' ,
+	options: [
+		"15 August 2005",
+		"15 March 2005",
+		"15 June 2005",
+		"15 July 2005"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Fill in the blank-"Rights ___ duties"-  ' ,
+	answer: 'Direct' ,
+	options: [
+		"Disrupt",
+		"Direct",
+		"Contain",
+		"Oppose"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Right to Education Act came into force on-  ' ,
+	answer: 'April 01, 2010' ,
+	options: [
+		"March 15, 2010",
+		"April 01, 2010",
+		"July 17, 2010",
+		"October 10, 2010"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The "Freedom of Press" is mentioned in which of the following rights?  ' ,
+	answer: 'Right to expression' ,
+	options: [
+		"Equality before law",
+		"Right to expression",
+		"Union freedom",
+		"Work security"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the followings is a Political right-  ' ,
+	answer: 'Right to contest election' ,
+	options: [
+		"Right to freedom",
+		"Right to contest election",
+		"Right to equality before law",
+		"Right to life"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which Fundamental Right in the Indian Constitution includes equal access to shops bathing ghats hotels etc?  ' ,
+	answer: 'Right to Equality' ,
+	options: [
+		"Right to Liberty and Personal Freedom",
+		"Right to Freedom of Religion",
+		"Right to Equality",
+		"Cultural and Educational Rights"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Right to Privacy comes under-  ' ,
+	answer: 'Article-21' ,
+	options: [
+		"Article-19",
+		"Article-20",
+		"Article-21",
+		"Article-18"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What Constitutional provision enables the Central Government to provide reservations in jobs and educational institutions for the weaker sections of the society?  ' ,
+	answer: 'Article-16' ,
+	options: [
+		"Article-14",
+		"Article-16",
+		"Article-46",
+		"Article-19"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the followings is not a fundamental right?  ' ,
+	answer: 'Right to strike' ,
+	options: [
+		"Right to equality",
+		"Right against Exploitation",
+		"Right to strike",
+		"Right to religious freedom"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Fundamental Rights are not given to-  ' ,
+	answer: 'Aliens' ,
+	options: [
+		"Bankrupt persons",
+		"Aliens",
+		"Persons suffering from incurable diseases",
+		"Political sufferers"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following is not a fundamental rights in Indian constitution?  ' ,
+	answer: 'Right to property' ,
+	options: [
+		"Right to equality",
+		"Right to freedom",
+		"Right to property",
+		"Right against exploitation"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following does not come under Fundamental Duty?  ' ,
+	answer: 'To protect freedom of speech and Expression' ,
+	options: [
+		"To safe guard public property",
+		"To protect and improve the natural environment",
+		"To promote harmony",
+		"To protect freedom of speech and Expression"
+		]
+	},
+	{
+	numb: 29,
+	question: 'According to Indian constitution which is not a fundamental right-  ' ,
+	answer: 'Right to information' ,
+	options: [
+		"Right to education",
+		"Right to information",
+		"Right to expression",
+		"Right to life"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which fundamental right was abolished by the 44th Amendment?  ' ,
+	answer: 'Right to Property' ,
+	options: [
+		"Right to Liberty",
+		"Right to Property",
+		"Right to Equality",
+		"Right to Religion"
+		]
+	},
+]</script><script src="./script.js"></script></html>

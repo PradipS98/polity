@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 026'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who among the following supports customary rights?  ' ,
+	answer: 'Ritchie' ,
+	options: [
+		"Ritchie",
+		"Plato",
+		"Locke",
+		"Heller"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The money of candidates for Lok Sabha and Legislative Assembly is forfeited-  ' ,
+	answer: 'When he could not secure 1/6 votes' ,
+	options: [
+		"When he loses the election",
+		"When he could not secure 1/4 votes",
+		"When he could not secure 1/5 votes",
+		"When he could not secure 1/6 votes"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The faith of Fascism formulates the principle of-  ' ,
+	answer: 'Dictatorship' ,
+	options: [
+		"Dictatorship",
+		"Utilitarianism",
+		"Democracy",
+		"Totalitarianism"
+		]
+	},
+	{
+	numb: 4,
+	question: 'What is a voluntary uion of sovereign and independent states called?  ' ,
+	answer: 'Confederation' ,
+	options: [
+		"Federation",
+		"Unitary state",
+		"Confederation",
+		"None of these"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The Model Code of Conduct, issued by the Election Commission of India for conduct of political parties and candidates during elections, is-  ' ,
+	answer: 'Agreement between all registered political parties' ,
+	options: [
+		"A command by the Supreme Court of India",
+		"Agreement between all registered political parties",
+		"Stipulated in Constitution",
+		"Specified in the Representation of the People Act, 1951"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following is not a branch of federal form of government?  ' ,
+	answer: 'Media' ,
+	options: [
+		"Judiciary",
+		"Executive",
+		"Legislative",
+		"Media"
+		]
+	},
+	{
+	numb: 7,
+	question: 'What is the full form of the Indian Political Party, "CPI"?  ' ,
+	answer: 'Communist Party of India' ,
+	options: [
+		"Common Party of India",
+		"Commonly Party of India",
+		"Communist Party of India",
+		"Community Party of India"
+		]
+	},
+	{
+	numb: 8,
+	question: ' Which are the two forms of Democracy-  ' ,
+	answer: 'Direct and Indirect' ,
+	options: [
+		"Parliamentary and Presidential",
+		"Direct and Indirect",
+		"Monarchical and Republican",
+		"Parliamentary and King"
+		]
+	},
+	{
+	numb: 9,
+	question: ' In which country, there is federal government-  ' ,
+	answer: 'USA' ,
+	options: [
+		"Ghina",
+		"USA",
+		"Cuba",
+		"Belgium"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The new official language of United Nations is-  ' ,
+	answer: 'Arabic' ,
+	options: [
+		"Chinese",
+		"Spanish",
+		"Russian",
+		"Arabic"
+		]
+	},
+	{
+	numb: 11,
+	question: 'What is meant by &apos;defection&apos;?  ' ,
+	answer: 'Changing party after winning election' ,
+	options: [
+		"Changing party after winning election",
+		"Changing party before winning election",
+		"Changing party after losing election",
+		"Changing party before losing election"
+		]
+	},
+	{
+	numb: 12,
+	question: 'In which of the following country, the judges of federal court are appointed by two houses of Federal Legislature-  ' ,
+	answer: '1 and 2 both' ,
+	options: [
+		"Switzerland",
+		"Germany",
+		"Canada",
+		"1 and 2 both"
+		]
+	},
+	{
+	numb: 13,
+	question: '____ goverment is better than other forms of government because it allows us to correct its own mistake.  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Democratic",
+		"Monarchic",
+		"Authoritarian",
+		"Autocratic"
+		]
+	},
+	{
+	numb: 14,
+	question: '_____is an institutional mechanism to accommodate two sets of polities one at the regional level and the other at the national level.  ' ,
+	answer: 'Federalism' ,
+	options: [
+		"Feudalism",
+		"Democracy",
+		"Federalism",
+		"Aristocracy"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who advocated the Nazism in Germany-  ' ,
+	answer: 'Adolf Hitler' ,
+	options: [
+		"Fedrick William 4th",
+		"William 3rd",
+		"Adolf Hitler",
+		"Wismark"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Coup is-  ' ,
+	answer: 'Sudden overthrow of a government illegally' ,
+	options: [
+		"Sudden overthrow of a government illegally",
+		"A system of rules that takes effect when a military authority takes control of normal administration and justice",
+		"Territory under the immediate political control of another state",
+		"All options are correct"
+		]
+	},
+	{
+	numb: 17,
+	question: 'What is the full form of the Indian Political Party "CPIM"?  ' ,
+	answer: 'Communist Party of India (Marxist)' ,
+	options: [
+		"Common Party of India (Marxist)",
+		"Common Party of India (Movement)",
+		"Communist Party of India (Movement)",
+		"Communist Party of India (Marxist)"
+		]
+	},
+	{
+	numb: 18,
+	question: 'What kind of right is "Right to vote"-  ' ,
+	answer: 'Political right' ,
+	options: [
+		"Human right",
+		"Civil right",
+		"Natural right",
+		"Political right"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who is the father of Idealism-  ' ,
+	answer: 'Plato' ,
+	options: [
+		"Plato",
+		"Hegal",
+		"Berkeley",
+		"Grein"
+		]
+	},
+	{
+	numb: 20,
+	question: 'What is the meaning of Fascism in respect to state-  ' ,
+	answer: 'State is in control of the king' ,
+	options: [
+		"State is in control of the king",
+		"State is a matter of exploitation by a group of people",
+		"State grows the concept of individualism",
+		"Nation state is a uninterrupted dominance"
+		]
+	},
+	{
+	numb: 21,
+	question: 'What is the Example of Direct Democracy in India-  ' ,
+	answer: 'Gram Sabha' ,
+	options: [
+		"District Panchayat",
+		"Nagar Panchayat",
+		"Gram Sabha",
+		"Kshetra Panchayat"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following is permanent organization-  ' ,
+	answer: 'Family' ,
+	options: [
+		"Family",
+		"Political party",
+		"Red cross",
+		"Plato"
+		]
+	},
+	{
+	numb: 23,
+	question: 'A government rules within limits set by constitutional law and citizen right-  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Autocratic",
+		"Democratic",
+		"Monarchic",
+		"Authoritarian"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following statement is true about "Community Government"?I. This government is elected by people belonging to one language community.II. This government has the power regarding cultural, educational and language related issues.  ' ,
+	answer: 'Both I and II' ,
+	options: [
+		"Both I and II",
+		"Only I",
+		"Only II",
+		"Neither I nor II"
+		]
+	},
+	{
+	numb: 25,
+	question: 'In which year was the First Five Year Plan launched in India?  ' ,
+	answer: '1951' ,
+	options: [
+		"1921",
+		"1931",
+		"1941",
+		"1951"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In which form of government the rulers are elected by the people?  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Autocratic",
+		"Democratic",
+		"Martial law",
+		"Aristocratic"
+		]
+	},
+	{
+	numb: 27,
+	question: 'In a ____ government, the final decision making power must rest with those elected by the people.  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Authoritarian",
+		"Autocratic",
+		"Monarchic",
+		"Democratic"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the fpllong language was given the status of "Classical language" by the central government-  ' ,
+	answer: 'Tamil' ,
+	options: [
+		"Guajarati",
+		"Tamil",
+		"Marathi",
+		"Malayalam"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which form of government believes in giving equal rights and opportunities for women and men?  ' ,
+	answer: 'Feminist' ,
+	options: [
+		"Feminist",
+		"Secularist",
+		"Castiest",
+		"Communalist"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Constitutional Majestic means-  ' ,
+	answer: 'Use of power by king under the ambit of constitution' ,
+	options: [
+		"Constitution defined by the king",
+		"Drafting of constitution by the king",
+		"Election of king by the people",
+		"Use of power by king under the ambit of constitution"
+		]
+	},
+]</script><script src="./script.js"></script></html>

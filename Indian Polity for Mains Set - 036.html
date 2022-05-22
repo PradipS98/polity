@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 036'
+let questions = [
+	{
+	numb: 1,
+	question: 'In which year elections to the parliament were de-linked from elections to the state assemblies?  ' ,
+	answer: '1971' ,
+	options: [
+		"1961",
+		"1969",
+		"1971",
+		"1975"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which committee recommended partial state funding of elections for the purpose of reducing “illegitimate and unnecessary funding” of elections expenses?  ' ,
+	answer: 'Second Administrative Reforms Commission' ,
+	options: [
+		"National Commission to Review the Working of the Constitution",
+		"Law Commission Report on Reform of the Electoral Laws",
+		"Second Administrative Reforms Commission",
+		"None of the above"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The Central Vigilance Commission has to present annually a report on its performance to which of the following?  ' ,
+	answer: 'President' ,
+	options: [
+		"Supreme Court",
+		"High Court",
+		"Parliament",
+		"President"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The duties of the Chief Minister of a state are enumerated in which Article of the Constitution?  ' ,
+	answer: 'Article 167' ,
+	options: [
+		"Article 166",
+		"Article 167",
+		"Article 168",
+		"Article 169"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following in the consequence when a no-confidence motion is passed against the council of ministers in legislative assembly?  ' ,
+	answer: 'All the ministers have to resign' ,
+	options: [
+		"The concerned minister resigns",
+		"All the ministers have to resign",
+		"Lok Sabha is dissolved",
+		"None of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Article 32 of the Constitution of India guarantees the right to move the Supreme Court for enforcement of fundamental rights. This falls under which among the following kinds of jurisdiction of the supreme court?  ' ,
+	answer: 'Original Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Advisory Jurisdiction",
+		"Appellate Jurisdiction",
+		"It depends upon the nature of remedy"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which committee recommended that nyaya panchayats should be kept as separate bodies from that of development panchayats?  ' ,
+	answer: 'Ashok Mehta Committee' ,
+	options: [
+		"G.V.K. Rao Committee",
+		"Dantwala Committee",
+		"Ashok Mehta Committee",
+		"Hanumantha Rao Committee"
+		]
+	},
+	{
+	numb: 8,
+	question: 'In which year was the Gadgil Committee on Policy and Programmes constituted?  ' ,
+	answer: '1988' ,
+	options: [
+		"1979",
+		"1971",
+		"1980",
+		"1988"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which committee recommended that there should also be reservation of seats for women in Panchayati Raj Institutions?  ' ,
+	answer: 'Thungon Committee' ,
+	options: [
+		"Thungon Committee",
+		"L M Singhvi Committee",
+		"G.V.K. Rao Committee",
+		"Gadgil Committee"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The Compensatory Afforestation Fund will be utilized for which of the following purposes?1. Afforestation2. Regeneration of forest ecosystem3. Wildlife protection4. Infrastructure developmentSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The jurisdiction of the CVC extends to which of the following?1. Members of All India Services.2. Officers of the rank of Scale V and above in the Public Sector Banks.3. Officers in Grade D and above in Reserve Bank of India, NABARD and SIDBI.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 12,
+	question: 'In which year the separate National Commission for SCs came into existence?  ' ,
+	answer: '2004' ,
+	options: [
+		"2003",
+		"2004",
+		"2006",
+		"2007"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What all categories of public servants come under the purview of Lokpal?  ' ,
+	answer: 'Group A, B, C and D' ,
+	options: [
+		"Group A and B",
+		"Group A, B, C and D",
+		"Group C and D",
+		"Group B and C"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The contingency fund of India has been placed at the disposal of which among the following authorities?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Comptroller and Auditor General of India",
+		"President of India",
+		"Parliament of India",
+		"Prime Minister of India"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who constitutes the Finance Commission of India?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Parliament",
+		"Prime Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 16,
+	question: 'How long did the constituent assembly take to frame the constitution?  ' ,
+	answer: 'Approximately 3 years' ,
+	options: [
+		"Approximately 1 year",
+		"Approximately 2 years",
+		"Approximately 3 years",
+		"6 months"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which among the following is a correct combination of members in Joint Committee on Office of Profit ?  ' ,
+	answer: '15 from Lok Sabha and 10 from Rajya Sabha =Total 25 members' ,
+	options: [
+		"15 from Lok Sabha and 10 from Rajya Sabha =Total 25 members",
+		"15 from Lok Sabha and 15 from Rajya Sabha = Total 30 members",
+		"20 from Lok Sabha and 10 from Rajya Sabha = Total 30 members",
+		"15 from Lok Sabha and 7 from Rajya Sabha = Total 22 members"
+		]
+	},
+	{
+	numb: 18,
+	question: 'What is the maximum term of the chairperson and members of National Human Rights Commission?  ' ,
+	answer: '3 years' ,
+	options: [
+		"2 years",
+		"3 years",
+		"5 years",
+		"6 years"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which type of majority is required for proclamation of Financial Emergency?  ' ,
+	answer: 'Simple majority' ,
+	options: [
+		"Simple majority",
+		"Absolute majority",
+		"Special majority",
+		"Special majority with ratification by half of the states"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which committee recommended that the three-tier system of panchayati raj should be replaced by the two-tier system?  ' ,
+	answer: 'Ashok Mehta Committee' ,
+	options: [
+		"Dantwala Committee",
+		"Hanumantha Rao Committee",
+		"Ashok Mehta Committee",
+		"Committee on Panchayati Raj Training Centres"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which of the following cases the Supreme Court criticised the doctrine of sovereign immunity of the State?  ' ,
+	answer: 'Nagendra Rao Case' ,
+	options: [
+		"P and O Steam Navigation Company case",
+		"Kasturilal case",
+		"Nagendra Rao Case",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'An area declared “disturbed” according to the Disturbed Areas (Special Courts) Act, 1976 has to maintain status quo for how many months?  ' ,
+	answer: '3 months' ,
+	options: [
+		"2 months",
+		"3 months",
+		"4 months",
+		"6 months"
+		]
+	},
+	{
+	numb: 23,
+	question: 'According to which section of IPC if anyone commits any offence which is punishable in our country is liable to be convicted and punished if he commits the same crime in foreign countries?  ' ,
+	answer: 'Section 3' ,
+	options: [
+		"Section 1",
+		"Section 2",
+		"Section 3",
+		"Section 4"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following states of India were Union Territories before becoming states ?  ' ,
+	answer: 'Himachal Pradesh, Manipur and Tripura' ,
+	options: [
+		"Himachal Pradesh, & Tripura",
+		"Himachal Pradesh, Manipur and Tripura",
+		"Himachal Pradesh, Manipur, Sikkim & Tripura",
+		"None of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Who all are included in the jurisdiction of Lokpal?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Prime Minister",
+		"Ministers",
+		"Members of Parliament",
+		"All of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who decides the reasonableness of the restrictions placed on Fundamental rights in India?  ' ,
+	answer: 'Courts' ,
+	options: [
+		"Parliament",
+		"Courts",
+		"President",
+		"Prime minister"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Protection of Women from Domestic Violence Act 2005 incorporates which of the following forms of violence against women?1. Physical violence2. Emotional violence3. Sexual violence4. Economic violenceSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 28,
+	question: 'How many days advance notice is to be given to speaker of state legislative assembly to move a resolution against him?  ' ,
+	answer: '14 days' ,
+	options: [
+		"7 days",
+		"14 days",
+		"15 days",
+		"30 days"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The PESA Act or the Extension Act was enacted in which of the following years?  ' ,
+	answer: '1996' ,
+	options: [
+		"1996",
+		"1997",
+		"1998",
+		"1999"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The Consumer Protection Act, 1986 provides how many rights to the consumers?  ' ,
+	answer: '6' ,
+	options: [
+		"4",
+		"5",
+		"6",
+		"7"
+		]
+	},
+]</script><script src="./script.js"></script></html>

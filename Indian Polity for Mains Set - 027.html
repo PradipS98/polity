@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 027'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following Article deals with Budget in the Constitution of India?  ' ,
+	answer: '112' ,
+	options: [
+		"110",
+		"111",
+		"112",
+		"114"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Directive Principles are just like ‘a cheque on bank payable at the convenience of the bank’. Who among the following said this?  ' ,
+	answer: 'Prof. K T Shah' ,
+	options: [
+		"Jawahar Lal Nehru",
+		"Bhim Rao Ambedkar",
+		"Mr. R. K. Sidhwa",
+		"Prof. K T Shah"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The Sixth Schedule of the Indian Constitution deals with the administration and control of Scheduled Areas and Scheduled Tribes in the four states of :  ' ,
+	answer: 'Assam, Meghalaya, Tripura and Mizoram' ,
+	options: [
+		"Manipur, Mizoram, Tripura and Nagaland",
+		"Assam, Meghalaya, Tripura and Mizoram",
+		"Assam, Meghalaya, Arunachal Pradesh and Nagaland",
+		"Assam, Meghalaya, Mizoram and Nagaland"
+		]
+	},
+	{
+	numb: 4,
+	question: 'What is the full form of ISD which is related to GST?  ' ,
+	answer: 'Input Service Distributor' ,
+	options: [
+		"Input Service Distributor",
+		"Indian Standard Data",
+		"Income Strength Distribution",
+		"Inter State Delivery"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who administers oath to a person appointed as a judge of the Supreme Court?  ' ,
+	answer: 'President' ,
+	options: [
+		"Prime Minister",
+		"President",
+		"Chief Justice of India",
+		"Vice President"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The Prime Minister Of India does not act as the chairman of which of the following?  ' ,
+	answer: 'National Green Tribunal' ,
+	options: [
+		"NITI Ayog",
+		"National Water Resources Council",
+		"Inter-State Council",
+		"National Green Tribunal"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Where is the headquarters of Indian Council of Forestry Research and Education(ICFRE)?  ' ,
+	answer: 'Dehradun' ,
+	options: [
+		"Dehradun",
+		"Ranchi",
+		"Shimla",
+		"Bhopal"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Who can file nomination papers for election to Lok Sabha?  ' ,
+	answer: 'any citizen of India whose name appears in the electoral roll of a constituency' ,
+	options: [
+		"any citizen of India",
+		"anyone residing in India",
+		"a resident of a constituency from where the election is to be contested",
+		"any citizen of India whose name appears in the electoral roll of a constituency"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which among the following article of the Constitution of India says that all public places are open to all citizens?  ' ,
+	answer: 'Article 15 (2)' ,
+	options: [
+		"Article 15 (2)",
+		"Article 16 (2)",
+		"Article 17",
+		"Article 18"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following presidents of India headed the Indian Society of Labour Economics (ISLE) founded in 1957 ?  ' ,
+	answer: 'V. V. Giri' ,
+	options: [
+		"Fakhruddin Ali Ahmed",
+		"V. V. Giri",
+		"Zakir Hussain",
+		"BD Jatti"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Where is the Forest Research Institute located?  ' ,
+	answer: 'Dehradun' ,
+	options: [
+		"Raipur",
+		"Jodhpur",
+		"Dehradun",
+		"Chennai"
+		]
+	},
+	{
+	numb: 12,
+	question: 'In which year Sikkim was included in the North Eastern Council ?  ' ,
+	answer: '2002' ,
+	options: [
+		"1992",
+		"1999",
+		"2002",
+		"2005"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which article in Part III of the constitution of India is related to free and compulsory education?  ' ,
+	answer: '21A' ,
+	options: [
+		"19",
+		"20",
+		"21",
+		"21A"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which among the following articles speaks about impeachment of the President of India?  ' ,
+	answer: 'Article 61' ,
+	options: [
+		"Article 60",
+		"Article 61",
+		"Article 62",
+		"Article 63"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following president of India was only person to be elected unopposed?  ' ,
+	answer: '6th President' ,
+	options: [
+		"4th President",
+		"5th President",
+		"6th President",
+		"7th President"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who can pass a resolution for the removal of Vice President of India?  ' ,
+	answer: 'Council of States' ,
+	options: [
+		"Council of States",
+		"Lok Sabha",
+		"Cabinet",
+		"Council of Ministers"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Right of Children to Free and Compulsory Education Act requires all private schools(except the minority institutions) to reserve how many percentage of seats for the poor and other categories of children?  ' ,
+	answer: '25%' ,
+	options: [
+		"15%",
+		"20%",
+		"25%",
+		"27%"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The Hindu Minority and Guardianship Act was passed in which year?  ' ,
+	answer: '1956' ,
+	options: [
+		"1953",
+		"1954",
+		"1955",
+		"1956"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following is correct with respect to the electoral college of Vice-President?1. It consists of both elected and nominated members of the Parliament2. It does not include the members of the state legislative assembliesSelect the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which section of the Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006 lays out a procedure by which people can be resettled from areas if it is found to be necessary for wildlife conservation?  ' ,
+	answer: 'Section 4(2)' ,
+	options: [
+		"Section 3(1)",
+		"Section 6(1)",
+		"Section 4(2)",
+		"None of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'By which among the following acts, the East India Company lost its monopoly of trade with China?  ' ,
+	answer: 'The Charter Act of 1833' ,
+	options: [
+		"Pitts India act 1784",
+		"The Charter Act of 1813",
+		"The Charter Act of 1833",
+		"The Charter Act of 1853"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The amendment of the constitution can be initiated in which of the following?Lok SabhaRajya SabhaState AssembliesSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 or 2' ,
+	options: [
+		"Only 1",
+		"Only 1 or 2",
+		"Only 1 or 3",
+		"1 or 2 or 3"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which article of the Indian Constitution reflects that it Constitution is neither rigid nor flexible but a synthesis of both?  ' ,
+	answer: 'Article 368' ,
+	options: [
+		"Article 350",
+		"Article 362",
+		"Article 368",
+		"Article 344"
+		]
+	},
+	{
+	numb: 24,
+	question: 'On which date, India’s Constituent Assembly adopted the National Flag of India?  ' ,
+	answer: '22 July, 1947' ,
+	options: [
+		"26 January, 1947",
+		"26 November, 1947",
+		"22 July, 1947",
+		"26 January, 1950"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following are the functions of National Biodiversity Authority (NBA)?1. Regulation of acts prohibited under the Act2. Advise the Government of India on conservation of biodiversity3. Advise the Government of India on selection of biological heritage sites4. Take appropriate steps for opposing grant of intellectual property rights in foreign countries, arising from the use of biological resources or   associated traditional knowledgeSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which among the following state / union territory got birth with the Punjab Reorganization Act of 1966?  ' ,
+	answer: 'Haryana' ,
+	options: [
+		"Haryana",
+		"Hiamchal Pradesh",
+		"Chandigarh",
+		"None of the above"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following provisions of the constitution did not come into force on November 26, 1949?  ' ,
+	answer: 'Fundamental rights' ,
+	options: [
+		"Provisions relating to citizenship",
+		"Provisions relating to elections",
+		"Fundamental rights",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following is empowered to appoint a commission to investigate the conditions of socially and educationally backward classes and to recommend the steps to improve their condition?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Rajya Sabha",
+		"Lok Sabha",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which year the government introduced Food for Work Programme (FWP)?  ' ,
+	answer: '2004' ,
+	options: [
+		"2000",
+		"2001",
+		"2003",
+		"2004"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Sindhi Language was included in the list of official languages in the 8th schedule of our constitution in which year?  ' ,
+	answer: '1967' ,
+	options: [
+		"1957",
+		"1967",
+		"1969",
+		"1968"
+		]
+	},
+]</script><script src="./script.js"></script></html>

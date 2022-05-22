@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 013'
+let questions = [
+	{
+	numb: 1,
+	question: 'How many seats are reserved for women on the board of every co-operative society?  ' ,
+	answer: '2' ,
+	options: [
+		"1",
+		"2",
+		"3",
+		"5"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which type of body was the Planning Commission of India?  ' ,
+	answer: 'Extra constitutional body' ,
+	options: [
+		"Constitutional body",
+		"Extra constitutional body",
+		"Statutory body",
+		"None of the above"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The cases involving interpretation of the Constitution by the Supreme Court come under which of the following?  ' ,
+	answer: 'Appellate Jurisdiction' ,
+	options: [
+		"Advisory Jurisdiction",
+		"Original Jurisdiction",
+		"Appellate Jurisdiction",
+		"None of the above"
+		]
+	},
+	{
+	numb: 4,
+	question: 'All lands, minerals and other things of value under the waters of the ocean within the territorial waters of India, the continental shelf of India and the exclusive economic zone of India vests with which of the following?  ' ,
+	answer: 'Union' ,
+	options: [
+		"Union",
+		"State",
+		"President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following statements regarding judicial review is correct?  ' ,
+	answer: 'It is a part of the basic structure of the Constitution' ,
+	options: [
+		"It is a part of the basic structure of the Constitution",
+		"It can be curtailed through an amendment",
+		"Only Supreme Court can exercise judicial review",
+		"Only legislative enactments can be examined through judicial review"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who appoints the State Chief Information Commissioner?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Governor",
+		"Chief Minister"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which type of majority is required for approval of proclamation of emergency?  ' ,
+	answer: 'Special majority' ,
+	options: [
+		"Simple majority",
+		"Special majority",
+		"Special majority with ratification by half of the states with simple majority",
+		"Simple majority with ratification by half of the states with simple majority"
+		]
+	},
+	{
+	numb: 8,
+	question: 'In how many states thegovernment headed by Morarji Desai imposed President’s Rule in 1977?  ' ,
+	answer: '9' ,
+	options: [
+		"6",
+		"7",
+		"8",
+		"9"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following is not one of the qualification for acquiring citizenship by naturalization?  ' ,
+	answer: 'He does not wish to reside in India after some time' ,
+	options: [
+		"He is not a citizen of a country where Indians are denied citizenship",
+		"He has resided in India for twelve months before making an application",
+		"He is of good character",
+		"He does not wish to reside in India after some time"
+		]
+	},
+	{
+	numb: 10,
+	question: 'How many states and Union Territories were created after the recommendations of States Reorganization Commission formed in 1953?  ' ,
+	answer: '14 States and 6 Uts' ,
+	options: [
+		"16 States and 3 Uts",
+		"14 States and 6 Uts",
+		"15 States and 5 Uts",
+		"14 States and 5 Uts"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Cabinet which is the real centre of authority in the state government performs which of the following functions?1. It is the highest decision making authority in the politico-administrative system of a state.2. It is the chief policy formulating body of the state government.3. It is an advisory body to the governor.4. It deals with all major legislative and financial matters.Select the correct option from the codes given below:  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1, 2 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'How many sessions did Constituent Assembly take to draft the Constitution of India?  ' ,
+	answer: '11' ,
+	options: [
+		"10",
+		"11",
+		"13",
+		"15"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The principle of dyarchy was introduced in India by British government through which act?  ' ,
+	answer: 'Government of India Act, 1919' ,
+	options: [
+		"Indian Councils Act, 1861",
+		"Indian Councils Act, 1892",
+		"Indian Councils Act, 1909",
+		"Government of India Act, 1919"
+		]
+	},
+	{
+	numb: 14,
+	question: 'What are the limitations on the sovereignty of parliament in India?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Written Constitution",
+		"Federalism",
+		"Judicial review",
+		"All of the above"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following statements are true about the fundamental principle of penal liability?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Actus non facit reum, nisi sit rea is the principle",
+		"It means fact itself is not criminal unless accompanied by a guilty mind",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 16,
+	question: 'According to Official Languages Act (1963) which language should be used for purposes of communication between the Union and the non-Hindi states?  ' ,
+	answer: 'English' ,
+	options: [
+		"Any regional Language of the State",
+		"English",
+		"Any language specified by the Supreme Court",
+		"None of the above"
+		]
+	},
+	{
+	numb: 17,
+	question: 'An Abetment is committed by which of the following?1. By instigating a person to commit an offence.2. By engaging in a conspiracy to commit it.3. By intentionally aiding a person to commit it.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 18,
+	question: 'How many group A Central services are there at present?  ' ,
+	answer: '62' ,
+	options: [
+		"50",
+		"60",
+		"62",
+		"70"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which Article of Indian Constitution contains the definition of Money bills?  ' ,
+	answer: 'Article 110' ,
+	options: [
+		"Article 110",
+		"Article 111",
+		"Article 112",
+		"Article 123"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Comptroller and Auditor General of India (CAG) submits his resignation to which of the following?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Chief Justice of India",
+		"Parliament",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 21,
+	question: 'According to National Commission for Protection of Child Rights (NCPCR) a child is defined as any person in the age group of?  ' ,
+	answer: '0-18' ,
+	options: [
+		"0-6",
+		"0-14",
+		"0-16",
+		"0-18"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following has the power to specify as to what castes or tribes in each state and union territory are to be treated as the SCs and STs?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"National Commission for STs",
+		"National Commission for SCs"
+		]
+	},
+	{
+	numb: 23,
+	question: 'In which year was the first proclamation of National Emergency issued because of Chinese aggression in the NEFA?  ' ,
+	answer: '1962' ,
+	options: [
+		"1960",
+		"1961",
+		"1962",
+		"1963"
+		]
+	},
+	{
+	numb: 24,
+	question: 'In which of the cases, presence or absence of a guilty mind is irrelevant?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Motor Vehicles Act",
+		"Arms Act",
+		"Public Liability Insurance Act",
+		"All of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The President consults which of the following while appointing the judges of a state high court?  ' ,
+	answer: 'Governor of the concerned state' ,
+	options: [
+		"Prime Minister",
+		"Governor of the concerned state",
+		"State Legislative Assembly",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Under which article of the constitution the CAG advises the President with regard to prescription of the form in which the accounts of the Centre and the states shall be kept?  ' ,
+	answer: 'Article 150' ,
+	options: [
+		"Article 150",
+		"Article 151",
+		"Article 152",
+		"Article 153"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which act provided for the establishment of a Reserve Bank of India?  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Government of India Act, 1919",
+		"Government of India Act, 1935",
+		"Indian Independence Act, 1947",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following statements are true about the Lokpal and Lokayuktas Act (2013)?  ' ,
+	answer: 'None of them' ,
+	options: [
+		"It seeks to establish the institution of the Lokpal at the level of the state",
+		"It seeks to establish the institution of the Lokyukta at the Centre",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which year the Chief Information Commissioner via an order had declared the political parties as public authorities and brought them under the RTI Act?  ' ,
+	answer: '2013' ,
+	options: [
+		"2011",
+		"2013",
+		"2016",
+		"2018"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following statement is correct about the orders issued by the Delimitation Commission?  ' ,
+	answer: 'They are final and cannot be challenged in any court.' ,
+	options: [
+		"They are scrutinized by the committee constituted for the same.",
+		"They are subject to judicial review.",
+		"They are final and cannot be challenged in any court.",
+		"None of the above"
+		]
+	},
+]</script><script src="./script.js"></script></html>

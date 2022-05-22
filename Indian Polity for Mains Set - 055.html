@@ -1,0 +1,311 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 055'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following are proper grounds for imposition of President’s Rule in a state?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"When there is Hung Assembly",
+		"When the majority party declines to form a ministry and the governor cannot find a coalition ministry",
+		"Internal subversion",
+		"All of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who among the following held the office of Vice President of India for two consecutive terms?  ' ,
+	answer: 'Dr. S Radhakrishnan' ,
+	options: [
+		"Dr. R Venkatramanan",
+		"Dr. Shankar Dayal Sharma",
+		"Dr. VV Giri",
+		"Dr. S Radhakrishnan"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Till now, the Preamble of Constitution of India has been amended for how many times?  ' ,
+	answer: 'Once' ,
+	options: [
+		"Never",
+		"Once",
+		"Twice",
+		"Thrice"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which form of numerals are used for the official purposes of the Union?  ' ,
+	answer: 'International form of Indian numerals' ,
+	options: [
+		"International form of Indian numerals",
+		"Devanagari form",
+		"Brahmi form",
+		"Sanskrit form"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which among the following articles defines the Money Bill?  ' ,
+	answer: 'Article 110' ,
+	options: [
+		"Article 110",
+		"Article 111",
+		"Article 112",
+		"Article 113"
+		]
+	},
+	{
+	numb: 6,
+	question: 'How many presidents of India so far were elected unopposed?  ' ,
+	answer: 'Two' ,
+	options: [
+		"One",
+		"Two",
+		"Three",
+		"Four"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following fall under the purview of municipalities?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Planning for economic and social development",
+		"Roads and bridges",
+		"Slum improvement and upgradation",
+		"All of the above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following duties are imposed by Article 355 on the Centre?1. to protect every state against external aggression and internal disturbance2. to ensure that the government of every state is carried on in accordance with the provisions of the ConstitutionSelect the correct code from the options given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following are the members of NITI Aayog?1. Prime Minister of India2. Chief Ministers of all the States3. Chief Ministers of Union Territories with Legislatures4. Special Invitees like experts, specialists and practitioners with relevant domain knowledgeSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following reports are laid by the Governor in front of the state legislature?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"State Public Service Commission",
+		"State Finance Commission",
+		"Comptroller and Auditor-General",
+		"All of the above"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which amendment bifurcated the erstwhile combined National Commission for Scheduled Castes and Scheduled Tribes into two separate bodies?  ' ,
+	answer: '89th Amendment Act, 2003' ,
+	options: [
+		"89th Amendment Act, 2003",
+		"91st Amendment Act, 2003",
+		"96th Amendment Act, 2011",
+		"99th Amendment Act, 2014"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Initially, for how long president rule can be imposed in a state?  ' ,
+	answer: '6 months' ,
+	options: [
+		"6 months",
+		"9 months",
+		"12 months",
+		"15 months"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who among the following can remove the governor of a state from office?  ' ,
+	answer: 'President' ,
+	options: [
+		"Legislative Assembly",
+		"Parliament",
+		"President",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 14,
+	question: 'When were the first general elections to Lok sabha held?  ' ,
+	answer: '1952' ,
+	options: [
+		"1951",
+		"1952",
+		"1953",
+		"1954"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Whose approval needed for imposing President’s Rule?  ' ,
+	answer: 'Both the Houses of Parliament' ,
+	options: [
+		"Council of Ministers",
+		"Lok Sabha",
+		"Rajya Sabha",
+		"Both the Houses of Parliament"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following articles mentions about the powers, privileges and immunities of Advocate-General?  ' ,
+	answer: 'Article 194' ,
+	options: [
+		"Article 180",
+		"Article 185",
+		"Article 194",
+		"Article 199"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following presidents of India had shortest tenure?  ' ,
+	answer: 'Zakir Hussain' ,
+	options: [
+		"S Radhakrishanan",
+		"Zakir Hussain",
+		"V. V Giri",
+		"BD Jatti"
+		]
+	},
+	{
+	numb: 19,
+	question: 'By which process the Joint State Public Service Commission (JSPSC) is created?  ' ,
+	answer: 'By an act of parliament on the request of the state legislatures concerned' ,
+	options: [
+		"By an act of parliament on the request of the state legislatures concerned",
+		"Created by a resolution passed by Rajya Sabha",
+		"Created by concerned state legislatures by joint voting",
+		"None of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'India’s exclusive economic zone extends upto how many nautical miles?  ' ,
+	answer: '200' ,
+	options: [
+		"12",
+		"100",
+		"200",
+		"250"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Where is CBI Academy located?  ' ,
+	answer: 'Ghaziabad' ,
+	options: [
+		"Ghaziabad",
+		"Agra",
+		"Dharamshala",
+		"New Delhi"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following can be members of Gram Sabha?  ' ,
+	answer: 'Registered voters in the area of a panchayat' ,
+	options: [
+		"Anyone more than 18 years of age",
+		"Registered voters in the area of a panchayat",
+		"Anyone more than 21 years of age",
+		"None of the above"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which among the following languages was included in the eighth schedule by Constitution (21st) amendment Bill on 10 April 1967?  ' ,
+	answer: 'Sindhi' ,
+	options: [
+		"Assamese",
+		"Sindhi",
+		"Gujarathi",
+		"Konkani"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who held the portfolio of finance in the interim government of 1946?  ' ,
+	answer: 'Liaquat Ali khan' ,
+	options: [
+		"Dr. Rajendra Prasad",
+		"Liaquat Ali khan",
+		"C. Rajagopalachari",
+		"Sardar Vallabhbhai Patel"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following statements are correct with respect to state legislature?1. A minister cannot participate in the proceedings of a House, of which he is not a member.2. A minister, who is not a member of either House, can participate in the proceedings of both the Houses.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 26,
+	question: 'What are the powers of the Governor with regards to the Money Bill?  ' ,
+	answer: 'None of them' ,
+	options: [
+		"He can return the Money bill back to the state legislature",
+		"Money bills can be introduced in the state legislature without his prior recommendation",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which the following become the citizens of India if a foreign territory is incorporated into India?  ' ,
+	answer: 'Persons specified by the Government of India' ,
+	options: [
+		"All the persons residing there become the citizens of India",
+		"Persons specified by the Government of India",
+		"Only educated persons become citizen of India",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who among the following was the Constitutional Advisor to the Constituent Assembly ?  ' ,
+	answer: 'B N Rao' ,
+	options: [
+		"Sachidanand Sinha",
+		"B N Rao",
+		"H N Kunzuru",
+		"V N Menon"
+		]
+	},
+	{
+	numb: 29,
+	question: 'What is the correct chronological order of creation of Assam, Nagaland, Goa & Mizoram?  ' ,
+	answer: 'Assam, Nagaland, Mizoram, Goa' ,
+	options: [
+		"Assam, Nagaland, Goa , Mizoram",
+		"Assam, Mizoram, Nagaland,. Goa",
+		"Assam, Nagaland, Mizoram, Goa",
+		"Assam, Goa, Mizoram, Nagaland"
+		]
+	},
+]</script><script src="./script.js"></script></html>

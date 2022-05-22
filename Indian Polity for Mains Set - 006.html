@@ -1,0 +1,311 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 006'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following states has reserved the maximum number of seats for Scheduled Tribes in Lok Sabha?  ' ,
+	answer: 'Madhya Pradesh' ,
+	options: [
+		"Chhattisgarh",
+		"Bihar",
+		"Madhya Pradesh",
+		"Uttar Pradesh"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which amendment extended the ban on readjustment of seats in the Lok Sabha and the state legislative assemblies for another 25 years with the objective of encouraging population limiting measures?  ' ,
+	answer: '84th Amendment' ,
+	options: [
+		"76th Amendment",
+		"84th Amendment",
+		"91st Amendment",
+		"93rd Amendment"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which writ is issued by the court to enquire into the legality of claim of a person to a public office?  ' ,
+	answer: 'Quo-Warranto' ,
+	options: [
+		"Quo-Warranto",
+		"Mandamus",
+		"Certiorari",
+		"Prohibition"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which Constitutional Amendment curtailed the Fundamental Right to Property?  ' ,
+	answer: '25th Amendment Act, 1971' ,
+	options: [
+		"21st Amendment Act, 1967",
+		"25th Amendment Act, 1971",
+		"42nd Amendment Act, 1976",
+		"44th Amendment Act, 1978"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which article of the Indian Constitution includes the Doctrine of Due Process of Law is included?  ' ,
+	answer: 'Article 21' ,
+	options: [
+		"Article 16",
+		"Article 26",
+		"Article 21",
+		"Article 11"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which year was the Securities and Exchange Board of India established?  ' ,
+	answer: '1992' ,
+	options: [
+		"1991",
+		"1992",
+		"1993",
+		"1994"
+		]
+	},
+	{
+	numb: 7,
+	question: 'In which case the Supreme Court for the first time limited the power of Parliament to amend the constitution for the first time?  ' ,
+	answer: 'Golaknath Vs. The State of Punjab' ,
+	options: [
+		"Minerva Mills Vs. The Union of India",
+		"A.K. Gopalan Vs. The State of Madras",
+		"Golaknath Vs. The State of Punjab",
+		"Keshavananda Vs. The Union of India"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Under which section of the Consumer Protection Act, 1986, the National Consumer Disputes Redressal Commission exercises administrative control over State Commissions?  ' ,
+	answer: '24-B' ,
+	options: [
+		"24-A",
+		"24-B",
+		"24-C",
+		"24-D"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which committee’s recommendations became the basis for drafting an amendment bill for conferring the constitutional status and protection to the Panchayati Raj institutions?  ' ,
+	answer: 'Gadgil Committee' ,
+	options: [
+		"Balwant Rai Committee",
+		"Ashok Mehta Committee",
+		"Thungon Committee",
+		"Gadgil Committee"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who advises the president with regard to the appointment of important officials like Attorney General of India, Comptroller and Auditor General of India?  ' ,
+	answer: 'The Prime Minister' ,
+	options: [
+		"The Council of Ministers",
+		"The Prime Minister",
+		"The Chief Justice of India",
+		"The Union Home Minister"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Under which act, the legislative council was given the power of discussing the budget in the British Indian Parliament?  ' ,
+	answer: 'Indian Councils Act, 1892' ,
+	options: [
+		"Indian Councils Act, 1861",
+		"Government of India Act, 1858",
+		"Indian Councils Act, 1892",
+		"Government of India Act, 1909"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Through which amendment act the Parliament declared that there is no limitation on the constituent power of Parliament?  ' ,
+	answer: '42nd' ,
+	options: [
+		"42nd",
+		"44th",
+		"48th",
+		"50th"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who administers the Union Territory?  ' ,
+	answer: 'President' ,
+	options: [
+		"Prime Minister",
+		"President",
+		"Governor",
+		"None of the above"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who characterises the Indian system as “extremely federal”?  ' ,
+	answer: 'Paul Appleby' ,
+	options: [
+		"Paul Appleby",
+		"KC Wheare",
+		"K Santhanam",
+		"Morris Jones"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who recommends the devolution of funds to the urban local bodies?  ' ,
+	answer: 'State Finance Commission' ,
+	options: [
+		"Governor",
+		"Finance Commission",
+		"State Finance Commission",
+		"None of the above"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following statements are correct with respect to Indian and British parliamentary system of government?  ' ,
+	answer: 'India has a republican system in place of British monarchical system' ,
+	options: [
+		"India has a republican system in place of British monarchical system",
+		"Britain does not has a system of legal responsibility of the minister while India has such a system",
+		"A person who is not a member of Parliament cannot be appointed as minister in India while in Britain it can happen",
+		"In India the prime minister must be a member of lower House of Parliament while in Britain he can be a member of any of the houses"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The 73rd amendment act provides for the reservation of not less than how much seats out of total number of seats for women?  ' ,
+	answer: '1/3' ,
+	options: [
+		"1/3",
+		"1/2",
+		"1/4",
+		"1/6"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following items are contained in the eleventh schedule of the Constitution of India?1. Agriculture, including agricultural extension2. Social forestry and farm forestry3. Rural electrification, including distribution of electricity4. Markets and fairsSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 4",
+		"Only 1, 2 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 20,
+	question: 'In which year was the Inland Waterways Authority of India established?  ' ,
+	answer: '1986' ,
+	options: [
+		"1985",
+		"1986",
+		"1987",
+		"1988"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following method is used for election of President in India?  ' ,
+	answer: 'Single Transferable Vote System' ,
+	options: [
+		"Open Ballot System",
+		"Single Transferable Vote System",
+		"Direct Election",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following writs is issued against judicial and quasi-judicial authorities?CertiorariProhibitionHabeas CorpusSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1 & 2",
+		"Only 3",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following are the features of unitary form of government?1. Single government2. Constitution may be writtenor unwritten3. No division of powers4. Judiciary may be independent or may not be independentSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 4",
+		"Only 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who has the power to summon or prorogue the Parliament and dissolve the Lok Sabha?  ' ,
+	answer: 'The President' ,
+	options: [
+		"The Chief Justice of India",
+		"The Attorney General",
+		"The President",
+		"The Prime Minister"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The PESA Act aims to extend the provisions of which part of the Constitution relating to the panchayats to the scheduled areas with certain modifications?  ' ,
+	answer: 'Part IX' ,
+	options: [
+		"Part VIII",
+		"Part IX",
+		"Part IX B",
+		"Part X"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following writs means ‘to have the body of’?  ' ,
+	answer: 'Habeas Corpus' ,
+	options: [
+		"Habeas Corpus",
+		"Mandamus",
+		"Prohibition",
+		"Quo-Warranto"
+		]
+	},
+	{
+	numb: 27,
+	question: 'In context with the writ jurisdiction of Supreme Court and High Courts, which of the following is a correct statement?  ' ,
+	answer: 'Supreme Court’s writ jurisdiction is narrower than the High Court.' ,
+	options: [
+		"Supreme Court’s writ jurisdiction is broader than the High Court.",
+		"Supreme Court’s writ jurisdiction is narrower than the High Court.",
+		"Both Supreme Court and High Court have equal powers in issuing writs.",
+		"Supreme Court can issue writs on only Fundamental Rights, while High Courts can issue writs on only ordinary legal rights"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which Act paved the way for the formation of State Electricity Regulatory Commissions?  ' ,
+	answer: 'Electricity Regulatory Commission Act 1998' ,
+	options: [
+		"Electricity Regulatory Commission Act 1991",
+		"Electricity Regulatory Commission Act 1993",
+		"Electricity Regulatory Commission Act 1995",
+		"Electricity Regulatory Commission Act 1998"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which article of the constitution provides control of the Union over the administration of Scheduled Areas and the welfare of Scheduled Tribes?  ' ,
+	answer: '339' ,
+	options: [
+		"244",
+		"244A",
+		"339",
+		"340"
+		]
+	},
+]</script><script src="./script.js"></script></html>

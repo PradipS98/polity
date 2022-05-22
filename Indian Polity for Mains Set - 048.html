@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 048'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which Act abolished the East India Company and transferred the powers of the government, territories and revenues to the British Crown?  ' ,
+	answer: 'Government of India Act, 1858' ,
+	options: [
+		"Charter Act of 1853",
+		"Government of India Act, 1858",
+		"Indian Councils Act of 1861",
+		"Indian Councils Act of 1892"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following was the first state to establish Panchayati Raj Syatem?  ' ,
+	answer: 'Rajasthan' ,
+	options: [
+		"Andhra Pradesh",
+		"Gujarat",
+		"Rajasthan",
+		"Madhya Pradesh"
+		]
+	},
+	{
+	numb: 3,
+	question: 'India had transferred Berubari territory to which of the following countries?  ' ,
+	answer: 'Pakistan' ,
+	options: [
+		"Pakistan",
+		"Nepal",
+		"China",
+		"Sri Lanka"
+		]
+	},
+	{
+	numb: 4,
+	question: 'When vice president acts as the president , which among the following is/ are true?  ' ,
+	answer: 'He/ She ceases to be the chairman of Rajya Sabha' ,
+	options: [
+		"He/ She remains the chairman of the Rajya Sabha and performs the duties of the chairman of Rajya Sabha",
+		"He/ She ceases to be the chairman of Rajya Sabha",
+		"Lok Sabha Speaker performs the duty of the chairman of the Rajya Sabha",
+		"None of the above"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which among the following amendments of the constitution of India fully secured the constitutional validity of zamindari abolition laws?  ' ,
+	answer: '1st' ,
+	options: [
+		"1st",
+		"2nd",
+		"3rd",
+		"4th"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following bills introduced foster care in India?  ' ,
+	answer: 'Juvenile Justice (Care and Protection of Children) Act, 2015' ,
+	options: [
+		"Juvenile Justice (Care and Protection of Children) Act, 2000",
+		"Juvenile Justice (Care and Protection of Children) Act, 2005",
+		"Juvenile Justice (Care and Protection of Children) Act, 2010",
+		"Juvenile Justice (Care and Protection of Children) Act, 2015"
+		]
+	},
+	{
+	numb: 7,
+	question: 'What is the number of Schedules in Constitution of India?  ' ,
+	answer: '12' ,
+	options: [
+		"8",
+		"10",
+		"11",
+		"12"
+		]
+	},
+	{
+	numb: 8,
+	question: 'In which year the Black Money (Undisclosed Foreign Income and Assets) and Imposition of Tax Act was enacted?  ' ,
+	answer: '2015' ,
+	options: [
+		"2014",
+		"2015",
+		"2016",
+		"2017"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following countries Lower House is called Gyelyong Tshogdu?  ' ,
+	answer: 'Bhutan' ,
+	options: [
+		"Bhutan",
+		"Myanmar",
+		"Thailand",
+		"Cambodia"
+		]
+	},
+	{
+	numb: 10,
+	question: 'In how many categories the public services (civil services or government services) in India are classified?  ' ,
+	answer: '3' ,
+	options: [
+		"2",
+		"3",
+		"4",
+		"5"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which Prime Minister advised the President to proclaim emergency without consulting the cabinet?  ' ,
+	answer: 'Indira Gandhi' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Gulzarilal Nanda",
+		"Indira Gandhi",
+		"Morarji Desai"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Under which article of the constitution it is the duty of the CAG to ascertain and certify the net proceeds of any tax or duty?  ' ,
+	answer: 'Article 279' ,
+	options: [
+		"Article 278",
+		"Article 279",
+		"Article 280",
+		"Article 281"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who determines the salaries, allowances and other conditions of service of the chairperson or a member of National Human Rights Commission?  ' ,
+	answer: 'Central government' ,
+	options: [
+		"Rajya Sabha",
+		"A committee is composed for the same",
+		"Central government",
+		"President"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year Supreme Court ruled that the tribunals are subject to the writ jurisdiction of the high courts?  ' ,
+	answer: '1997' ,
+	options: [
+		"1996",
+		"1997",
+		"1998",
+		"1999"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Unorganised Workers’ Social Security Act was passed in which year?  ' ,
+	answer: '2008' ,
+	options: [
+		"2007",
+		"2008",
+		"2009",
+		"2010"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Under which of the following articles comes the appointment of Administrator of the Union territory by the President of India?  ' ,
+	answer: 'Article 239' ,
+	options: [
+		"Article 239",
+		"Article 240",
+		"Article 241",
+		"Article 242"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following does not form the main jurisdiction of High Court?  ' ,
+	answer: 'Advisory jurisdiction' ,
+	options: [
+		"Appellate jurisdiction",
+		"Supervisory jurisdiction",
+		"Original jurisdiction",
+		"Advisory jurisdiction"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which article of the Indian constitution gives an extensive original jurisdiction to the Supreme Court in regard to enforcement of Fundamental Rights?  ' ,
+	answer: 'Article 32' ,
+	options: [
+		"Article 22",
+		"Article 32",
+		"Article 35",
+		"Article 37"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following are the powers of National Commission for Scheduled Tribes?1. Summoning and enforcing the attendance of any person from any part of India and examining him on oath.2. Requisitioning any public record from any court or office.3. Receiving evidence on affidavits.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The 73rd Amendment Act of 1992 added which part to the Constitution of India?  ' ,
+	answer: 'Part IX' ,
+	options: [
+		"Part IX",
+		"Part IX B",
+		"Part X",
+		"Part XI"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which among the following features of Indian Constitution is not borrowed from British Constitution?  ' ,
+	answer: 'Concurrent List' ,
+	options: [
+		"Parliamentary Form of Government",
+		"Cabinet Form of Government",
+		"Rule of law",
+		"Concurrent List"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which institution is responsible for the conduct of the elections to the municipalities?  ' ,
+	answer: 'State election commission' ,
+	options: [
+		"State election commission",
+		"Election commission",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following was not added to the Directive Principles by 42nd Amendment of the Constitution?  ' ,
+	answer: 'Uniform civil code' ,
+	options: [
+		"Participation of workers in the management of industries",
+		"Equal justice and free legal aid to poor",
+		"Uniform civil code",
+		"Protection of children and youth from exploitation"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which one of the following is a part of the Fundamental Duties in the Constitution of India?  ' ,
+	answer: 'To value and preserve the rich heritage of our country' ,
+	options: [
+		"To value and preserve the rich heritage of our country",
+		"Separation of judiciary from executive",
+		"Abolition of untouchability",
+		"Free and compulsory education"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following articles of the constitution mention special provisions for the scheduled castes (SCs), the scheduled tribes (STs), the backward classes (BCs) and the Anglo-Indians?  ' ,
+	answer: 'Articles 330 to 342A' ,
+	options: [
+		"Articles 330 to 342A",
+		"Articles 344 to 352A",
+		"Articles 350 to 352A",
+		"Articles 360 to 362A"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In which year the Hanumantha Rao Committee submitted its report?  ' ,
+	answer: '1984' ,
+	options: [
+		"1984",
+		"1985",
+		"1986",
+		"1987"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The Amindivi islands consist of five islands of which of the Union Territory ?  ' ,
+	answer: 'Lakshadweep' ,
+	options: [
+		"Andaman & Nicobar",
+		"Lakshadweep",
+		"Pondicherry",
+		"Daman & Diu"
+		]
+	},
+	{
+	numb: 28,
+	question: 'which of the following Constitutional amendmentshas authorized the president to publish a authoritative Hindi Translation of the Constitution of India?  ' ,
+	answer: 'The Constitution (58th Amendment) Act' ,
+	options: [
+		"The Constitution (55th Amendment) Act",
+		"The Constitution (56th Amendment) Act",
+		"The Constitution (57th Amendment) Act",
+		"The Constitution (58th Amendment) Act"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which country the concept of Public Interest Litigation originated?  ' ,
+	answer: 'US' ,
+	options: [
+		"UK",
+		"India",
+		"Australia",
+		"US"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The power to create of abolish legislative council in states is vested with which among the following?  ' ,
+	answer: 'Legislative assembly of the state' ,
+	options: [
+		"Council of State Ministers",
+		"Governor of the state",
+		"Legislative assembly of the state",
+		"President of India"
+		]
+	},
+]</script><script src="./script.js"></script></html>

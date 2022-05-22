@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 043'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who prepares a roster for publicity of the policies of the political parties on radio and TV in times of elections?  ' ,
+	answer: 'Election Commission' ,
+	options: [
+		"Cabinet",
+		"Vice-President",
+		"A committee is constituted for the same",
+		"Election Commission"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Free & Compulsory education to all children from 6-14 years age was made a fundamental right by which of the following amendments?  ' ,
+	answer: '86th' ,
+	options: [
+		"82nd",
+		"83rd",
+		"84th",
+		"86th"
+		]
+	},
+	{
+	numb: 3,
+	question: 'What are the factors which are taken into consideration while constituting Zonal Councils?1. natural divisions of the country2. river systems and means of communication3. cultural and linguistic affinity4. requirements of economic development, security and law and orderSelect the correct option from the codes given below:  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The Child and Adolescent Labour (Prohibition and Regulation) Act was enacted in which year?  ' ,
+	answer: '1986' ,
+	options: [
+		"1980",
+		"1982",
+		"1984",
+		"1986"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following are offences affecting human body?1. Culpable Homicide2. Criminal breach of trust3. Wrongful Restraint and wrongful confinementSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which year Dogri language was included in the eighth Schedule of Indian Constitution?  ' ,
+	answer: '2003' ,
+	options: [
+		"2001",
+		"2002",
+		"2003",
+		"2004"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Whistle Blower Act, 2014 has overridden the Official Secrets Act of which year?  ' ,
+	answer: '1923' ,
+	options: [
+		"1922",
+		"1923",
+		"1924",
+		"1925"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which Act of British Parliament took away the exclusive right of the company to trade in India?  ' ,
+	answer: 'Charter Act of 1813' ,
+	options: [
+		"Regulating Act of 1773",
+		"Pitt’s India Act of 1784",
+		"Charter Act of 1813",
+		"Charter Act of 1833"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act was passed in which year?  ' ,
+	answer: '2013' ,
+	options: [
+		"2011",
+		"2012",
+		"2013",
+		"2014"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following statements are correct with respect to Attorney General of India?1. He has the right of audience in all courts in the territory of India.2. He has the right to speak and to take part in the proceedings of both the Houses of Parliament.3. He does not enjoy all the privileges and immunities that are available to a member of Parliament.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which among the following has the power to legislate on the matters which are neither in the Union List, nor in the State list nor in the Concurrent list of the Constitution of India?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"State Legislatures",
+		"Both State legislatures and Parliament",
+		"Neither Parliament nor State legislature"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who appoints the chairman of the Estimates Committee?  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Speaker of Lok Sabha",
+		"Chairman of Lok Sabha"
+		]
+	},
+	{
+	numb: 13,
+	question: 'How many parliaments are there in the Inter Parliamentary Union at present?  ' ,
+	answer: '153' ,
+	options: [
+		"152",
+		"153",
+		"154",
+		"155"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who can make regulations for the peace, progress and good government of the Union Territories?  ' ,
+	answer: 'The President' ,
+	options: [
+		"The Parliament",
+		"The Cabinet",
+		"The Prime Minister",
+		"The President"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which article deals with transfer of a judge from one High Court to another?  ' ,
+	answer: '222' ,
+	options: [
+		"222",
+		"223",
+		"224",
+		"225"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who is empowered to constitute a GST Council?  ' ,
+	answer: 'The President' ,
+	options: [
+		"The Parliament",
+		"The President",
+		"The Prime Minister",
+		"The Rajya Sabha"
+		]
+	},
+	{
+	numb: 17,
+	question: 'How many offices are attached to NITI Aayog?  ' ,
+	answer: '2' ,
+	options: [
+		"1",
+		"2",
+		"3",
+		"4"
+		]
+	},
+	{
+	numb: 18,
+	question: 'In which year the Hindi names ‘Rajya Sabha’ and ‘Lok Sabha’ were adopted by the Council of States and the House ofPeople respectively?  ' ,
+	answer: '1954' ,
+	options: [
+		"1950",
+		"1952",
+		"1954",
+		"1956"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which was the first state in India to set up an institution of Lokayukta?  ' ,
+	answer: 'Maharashtra' ,
+	options: [
+		"Tamil Nadu",
+		"Andhra Pradesh",
+		"Maharashtra",
+		"Mizoram"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following matters can be taken up in Lok Adalats?1. Land Acquisition cases2. Non compoundable offences3. Electricity matters4. Housing Finance casesSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 3 & 4' ,
+	options: [
+		"Only 1 & 3",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"Only 1, 3 & 4"
+		]
+	},
+	{
+	numb: 21,
+	question: 'A constitution amendment bill has also provisions pertaining to imposition, abolition, remission, alteration or regulation of a tax. Which of the following statements would hold correct for such a bill?  ' ,
+	answer: 'This bill can originate in either Rajya Sabha or Lok Sabha' ,
+	options: [
+		"This bill will need prior approval of president to get introduced",
+		"This bill can originate only in Lok Sabha",
+		"This bill can originate only in Rajya Sabha",
+		"This bill can originate in either Rajya Sabha or Lok Sabha"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which constitutional amendment provides constitutional status to the National Commission for Backward Classes?  ' ,
+	answer: '102' ,
+	options: [
+		"100",
+		"101",
+		"102",
+		"103"
+		]
+	},
+	{
+	numb: 23,
+	question: 'According to the National Security Act of 1980 what is the maximum period of detention?  ' ,
+	answer: '12 months' ,
+	options: [
+		"3 months",
+		"5 months",
+		"10 months",
+		"12 months"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The Rights of Persons with Disabilities Act was passed in which year?  ' ,
+	answer: '2016' ,
+	options: [
+		"2015",
+		"2016",
+		"2017",
+		"2018"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which amendment is related to Goods and Services Tax?  ' ,
+	answer: '101st Amendment' ,
+	options: [
+		"100th Amendment",
+		"101st Amendment",
+		"102nd Amendment",
+		"103nd Amendment"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who moved the historic ‘Objectives Resolution’ on December 13, 1946 in the Constituent Assembly?  ' ,
+	answer: 'Jawaharlal Nehru' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Mahatma Gandhi",
+		"Dr. Rajendra Prasad",
+		"G.V. Mavalankar"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which article contains special provisions with respect to the state of Arunachal Pradesh?  ' ,
+	answer: '371-H' ,
+	options: [
+		"371-G",
+		"371-H",
+		"371-I",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following statements are incorrect regarding election to Lok Sabha?  ' ,
+	answer: 'The electoral rolls are prepared under the direction and control of President' ,
+	options: [
+		"The electoral rolls are prepared under the direction and control of President",
+		"The elections are on the basis of adult suffrage",
+		"On the request of Election Commission the President is required to make available such staff as me be necessary for discharge of functions",
+		"The Election Commission conducts the election"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following appears on behalf of the Government of India in all cases in the Supreme Court in which the Government of India is concerned?  ' ,
+	answer: 'Attorney General' ,
+	options: [
+		"Law Minister",
+		"Attorney General",
+		"Advocate General",
+		"Chief Justice of India"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The provision for establishment of Supreme Court of Calcutta was made in which act?  ' ,
+	answer: 'Regulating Act of 1773' ,
+	options: [
+		"Regulating Act of 1773",
+		"Indian Council Act, 1861",
+		"Charter Act of 1813",
+		"Pitt’s India Act, 1784"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 050'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who can transfer a Governor appointed to one state to another state?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Chief Minister",
+		"Chief Justice of the high court"
+		]
+	},
+	{
+	numb: 2,
+	question: 'What the minimum age for a person seeking election to the Lok Sabha?  ' ,
+	answer: '25 years' ,
+	options: [
+		"18 years",
+		"20 years",
+		"25 years",
+		"35 years"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following is not in the domain of Union government?  ' ,
+	answer: 'Health' ,
+	options: [
+		"Defence",
+		"Foreign affairs",
+		"Communication",
+		"Health"
+		]
+	},
+	{
+	numb: 4,
+	question: 'What is the minimum quorum required in Lok Sabha to transact any business?  ' ,
+	answer: '1/10' ,
+	options: [
+		"1/2",
+		"1/5",
+		"1/3",
+		"1/10"
+		]
+	},
+	{
+	numb: 5,
+	question: 'National Legal Services Authority (NALSA) has been constituted under which act of Parliament?  ' ,
+	answer: 'Legal Services Authorities Act, 1987' ,
+	options: [
+		"Legal Services Authorities Act, 1958",
+		"Legal Services Authorities Act, 1967",
+		"Legal Services Authorities Act, 1987",
+		"Legal Services Authorities Act, 1990"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which of the following situations a President can establish Inter -State Council?  ' ,
+	answer: 'When it appears to him / her that it would be serving the public interest' ,
+	options: [
+		"During an emergency",
+		"When council of Ministers recommends him / her to do so",
+		"When parliament passes a law",
+		"When it appears to him / her that it would be serving the public interest"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who remarked “The Supreme Court of India has more powers than any other Supreme Court in any part of the world”?  ' ,
+	answer: 'Alladi Krishnaswamy Ayyar' ,
+	options: [
+		"B.R. Ambedkar",
+		"K.M. Munshi",
+		"Alladi Krishnaswamy Ayyar",
+		"Jawaharlal Nehru"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following persons the courts have no jurisdiction to try even if they have transgressed the provisions of the Penal Code?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"President",
+		"Governors",
+		"Ambassadors",
+		"All of the above"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Where can be the money bill introduced ?1. Legislative Assembly2. Legislative Council3. Joint sitting of both housesSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which Schedule of Indian Constitution mentions about the division of power between the Union and the States?  ' ,
+	answer: '7th Schedule' ,
+	options: [
+		"6th Schedule",
+		"7th Schedule",
+		"8th Schedule",
+		"9th Schedule"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The writ of mandamus is available for the purpose of which of the following?Enforcement of Fundamental RightsCompelling a court or Judicial tribunal to exercise its jurisdiction when it has refuse to exercise itDirecting a public official or the Government not to enforce a law which is unconstitutionalSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which article of the Indian Constitution says that directive principles are not enforceable by any court?  ' ,
+	answer: 'Article 37' ,
+	options: [
+		"Article 36",
+		"Article 37",
+		"Article 38",
+		"Article 39"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who appoints a special officer for linguistic minorities to investigate all matters relating to the constitutional safeguards for linguistic minorities?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Governor",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which yer was the first Parliamentary Forum on Water Conservation and Management was constituted?  ' ,
+	answer: '2005' ,
+	options: [
+		"2004",
+		"2005",
+		"2006",
+		"2007"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following statements are correct with respect to Article 163?1. There shall be a Council of Ministers with the Chief Minister as the head to aid and advise the Governor.2. If any question arises whether a matter falls within the Governor’s discretion or not, decision of the Governor is subject to review.3. The advice tendered by Ministers to the Governor shall not be inquired into in any court.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 1 & 3",
+		"Only 2 & 3"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who enjoys the extensive executive powers as an agent of the President during the President’s Rule?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief Minister",
+		"Governor",
+		"Chief Justice of the high court",
+		"None of the above"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which Constitutional Amendment Act extended the provision for tribal welfare minister for the states of Chhattisgarh and Jharkhand?  ' ,
+	answer: '94th' ,
+	options: [
+		"91st",
+		"92nd",
+		"93rd",
+		"94th"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which article of the constitution made right to form co-operative societies a fundamental right?  ' ,
+	answer: 'Article 19' ,
+	options: [
+		"Article 16",
+		"Article 17",
+		"Article 18",
+		"Article 19"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which among the following committees of Lok Sabha is assisted by Comptroller & Auditor General of India?  ' ,
+	answer: 'Public Accounts Committee' ,
+	options: [
+		"Estimates committee",
+		"Public Accounts Committee",
+		"Joint Committee of salary and allowances",
+		"Joint committee of Offices of Profit"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The University Grants Commission Act was enacted in which year?  ' ,
+	answer: '1956' ,
+	options: [
+		"1950",
+		"1952",
+		"1954",
+		"1956"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which year Supreme Court ruled that the transfer of high court judges could be resorted to only as an exceptional measure and only in public interest and not by way of punishment?  ' ,
+	answer: '1977' ,
+	options: [
+		"1976",
+		"1977",
+		"1978",
+		"1979"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who amongst the following is associated with judicial activism in India?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Justice P.N. Bhagwati",
+		"Justice O. Chinnappa Reddy",
+		"Justice D.A. Desai",
+		"All of the above"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which amendment to the Wildlife Protection Act, 1972 has made punishment and penalty for offences under the Act more stringent?  ' ,
+	answer: 'Wild Life (Protection) Amendment Act, 2002' ,
+	options: [
+		"Wild Life (Protection ) Amendment Act 1982",
+		"Wild Life (Protection ) Amendment Act 1991",
+		"Wild Life (Protection) Amendment Act, 2002",
+		"Wild Life (Protection ) Amendment Act 2006"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which committee inquired into whether the parliamentary system should be continued or should be replaced by the presidential system?  ' ,
+	answer: 'Swaran Singh Committee' ,
+	options: [
+		"Swaran Singh Committee",
+		"Sarkaria Commission",
+		"Punchi Commission",
+		"Rajamannar Commission"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following represents the mental aspects of crime?  ' ,
+	answer: 'Mens rea' ,
+	options: [
+		"Actus reus",
+		"Mens rea",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 26,
+	question: 'By which of the following amendment Sikkim was made a full-fledged State of the Indian Union?  ' ,
+	answer: '36th' ,
+	options: [
+		"30th",
+		"32nd",
+		"35th",
+		"36th"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following is are the three tiers of Panchayati Raj recommended by the Balwant Rai Mehta Committee?1. Gram panchayat2. Panchayat samiti3. Zila parishad4. Nagar panchayatSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1, 2 & 3",
+		"Only 1, 3 & 4",
+		"Only 1, 2 & 4",
+		"Only 2, 3 & 4"
+		]
+	},
+	{
+	numb: 28,
+	question: 'What are the reasons for the creation of Union Territories?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Special treatment of the backward and tribal people",
+		"Strategic importance",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which year was the separate High Court of Andhra Pradesh established after separation from Telangana?  ' ,
+	answer: '2019' ,
+	options: [
+		"2017",
+		"2018",
+		"2019",
+		"2020"
+		]
+	},
+	{
+	numb: 30,
+	question: 'How many Cabinet Committees are functional at present?  ' ,
+	answer: '8' ,
+	options: [
+		"6",
+		"7",
+		"8",
+		"9"
+		]
+	},
+]</script><script src="./script.js"></script></html>

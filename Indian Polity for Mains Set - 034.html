@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 034'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following was the first Speaker of Lok Sabha?  ' ,
+	answer: 'G.V. Mavalankar' ,
+	options: [
+		"V.V. Giri",
+		"Dr. Rajendra Prasad",
+		"B.D. Jatti",
+		"G.V. Mavalankar"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who advises the governor with regard to the summoning and proroguing of the sessions of the state legislature?  ' ,
+	answer: 'Chief Minister' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"Speaker of Legislative Assembly",
+		"Chairman of Legislative Council"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Constitution of India guarantees which of the following to the states of India?  ' ,
+	answer: 'None of them' ,
+	options: [
+		"Territorial Integrity",
+		"Sovereignty",
+		"Right to secede from Union",
+		"None of them"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who hoped that the drastic power conferred by Article 356 would remain a ‘deadletter’?  ' ,
+	answer: 'B.R. Ambedkar' ,
+	options: [
+		"Jawaharlal Nehru",
+		"K.M. Munshi",
+		"B.R. Ambedkar",
+		"Sardar Vallbhbhai Patel"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The governor can make regulations for the peace and for ensuring social and economic advancement of the different sections of the population of which of the following states?  ' ,
+	answer: 'Sikkim' ,
+	options: [
+		"Maharashtra",
+		"Manipur",
+		"Sikkim",
+		"Assam"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following bodies are a Special Purpose Agency?  ' ,
+	answer: 'All of them' ,
+	options: [
+		"Water supply and sewerage boards",
+		"Electricity supply boards",
+		"Town improvement trusts",
+		"All of them"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who is authorized to remove the Chief Information Commissioner or any Information Commissioner from the office?  ' ,
+	answer: 'President' ,
+	options: [
+		"Supreme Court",
+		"President",
+		"Parliament",
+		"Cabinet"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which act gave recognition to the ‘portfolio system’ introduced by Lord Canning in 1859?  ' ,
+	answer: 'Indian Councils Act, 1861' ,
+	options: [
+		"Indian Councils Act, 1861",
+		"Indian Councils Act, 1892",
+		"Government of India Act, 1858",
+		"None of the Above"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following Constitutional Amendment Act was called as ‘Mini Constitution’?  ' ,
+	answer: '42nd' ,
+	options: [
+		"42nd",
+		"46th",
+		"69th",
+		"91st"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The concept of Fundamental Duties in the Indian Constitution has been borrowed from?  ' ,
+	answer: 'Russian Constitution' ,
+	options: [
+		"British Constitution",
+		"French Constitution",
+		"Canadian Constitution",
+		"Russian Constitution"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Under which Article of Indian Constitution Panchayats were given Constitutional status?  ' ,
+	answer: 'Article 243' ,
+	options: [
+		"Article 219",
+		"Article 239",
+		"Article 243",
+		"Article 226"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which Constitutional Amendment Act abolished the privy purses and privileges of the former rulers of princely states?  ' ,
+	answer: '26th Amendment' ,
+	options: [
+		"26th Amendment",
+		"28th Amendment",
+		"42nd Amendment",
+		"44th Amendment"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The Finance Commission submits its report to which of the following?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Parliament",
+		"Prime Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The writ of mandamus cannot be issued against which of the following?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"A private individual",
+		"President of India",
+		"State Governors",
+		"All of the above"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who appoints the members of Finance Commission?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Prime Minister",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who appoints the judges of the Supreme Court?  ' ,
+	answer: 'President' ,
+	options: [
+		"Chief Justice of India",
+		"President",
+		"Prime Minister",
+		"Council of Ministers"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following is not a demerit of system proportional representation?  ' ,
+	answer: 'It establishes intimate contacts between voters and representatives' ,
+	options: [
+		"Highly expensive",
+		"No scope for organising by-elections",
+		"Promotes minority thinking and group interests",
+		"It establishes intimate contacts between voters and representatives"
+		]
+	},
+	{
+	numb: 18,
+	question: 'How many members are there in the Public Accounts Committee?  ' ,
+	answer: '22' ,
+	options: [
+		"20",
+		"22",
+		"24",
+		"25"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who determines the number of members of a Joint State Public Service Commission and their conditions of service?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Governor",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following Articles of the Indian Constitution deals with promotion of international peace and security?  ' ,
+	answer: 'Article 51' ,
+	options: [
+		"Article 48 A",
+		"Article 41",
+		"Article 43 A",
+		"Article 51"
+		]
+	},
+	{
+	numb: 21,
+	question: 'What is the maximum age till which Chief Information Commissioner and an Information Commissioner can hold office?  ' ,
+	answer: '65 years' ,
+	options: [
+		"60 years",
+		"62 years",
+		"65 years",
+		"70 years"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following statements is correct for Public Interest Litigation?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"It only deals with the rights of the poor",
+		"It recognizes that ordinary marketplace for legal services fails to represent everybody",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which among the following was the strength of Lok Sabha after India’s first general elections?  ' ,
+	answer: '489' ,
+	options: [
+		"289",
+		"389",
+		"489",
+		"500"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following statements are correct with respect to National Human Rights Commission?1. The functions of the commission are mainly recommendatory in nature.2. It has no power to punish the violators of human rights.3. It can award any relief including monetary relief to the victim.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 1 & 2",
+		"Only 2 & 3"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Who is authorised to make any provision for reservation of seats in any panchayat or offices of chairperson in the panchayat at any level in favour of backward classes?  ' ,
+	answer: 'State legislature' ,
+	options: [
+		"President",
+		"Parliament",
+		"Governor",
+		"State legislature"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who among the following put forward the idea of Constituent Assembly for India for the first time?  ' ,
+	answer: 'M. N. Roy' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Sardar Vallabhbhai Patel",
+		"Dr. Rajendra Prasad",
+		"M. N. Roy"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following bodies is headed by the Mayor?  ' ,
+	answer: 'The Council' ,
+	options: [
+		"The Council",
+		"The standing committees",
+		"The municipal commissioner",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'In which case the Supreme Court characterised federalism as its ‘basic feature’ of the Constitution of India?  ' ,
+	answer: 'Bommai case' ,
+	options: [
+		"Keshvananda Bharti case",
+		"Bommai case",
+		"LIC of India case",
+		"Minerva Mills case"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which of the following cases the Supreme Court held that Parliament is empowered to take away any of the Fundamental Rights?  ' ,
+	answer: 'Kesavananda Bharati case' ,
+	options: [
+		"Golak Nath case",
+		"Minerva Mills case",
+		"Kesavananda Bharati case",
+		"Shankari Prasad case"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The Parliament of India is consisted of _______:  ' ,
+	answer: 'Lok Sabha & Rajya Sabha & President' ,
+	options: [
+		"Lok Sabha & Rajya Sabha",
+		"Lok Sabha & Rajya Sabha & President",
+		"Lok Sabha, Rajya Sabha, President & Prime Minister",
+		"Lok Sabha, Rajya Sabha & Council of Ministers"
+		]
+	},
+]</script><script src="./script.js"></script></html>

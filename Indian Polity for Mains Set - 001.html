@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 001'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following must be approved by the Public Accounts Committee before being submitted to the Lok Sabha for voting?  ' ,
+	answer: 'Excess grant' ,
+	options: [
+		"Supplementary grant",
+		"Exceptional grant",
+		"Token grant",
+		"Excess grant"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which among the following schedules is related to the responsibilities of Municipalities?  ' ,
+	answer: '12th' ,
+	options: [
+		"9th",
+		"10th",
+		"11th",
+		"12th"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following Constitution Amendment Act provided for reservation of seats for scheduled tribes of Nagaland, Meghalaya, Mizoram, & Arunachal Pradesh state assemblies?  ' ,
+	answer: '57th' ,
+	options: [
+		"52nd",
+		"57th",
+		"61st",
+		"65th"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who called the Governor of a state as “federal fireman”?  ' ,
+	answer: 'C Rajagopalachari' ,
+	options: [
+		"K T Shah",
+		"B R Ambedkar",
+		"C Rajagopalachari",
+		"Dr. Rajendra Prasad"
+		]
+	},
+	{
+	numb: 5,
+	question: 'How many times the word “Secular” appears in our constitution?  ' ,
+	answer: '2' ,
+	options: [
+		"1",
+		"2",
+		"3",
+		"4"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Protection of wild life comes under which of the following in Constitution of India?Fundamental dutiesDirective PrinciplesSeventh ScheduleSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Indian Councils Act of 1909 is associated with one major change that propagated the British agenda of divide and rule?  ' ,
+	answer: 'Introduction of separate electorates' ,
+	options: [
+		"Decentralization of power",
+		"Introduction of separate electorates",
+		"Increase in size of legislative council",
+		"Retention of official majority in central legislative council"
+		]
+	},
+	{
+	numb: 8,
+	question: 'By which amendment act 10th schedule was added in the Indian Constitution, giving special status to Sikkim?  ' ,
+	answer: '35th Amendment Act' ,
+	options: [
+		"35th Amendment Act",
+		"36th Amendment Act",
+		"37th Amendment Act",
+		"38th Amendment Act"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Supreme Court has made Right to Free Education as the part of which among the following rights?  ' ,
+	answer: 'Right to life' ,
+	options: [
+		"Right to life",
+		"Right against Exploitation",
+		"Right to freedom of speech and expression",
+		"Cultural and Educational Rights"
+		]
+	},
+	{
+	numb: 10,
+	question: 'How many Former Presidents have been awarded “Bharat Ratna” till now?  ' ,
+	answer: '6' ,
+	options: [
+		"2",
+		"3",
+		"6",
+		"5"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following categories of persons became the citizens of India at its commencement i.e., on January, 1950?persons domiciled in Indiapersons migrated from Pakistanpersons migrated from Pakistan but later returnedpersons of Indian origin residing outside IndiaSelect the correct option from the codes given below:  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Only 1 & 2",
+		"Only 3 & 4",
+		"Only 2 & 4",
+		"All of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which among the following presidents of Indiarepresented India in UNESCOonce in his lifetime?  ' ,
+	answer: 'Dr. S Radhakrishnan' ,
+	options: [
+		"Dr. Shankar Dayal Sharma",
+		"Dr. Rajendra Prasad",
+		"Dr. S Radhakrishnan",
+		"Giani Jail Singh"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which Act during British India abolished the monopoly of East India Company in tea trade with China?  ' ,
+	answer: 'Charter Act of 1833' ,
+	options: [
+		"Charter Act of 1813",
+		"Charter Act of 1833",
+		"Charter Act of 1853",
+		"Government of India Act of 1858"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which schedule of Indian Constitution, the territorial extent of Indian states and union Territories is prescribed?  ' ,
+	answer: '1st' ,
+	options: [
+		"1st",
+		"2nd",
+		"3rd",
+		"4th"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Directive Principles of State Policy has been adopted from the Constitution of which country?  ' ,
+	answer: 'Ireland' ,
+	options: [
+		"Canada",
+		"South Africa",
+		"Australia",
+		"Ireland"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who was the Vice President of the executive council formed during the interim government in 1946?  ' ,
+	answer: 'Jawaharlal Nehru' ,
+	options: [
+		"Dr. Rajendra Prasad",
+		"C. Rajagopalachari",
+		"KM Munshi",
+		"Jawaharlal Nehru"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following became the first member country of United Nation to leave international criminal court?  ' ,
+	answer: 'Burundi' ,
+	options: [
+		"Yemen",
+		"Lebanon",
+		"Burundi",
+		"North Korea"
+		]
+	},
+	{
+	numb: 18,
+	question: 'In which year, parliament passed the Citizenship Act?  ' ,
+	answer: '1955' ,
+	options: [
+		"1950",
+		"1955",
+		"1960",
+		"1965"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which act clearly distinguished between the commercial and political functions of the East India Company?  ' ,
+	answer: 'Pitt’s India Act of 1784' ,
+	options: [
+		"Charter Act of 1813",
+		"Pitt’s India Act of 1784",
+		"Charter Act of 1833",
+		"Charter Act of 1853"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following is incorrect about Indian Independence Act?  ' ,
+	answer: 'British monarch retained his right to veto bills for certain period' ,
+	options: [
+		"It provided for the partition of India",
+		"It abolished the office of Viceroy",
+		"Freedom to princely states to join the Dominion of India or the Dominion of Pakistan or to remain",
+		"British monarch retained his right to veto bills for certain period"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Regarding the “starred questions” asked during Question Hour of Parliament , which among the following is true?  ' ,
+	answer: 'Oral Answer is required to be given by the minister on floor of the house and supplementary questions may be asked on Minister’s reply' ,
+	options: [
+		"Oral Answer is required to be given by the minister on floor of the house and supplementary questions may be asked on Minister’s reply",
+		"Oral Answer is required to be given by the minister on floor of the house and supplementary questions may not be asked on Minister’s reply",
+		"Written Answer is to be given by the minister after 10 days notice and no supplementary question may be asked",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which among the following is the constitutional body appointed by the president, every five years to review centre state financial relationships?  ' ,
+	answer: 'Finance Commission' ,
+	options: [
+		"Finance Commission",
+		"Inter State Commission",
+		"Inter State Council",
+		"Zonal Council"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following is the ultimate defender/guarantor of Fundamental Rights in India?  ' ,
+	answer: 'Supreme Court' ,
+	options: [
+		"Supreme Court",
+		"Parliament",
+		"People of India",
+		"President of India"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The tribal areas of which states are included in the Sixth Schedule of the Constitution of India?  ' ,
+	answer: 'Assam, Meghalaya, Tripura and Mizoram' ,
+	options: [
+		"Assam, Nagaland, Tripura and Mizoram",
+		"Assam, Meghalaya, Tripura and Mizoram",
+		"Assam, Meghalaya, Tripura and Arunachal Pradesh",
+		"Assam, Meghalaya, Tripura and Manipur"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which act abolished dyarchy in the provinces and introduced provincial autonomy in its place?  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Indian Councils Act, 1909",
+		"Government of India Act, 1919",
+		"Government of India Act, 1935",
+		"None of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which act provided some share to Indians in the administration of their county?  ' ,
+	answer: 'Charter Act of 1833' ,
+	options: [
+		"Regulating Act, 1773",
+		"Pitts India Act, 1784",
+		"Charter Act of 1833",
+		"Charter Act 1813"
+		]
+	},
+	{
+	numb: 27,
+	question: 'From which constitution, India has borrowed the provisions related to amendment Constitution?  ' ,
+	answer: 'South Africa' ,
+	options: [
+		"Weimer Republic of Germany",
+		"South Africa",
+		"Ireland",
+		"Canada"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which Constitutional Amendment gave Right to Education to children in India?  ' ,
+	answer: '86th' ,
+	options: [
+		"86th",
+		"90th",
+		"91st",
+		"97th"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which case, Supreme Court held that Preamble is integral part of the constitution?  ' ,
+	answer: 'SR Bommai Case' ,
+	options: [
+		"SR Bommai Case",
+		"Kesavanand Bharti Case",
+		"Ashok Kumar Thakur Case",
+		"M C Mehta Case"
+		]
+	},
+	{
+	numb: 30,
+	question: 'How many Fundamental Rights did the Indian Constitution contain initially ?  ' ,
+	answer: '7' ,
+	options: [
+		"5",
+		"6",
+		"7",
+		"8"
+		]
+	},
+]</script><script src="./script.js"></script></html>

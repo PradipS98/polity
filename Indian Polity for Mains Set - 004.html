@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 004'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which section of theScheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006 provides that the gram sabha, or village assembly, will initially pass a resolution recommending whose rights to which resources should be recognized?  ' ,
+	answer: 'Section 6(1)' ,
+	options: [
+		"Section 6(1)",
+		"Section 3(1)",
+		"Section 4(2)",
+		"Section 5(1)"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Whistleblowers Protection Bill became a law in which of the following years?  ' ,
+	answer: '2014' ,
+	options: [
+		"2011",
+		"2012",
+		"2013",
+		"2014"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The Arms Act was enacted by the Parliament of India in which year?  ' ,
+	answer: '1959' ,
+	options: [
+		"1958",
+		"1959",
+		"1960",
+		"1961"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following fundamental right is also known to have incorporated a “Necessary Evil” of the Constitution of India?  ' ,
+	answer: 'Protection against arrest and detention in certain case' ,
+	options: [
+		"Protection of certain rights regarding freedom of speech, etc.",
+		"Protection in respect of conviction for offences.",
+		"Protection of life and personal liberty.",
+		"Protection against arrest and detention in certain case"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following articles says that executive power of the state is vested in the Governor?  ' ,
+	answer: 'Article 154' ,
+	options: [
+		"Article 152",
+		"Article 153",
+		"Article 154",
+		"Article 155"
+		]
+	},
+	{
+	numb: 6,
+	question: 'India followed the dual-mode of Goods and Service Tax from which of the following country?  ' ,
+	answer: 'Canada' ,
+	options: [
+		"USA",
+		"Canada",
+		"Russia",
+		"France"
+		]
+	},
+	{
+	numb: 7,
+	question: 'According to Indian Institute of Management Act, 2017 the board of governors can have maximum how many members including the chairman?  ' ,
+	answer: '19' ,
+	options: [
+		"19",
+		"20",
+		"21",
+		"22"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The Bicameral legislature is an essential features in which among the following types of Governments?  ' ,
+	answer: 'Federal System' ,
+	options: [
+		"Parliamentary System",
+		"Presidential system",
+		"Federal System",
+		"Unitary System"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which sections of IPC cover offences related to elections?  ' ,
+	answer: 'Sections 171A to 171I' ,
+	options: [
+		"Sections 161 to 171",
+		"Sections 171A to 171I",
+		"Sections 172 to 190",
+		"Sections 191 to 229"
+		]
+	},
+	{
+	numb: 10,
+	question: '“Test of reasonableness ” is a very important consequence under the following articles?  ' ,
+	answer: 'Article 14' ,
+	options: [
+		"Article 13",
+		"Article 14",
+		"Article15",
+		"Article 16"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which among the following document is presented in the parliament as per mandate of Article 112?  ' ,
+	answer: 'Annual Financial Statement' ,
+	options: [
+		"Annual Financial Statement",
+		"Demands for Grants",
+		"Appropriation Bill",
+		"Finance Bill"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The Prevention of Cruelty to Animals Act was enacted in which year?  ' ,
+	answer: '1960' ,
+	options: [
+		"1950",
+		"1960",
+		"1970",
+		"1980"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Where is the principal bench of the National Green Tribunal?  ' ,
+	answer: 'New Delhi' ,
+	options: [
+		"Mumbai",
+		"New Delhi",
+		"Hyderabad",
+		"Lucknow"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year Armed Forces Special Powers Act(AFSPA) was passed?  ' ,
+	answer: '1958' ,
+	options: [
+		"1956",
+		"1957",
+		"1958",
+		"1959"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following was also called as Constitution of Commonwealth of India by some scholars?  ' ,
+	answer: 'Nehru Report' ,
+	options: [
+		"Government of India Act 1935",
+		"Nehru Report",
+		"Objective Resolution",
+		"Resolution by Swaraj Party in 1924"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Indian Institute of Management Act, 2017 provides for the creation of an academic council which takes decisions about which of the following?1. Academic content2. Criteria and processes for admissions to course3. Guidelines for conduct of examinationsSelect the correct option form the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Wildlife Protection Act of 1972 consists of how many schedules?  ' ,
+	answer: '6' ,
+	options: [
+		"4",
+		"5",
+		"6",
+		"7"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Who among the following functions as Chairman of Zonal Council?  ' ,
+	answer: 'Union Home Minister' ,
+	options: [
+		"Prime Minister",
+		"Union Home Minister",
+		"State Chief Minister elected by all chief ministers of respective states",
+		"President"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following is the primary objective to bring a Privilege Motion in Indian Parliament?  ' ,
+	answer: 'To raise a matter related to breach of parliamentary privileges' ,
+	options: [
+		"To raise a matter of urgent public importance",
+		"To raise a demand for privilege of the ministers",
+		"To raise a matter related to breach of parliamentary privileges",
+		"To raise a matter such as impeachment of the President"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The Scheduled Castes and Tribes (Prevention of Atrocities) Act was passed in which year?  ' ,
+	answer: '1989' ,
+	options: [
+		"1988",
+		"1989",
+		"1990",
+		"1991"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following is / are qualifications to be appointed as governor of a state?Should be citizen of IndiaShould not be resident of the state of which he / she works as GovernorShould have completed age of 35 yearsSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 1",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The constitution of India mentions untouchability in which of the following articles?  ' ,
+	answer: 'Article 17' ,
+	options: [
+		"Article 15",
+		"Article 16",
+		"Article 17",
+		"Article 18"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The Indian Evidence Act, 1872 is divided into how many parts?  ' ,
+	answer: '3' ,
+	options: [
+		"2",
+		"3",
+		"4",
+		"5"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Street Vendors Act was enacted in which year?  ' ,
+	answer: '2014' ,
+	options: [
+		"2014",
+		"2015",
+		"2016",
+		"2017"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The Maternity Benefit Amendment Act, 2017 has increased the duration of paid maternity leave available for women employees from 12 weeks to how many weeks?  ' ,
+	answer: '26 weeks' ,
+	options: [
+		"20 weeks",
+		"22 weeks",
+		"24 weeks",
+		"26 weeks"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In which year the Institutes of Technology Act was enacted?  ' ,
+	answer: '1961' ,
+	options: [
+		"1960",
+		"1961",
+		"1962",
+		"1963"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following sections of the Hindu Marriage Act recognizes the ceremonies and customs of marriage?  ' ,
+	answer: 'Section 7' ,
+	options: [
+		"Section 6",
+		"Section 7",
+		"Section 8",
+		"Section 9"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Indian Medical Council Act was enacted in which year?  ' ,
+	answer: '1956' ,
+	options: [
+		"1950",
+		"1952",
+		"1954",
+		"1956"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The 8th schedule of Constitution of India , originally had how many languages?  ' ,
+	answer: '14' ,
+	options: [
+		"12",
+		"14",
+		"16",
+		"22"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The Hindu Succession Act was passed in which year?  ' ,
+	answer: '1956' ,
+	options: [
+		"1956",
+		"1957",
+		"1958",
+		"1959"
+		]
+	},
+]</script><script src="./script.js"></script></html>

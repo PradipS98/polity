@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 011'
+let questions = [
+	{
+	numb: 1,
+	question: 'Article 134(A) of the Indian Constitution"Certificate for appeal to the Supreme Court" deals with?  ' ,
+	answer: 'the Directive Principles of State Policy' ,
+	options: [
+		"the State Government",
+		"the Union Government",
+		"the fundamental rights of the Indian citizen",
+		"the Directive Principles of State Policy"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which one of the following statements about the Chief Justice of India (CJI) is not correct?  ' ,
+	answer: 'He appoints the Chief Justice of all High Courts.' ,
+	options: [
+		"He appoints the Chief Justice of all High Courts.",
+		"The CJI administers &apos;the oath&apos;of office &apos;to the President.",
+		"When both the office of the President and Vice President fall vacant simultaneously, the CJI discharges the duties of the President .",
+		"The CJI can hold his office till he attains the age of 65 years."
+		]
+	},
+	{
+	numb: 3,
+	question: 'A proceeding under Article-226 in case of detention of a person is a-  ' ,
+	answer: 'Criminal proceeding' ,
+	options: [
+		"Civil proceeding",
+		"Criminal proceeding",
+		"Judicial proceeding",
+		"Statutory proceeding"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Article-222 of the Indian Constitution "Transfer of a Judge from one High Court to another" deals with?  ' ,
+	answer: 'The State Government' ,
+	options: [
+		"The Directive Principles of State Policy",
+		"The Union Government",
+		"The State Government",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who appoits the judges of the Supreme Court of India?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Chief Justice",
+		"Prime Minister",
+		"Council of Ministers"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The states which have a common High Court are-  ' ,
+	answer: 'Maharashtra and Goa' ,
+	options: [
+		"Karnataka and Andhra Pradesh",
+		"Gujarat and Orissa",
+		"Maharashtra and Goa",
+		"Madhya Pradesh and Rajasthan"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following is not an eligibility of the judge of Supreme Court in India?  ' ,
+	answer: 'Age should be 35 years' ,
+	options: [
+		"Citizen of India",
+		"Age should be 35 years",
+		"Should have practiced at least 10 years in any High court",
+		"Should be a jurist"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The salary and allowances of judges of Supreme Court are charged on-  ' ,
+	answer: 'Consolidated Fund of India' ,
+	options: [
+		"Reserve Bank of India",
+		"Contingency Fund of India",
+		"Consolidated Fund of India",
+		"Finance Commission"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who has the power to decide on an election petition for any state-  ' ,
+	answer: 'High Court' ,
+	options: [
+		"Parliament",
+		"Suprime Court",
+		"High Court",
+		"Election Commission"
+		]
+	},
+	{
+	numb: 10,
+	question: 'What is the retirement age. of the judge of Supreme Court?  ' ,
+	answer: '65 years' ,
+	options: [
+		"60 years",
+		"62 years",
+		"64 years",
+		"65 years"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which one of the following is related to Advisory Jurisdiction of the Supreme Court-  ' ,
+	answer: 'President of the India seeks opinion onlaw or facts' ,
+	options: [
+		"Speaker of the Parliament&apos; seeking opinion from the Supreme Court",
+		"Election Commission seeking opinion from th Supreme Court",
+		"State&apos;. seeking pinion. rrom the Supreme Court",
+		"President of the India seeks opinion onlaw or facts"
+		]
+	},
+	{
+	numb: 12,
+	question: 'High Court of Andaman and Nicobar Island is located in which state of India?  ' ,
+	answer: 'West Bengal' ,
+	options: [
+		"Tamil Nadu",
+		"West Bengal",
+		"Andhra Pradesh",
+		"Karnataka"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The Judges of High Court are administered oath of office by-  ' ,
+	answer: 'Governor of the State' ,
+	options: [
+		"The Chief Justice of High Court",
+		"The President of India",
+		"The Chief Justice of India",
+		"Governor of the State"
+		]
+	},
+	{
+	numb: 14,
+	question: 'To become a Judge of the High Court one must be a practicing advocate of the High Court for at least-  ' ,
+	answer: '10 years' ,
+	options: [
+		"20 years",
+		"5 years",
+		"10 years",
+		"15 years"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The retired judge of High Court is not permitted to practice as a lawyer in-  ' ,
+	answer: 'The High Court where he retired from' ,
+	options: [
+		"Supreme Court",
+		"Any court in India",
+		"High Courts",
+		"The High Court where he retired from"
+		]
+	},
+	{
+	numb: 16,
+	question: ' The pension of the judge of High Court is charged on-  ' ,
+	answer: 'Consolidated Fund of India' ,
+	options: [
+		"Public account of State",
+		"Consolidated Fund of India",
+		"Public Accounts of India",
+		"Consolidated Fund of State"
+		]
+	},
+	{
+	numb: 17,
+	question: '_____ means that the Presjdent of India can refer any matter that is of public importance or that which involves interpretation of Constitution to Supreme Court for advice.  ' ,
+	answer: 'Advisory Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Writ Jurisdiction",
+		"Appellate Jurisdiction",
+		"Advisory Jurisdiction"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which two states have a common High Court ?  ' ,
+	answer: 'Haryana and Punjab' ,
+	options: [
+		"Himachal Pradesh and Uttar Pradesh",
+		"Haryana and Punjab",
+		"Gujarat and Maharashtra",
+		"Kerala and Tamil Nadu"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Match the followings-Union Territory - Jurisdiction (High Court)A. Puducherry - 1. KeralaB. Andaman and Nicobar Islands - 2. MumbaiC. Lakshadweep - 3. Madrasd. Daman and Diu - 4. Calcutta  ' ,
+	answer: 'A-3, B-4, C-1, D-2' ,
+	options: [
+		"A-3, B-4, C-1, D-2",
+		"A-1, B-3, C-4, D-2",
+		"A-1, B-2, C-3, D-4",
+		"A-1, B-4, C-3, D-2"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Article-231 of the Indian Constitution "Establishment of a common High Court for two or more States" deals with?  ' ,
+	answer: 'The State Government' ,
+	options: [
+		"The State Government",
+		"The Directive Principles of State Policy",
+		"The Union Government",
+		"The fundamental rghts of the Indian Citizen"
+		]
+	},
+	{
+	numb: 21,
+	question: 'How many judges are in Supreme Court?  ' ,
+	answer: '31' ,
+	options: [
+		"25",
+		"26",
+		"30",
+		"31"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who is empowered to transfer a Judge from one High Court to another High Court ?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Chief Justice of India",
+		"President of India",
+		"Law Minister of India",
+		"The Union Cabinet"
+		]
+	},
+	{
+	numb: 23,
+	question: 'District Judge is under the control of-  ' ,
+	answer: 'High Court' ,
+	options: [
+		"State Government",
+		"High Court",
+		"Supreme Court",
+		"Governor"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Article-228 of the Indian Constitution "Transfer of certain cases to High Court" deals with?  ' ,
+	answer: 'The State Government' ,
+	options: [
+		"The Directive Principles of State Policy",
+		"The State Government",
+		"The Union Government",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Judge of the Superme Court and High Court can be removed by-  ' ,
+	answer: 'The President' ,
+	options: [
+		"The President",
+		"Parliament",
+		"Union Council of Minister",
+		"Chief Justice of the Supreme court"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following comes under the jurisdiction of both the High Court and the Supreme Court ?  ' ,
+	answer: 'Protection of Fundamental Rights' ,
+	options: [
+		"Disputes between the states interse",
+		"Protection against the vipolation of the Constitution",
+		"Protection of Fundamental Rights",
+		"Disputes between centre andthe State"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who can send a matter to Supreme Court for consultation under Article-143?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"President of India",
+		"Governor",
+		"Deputy governor",
+		"President and governor"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who appoints the judges of district courts-  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"Law Minister",
+		"President"
+		]
+	},
+	{
+	numb: 29,
+	question: 'What should be the experience of advocacy in any High Court for being a judge of Supreme court?  ' ,
+	answer: '10 years' ,
+	options: [
+		"10 years",
+		"5 years",
+		"15 years",
+		"20 years"
+		]
+	},
+	{
+	numb: 30,
+	question: ' Who on recommendations made by both houses of parliament can oust the judges of high court before completion of their tenure on the basis of misconduct or incapability?  ' ,
+	answer: 'President on recommendations made by both houses of Parliament' ,
+	options: [
+		"Chief Justice of India",
+		"Chief Justice of High Court",
+		"President on recommendations made by both houses of Parliament",
+		"Special majority in both houses of Parliament"
+		]
+	},
+]</script><script src="./script.js"></script></html>

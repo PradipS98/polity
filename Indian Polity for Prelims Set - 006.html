@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 006'
+let questions = [
+	{
+	numb: 1,
+	question: 'How many subjects are there in union list-  ' ,
+	answer: '97' ,
+	options: [
+		"52",
+		"66",
+		"97",
+		"99"
+		]
+	},
+	{
+	numb: 2,
+	question: '"Betting and gambling" is listed in the_____ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'State' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which one of the following schedules of the Constitution of India contains provisions regarding anti-defection Act?  ' ,
+	answer: 'Tenth Schedule' ,
+	options: [
+		"Second Schedule",
+		"Fifth Schedule",
+		"Eighth Schedule",
+		"Tenth Schedule"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following languages is not mentioned in 8th schedule of the constitution-  ' ,
+	answer: 'English' ,
+	options: [
+		"Sanskrit",
+		"Sindhi",
+		"English",
+		"Nepali"
+		]
+	},
+	{
+	numb: 5,
+	question: 'What was the exact constitutional position of the Indian Republic when the Constitution was brought into force with effect from 26th January, 1950?  ' ,
+	answer: 'A Sovereign Democratic Republic' ,
+	options: [
+		"A Democratic Republic",
+		"A Sovereign Democratic Republic",
+		"Sovereign Secular Democratic Republic",
+		"A Sovereign Secular Soicalist Democratic Republic"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In our Constitution Economic planning is in-  ' ,
+	answer: 'Concurrent list' ,
+	options: [
+		"Union list",
+		"State list",
+		"Concurrent list",
+		"Not in any list"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Indian Constitution declares India as all of the following, except-  ' ,
+	answer: 'Communist' ,
+	options: [
+		"Communist",
+		"Democratic republic",
+		"Socialist",
+		"Secular"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Anti-defection law is given in which schedule of Indian constitution?  ' ,
+	answer: 'Tenth Schedule' ,
+	options: [
+		"Second Schedule",
+		"Tenth Schedule",
+		"Third Schedule",
+		"Fourth Schedule"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The Parliament can legislate on subjects given in the Union List only in consultation with the State Government for the State of-  ' ,
+	answer: 'Jammu & Kashmir' ,
+	options: [
+		"Assam",
+		"Rajasthan",
+		"Jammu & Kashmir",
+		"Kerala"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Republic means ultimate power is held by-  ' ,
+	answer: 'the people' ,
+	options: [
+		"the monarch",
+		"the people",
+		"the winning party",
+		"Ministers"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The meaning of Residuary Powers in constitution of India is-  ' ,
+	answer: 'Powers which are not included in Union, State, and Concurrent List' ,
+	options: [
+		"Powers related to International issues",
+		"Powers related to Internal Emergency",
+		"Power which can be exercised by Central and State Governments",
+		"Powers which are not included in Union, State, and Concurrent List"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The total number of Languages in 8th schedule of Indian Constitution are-  ' ,
+	answer: '22' ,
+	options: [
+		"15",
+		"18",
+		"22",
+		"14"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following is not a Union Territory?  ' ,
+	answer: 'Nagaland' ,
+	options: [
+		"Pondicherry",
+		"Nagaland",
+		"Daman and Diu",
+		"Lakahadweep"
+		]
+	},
+	{
+	numb: 14,
+	question: '"Bankruptcy and insolvency" is listed in the ______ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Concurrent' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which type of writ is not issued under Indian constitution?  ' ,
+	answer: 'Injuction' ,
+	options: [
+		"Mandamus",
+		"Prohibition",
+		"Injuction",
+		"Certiorari"
+		]
+	},
+	{
+	numb: 16,
+	question: '"Public health and sanitation; hospitals and dispensaries" is listed in the______ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'State' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 17,
+	question: 'How many schedules are in the constitution of India-  ' ,
+	answer: '12' ,
+	options: [
+		"9",
+		"10",
+		"11",
+		"12"
+		]
+	},
+	{
+	numb: 18,
+	question: 'How many states are there in the Indian Union?  ' ,
+	answer: '28' ,
+	options: [
+		"27",
+		"28",
+		"30",
+		"29"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The item &apos;Education&apos; belongs to the-  ' ,
+	answer: 'Concurrent List' ,
+	options: [
+		"Union List",
+		"State List",
+		"Concurrent List",
+		"Residuary Subjects"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The Ninth Schedule to the Indian constitution was added by-  ' ,
+	answer: 'First Amendment' ,
+	options: [
+		"First Amendment",
+		"Eighth Amendment",
+		"Ninth Amendment",
+		"Forty Second Amendment"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The civil affairs like marriage, divorce, inheritance etc. which has been authorised by the constitution to make legal laws?  ' ,
+	answer: 'Centre and States, by the Concurrent List of the Constitution' ,
+	options: [
+		"Centre, by the Union List of the Constitution",
+		"States, by the State List of the Constitution",
+		"Centre and States, by the Concurrent List of the Constitution",
+		"Religious authorities which have relation to individual affairs"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following subject is in state list-  ' ,
+	answer: 'Agriculture' ,
+	options: [
+		"Agriculture",
+		"Criminal law",
+		"Education",
+		"defence"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Indian constitution not only imagines the democratic form of government but also imagines a democratic society, because its ideology consists of-1. Justice, 2. Liberty, 3. Equality, 4. Fraternity  ' ,
+	answer: '1,2,3 and 4' ,
+	options: [
+		"1 and 2",
+		"2 and 3",
+		"1 and 3",
+		"1,2,3 and 4"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The number of Union Territories in India is-  ' ,
+	answer: '8' ,
+	options: [
+		"8",
+		"7",
+		"9",
+		"6"
+		]
+	},
+	{
+	numb: 25,
+	question: 'India is a republic because-  ' ,
+	answer: 'The head of the state is elected for a definite period' ,
+	options: [
+		"It is democratic country",
+		"It is a parliamentary democracy",
+		"The head of the state is elected for a definite period",
+		"All of these"
+		]
+	},
+	{
+	numb: 26,
+	question: ' All legislative subject are mentioned in three lists union list, concurrent list and state list. Any subject is not mentioned in all three list, the law on that particular subject can be framed by-  ' ,
+	answer: 'Parliament only' ,
+	options: [
+		"Parliament only",
+		"State Legislature only",
+		"1 and 2",
+		"Neither 1 nor 2"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which schedule of constitution of India contains special provisions for the administration and control of scheduled Area in several states?  ' ,
+	answer: 'Fifth' ,
+	options: [
+		"Third",
+		"Fifth",
+		"Seventh",
+		"Ninth"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which one of the following schedules of the Indian Cotitution lists the names of states and specifies their territories?  ' ,
+	answer: 'First' ,
+	options: [
+		"First",
+		"Second",
+		"Third",
+		"Fourth"
+		]
+	},
+	{
+	numb: 29,
+	question: '"Central Bureau of Intelligence and Investigation" is listed in the _______ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Union' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The Residuary powers of legislation under Indian Constitution rests with-  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Parliament",
+		"States"
+		]
+	},
+]</script><script src="./script.js"></script></html>

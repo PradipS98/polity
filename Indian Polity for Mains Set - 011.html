@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 011'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following amendment bill exempted the state of Bihar from the obligation of having a tribal Welfare Minister?  ' ,
+	answer: '94th' ,
+	options: [
+		"92nd",
+		"93rd",
+		"94th",
+		"95th"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The reports of the Comptroller and Auditor-General of India relating to the accounts of the States are submitted to which among the following?  ' ,
+	answer: 'The Governor' ,
+	options: [
+		"The President",
+		"The Governor",
+		"The Parliament",
+		"The Chief Minister"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following articles deal with the organisation, independence, jurisdiction, powers, procedures and so on of the high courts?  ' ,
+	answer: 'Articles 214 to 231' ,
+	options: [
+		"Articles 164 to 174",
+		"Articles 175 to 191",
+		"Articles 189 to 104",
+		"Articles 214 to 231"
+		]
+	},
+	{
+	numb: 4,
+	question: 'How many digits are there in the GSTIN (Goods and Services Tax Identification) number?  ' ,
+	answer: '15' ,
+	options: [
+		"12",
+		"13",
+		"15",
+		"18"
+		]
+	},
+	{
+	numb: 5,
+	question: 'In which year the Supreme Court ruled that the decision of Chairman/Speaker of disqualification under the Tenth Schedule is subject to judicial review?  ' ,
+	answer: '1992' ,
+	options: [
+		"1973",
+		"1989",
+		"1992",
+		"1995"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The question of disqualification of a member of state legislature is decided by?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"State Legislature",
+		"Governor",
+		"Chief Minister"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which among the following amendments of Constitution of India had accorded precedence to Directive Principles over Fundamental Rights?  ' ,
+	answer: '42nd' ,
+	options: [
+		"25th",
+		"42nd",
+		"59th",
+		"44th"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which among the following articles helped the Madarsas in India to remain out of purview of the Right to Education Act?  ' ,
+	answer: 'Article 30' ,
+	options: [
+		"Article 26",
+		"Article 27",
+		"Article 28",
+		"Article 30"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which among the following authorities decides , how far the fundamental rights can apply to the members of the armed forces in India?  ' ,
+	answer: 'Parliament of India' ,
+	options: [
+		"President of India",
+		"Parliament of India",
+		"Arms Forces themselves",
+		"Arms Forces Tribunal"
+		]
+	},
+	{
+	numb: 10,
+	question: 'In which year did the Parliament enact the Legal Services Authorities Act?  ' ,
+	answer: '1987' ,
+	options: [
+		"1987",
+		"1988",
+		"1989",
+		"1990"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The Hindu Adoptions and Maintenance Act was enacted in which year?  ' ,
+	answer: '1956' ,
+	options: [
+		"1952",
+		"1954",
+		"1956",
+		"1958"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following are a part of National Food Security Act, 2013?1. Midday Meal Scheme2. Integrated Child Development Service Scheme3. Public Distribution SystemSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 13,
+	question: 'In which year, the first meeting of Rajya Sabha was held in Independent India?  ' ,
+	answer: '1952' ,
+	options: [
+		"1950",
+		"1952",
+		"1953",
+		"1954"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year Central Council of Homeopathy Act was enacted?  ' ,
+	answer: '1973' ,
+	options: [
+		"1972",
+		"1973",
+		"1974",
+		"1975"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Majority Act was passed in which year?  ' ,
+	answer: '1875' ,
+	options: [
+		"1865",
+		"1870",
+		"1875",
+		"1880"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which committee was appointed to prepare a concept paper on ‘Revitalisation of Panchayati Raj Institutions for Democracy and Development’?  ' ,
+	answer: 'L M Singhvi Committee' ,
+	options: [
+		"L M Singhvi Committee",
+		"G.V.K. Rao Committee",
+		"Thungon Committee",
+		"Gadgil Committee"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The jurisdiction and powers of a high court are governed by which of the following?1. Constitutional provisions2. Letters Patent3. Acts of Parliament4. Civil Procedure Code, 1908Select the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 4",
+		"Only 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Eleventh Schedule contains how many functional items of the Panchayats?  ' ,
+	answer: '29' ,
+	options: [
+		"21",
+		"25",
+		"27",
+		"29"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who administers oath to every member of either House of state legislature?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief Justice of India",
+		"Chief Justice of High Court",
+		"Chief Minister",
+		"Governor"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following are not considered Hindus according to the Hindu Adoptions and Maintenance Act?1. Muslims2. Christians3. JewsSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Who among the following was the Prime Minister of India when Mandal Commission was constituted?  ' ,
+	answer: 'Morarji Desai' ,
+	options: [
+		"Indira Gandhi",
+		"Morarji Desai",
+		"Rajiv Gandhi",
+		"V P Singh"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who has the final power to decide whether a particular bill is a money bill or not?  ' ,
+	answer: 'Speaker' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Speaker",
+		"Chairman"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The Hindu Marriage Act was passed in which year?  ' ,
+	answer: '1955' ,
+	options: [
+		"1955",
+		"1960",
+		"1965",
+		"1970"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What type of GST is levied on the activities of charitable institutions?  ' ,
+	answer: 'They are exempted from levying any kind of tax' ,
+	options: [
+		"CGST",
+		"SGST",
+		"IGST",
+		"They are exempted from levying any kind of tax"
+		]
+	},
+	{
+	numb: 25,
+	question: 'What is the minimum age for a candidate to be elected as President of India?  ' ,
+	answer: '35 years' ,
+	options: [
+		"20 years",
+		"25 years",
+		"30 years",
+		"35 years"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The Child and Adolescent Labour (Prohibition and Regulation) Act, 1986 prohibits employment of a child in any employment including as domestic help below which age?  ' ,
+	answer: '14' ,
+	options: [
+		"12",
+		"13",
+		"14",
+		"15"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The pecuniary jurisdiction of the Permanent Lok Adalat shall be up to rupees?  ' ,
+	answer: '10 lakh' ,
+	options: [
+		"10 lakh",
+		"20 lakh",
+		"25 lakh",
+		"30 lakh"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The Indian Christian Marriage Act was passed in which year?  ' ,
+	answer: '1872' ,
+	options: [
+		"1872",
+		"1874",
+		"1876",
+		"1878"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The accounts of which of the following are not audited by CAG?  ' ,
+	answer: 'Municipal institutions' ,
+	options: [
+		"Municipal institutions",
+		"State Governments",
+		"Government Companies",
+		"Central Government"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which articles of the Constitution deal with the organisation, composition, duration, officers, procedures, privileges, powers and so on of the state legislature?  ' ,
+	answer: 'Articles 168 to 212' ,
+	options: [
+		"Articles 148 to 168",
+		"Articles 168 to 212",
+		"Articles 213 to 221",
+		"Articles 221 to 241"
+		]
+	},
+]</script><script src="./script.js"></script></html>

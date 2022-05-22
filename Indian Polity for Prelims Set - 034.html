@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 034'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which is the highest law of the land?  ' ,
+	answer: 'Indian Constitution' ,
+	options: [
+		"Indian Penal Code",
+		"Indian Constitution",
+		"Civil Procedure Code",
+		"Criminal Procedure Code"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who was the first Indian president of Central Legislature&apos;?  ' ,
+	answer: 'Vitthal Bhai Patel' ,
+	options: [
+		"Sacchidanand Sinha",
+		"G.V.Mavalanker",
+		"Vitthal Bhai Patel",
+		"Rajendra Prasad"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Constitution Day of India is on-  ' ,
+	answer: '26th November' ,
+	options: [
+		"26th January",
+		"23rd June",
+		"15th August",
+		"26th November"
+		]
+	},
+	{
+	numb: 4,
+	question: 'When did India become a Complete Sovereign Democratic Republic-  ' ,
+	answer: '26 November 1949' ,
+	options: [
+		"26 January, 1949",
+		"26 November 1951",
+		"26 November 1930",
+		"26 November 1949"
+		]
+	},
+	{
+	numb: 5,
+	question: 'From which of the following country Indian Constitution borrowed the feature "The written Constituion?  ' ,
+	answer: 'U.S' ,
+	options: [
+		"USSR",
+		"UK",
+		"U.S",
+		"Japan"
+		]
+	},
+	{
+	numb: 6,
+	question: 'A federal structure for India was first put forward by the-  ' ,
+	answer: 'Act of 1935' ,
+	options: [
+		"Act of 1909",
+		"Act of 1919",
+		"Act of 1935",
+		"Act of 1947"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which State has the highest Lok Sabha seats in India?  ' ,
+	answer: 'Uttar Pradesh' ,
+	options: [
+		"Maharashtra",
+		"Madhya Pradesh",
+		"Uttar Pradesh",
+		"Bihar"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Match List-I with List-II and select the correct answer using the codes given below the lists:-List I(From of Govt) - List II(Principles)A. Presidential - 1. Separation of powers SystemB. Parliamentary - 2. Close relationship between executive and legislatureC. Federal System - 3. Division of powersD. Unitary System - 4. Concentration of power  ' ,
+	answer: 'A-1, B-2, C-3, D-4' ,
+	options: [
+		"A-1, B-2, C-3, D-4",
+		"A-2, B-1, C-3, D-4",
+		"A-2, B-1, C-4, D-3",
+		"A-1, B-2, C-4, D-3"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The Phrase "equality before law" used in article-14 of Indian constitution has been borrowed from-  ' ,
+	answer: 'Britain' ,
+	options: [
+		"U.S.A",
+		"Germany",
+		"Britain",
+		"Greece"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Bicameral system is a feature of which of the following form of government-  ' ,
+	answer: 'Federal system' ,
+	options: [
+		"Parliamentary system",
+		"President system",
+		"Federal system",
+		"Unitary system"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Cabinet system&apos; and &apos;Collective responsibility&apos; are the contributions of-  ' ,
+	answer: 'Britain' ,
+	options: [
+		"Ireland",
+		"United State",
+		"India",
+		"Britain"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The concept of constitution first originated in-  ' ,
+	answer: 'Britain' ,
+	options: [
+		"Switzerland",
+		"Britain",
+		"U.S.A",
+		"Japan"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The number of parliamentary seats (Rajya Sabha) of West Bengal is-  ' ,
+	answer: '16' ,
+	options: [
+		"12",
+		"16",
+		"18",
+		"31"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The Constituion of which country is the longest written constitution of any sovereign country in the world?  ' ,
+	answer: 'India' ,
+	options: [
+		"Russia",
+		"United Kingdom",
+		"USA",
+		"India"
+		]
+	},
+	{
+	numb: 15,
+	question: 'First country to make constitution is -  ' ,
+	answer: 'USA' ,
+	options: [
+		"India",
+		"England",
+		"USA",
+		"Sri Lanka"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following is not a feature of centralized government?  ' ,
+	answer: 'Judicial Review' ,
+	options: [
+		"Dependent State",
+		"Judicial Review",
+		"Single Government",
+		"Flexible Constitution"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The constitution of India was framed by-  ' ,
+	answer: 'Constituent Assembly' ,
+	options: [
+		"Planning Commission",
+		"Constituent Assembly",
+		"President",
+		"Working Committee"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Who among the following was not a member of the constituent Assembly?  ' ,
+	answer: 'Jay Prakash Narayan' ,
+	options: [
+		"Sardar Vallabhbhai Patel",
+		"Acharya J. B Kripalani",
+		"Jay Prakash Narayan",
+		"K.M.Munshi"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The declaration that Democracy is a Government of the people, by the people for the people was made by-  ' ,
+	answer: 'Abrahm Lincoln' ,
+	options: [
+		"Abrahm Lincoln",
+		"George Washington",
+		"Theodre Roosevelt",
+		"Winston Churchill"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The impeachment process of President of India is adopted from-  ' ,
+	answer: 'USA' ,
+	options: [
+		"USA",
+		"UK",
+		"USSR",
+		"France"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The constituent Assembly was set up in-  ' ,
+	answer: '1946' ,
+	options: [
+		"1945",
+		"1946",
+		"1947",
+		"1949"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following feature as been adopted from the constitution of USA by the maker of Indian constitution?  ' ,
+	answer: 'All of these' ,
+	options: [
+		"Judicial Review",
+		"Fundamental Rights",
+		"Removal of the Judges of Supreme Court",
+		"All of these"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The assumption of concurrent list of Indian constitution has been borrowed from-  ' ,
+	answer: 'Australia' ,
+	options: [
+		"Japan",
+		"Canada",
+		"Australia",
+		"USA"
+		]
+	},
+	{
+	numb: 24,
+	question: ' The Chairman of the Drafting Committee of the constituent Assembly of India was-  ' ,
+	answer: 'Dr. B.R. Arnbedkar' ,
+	options: [
+		"K.M.Munshi",
+		"D.P. Khaitan",
+		"Dr. B.R. Arnbedkar",
+		"T.T. Krishanmachari"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The Indian constitution was adopted on-  ' ,
+	answer: '26 November, 1949' ,
+	options: [
+		"26 January, 1950",
+		"26 January, 1946",
+		"26 November, 1949",
+		"31 December, 19,49"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who is considered as the maker of the constitution of India?  ' ,
+	answer: 'B.R Ambedkar' ,
+	options: [
+		"Mahatma Gandhi",
+		"B.R Ambedkar",
+		"Jawaharlal Nehru",
+		"B.N.Rau"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who was the constitutional advisor to the constituent assembly at the time of the drafting of the constitution?  ' ,
+	answer: 'B.N. Rau' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Dr.B.R Ambedkar",
+		"B.N. Rau",
+		"Rajendra Prasad"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The Advantage of unitary system of governance is-  ' ,
+	answer: 'Strong state' ,
+	options: [
+		"More adaptability",
+		"Strong state",
+		"More participation by the people",
+		"Less chance of authoritarianism"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In which of the form, composit India has been described in the constitution?  ' ,
+	answer: 'A Union State' ,
+	options: [
+		"A Union State",
+		"Semi Federal",
+		"Federation of States and Territories",
+		"Partly Unitary and Partly Federal"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Name of qountry from which the consititution features of procedures for amendment was borrowed by India-  ' ,
+	answer: 'South Africa' ,
+	options: [
+		"Britain",
+		"America",
+		"South Africa",
+		"Germany"
+		]
+	},
+]</script><script src="./script.js"></script></html>

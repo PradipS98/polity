@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 015'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following has the power to form new states or to change the borders of the states?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Parliament",
+		"Election Commission",
+		"None of these"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Match the following-Column-I - Column-II1. Acquisition of Indian - a. By deprivation Citizenship2. Loss of Indian - b. Equality before law and equal protection of laws3. Fundamental Right - c. By Registration  ' ,
+	answer: '1-c, 2-a, 3-b' ,
+	options: [
+		"1-c, 2-a, 3-b",
+		"1-b, 2-a, 3-c",
+		"1-c, 2-b, 3-a",
+		"1-b, 2-c, 3-a"
+		]
+	},
+	{
+	numb: 3,
+	question: 'In how many ways Indian citizenship can be lost?  ' ,
+	answer: 'Three' ,
+	options: [
+		"One",
+		"Two",
+		"Three",
+		"Four"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which commission made the recommendations which formed the basis for the Punjab Reorganisation Act which created the states Punjab and Haryana?  ' ,
+	answer: 'Shah Commission' ,
+	options: [
+		"Dhar Commission",
+		"Dass Commission",
+		"Shah Commission",
+		"Mahajan Commission"
+		]
+	},
+	{
+	numb: 5,
+	question: 'In which of the following form, India has been described in the constitution?  ' ,
+	answer: 'Union of states' ,
+	options: [
+		"Confederation",
+		"Unitary",
+		"Union of states",
+		"Federation"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which one of the following is not a element of the State?  ' ,
+	answer: 'Army' ,
+	options: [
+		"Population",
+		"Land",
+		"Army",
+		"Government"
+		]
+	},
+	{
+	numb: 7,
+	question: 'In which year, the name of Laccadive, Minicoy and Aminidivi Islands was changed in Lakshadweep by parliamentary act?  ' ,
+	answer: '1973' ,
+	options: [
+		"1973",
+		"1971",
+		"1970",
+		"1972"
+		]
+	},
+	{
+	numb: 8,
+	question: 'No person shall be a citizen of India if he has-  ' ,
+	answer: 'Voluntarily acquired citizenship of another country' ,
+	options: [
+		"Lived in a foreign country for more than five years",
+		"Been convicted by a foreign court of law",
+		"Voluntarily acquired citizenship of another country",
+		"Accepted employment in another country"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which State was formed after the amendment of Articles-239(A) and 240?  ' ,
+	answer: 'Arunachal Pradesh' ,
+	options: [
+		"Arunachal Pradesh",
+		"Uttrakhand",
+		"Sikkim",
+		"Chhattisgarh"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who permits the formation of new state in Union of India?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Supreme Court",
+		"Prime Minister",
+		"Parliament"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Provisions of citizenship in Indian Constitution, became applicable in-  ' ,
+	answer: '1949' ,
+	options: [
+		"1950",
+		"1949",
+		"1951",
+		"1952"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Formation of a new state in India is done by Citizenship-  ' ,
+	answer: 'Simple Majority' ,
+	options: [
+		"Special Majority",
+		"Simple Majority",
+		"Without Majority",
+		"None of these"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which type of federalism is seen in India?  ' ,
+	answer: 'Holding together federation' ,
+	options: [
+		"Coming together federation",
+		"Holding together federation",
+		"Coming together federation and Holding together federation both",
+		"None of these"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which body decides the conditions for getting the citizenship of India?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Election commission",
+		"President",
+		"Parliament",
+		"Parliament and legislative assemblies"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following is an essential element of the State?  ' ,
+	answer: 'All these' ,
+	options: [
+		"Sovereignty",
+		"Government",
+		"Territory",
+		"All these"
+		]
+	},
+	{
+	numb: 16,
+	question: 'In how many ways Indian citizenship can be acquired?  ' ,
+	answer: 'Five' ,
+	options: [
+		"Three",
+		"Four",
+		"Five",
+		"Six"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Under Article of the Indian constitution,it is declared that "Bharat means India shall be-  ' ,
+	answer: 'Union of States' ,
+	options: [
+		"Union of States",
+		"Federal State of Unitary features",
+		"Federal State of Federal features",
+		"Federal state"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Indian Parliament can rename or redefine the boundary of a State by-  ' ,
+	answer: 'A simple majority' ,
+	options: [
+		"A simple majority",
+		"Absolute majority",
+		"2/3rd majority of the members voting",
+		"2/3rd majority of the members voting and an absolute majority of its total membership"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following is not an essential element of the state?  ' ,
+	answer: 'Administration' ,
+	options: [
+		"Population",
+		"Administration",
+		"Sovereignty",
+		"Territory"
+		]
+	},
+	{
+	numb: 20,
+	question: 'In which of the form, composite India has been described in the constitution?  ' ,
+	answer: 'A Union State' ,
+	options: [
+		"A Union State",
+		"Semi Federal",
+		"Federation of States and Territories",
+		"Partly Unitary and Partly Federal"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The money bill can be presented in the state assembly with prior athorization of-  ' ,
+	answer: 'Governor of the State' ,
+	options: [
+		"Governor of the State",
+		"Chief Minister of the State",
+		"Speaker of the Assembly",
+		"Finance Minister of the State"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following article describes India also as Bharat?  ' ,
+	answer: 'Article-1' ,
+	options: [
+		"Article-1",
+		"Article-2",
+		"Article-3",
+		"Article-4"
+		]
+	},
+	{
+	numb: 23,
+	question: 'In which of the following articles, citizenship rights of people who migrated from Pakistan to India is mentioned?  ' ,
+	answer: 'Article-6' ,
+	options: [
+		"Article-4",
+		"Article-8",
+		"Article-6",
+		"Article-10"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The Jammu and Kashmir State Legislative Assembly has a tenure -  ' ,
+	answer: 'Six years' ,
+	options: [
+		"Six years",
+		"Five years",
+		"Four years",
+		"Seven years"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Indian Citizenship is granted by-  ' ,
+	answer: 'The Ministry of Home Affairs' ,
+	options: [
+		"The President of India",
+		"The Prime Minister",
+		"The Ministry of Home Affairs",
+		"The Ministry of External Affairs"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following is under the state?  ' ,
+	answer: 'Internal and external sovereignty' ,
+	options: [
+		"Only external sovereignty",
+		"Only internal sovereignty",
+		"Internal and external sovereignty",
+		"Neither external nor internal sovereignty"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Sikkim was granted statehood in the year-  ' ,
+	answer: '1975' ,
+	options: [
+		"1973",
+		"1974",
+		"1975",
+		"1976"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who admits a new State to the Union of India?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Supreme Court",
+		"Prime Minister",
+		"Parliament"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The state operates through-  ' ,
+	answer: 'Government' ,
+	options: [
+		"Political Party",
+		"Party President",
+		"Government",
+		"President"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The unification of Karnataka was achieved in the year-  ' ,
+	answer: '1956' ,
+	options: [
+		"1956",
+		"1957",
+		"1958",
+		"1560"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 041'
+let questions = [
+	{
+	numb: 1,
+	question: 'What is the maximum term of Central Vigilance Commissioner and other vigilance commissioners?  ' ,
+	answer: '4 years' ,
+	options: [
+		"2 years",
+		"3 years",
+		"4 years",
+		"5 years"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following are the demerits of the presidential form of government?1. Conflict between legislature and executive2. Non-responsible government3. May lead to autocracy4. Narrow representationSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 3,
+	question: 'National Commission for Women was established in which year?  ' ,
+	answer: '1992' ,
+	options: [
+		"1991",
+		"1992",
+		"1993",
+		"1994"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which among the following don’t come under the purview of Right to Education?  ' ,
+	answer: 'Madrasas' ,
+	options: [
+		"Government Schools",
+		"Private Schools",
+		"Madrasas",
+		"Government schools funded by Private Funds"
+		]
+	},
+	{
+	numb: 5,
+	question: 'How many electors are needed for nomination of a candidate for election to the office of Vice-President?  ' ,
+	answer: '20' ,
+	options: [
+		"10",
+		"20",
+		"30",
+		"50"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who is the current Vice-Chairman of NITI Aayog?  ' ,
+	answer: 'Rajiv Kumar' ,
+	options: [
+		"Amitabh Kan…Amitabh Kant",
+		"Ramesh Chand",
+		"Rajiv Kumar",
+		"Vinod Paul"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following are the compulsory provisions of the 73rd Constitutional Amendment Act (1992)?1. Organisation of Gram Sabha in a village or group of villages.2. Direct elections to all seats in panchayats at the village, intermediate and district levels.3. Endowing the Gram Sabha with powers and functions at the village level.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following are the functions of Chief Technical Examiners’ Organisation, the technical wing of CVC?1. Technical audit of construction works of Government organisations from a vigilance angle.2. Investigation of specific cases of complaints relating to construction works.Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The provision on crèche facility comes under which section of Maternity Benefit (Amendment) Act, 2017?  ' ,
+	answer: 'Section 111 A' ,
+	options: [
+		"Section 110",
+		"Section 111",
+		"Section 111 A",
+		"Section 111 B"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Whose prior recommendation is needed for the introduction of a Money Bill in the Parliament?  ' ,
+	answer: 'The President' ,
+	options: [
+		"The Council of Ministers",
+		"The Prime Minister",
+		"The Speaker",
+		"The President"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which chapter details the functions and powers of the Unique Identification Authority of India constituted under Aadhaar (Targeted Delivery of Financial and other Subsidies, benefits and services) Act, 2016 ?  ' ,
+	answer: 'Chapter IV' ,
+	options: [
+		"Chapter I",
+		"Chapter II",
+		"Chapter III",
+		"Chapter IV"
+		]
+	},
+	{
+	numb: 12,
+	question: 'As per which article of the constitution the CAG submits his audit reports relating to the accounts of the Centre to President?  ' ,
+	answer: 'Article 151' ,
+	options: [
+		"Article 130",
+		"Article 145",
+		"Article 150",
+		"Article 151"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following acts created Supreme Court of Judicature at Fort William?  ' ,
+	answer: 'The Regulating Act 1773' ,
+	options: [
+		"The Regulating Act 1773",
+		"Indian Councils Act 1861",
+		"Dundas Bill of 1783",
+		"Charter Act of 1833"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which of the following cases the CAG cannot call for particulars of expenditure incurred by the executive agencies?  ' ,
+	answer: 'Secret service expenditure' ,
+	options: [
+		"Defence expenditure",
+		"Secret service expenditure",
+		"Expenditure on social reforms",
+		"Expenditure on atomic energy"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who appoints the Attorney General (AG) of India?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Supreme Court",
+		"Prime Minister",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Sati (Prevention) Act, 1987 is a law enacted by government of which state?  ' ,
+	answer: 'Rajasthan' ,
+	options: [
+		"Andhra Pradesh",
+		"Rajasthan",
+		"Maharashtra",
+		"Gujarat"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Introduction of provincial Autonomy is related to which of the following acts?  ' ,
+	answer: 'The Government of India Act, 1935' ,
+	options: [
+		"The Government of India Act, 1858",
+		"The Government of India Act, 1909",
+		"The Government of India Act, 1919",
+		"The Government of India Act, 1935"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following decides the number of members in the board of cooperative societies?  ' ,
+	answer: 'State Legislature' ,
+	options: [
+		"President",
+		"Parliament",
+		"Governor",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following is the highest tax slab of GST?  ' ,
+	answer: '28%' ,
+	options: [
+		"12%",
+		"18%",
+		"20%",
+		"28%"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The office of Vice-President is modelled on the lines of which country’s Vice-President?  ' ,
+	answer: 'America' ,
+	options: [
+		"Japan",
+		"Australia",
+		"America",
+		"Russia"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which amendment restored the power of judicial review of the Supreme Court and High courts that was earlier curtailed by Constitution (42nd) Amendment Act, 1976?  ' ,
+	answer: 'Forty-third Amendment Act, 1977' ,
+	options: [
+		"Forty-third Amendment Act, 1977",
+		"Forty-fifth Amendment Act, 1980",
+		"Forty-sixth Amendment Act, 1982",
+		"Forty-eighth Amendment Act, 1984"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following countries have the institution of Ombudsman?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Finland",
+		"Norway",
+		"Denmark",
+		"All of the above"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which amendment made it compulsory for the president to give his assent to a Constitutional Amendment Bill?  ' ,
+	answer: '24th Amendment, 1971' ,
+	options: [
+		"24th Amendment, 1971",
+		"42nd Amendment, 1976",
+		"44th Amendment, 1978",
+		"69th Amendment, 1991"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following does not qualify as consent in a criminal law?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Consent given by a person under fear of injury",
+		"Consent given by a person by misconception of fact",
+		"Consent given by a person under 12 years of age",
+		"All of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which among the following article was inserted in the Indian Constitution by 42nd amendment 1976, in purview of India being a signatory of Stockholm Conference of 1972?  ' ,
+	answer: 'Article 48 A' ,
+	options: [
+		"Article 45",
+		"Article 47",
+		"Article 47 A",
+		"Article 48 A"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which article of the Directive Principle of State Policy promotes the formation of Cooperative Societies?  ' ,
+	answer: 'Article 43-B' ,
+	options: [
+		"39-B",
+		"Article 43-B",
+		"Article 44",
+		"Article 45"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who decides criminal cases which are punishable with imprisonment for a term up to seven years?  ' ,
+	answer: 'Chief judicial magistrate' ,
+	options: [
+		"Chief judicial magistrate",
+		"Munsiff",
+		"Judicial magistrate",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following has the authority to prescribe conditions for the acquisition of citizenship of India?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"President",
+		"Parliament and State Legislatures jointly",
+		"Election Commission"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The Fiscal Responsibility and Budget Management Act was passed in which year?  ' ,
+	answer: '2003' ,
+	options: [
+		"2002",
+		"2003",
+		"2004",
+		"2005"
+		]
+	},
+	{
+	numb: 30,
+	question: 'On whose recommendation the President dissolves the Lok Sabha?  ' ,
+	answer: 'Cabinet' ,
+	options: [
+		"Election Commission",
+		"Rajya Sabha",
+		"Chief Justice of India",
+		"Cabinet"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 012'
+let questions = [
+	{
+	numb: 1,
+	question: 'All of the following are the aims of Lok Adalat, except-  ' ,
+	answer: 'Give the power to rule in the hands of the common man-' ,
+	options: [
+		"Secure justice to the weaker sections",
+		"Mass disposal of the cases",
+		"Give the power to rule in the hands of the common man-",
+		"Minimize cost and delay"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The retired judges of Supreme court are restricted to practice advocacy in-  ' ,
+	answer: 'Any court of India' ,
+	options: [
+		"Any court except Supreme Court",
+		"Any court of India",
+		"Any court below High Court",
+		"Any civil Court"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The Supreme Court is empowered to settle election disputes of President and Vice-President. This is its-  ' ,
+	answer: 'Original Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Appellate Jurisdiction",
+		"Advisory Jurisdiction",
+		"Miscellaneous Jurisdiction"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Where the High Courts in India first set up?  ' ,
+	answer: 'Bombay Madras Calcutta' ,
+	options: [
+		"Delhi and Calcutta",
+		"Bombay Madras Calcutta",
+		"Bombay Delhi Calcutta",
+		"Madras and Bombay"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The High Court which has the distinction of having the first woman Chief Justice is-  ' ,
+	answer: 'Himanchal Pradesh High Court' ,
+	options: [
+		"Guwahati High Court",
+		"Allahabad High Court",
+		"Delhi High Court",
+		"Himanchal Pradesh High Court"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following Chief Justice of India had the opportunity to act as President of India?  ' ,
+	answer: 'Justice M.Hidayatulla' ,
+	options: [
+		"Justice Mehar Chand Mahajan",
+		"Justice P.B..Gajendra Gadkar",
+		"Justice M.Hidayatulla",
+		"Justice P.N.Bhagawati"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The interpreter of Indian constitution is-  ' ,
+	answer: 'Supreme Court' ,
+	options: [
+		"Central Cabinet",
+		"President",
+		"High Court",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What is the meaning of "Public Interest Litigation"?  ' ,
+	answer: 'A case brought by anyone to court involving public interest' ,
+	options: [
+		"Anything of public interest",
+		"A case brought by victim to court, involving public interest",
+		"A case brought by anyone to court involving public interest",
+		"A directive issued by Supreme Court involving public interest"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The Judge of the High Court hold office-  ' ,
+	answer: 'Till they have attained 62 years of age' ,
+	options: [
+		"During the pleasure of the Chief Justice of India",
+		"Till they have attained 62 years of age",
+		"Till they have attained 65 years of age",
+		"As long as they desire"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The Indian&apos;Judiciary headed&apos; by-  ' ,
+	answer: 'The Supreme Court' ,
+	options: [
+		"The President",
+		"The Prime Minister",
+		"The Supreme Court",
+		"The Parliament"
+		]
+	},
+	{
+	numb: 11,
+	question: '_____ means cases that can be directly considered by the Supreme Cour&apos;t without going to the lower courts before that.  ' ,
+	answer: 'Original Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Writ Jurisdiction",
+		"Appellate Jurisdiction",
+		"Advisory Jurisdiction"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Of the following who held the offices of Judge of the Supreme Court and be Speaker of the Lok Sabha?  ' ,
+	answer: 'K.S. Hegde' ,
+	options: [
+		"M. Hidayatullah",
+		"K.S. Hegde",
+		"Subba Rao",
+		"P.N. Bhagwati"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The power of mitigation of dispute between centre and state falls in ______ of the supreme court of India-  ' ,
+	answer: 'Original Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Constitutional Jurisdiction",
+		"Consulting Jurisdiction",
+		"Appellate Jurisdiction"
+		]
+	},
+	{
+	numb: 14,
+	question: 'What is the main function of judiciary-  ' ,
+	answer: 'Adjudication of law' ,
+	options: [
+		"To make law",
+		"Execution of law",
+		"Adjudication of law",
+		"To apply law"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Supreme Court of India acts as a Federel Court when it deals with-  ' ,
+	answer: 'Interstate disputes' ,
+	options: [
+		"Civil cases",
+		"Interstate disputes",
+		"Appeals from lower courts",
+		"Election petitions"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who was the first woman Chif Justice of a High Court of a state if India?  ' ,
+	answer: 'Leila Seth' ,
+	options: [
+		"Sunanda Bhandare",
+		"Fathima Beevi",
+		"Leila Seth",
+		"Anna Chandy"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The Superme Court at Calcutta was established by-  ' ,
+	answer: 'Regulating Act of 1773' ,
+	options: [
+		"Regulating Act of 1773",
+		"Pitts India Act of 1784",
+		"Charter Act of 1793",
+		"Charter Act of 1813"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The Supreme Court of India was set up-  ' ,
+	answer: 'By the Constitution' ,
+	options: [
+		"By the Constitution",
+		"By the law of parliament",
+		"By a Presidential Order",
+		"By the Act of 1947"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who was the first Woman Judge of the supreme court?  ' ,
+	answer: 'M.S.Fathima Beevi' ,
+	options: [
+		"Sujata Manohar",
+		"Ruma Pal",
+		"M.S.Fathima Beevi",
+		"None of these"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The law framed by Judiciary is called-  ' ,
+	answer: 'Case law' ,
+	options: [
+		"Ordinary law",
+		"Case law",
+		"Rule of law",
+		"Administrative law"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Lakshadweep&apos;s High Court is located in which state of India?  ' ,
+	answer: 'Kerala' ,
+	options: [
+		"Tamil Nadu",
+		"Kerala",
+		"Andhra Pradesh",
+		"Karnataka"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The Supreme Court of India has-  ' ,
+	answer: 'Original, Appellate and Consultative Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Consultative Jurisdiction",
+		"Appellate and Consultative Jurisdiction",
+		"Original, Appellate and Consultative Jurisdiction"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which is the last appellate court-  ' ,
+	answer: 'Supreme court' ,
+	options: [
+		"High court",
+		"District court",
+		"Civil court",
+		"Supreme court"
+		]
+	},
+	{
+	numb: 24,
+	question: '___ means that the Supreme Court will reconsider the case and the legal issues involved in it.  ' ,
+	answer: 'Appellate Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Writ Jurisdiction",
+		"Appellate Jurisdiction",
+		"Advisory Jurisdiction"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following High Court declared 1st that "Shutdown" is Unconstitutional-  ' ,
+	answer: 'Kerala' ,
+	options: [
+		"Andhra Pradesh",
+		"Madhya Pradesh",
+		"Kerala",
+		"Odissa"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The principal bench of High Court of Madhya Pradesh is located in-  ' ,
+	answer: 'Jabalpur' ,
+	options: [
+		"Bhopal",
+		"Jabalpur",
+		"Gwalior",
+		"Indore"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which amendment act raised the age of retirement for judges of High Court to 62 from 60?  ' ,
+	answer: '15th' ,
+	options: [
+		"12th",
+		"15th",
+		"10th",
+		"252th"
+		]
+	},
+	{
+	numb: 28,
+	question: ' Chief Justic of the Supreme Court is appointed by the-  ' ,
+	answer: 'President' ,
+	options: [
+		"Speaker of the Lok Sabha",
+		"Chairman of the Rajya Sabha",
+		"Prime Minister",
+		"President"
+		]
+	},
+	{
+	numb: 29,
+	question: 'An appeal to the High Court lies in case the Session Court has awarded the punishment of-  ' ,
+	answer: 'Four years or more' ,
+	options: [
+		"One year or more",
+		"Two years or more",
+		"Three years or more",
+		"Four years or more"
+		]
+	},
+	{
+	numb: 30,
+	question: '"Judicial Review" in Indian constitution is based on-  ' ,
+	answer: 'On the procedure established by law' ,
+	options: [
+		"On the rule of law",
+		"Due process of law",
+		"On the procedure established by law",
+		"On former decisions and conventions"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 004'
+let questions = [
+	{
+	numb: 1,
+	question: 'In which year was the Prevention of terrorism Act (POTA)enacted?  ' ,
+	answer: '2002' ,
+	options: [
+		"2000",
+		"2001",
+		"2002",
+		"2003"
+		]
+	},
+	{
+	numb: 2,
+	question: 'A writ of Mandamus can be issued by the Supreme Court to-  ' ,
+	answer: 'An official to perform public duty' ,
+	options: [
+		"An official to perform public duty",
+		"The Prime Minister to dissolve the Cabinet",
+		"The company to raise wages",
+		"The Government to pay the salaries to employees"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which among the following writs comes into the category of public litigation petition before High Court or Supreme Court?  ' ,
+	answer: 'Against a general topic' ,
+	options: [
+		"A challenge to elections of the office-bearers of a political party",
+		"Against political interference",
+		"Against the decision of Lower Court",
+		"Against a general topic"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following is Justiciable in nature?  ' ,
+	answer: 'Fundamental Rights' ,
+	options: [
+		"Fundamental Duties",
+		"Directive Principles of State Policy",
+		"Fundamental Rights",
+		"None of these"
+		]
+	},
+	{
+	numb: 5,
+	question: ' Which of the following writs/ orders of the High Court/Supreme Court is sought to get an order of an authority quashed?  ' ,
+	answer: 'Certiorari' ,
+	options: [
+		"Mandamus",
+		"Certiorari",
+		"Quo Warranto",
+		"Habeas corpus"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which of the following cases the Supreme Court held that fundamental rights are unamendable?  ' ,
+	answer: 'Golak Nath&apos;s case' ,
+	options: [
+		"A.K.Gopalan&apos;s case",
+		"Keshavananda Bharti&apos;s case",
+		"M.C. Mehta&apos;s case",
+		"Golak Nath&apos;s case"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Basic Structure of our Constitution was proclaimed by the Supreme Court in-  ' ,
+	answer: 'Keshavananda Bharti case' ,
+	options: [
+		"Keshavananda Bharti case",
+		"Golaknath case",
+		"Minerva Mills case",
+		"Gopalan case"
+		]
+	},
+	{
+	numb: 8,
+	question: 'By which of the following rights fundamental rights are ensured in Indian constitution?  ' ,
+	answer: 'Right to constitutional remedies' ,
+	options: [
+		"Right to equality",
+		"Right against exploitation",
+		"Right to constitutional remedies",
+		"Educational and cultural right"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following writ is issued by a higher court to a lower court?  ' ,
+	answer: 'Prohibition' ,
+	options: [
+		"Habeas Corpus",
+		"Quo-Warranto",
+		"Prohibition",
+		"None of these"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The fundamental rights of Indian citizens can be suspended-  ' ,
+	answer: 'During National Emergency' ,
+	options: [
+		"During National Emergency",
+		"During Financial Emergency",
+		"Anytime",
+		"In any situation"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Fundamental rights can be suspended by-  ' ,
+	answer: 'President' ,
+	options: [
+		"Governor",
+		"President",
+		"Law Minister",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following is not a fundamental duty?  ' ,
+	answer: 'Abolition of&apos; titles except military and academic' ,
+	options: [
+		"To abide by constitution and respect the National Flag",
+		"To promote harmony and brotherhood",
+		"To uphold and protect the sovereignty",
+		"Abolition of&apos; titles except military and academic"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following writs can be issued only gainst a overnment offlcial?  ' ,
+	answer: 'Mandamus' ,
+	options: [
+		"Habeas corpus",
+		"Mandamus",
+		"Prohibition",
+		"Certiorari"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which writ is issued by a High Court or the Supreme Court to compel an authority to perform a function that it was not performing?  ' ,
+	answer: 'Writ of Mandamus' ,
+	options: [
+		"Writ of Certiorari",
+		"Writ of Habeas Corpus",
+		"Writ of Mandamus",
+		"Writ of Quo Warranto"
+		]
+	},
+	{
+	numb: 15,
+	question: 'In the Constitution of India the &apos;Right to Constitutional Remedies&apos; has been provided in Article-  ' ,
+	answer: '32' ,
+	options: [
+		"30",
+		"31",
+		"32",
+		"35"
+		]
+	},
+	{
+	numb: 16,
+	question: 'From which of the following are the Fundamental duties adopted?  ' ,
+	answer: 'USSR Constitution' ,
+	options: [
+		"French Constitution",
+		"Indian Constitution",
+		"Spanish Constitution",
+		"USSR Constitution"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Under which of the following writs, a person is restricted to perform any duties for which he does not have the authority?  ' ,
+	answer: 'Quo warranto' ,
+	options: [
+		"Mandamus",
+		"Quo warranto",
+		"Certiorari",
+		"Habeas corpus"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following fundamental right can be controlled by preventive detention act-  ' ,
+	answer: 'Right to freedom' ,
+	options: [
+		"Right to religion",
+		"Right to constitutional remedies",
+		"Right to freedom",
+		"Right to equality"
+		]
+	},
+	{
+	numb: 19,
+	question: 'A writ of ____ means that the court orders that the arrested person should be presented before it.  ' ,
+	answer: 'Habeas Corpus' ,
+	options: [
+		"Habeas Corpus",
+		"Mandamus",
+		"Prohibition",
+		"Quo-Warranto"
+		]
+	},
+	{
+	numb: 20,
+	question: '___ is issued when the court finds that a particular office holder is not doing legal duty and thereby is infringing on the right of an individual.  ' ,
+	answer: 'Mandamus' ,
+	options: [
+		"Habeas Corpus",
+		"Mandamus",
+		"Prohibition",
+		"Quo-Warranto"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The Preventive Detention Act curtailed-  ' ,
+	answer: 'Right to Freedom' ,
+	options: [
+		"Right to Freedom",
+		"Right to Equality",
+		"Right to Property",
+		"Educational Right"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who can restrict the fundamental rights of the citizens?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Council of Ministers",
+		"Parliament",
+		"Public",
+		"Cabinet"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following writs is called "Bulwark of Personal Freedom"?  ' ,
+	answer: 'Habeas corpus' ,
+	options: [
+		"Mandamus",
+		"Habeas corpus",
+		"Quo warranto",
+		"Certiorari"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which Article of the Indian Constitution did Dr. B.R. Ambedkar term as the "Heart and Soul of the Indian Constitution"?  ' ,
+	answer: 'Article 32' ,
+	options: [
+		"Article 14",
+		"Article 19",
+		"Article 356",
+		"Article 32"
+		]
+	},
+	{
+	numb: 25,
+	question: 'In which of the following situations Habeas corpus writ is issued?  ' ,
+	answer: 'Faulty police detention' ,
+	options: [
+		"Loss of property",
+		"Extra tax receipts",
+		"Faulty police detention",
+		"Violation of freedom of Expression"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following right has been removed from fundamental rights and converted to a simple legal right?  ' ,
+	answer: 'Right to property' ,
+	options: [
+		"Right to life and personal liberty",
+		"Right to property",
+		"Right to education",
+		"Right to freedom of religion"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Under which one of the following writs an official can be prevented from taking an action which he is offlcially not entitled?  ' ,
+	answer: 'Quo Warranto' ,
+	options: [
+		"Mandamus",
+		"Quo Warranto",
+		"Certiorari",
+		"Habeas Corpus"
+		]
+	},
+	{
+	numb: 28,
+	question: '______ writ is issued by a higher court (High Court or Supreme Court) when a lower court has considered a case going beyond its jurisdiction.  ' ,
+	answer: 'Prohibition' ,
+	options: [
+		"Habeas Corpus",
+		"Mandamus",
+		"Prohibition",
+		"Quo-Warranto"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following writ&apos;s meaning is- "to have the body of"?  ' ,
+	answer: 'Habeas corpus' ,
+	options: [
+		"Habeas corpus",
+		"Mandamus",
+		"Quo warranto",
+		"Certiorari"
+		]
+	},
+	{
+	numb: 30,
+	question: 'In which of the following Articles there is provision of "Right to Equality"?  ' ,
+	answer: 'Article-14' ,
+	options: [
+		"Article-14",
+		"Article-19",
+		"Article-20",
+		"Article-21"
+		]
+	},
+]</script><script src="./script.js"></script></html>

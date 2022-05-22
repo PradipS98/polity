@@ -1,0 +1,245 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 037'
+let questions = [
+	{
+	numb: 1,
+	question: 'The original 1950 Constitution of India is preserved in-  ' ,
+	answer: 'Parliament House' ,
+	options: [
+		"President House",
+		"Prime Minister House",
+		"Parliament House",
+		"Archaeological Survey of India"
+		]
+	},
+	{
+	numb: 2,
+	question: 'A big difference is there in between principle and behavior-  ' ,
+	answer: 'Parliamentary Form of Government' ,
+	options: [
+		"Presidential Form of Government",
+		"Fascist Form of Government",
+		"Parliamentary Form of Government",
+		"Socialist Form of Government"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following Article of Indian Constitution deals with the Right to Equality before Law?  ' ,
+	answer: 'Article-14' ,
+	options: [
+		"Article-13",
+		"Article-14",
+		"Article-15",
+		"Article-17"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Article 14 of the Indian Constitution guarantees Indian citizens-  ' ,
+	answer: 'Equality before law and equal protection of the laws' ,
+	options: [
+		"Equal protection of laws",
+		"Equality before law",
+		"Equal distribution of economic resources",
+		"Equality before law and equal protection of the laws"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The president of India has the same constitution powers which have-  ' ,
+	answer: 'British crown' ,
+	options: [
+		"British crown",
+		"President of USA",
+		"President of Pakistan",
+		"President of France"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following act suggested the post of Comptroller and Auditor General?  ' ,
+	answer: 'Act of 1919' ,
+	options: [
+		"Act of 1909",
+		"Act of 1919",
+		"Act of 1935",
+		"Act of 1947"
+		]
+	},
+	{
+	numb: 7,
+	question: 'How many fundamental duties are there in Indian constitution?  ' ,
+	answer: '11' ,
+	options: [
+		"9",
+		"10",
+		"11",
+		"12"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Of the various grounds below which discrimination by the State is not prohibited in ArticleIS of the Constitution?  ' ,
+	answer: 'Language' ,
+	options: [
+		"Place of birth",
+		"Race",
+		"Language",
+		"Caste"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Evaluate the following statements-I. The legal interpretation of equality is chiefly influenced by equality before law and equal protection of lawII. Equality before law means rule of law  ' ,
+	answer: 'Both are correct' ,
+	options: [
+		"I is correct but II is incorrect",
+		"II is correct but I is incorrect",
+		"Both are correct",
+		"Both are incorrect"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Indian Constitution is-  ' ,
+	answer: 'Quasi Federal' ,
+	options: [
+		"Federal",
+		"Quasi Federal",
+		"Unitary",
+		"Presidential"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following is opposite to the principle of "Rule of Law"?  ' ,
+	answer: 'Privileges and Immunity' ,
+	options: [
+		"Equality before Law",
+		"Privileges and Immunity",
+		"Equal Opportunity",
+		"None of these"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The following article of tbe Indian Constitution abolished the practice of untouchability-  ' ,
+	answer: 'Article-17' ,
+	options: [
+		"Article-14",
+		"Article-18",
+		"Article-17",
+		"Article-19"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The Articles-17 and 18 of constitution provide-  ' ,
+	answer: 'Social equality' ,
+	options: [
+		"Social equality",
+		"Economic equality",
+		"Political equality",
+		"Religious equality"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The Westminster parliamentary system was developed in-  ' ,
+	answer: 'UK' ,
+	options: [
+		"Spain",
+		"Australia",
+		"UK",
+		"USA"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which article of the Indian Constitution provides for equal opportunities for all citizens in Public employment?  ' ,
+	answer: 'Article-16' ,
+	options: [
+		"Article-22",
+		"Article-16",
+		"Article-20",
+		"Article-25"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Universal adult franchise shows that India is a country which is-  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Secular",
+		"Socialist",
+		"Democratic",
+		"Sovereign"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the fullowing countries enjoys a federal form of government?  ' ,
+	answer: 'USA' ,
+	options: [
+		"China",
+		"USA",
+		"Cuba",
+		"Belgium"
+		]
+	},
+	{
+	numb: 18,
+	question: 'What is the category in which the negotiating strategy of a strike by the Government employees falls?  ' ,
+	answer: 'There is no right' ,
+	options: [
+		"Fundamental Rights of freedom of association and expression",
+		"Legal Right",
+		"Trade Union right as common law",
+		"There is no right"
+		]
+	},
+	{
+	numb: 19,
+	question: 'A unitary form of government is that in which all the powers are concentrated in the hands of-  ' ,
+	answer: 'Central government' ,
+	options: [
+		"Local government",
+		"Central government",
+		"Provincial government",
+		"Panchayats"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Where is the word "Federal" used in the constitution of India?  ' ,
+	answer: 'Nowhere in constitution' ,
+	options: [
+		"Preamble",
+		"Part 3",
+		"Article 368",
+		"Nowhere in constitution"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Preventive detention means-  ' ,
+	answer: 'Detention without interrogation' ,
+	options: [
+		"Detention for interrogation",
+		"Detention after interrogation",
+		"Detention without interrogation",
+		"Detention for cognizable offence"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Why did one of the High Courts inIndian decree that "bandhs are unconstitutional and punitive"?  ' ,
+	answer: 'It is not in exercise of a fundamental freedom' ,
+	options: [
+		"It infringes on the fundamental rights of some groups of people",
+		"It is not in exercise of a fundamental freedom",
+		"It adversely affectsproduction",
+		"It is not part of a right to protest"
+		]
+	},
+]</script><script src="./script.js"></script></html>

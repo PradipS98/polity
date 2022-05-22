@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 015'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following hears appeals against the orders of the Adjudicating Authority constituted under Prevention of Money Laundering Act, 2002?  ' ,
+	answer: 'Appellate Tribunal' ,
+	options: [
+		"Supreme Court",
+		"President",
+		"Appellate Tribunal",
+		"Parliament"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who constitutes the finance commission to review the financial position of the panchayats?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Governor",
+		"Prime Minister",
+		"Chief Minister"
+		]
+	},
+	{
+	numb: 3,
+	question: 'At present how many states have fifth schedule areas?  ' ,
+	answer: '10' ,
+	options: [
+		"9",
+		"10",
+		"11",
+		"12"
+		]
+	},
+	{
+	numb: 4,
+	question: 'What is the term of Chief Minister of a state?  ' ,
+	answer: 'None of the above' ,
+	options: [
+		"3 years",
+		"5 years",
+		"6 years",
+		"None of the above"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The Sarkaria commission is related to which of the following?  ' ,
+	answer: 'Centre and State Relations' ,
+	options: [
+		"Centre and State Relations",
+		"Banking & Financial Sector",
+		"Elections Reforms",
+		"Freedom of Press In India"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who can make provisions with respect to matters relating to delimitation of constituencies?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"President",
+		"Rajya Sabha",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who acts as the district returning officer at the district level?  ' ,
+	answer: 'Collector' ,
+	options: [
+		"A person appointed by the panchayat",
+		"Head of the Gram Sabha",
+		"Collector",
+		"Member of state legislative assembly"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Who will head the Investigation Wing of the Central Consumer Protection Authority?  ' ,
+	answer: 'Director General' ,
+	options: [
+		"Chief Commissioner",
+		"Commissioner",
+		"Director General",
+		"None of the above"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who appoints the upalokayukta?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Chief Minister",
+		"Governor",
+		"Lokyukta",
+		"None of the above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'As per the Supreme Court guidelines, what category of petitions are not to be entertained as Public Interest Litigation?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Landlord-tenant matters",
+		"Admission to medical and other educational institution",
+		"Service matter and those pertaining to pension and gratuity",
+		"All of the above"
+		]
+	},
+	{
+	numb: 11,
+	question: 'In which case Supreme Court ruled that the writ jurisdiction of both the high court and the Supreme Court constitute a part of the basic structure of the Constitution?  ' ,
+	answer: 'Chandra Kumar case' ,
+	options: [
+		"S.R. Bommai case",
+		"Chandra Kumar case",
+		"Minerva Mills case",
+		"Shankari Prasad case"
+		]
+	},
+	{
+	numb: 12,
+	question: 'When was the Income Tax Appellate Tribunal established?  ' ,
+	answer: '1941' ,
+	options: [
+		"1940",
+		"1941",
+		"1950",
+		"1951"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which states have chief minister included within the jurisdiction of lokayukta?  ' ,
+	answer: 'Himachal Pradesh' ,
+	options: [
+		"Himachal Pradesh",
+		"Mizoram",
+		"Jammu and Kashmir",
+		"Tamil Nadu"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following is empowered to remove the Central Vigilance Commissioner?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"Rajya Sabha",
+		"President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following statements are correct regarding the promulgation of ordinances in the state?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Governor can promulgate ordinances when the state legislature is not in session",
+		"Governor can withdraw an ordinance anytime",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 16,
+	question: 'In which year the Indian Civil Service (ICS) was replaced by IAS?  ' ,
+	answer: '1947' ,
+	options: [
+		"1946",
+		"1947",
+		"1948",
+		"1949"
+		]
+	},
+	{
+	numb: 17,
+	question: 'What are the characteristics of Special Purpose Agency?1. Statutory bodies2. Subordinate agencies of the local municipal bodies3. Perform specific functions4. AutonomousSelect the correct code from the options given below:  ' ,
+	answer: '1, 3 and 4' ,
+	options: [
+		"1 and 2",
+		"2 and 4",
+		"1, 3 and 4",
+		"1, 2 and 3"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following has been described as ‘Super Cabinet’, an ‘Economic Cabinet’, a ‘Parallel Cabinet’, the ‘Fifth Wheel of the Coach’ and soon?  ' ,
+	answer: 'Planning Commission' ,
+	options: [
+		"NITI Aayog",
+		"Planning Commission",
+		"Cabinet",
+		"Ministry of Finance"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following UTs have a legislative assembly?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Puducherry",
+		"Delhi",
+		"Jammu and Kashmir",
+		"All of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following is empowered to constitute the State Finance Commission?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Parliament",
+		"President",
+		"State Legislature",
+		"Governor"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The Nirbhaya Act was passed in which year?  ' ,
+	answer: '2013' ,
+	options: [
+		"2013",
+		"2014",
+		"2015",
+		"2016"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who was the chairman of the Committee on Rationalisation of Panchayat Statistics?  ' ,
+	answer: 'V.R. Rao' ,
+	options: [
+		"S.D. Mishra",
+		"V. Iswaran",
+		"G.R. Rajgopal",
+		"V.R. Rao"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following statements are correct with respect to Lok adalats?1. An award of a Lok Adalat shall be deemed to be a decree of a Civil Court.2. Every award made by a Lok Adalat shall be final and binding on all the parties to the dispute.Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who submits a report to the president regarding the administration of scheduled areas?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"State Legislature",
+		"Panchayat",
+		"Governor",
+		"Chief Minister"
+		]
+	},
+	{
+	numb: 25,
+	question: 'What is the term of office of elected members of the board of cooperative societies?  ' ,
+	answer: '5 years' ,
+	options: [
+		"2 years",
+		"3 years",
+		"4 years",
+		"5 years"
+		]
+	},
+	{
+	numb: 26,
+	question: 'A no-confidence motion against the Union Government can be initiated in which among the following ?  ' ,
+	answer: 'ONLY Lok Sabha' ,
+	options: [
+		"ONLY Lok Sabha",
+		"ONLY Rajya Sabha",
+		"Either Lok Sabha or Rajya Sabha",
+		"ONLY Lok Sabha with prior consent of President"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The Arms Act of 1959 is divided into how many chapters?  ' ,
+	answer: '6' ,
+	options: [
+		"4",
+		"5",
+		"6",
+		"7"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who is authorized to exclude posts, services and matters from the purview of the UPSC?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"Rajya Sabha",
+		"President",
+		"Council of Ministers"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which among the following are essentials of the ‘attempt’ stage of a criminal act?  ' ,
+	answer: 'Guilty intention to commit an offence' ,
+	options: [
+		"Guilty intention to commit an offence",
+		"No act done towards the commission of the offence",
+		"The act must be a completed offence",
+		"All of the above"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The IPC applies to which of the following?1. Any offence committed within the territory of India as defined in Article (1) of constitution.2. Any offence committed within the territorial waters of India.3. Any offence committed on any ship or aircraft either owned by India or registered in India.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+]</script><script src="./script.js"></script></html>

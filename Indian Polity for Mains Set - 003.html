@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 003'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who determines the salary, allowances and other service conditions of the Chief Information Commissioner and an Information Commissioner?  ' ,
+	answer: 'Central Government' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Central Government",
+		"None of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'How many languages are specified in the Eighth Schedule of the Constitution of India?  ' ,
+	answer: '22' ,
+	options: [
+		"14",
+		"18",
+		"22",
+		"24"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Who is empowered to remove the chairperson or any member of National Human Rights Commission on the ground of proved misbehaviouror incapacity?  ' ,
+	answer: 'President' ,
+	options: [
+		"Supreme Court",
+		"Parliament",
+		"Prime Minister",
+		"President"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who determines the salary and other service conditions of the Comptroller and Auditor General of India (CAG)?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Parliament",
+		"Rajya Sabha",
+		"Council of Ministers"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following have the French system of Administrative Courts?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Belgium",
+		"Greece",
+		"Turkey",
+		"All of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which year was the National Green Tribunal established?  ' ,
+	answer: '2010' ,
+	options: [
+		"2000",
+		"2005",
+		"2007",
+		"2010"
+		]
+	},
+	{
+	numb: 7,
+	question: 'In which year was the Central Pollution Control Board (CPCB) established?  ' ,
+	answer: '1974' ,
+	options: [
+		"1972",
+		"1973",
+		"1974",
+		"1975"
+		]
+	},
+	{
+	numb: 8,
+	question: 'In which year was the National Human Rights Commission established?  ' ,
+	answer: '1993' ,
+	options: [
+		"1991",
+		"1992",
+		"1993",
+		"1994"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following is empowered to establish administrative tribunals?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Parliament",
+		"Supreme Court",
+		"Rajya Sabha"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who is empowered to change the names of autonomous districts?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Parliament",
+		"State Legislature",
+		"President",
+		"Governor"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following statements about Special Police Establishment are true?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"It is a division of CBI",
+		"It is supplementary to the state police forces",
+		"It enjoys concurrent powers of investigation/prosecution for offences under Delhi Police Establishment Act",
+		"All of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'What is the maximum number of directors a co-operative society can have?  ' ,
+	answer: '21' ,
+	options: [
+		"15",
+		"20",
+		"21",
+		"25"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who determines the remuneration of the advocate general of the state?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Consitution",
+		"President",
+		"Governor",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 14,
+	question: 'NITI Aayog can be referred to as which type of body?  ' ,
+	answer: 'Non-statutory body' ,
+	options: [
+		"Constitutional body",
+		"Statutory body",
+		"Non-statutory body",
+		"None of the above"
+		]
+	},
+	{
+	numb: 15,
+	question: 'CBI provides assistance to which of the following institutions?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Central Vigilance Commission",
+		"Lokpal",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Where is the headquarters of Telecom Disputes Settlement and Appellate Tribunal (TDSAT) ?  ' ,
+	answer: 'New Delhi' ,
+	options: [
+		"New Delhi",
+		"Mumbai",
+		"Hyderabad",
+		"Kolkata"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who appoints the chairperson of the National Commission for Backward Classes (NCBC)?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Prime Minister",
+		"Governor"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following are the functions of CBI?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Coordinating the activities of the anti-corruption agencies",
+		"Maintaining crime statistics",
+		"Disseminating criminal information",
+		"All of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which article of the Constitution off India provides for an independent office of the Comptroller and Auditor General of India (CAG)?  ' ,
+	answer: 'Article 148' ,
+	options: [
+		"Article 147",
+		"Article 148",
+		"Article 149",
+		"Article 150"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following termed the renaming of the Planning Commission as aniti aur durniti?  ' ,
+	answer: 'Sitaram Yechury' ,
+	options: [
+		"Nitin Gadkari",
+		"Nirmala Sitharaman",
+		"Sitaram Yechury",
+		"Narendra Modi"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which year the two posts of election commissioners created in 1989 were abolished?  ' ,
+	answer: '1990' ,
+	options: [
+		"1989",
+		"1990",
+		"1995",
+		"2000"
+		]
+	},
+	{
+	numb: 22,
+	question: 'How much percentage of total votes is required by a party in the state in general or assembly elections to be recognized as state political party?  ' ,
+	answer: '6%' ,
+	options: [
+		"5%",
+		"6%",
+		"7%",
+		"8%"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following allots election symbols to political parties?  ' ,
+	answer: 'Election commission of India' ,
+	options: [
+		"Election commission of India",
+		"Parliament of India",
+		"Rajya Sabha",
+		"A special body is created for this purpose"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Each autonomous district has a district council consisting of how many members?  ' ,
+	answer: '30' ,
+	options: [
+		"15",
+		"20",
+		"25",
+		"30"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following fixes a ceiling on election expenses?  ' ,
+	answer: 'Union Government' ,
+	options: [
+		"Election commission of India",
+		"Union Government",
+		"Cabinet",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 26,
+	question: 'What is the maximum age till which chairman of National Human Rights Commission can hold office?  ' ,
+	answer: '70 years' ,
+	options: [
+		"60 years",
+		"62 years",
+		"65 years",
+		"70 years"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which amongst the following does not have a Port Trust?  ' ,
+	answer: 'Delhi' ,
+	options: [
+		"Delhi",
+		"Mumbai",
+		"Chennai",
+		"Kolkata"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following are the specialized wings of NITI Aayog?1. Research Wing2. Consultancy Wing3. Team India WingSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 29,
+	question: 'On which of the following basis the seats are reserved for the SCs and STs in the Lok Sabha and the state legislative assemblies?  ' ,
+	answer: 'Population' ,
+	options: [
+		"Area",
+		"Population",
+		"Gender",
+		"Locality"
+		]
+	},
+	{
+	numb: 30,
+	question: 'When was the Customs Excise and Service Tax Appellate Tribunal (CESTAT) constituted?  ' ,
+	answer: '1982' ,
+	options: [
+		"1960",
+		"1972",
+		"1979",
+		"1982"
+		]
+	},
+]</script><script src="./script.js"></script></html>

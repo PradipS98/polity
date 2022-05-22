@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 031'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who among the following presides over the Lok Sabha in the absence of Speaker or Deputy Speaker of the Lok Sabha?  ' ,
+	answer: 'A person from the panel formed by: the Speaker of the Lok Sabha' ,
+	options: [
+		"Amember appointed by the President",
+		"Amember nominated by the members of the Parliament present in the House",
+		"A person from the panel formed by: the Speaker of the Lok Sabha",
+		"A senior most member of the House"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which Lok Sabha speaker has authored the book &apos;Matoshree&apos;?  ' ,
+	answer: 'Sumitra Mahajan' ,
+	options: [
+		"Sumitra Mahajan",
+		"Meira Kumar",
+		"Sornnath Chatterjee",
+		"Manohar Joshi"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which one of the following Committees is described as the twin sister of the Estimates Committee?  ' ,
+	answer: 'Public Accounts Committee' ,
+	options: [
+		"Public Accounts Committee",
+		"Committee on Public Undertakings",
+		"Departmental Standing Committee",
+		"Privilege Committee"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Answer the name of two temporary houses of parliamentary structure of India-  ' ,
+	answer: 'Lok Sabha and Legislative Assembly' ,
+	options: [
+		"Rajya Sabha and Legislative Assembly",
+		"Lok Sabha and Legislative Council",
+		"Rajya Sabha and Legislative Council",
+		"Lok Sabha and Legislative Assembly"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who generally presents the Finance Budget in Indian Parliament?  ' ,
+	answer: 'Finance Minister' ,
+	options: [
+		"RBI Governor",
+		"Budget Minister",
+		"Finance Minister",
+		"Finance Secretary"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following parliamentary constituency is the largest in terms of area-  ' ,
+	answer: 'Laddakh (Jammu and Kashmir)' ,
+	options: [
+		"Barmer (Rajasthan)",
+		"Arunachal West (Arunachal Pradesh)",
+		"Laddakh (Jammu and Kashmir)",
+		"Uttaranchal East (Uttaranchal)"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following is not related to Parliament-  ' ,
+	answer: 'Suspension' ,
+	options: [
+		"Closure",
+		"Adjournment",
+		"Censure",
+		"Suspension"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The number of parliamentary seats (Jok Sabha) of Gujarat is-  ' ,
+	answer: '26' ,
+	options: [
+		"10",
+		"26",
+		"28",
+		"48"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The function of Protem Speaker is to-  ' ,
+	answer: 'Swearing in members and hold charge till a regular Speaker is elected' ,
+	options: [
+		"Conduct the Proceedings of the House in the absence of the Speaker",
+		"Officiate as Speaker when a Speaker is unlikely to be elected",
+		"Swearing in members and hold charge till a regular Speaker is elected",
+		"Check if the election certificates of members are in order"
+		]
+	},
+	{
+	numb: 10,
+	question: 'What is the total number of members for the main opposition party in parliament-  ' ,
+	answer: '1/10 of total members' ,
+	options: [
+		"1/3 of total members",
+		"1/4 of total members",
+		"1/6 of total members",
+		"1/10 of total members"
+		]
+	},
+	{
+	numb: 11,
+	question: 'A Member of Parliament will be suspended from his membership, if he absents the house continuously for-  ' ,
+	answer: '60 days' ,
+	options: [
+		"45 days",
+		"60 days",
+		"90 days",
+		"365 days"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The main duty of the legislature is-  ' ,
+	answer: 'Enforcement of law' ,
+	options: [
+		"Central administration",
+		"Enforcement of law",
+		"Execution of judicial matters",
+		"Execution of laws"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Howmany times, a Non-money bill is discussed in every house of the parliament-  ' ,
+	answer: 'Three' ,
+	options: [
+		"Two",
+		"Three",
+		"Four",
+		"One"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following motion is related to Union Budget-  ' ,
+	answer: 'Cut motion' ,
+	options: [
+		"Adjournment",
+		"Censure",
+		"Cut motion",
+		"None of these"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Parliament and Constitution are not mode of-  ' ,
+	answer: 'Legal Justice' ,
+	options: [
+		"Legal Justice",
+		"Political Justice",
+		"Economic Justice",
+		"Social Justice"
+		]
+	},
+	{
+	numb: 16,
+	question: 'In which house, the chairman of that house is not a member of house-  ' ,
+	answer: 'Rajya Sabha' ,
+	options: [
+		"Lok Sabha",
+		"Rajya Sabha",
+		"Legislative Assembly",
+		"Legislative Council"
+		]
+	},
+	{
+	numb: 17,
+	question: 'If the Speaker, of Lok Sabha wants to resign, whom does he resign-  ' ,
+	answer: 'Deputy Speaker' ,
+	options: [
+		"President of India",
+		"Deputy Speaker",
+		"Prime Minister",
+		"Council of Ministers"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The number of parliamentary seats (Lok Sabha) of Goa is-  ' ,
+	answer: '2' ,
+	options: [
+		"2",
+		"13",
+		"20",
+		"25"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the followings are the financial committees of Parliament in India-1.Public Accounts Committee2.Estimates Committee3.Committee on Public Undertakings  ' ,
+	answer: '1,2 and 3' ,
+	options: [
+		"1 and 3",
+		"1 and 2",
+		"2 and 3",
+		"1,2 and 3"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Bicameral Legislature means-  ' ,
+	answer: 'Lower and Upper Chamber' ,
+	options: [
+		"Primary and secondary legislature",
+		"Lower and Upper Chamber",
+		"Lok Adalats and Courts",
+		"Elected as well as selected members"
+		]
+	},
+	{
+	numb: 21,
+	question: 'A motion that seeks to reduce the amount of demand presented by government to Rs. 1/- is known as-  ' ,
+	answer: 'Disapproval of policy cut' ,
+	options: [
+		"Disapproval of policy cut",
+		"Token cut",
+		"Economy cut",
+		"Vote on account"
+		]
+	},
+	{
+	numb: 22,
+	question: 'First Leader of opposition in Lok Sabha was-  ' ,
+	answer: 'A. K. Gopalan' ,
+	options: [
+		"B. R. Ambedkar",
+		"A. K. Gopalan",
+		"S. Radhakrishnan",
+		"Vallabhbhai Patel"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who presides the joint sitting of Parliament-  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"Chairman of Rajya Sabha",
+		"Senior most member of Parliament",
+		"Speaker of Lok Sabha",
+		"President of India"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The number of parliamentary seats (Rajya Sabha) of Karnataka is -  ' ,
+	answer: '12' ,
+	options: [
+		"12",
+		"16",
+		"18",
+		"31"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Indian Parliament is-  ' ,
+	answer: 'Bicameral' ,
+	options: [
+		"Unicameral",
+		"Bicameral",
+		"Tricameral",
+		"None of these"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The committee which Examines the audit report of Comptroller and Auditor General of India, is-  ' ,
+	answer: 'Public Accounts Committee' ,
+	options: [
+		"Estimates committee",
+		"Consultative committee",
+		"Public Accounts Committee",
+		"None of these"
+		]
+	},
+	{
+	numb: 27,
+	question: 'By which bill, Government presents a proposal for annual revenue collection?  ' ,
+	answer: 'Finance bill' ,
+	options: [
+		"Money bill",
+		"Finance bill",
+		"Ordinance",
+		"None of these"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Building of the Parliament of India is called-  ' ,
+	answer: 'Sansad Bhavan' ,
+	options: [
+		"Sansad Bhavan",
+		"Lok Sabha Bhavan",
+		"Rajya Sabha Bhavan",
+		"Sarkar Bhavan"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The number of parliamentary seats (Lok Sabha) of Kerala is-  ' ,
+	answer: '20' ,
+	options: [
+		"2",
+		"13",
+		"20",
+		"25"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The largest committee of Parliament of India is-  ' ,
+	answer: 'Estimates Committee' ,
+	options: [
+		"Public Accounts Committee",
+		"Estimates Committee",
+		"Committee on Public Undertakings",
+		"Joint Parliamentary Committee"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 049'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who called the Preamble as Political Horoscope of Indian Constitution?  ' ,
+	answer: 'K M Munshi' ,
+	options: [
+		"Thakurdas Bhargava",
+		"N A Palkhi Wala",
+		"K M Munshi",
+		"Jawahar Lal Nehru"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which committee recommended for the creation of the post of District Development Commissioner?  ' ,
+	answer: 'G.V.K. Rao Committee' ,
+	options: [
+		"Gadgil Committee",
+		"Thungon Committee",
+		"Ashok Mehta Committee",
+		"G.V.K. Rao Committee"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The Model Tenancy Act was passed in which year?  ' ,
+	answer: '2019' ,
+	options: [
+		"2017",
+		"2018",
+		"2019",
+		"2020"
+		]
+	},
+	{
+	numb: 4,
+	question: 'What is the basis for the allocation of seats in the Rajya Sabha?Area of the statePopulationSelect the correct option from the codes below:  ' ,
+	answer: 'Only 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which among the following term correctly represents the Zonal Councils?  ' ,
+	answer: 'Advisory Bodies' ,
+	options: [
+		"Advisory Bodies",
+		"Actually Working Bodies",
+		"Law Making authorities",
+		"Administrative Bodies"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Wildlife Protection Act was enacted in which year?  ' ,
+	answer: '1972' ,
+	options: [
+		"1970",
+		"1972",
+		"1975",
+		"1986"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of following is not a correct statement with respect to the Preamble of Indian Constitution?  ' ,
+	answer: 'Preamble is enforceable in court of law' ,
+	options: [
+		"Preamble is enforceable in court of law",
+		"It depicts the nature of Indian States",
+		"It defines the objective of the Constitution",
+		"It mentions the date of adoption of the Constitution"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The Elphinstone code which introduced a uniform scheme of criminal law was introduced in which year?  ' ,
+	answer: '1827' ,
+	options: [
+		"1818",
+		"1820",
+		"1827",
+		"1830"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who among the following was appointed the head of the first committee to design a GST model?  ' ,
+	answer: 'Asim Dasgupta' ,
+	options: [
+		"Vijay Kelkar",
+		"Asim Dasgupta",
+		"Pranab Mukherjee",
+		"V.P. Singh"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who is authorized to remove the chief election commissioner?  ' ,
+	answer: 'The President on the basis of a resolution passed to that effect by both the Houses of Parliament with special majority' ,
+	options: [
+		"The Parliament",
+		"The Supreme Court of India",
+		"The President of India",
+		"The President on the basis of a resolution passed to that effect by both the Houses of Parliament with special majority"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which Article of the Indian Constitution contains the provisions of National Emergency?  ' ,
+	answer: 'Article 352' ,
+	options: [
+		"Article 352",
+		"Article 356",
+		"Article 360",
+		"Article 362"
+		]
+	},
+	{
+	numb: 12,
+	question: 'To whom does the Vice-President submit his resignation?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Deputy Chairman of Rajya Sabha",
+		"Speaker of Lok Sabha",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What is the other name for Public Interest Litigation?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Class Action Litigation",
+		"Social Action Litigation",
+		"Social Interest Litigation",
+		"All of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following represents the physical aspects of crime?  ' ,
+	answer: 'actus reus' ,
+	options: [
+		"actus reus",
+		"mens rea",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Any fees collected and revenue generated by the UIDAI will be deposited in which of the following?  ' ,
+	answer: 'Consolidated Fund of India' ,
+	options: [
+		"Consolidated Fund of India",
+		"Contingency Fund of India",
+		"Public Accounts of India",
+		"None of the above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which section of the Representation of Peoples Act, 1951 says that the expenditure incurred by leaders of a political party on account of travel by air or by any other means of transport for propagating programme of the political party is not considered to be the election expenditure?  ' ,
+	answer: 'Section 77' ,
+	options: [
+		"Section 75",
+		"Section 76",
+		"Section 77",
+		"Section 78"
+		]
+	},
+	{
+	numb: 17,
+	question: 'What will follow if a bill to bifurcate a state is rejected by the state assembly?  ' ,
+	answer: 'The Parliament may still proceed with bifurcation of state' ,
+	options: [
+		"The Parliament may still proceed with bifurcation of state",
+		"The bill will get lapsed",
+		"The Governor of the state may initiate reintroduction of the bill",
+		"The Governor may take ordinance route to bifurcate the state"
+		]
+	},
+	{
+	numb: 18,
+	question: 'When can the the Parliament can abolish a legislative council or create it?  ' ,
+	answer: 'If the legislative assembly of the concerned state passes a resolution to that effect' ,
+	options: [
+		"If the Chief Minister requests the central legislature",
+		"If Parliament passes a resolution to that effect",
+		"If Rajya Sabha passes a resolution to that effect",
+		"If the legislative assembly of the concerned state passes a resolution to that effect"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following are the duties of Child Marriage Prohibition Officer?1. Preventing child marriage by taking action.2. Collecting evidence for effective prosecution.3. Advising the locals not to indulge in promoting or helping or allowing solemnization of child marriage.4. Creating awareness of the evil of such child marriageSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 2, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 20,
+	question: 'From which state the Systematic Voter’s Education and Electoral Participation (SVEEP) programme was started?  ' ,
+	answer: 'Bihar' ,
+	options: [
+		"Orissa",
+		"Uttrakhand",
+		"Bihar",
+		"Uttar Pradesh"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Where is the headquarters of National Human Rights Commission?  ' ,
+	answer: 'New Delhi' ,
+	options: [
+		"New Delhi",
+		"Hyderabad",
+		"Bhopal",
+		"Mumbai"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The Maternity Benefit Amendment Act makes crèche facility mandatory for every establishment employing how more than how many workers?  ' ,
+	answer: '50' ,
+	options: [
+		"30",
+		"40",
+		"50",
+		"60"
+		]
+	},
+	{
+	numb: 23,
+	question: 'TheUpper House of Egypt parliamentis known as:  ' ,
+	answer: 'Shura Council' ,
+	options: [
+		"Shura Council",
+		"Majilis Al-Sha’ab",
+		"Dewan Rakyat",
+		"Majlis al-Nuwaab"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Under which Article of the Constitution the President is empowered to consult the Supreme Court?  ' ,
+	answer: 'Article 143' ,
+	options: [
+		"Article 143",
+		"Article 133",
+		"Article 129",
+		"Article 32"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Whose prior permission is needed to introduce a bill in the Parliament for the reorganization of States?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Chief Minister of the concerned State",
+		"Governor of the concerned State",
+		"President of India",
+		"Rajya Sabha"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which section of the Drugs and Cosmetics Act, 1940 defines the standards of quality for drugs?  ' ,
+	answer: '16' ,
+	options: [
+		"14",
+		"15",
+		"16",
+		"17"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The Andhra Pradesh Legislative Council was abolished in 1985. In which year it was revived back ?  ' ,
+	answer: '2007' ,
+	options: [
+		"2004",
+		"2005",
+		"2006",
+		"2007"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following are the objectives behind the specification of the regional languages in the Eighth Schedule?1. The members of these languages are to be given representation in the Official Language Commission.2. The forms, style and expression of these languages are to be used for the enrichment of the Hindi language.Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who refers to the CBI conventional crimes like murder, kidnapping etc.?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Supreme Court",
+		"High Court",
+		"State government",
+		"All of the above"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who can establish, construct or manage primary schools, dispensaries, markets, ferries, fisheries, roads and so on in the tribal autonomous districts?  ' ,
+	answer: 'District Council' ,
+	options: [
+		"Governor",
+		"District Council",
+		"Legislative Assembly",
+		"None of the above"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 039'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following statements are correct with respect to the Cigarettes and Other Tobacco Products (Prohibition of Advertisement and Regulation of Trade and Commerce, Production, Supply and Distribution) Act, 2003?1. Advertisement of tobacco products including cigarettes is prohibited.2. Tobacco products cannot be sold to person below the age of 18 years.3. A fine up to Rs. 200 can be imposed for smoking in public place.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who appoints the Chief Minister?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"The Chief Justice of High Court",
+		"President",
+		"Prime Minister",
+		"Governor"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which section of IPC is based on the principle of ‘Volenti-Non-Fit Injuria’?  ' ,
+	answer: 'Section 87' ,
+	options: [
+		"Section 85",
+		"Section 86",
+		"Section 87",
+		"Section 88"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who is empowered to declare National Emergency under Article 352?  ' ,
+	answer: 'The President' ,
+	options: [
+		"The Parliament",
+		"The Prime Minister",
+		"The Council of Ministers",
+		"The President"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which section of Drugs and Cosmetics Act, 1940 deals with fake and adulterated drugs?  ' ,
+	answer: '27' ,
+	options: [
+		"20",
+		"23",
+		"25",
+		"27"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following Articles cover the provisions related to Citizenship?  ' ,
+	answer: 'Article 5 to 11' ,
+	options: [
+		"Article 4 to 9",
+		"Article 5 to 15",
+		"Article 5 to 11",
+		"Article 5 to 9"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who among the following had voiced for a demand for Constituent Assembly based on adult Franchise?  ' ,
+	answer: 'C Rajgopalachari' ,
+	options: [
+		"K Kamraj",
+		"Dr. Rajendra Prasad",
+		"Sardar Patel",
+		"C Rajgopalachari"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Who among the following was not among the seven members of the Drafting Committee of the Constituent Assembly?  ' ,
+	answer: 'G. V. Mavalankar' ,
+	options: [
+		"Alladi Krishnaswamy Ayyar",
+		"Dr. K M Munshi",
+		"Syed Mohammad Saadullah",
+		"G. V. Mavalankar"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which Amendment Acts has made the advice of Council of Ministers binding on the President?  ' ,
+	answer: '42nd & 44th' ,
+	options: [
+		"42nd & 44th",
+		"44th & 46th",
+		"46th & 48th",
+		"49th & 50th"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of the following statements is / are correct regarding the concept of equality and liberty enshrined in the Preamble of the Constitution of India?Without equality, liberty would produce the supremacy of the few over manyEquality without liberty promotes individual initiative Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 nor 2"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who can exercise the power of judicial review as per the Constitution?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Supreme Court",
+		"High Court",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following Article of the Indian Constitution contains provisions regarding curative petition?  ' ,
+	answer: 'Article 142' ,
+	options: [
+		"Article 128",
+		"Article 140",
+		"Article 141",
+		"Article 142"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following subjects were transferred to Concurrent List from State List by 42nd Amendment Act of 1976?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Education",
+		"Forests",
+		"Weights",
+		"All of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who can pass resolution for constitution of a new All India Service?  ' ,
+	answer: 'The Rajya Sabha' ,
+	options: [
+		"The Parliament",
+		"The Lok Sabha",
+		"The Rajya Sabha",
+		"The President"
+		]
+	},
+	{
+	numb: 15,
+	question: 'What are the qualifications for the appointment of a person as a Governor?  ' ,
+	answer: 'He should be a citizen of India' ,
+	options: [
+		"He should be a citizen of India",
+		"He should have completed the age of 45 years",
+		"He should have served as an MLA",
+		"He should be at least a graduate"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Goods and Services Tax (GST) was first introduced in which among the following country?  ' ,
+	answer: 'France' ,
+	options: [
+		"France",
+		"Canada",
+		"USA",
+		"Indonesia"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Protection of Women from Domestic Violence Act was enacted in which year?  ' ,
+	answer: '2005' ,
+	options: [
+		"2004",
+		"2005",
+		"2006",
+		"2007"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Reserved Forest are notified under which section of the Indian Forest Act, 1927?  ' ,
+	answer: 'Section 20' ,
+	options: [
+		"Section 14",
+		"Section 17",
+		"Section 20",
+		"Section 23"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who can advise the president to dissolve the Lok Sabha on the ground that the House does not represent the views of the electorate faithfully?  ' ,
+	answer: 'Council of Ministers' ,
+	options: [
+		"The President",
+		"The Prime Minister",
+		"Council of Ministers",
+		"Rajya Sabha"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who all are the part of the state executive?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"Advocate General",
+		"All of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following are the merits of parliamentary form of government?1. Harmony Between Legislature and Executive2. Responsible Government3. Wide Representation4. No Continuity of PoliciesSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1",
+		"Only 1, 2 & 3",
+		"Only 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following is not a compulsory condition for termination of Indian citizenship by the Central government?  ' ,
+	answer: 'the citizen have been residing out of India for five years' ,
+	options: [
+		"the citizen has obtained citizenship by fraud",
+		"the citizen has been involved in illegal trade",
+		"the citizen has shown disloyalty to the Constitution of India",
+		"the citizen have been residing out of India for five years"
+		]
+	},
+	{
+	numb: 23,
+	question: 'How many members can be nominated to Lok Sabha by President ?  ' ,
+	answer: '0' ,
+	options: [
+		"0",
+		"2",
+		"3",
+		"4"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following statements are incorrect with respect to Fundamental Duties?  ' ,
+	answer: 'They can be enforced by writs' ,
+	options: [
+		"They can be promoted only by constitutional methods",
+		"They can used for interpreting ambiguous statutes",
+		"They can be enforced by writs",
+		"The performance of any particular duty comes within the sphere of constitutional law which court has to decide"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which amendment act of Parliament increased the strength of Lok Sabha from 525 to 545?  ' ,
+	answer: '31st' ,
+	options: [
+		"35th",
+		"42nd",
+		"31st",
+		"45th"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which schedule was added by the 1st Amendment to the Constitution of India?  ' ,
+	answer: '9th Schedule' ,
+	options: [
+		"7th Schedule",
+		"8th Schedule",
+		"9th Schedule",
+		"10th Schedule"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which citizenship amendment act made illegal immigrants ineligible for citizenship by registration or by naturalization?  ' ,
+	answer: 'Citizenship (Amendment) Act, 2003' ,
+	options: [
+		"Citizenship (Amendment) Act, 1986",
+		"Citizenship (Amendment) Act, 1992",
+		"Citizenship (Amendment) Act, 2003",
+		"Citizenship (Amendment) Act, 2005"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who among the following decide rates for levy of GST?  ' ,
+	answer: 'Centre and State together' ,
+	options: [
+		"Centre",
+		"State",
+		"Centre and State together",
+		"Comproller and Auditor General of India"
+		]
+	},
+	{
+	numb: 29,
+	question: 'TheNational Security Act was enacted in which year?  ' ,
+	answer: '1980' ,
+	options: [
+		"1980",
+		"1981",
+		"1982",
+		"1983"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which among the following statements are true?1. CGST is levied by Centre2. IGST is levied by Centre3. SGST is levied by respective States or UTChoose the correct option from the codes given below :  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"1 only",
+		"1 & 2",
+		"1 & 3",
+		"1, 2 & 3"
+		]
+	},
+]</script><script src="./script.js"></script></html>

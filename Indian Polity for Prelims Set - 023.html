@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 023'
+let questions = [
+	{
+	numb: 1,
+	question: 'The phrase &apos;procedure established by the law&apos; means  ' ,
+	answer: 'the judges in India cannot question the fairness or validity of a law, provided it is within the limits of the constitution' ,
+	options: [
+		"the judges in India cannot question the fairness or validity of a law, provided it is within the limits of the constitution",
+		"judges in India can question the fairness or validity of an undue law even if it is within the limits of the constitution",
+		"judges in India can declare a law invalid simply because in their opinion the law is not due or is unjust",
+		"None of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The members of the state legislature exercise control over the council of the ministers through  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"questions and supplementary questions",
+		"criticism of its policies",
+		"adjournment motion",
+		"All of the above"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The name of the union given in the Constitution is  ' ,
+	answer: 'India or Bharat' ,
+	options: [
+		"Hindustan or Bharatavarsha",
+		"India or Hindustan",
+		"India or Bharat",
+		"Bharatadesh or India"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The members of the committees of Parliament are  ' ,
+	answer: 'appointed by the speaker or elected by the House from amongst its own members' ,
+	options: [
+		"nominated by the leaders of the various parties in the Parliament",
+		"nominated by the prime minister",
+		"appointed by the speaker or elected by the House from amongst persons who are not members of Parliam",
+		"appointed by the speaker or elected by the House from amongst its own members"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The preamble enshrines certain ideals that were first spelt out in  ' ,
+	answer: 'the Objectives Resolution adopted by the Constituent Assembly' ,
+	options: [
+		"the speech by Jawaharlal Nehru on the banks of Ravi when he called for Purana Swaraj",
+		"the Nehru report",
+		"a resolution adopted at the Karachi session of the Indian National Congress",
+		"the Objectives Resolution adopted by the Constituent Assembly"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The national flag was adopted by the Constituent Assembly of India on 22 July 1947 and was presented to the nation at the midnight session of the Assembly on 14th August 1947 on behalf of  ' ,
+	answer: 'the women of India' ,
+	options: [
+		"the minorities of India",
+		"the National Integration Council",
+		"the women of India",
+		"the people of India"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Mainstream Nationalism in India  ' ,
+	answer: 'aimed at emancipation from colonial rule' ,
+	options: [
+		"was characterized by Chauvinism",
+		"aimed at restoration of the Hindu state",
+		"had national socialism as its ultimate goal",
+		"aimed at emancipation from colonial rule"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The preamble declares India as a sovereign state which implies  ' ,
+	answer: 'India is free to conduct her internal as well as external affairs' ,
+	options: [
+		"India is free to conduct her internal affairs",
+		"India is free to conduct her external affairs",
+		"India is free to conduct her internal as well as external affairs",
+		"None of the above"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The oath of office is conducted to the president by  ' ,
+	answer: 'the chief justice of India' ,
+	options: [
+		"the speaker of Lok Sabha",
+		"the chief justice of India",
+		"the vice-president of India",
+		"None of the above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The preamble to our constitution includes all the following except  ' ,
+	answer: 'adult franchise' ,
+	options: [
+		"adult franchise",
+		"equality of status",
+		"fraternity",
+		"justice"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The president can be removed from his office before the expiry of his normal term only on the recommendation of  ' ,
+	answer: 'the two Houses of Parliament' ,
+	options: [
+		"the Supreme Court",
+		"the chief justice of India",
+		"council of ministers",
+		"the two Houses of Parliament"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The objective of the Morley-Minto Reforms was  ' ,
+	answer: 'extension of provincial assemblies' ,
+	options: [
+		"extension of provincial assemblies",
+		"to give more powers to local government",
+		"to abolish the post of secretary of the state for India",
+		"to establish diarchy in provinces"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The president convenes and prorogues all sessions of Parliament in consultation with  ' ,
+	answer: 'the prime minister' ,
+	options: [
+		"the speaker",
+		"the prime minister",
+		"the prime minister and the leader of the Opposition in Lok Sabha",
+		"None of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The president can be impeached for  ' ,
+	answer: 'violating the constitution' ,
+	options: [
+		"violating the constitution",
+		"disregarding Parliament",
+		"for not taking the prime minister&apos;s advice",
+		"All of the above"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The position of the prime minister of India is superior to that of his counterpart in Britain because  ' ,
+	answer: 'his office enjoys constitutional basis' ,
+	options: [
+		"India is the biggest democracy",
+		"India has adopted the federal system",
+		"India has a written constitution",
+		"his office enjoys constitutional basis"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The member of a State Public Service Commission can be removed on the ground of misbehavior only after an enquiry has been conducted by the  ' ,
+	answer: 'Supreme Court of India' ,
+	options: [
+		"Supreme Court of India",
+		"High Court of the state",
+		"committee appointed by the president",
+		"None of the above"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The nature of the anti-imperialist struggle was  ' ,
+	answer: 'initially constitutional and by large non-violent' ,
+	options: [
+		"always peaceful and constitutional",
+		"initially constitutional and by large non-violent",
+		"based on continuous armed resistance",
+		"largely supported by foreign powers"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The minimum age required to become a member of Rajya Sabha is  ' ,
+	answer: '30 years' ,
+	options: [
+		"21 years",
+		"25 years",
+		"30 years",
+		"35 years"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The Objectives Resolution was unanimously adopted by the Constituent Assembly on  ' ,
+	answer: '22nd January 1947' ,
+	options: [
+		"22nd January 1947",
+		"26th November 1946",
+		"1st October 1948",
+		"None of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The members of the standing committee are taken from the Lok Sabha and Rajya Sabha in the ratio of  ' ,
+	answer: 'two and one respectively' ,
+	options: [
+		"two and one respectively",
+		"three and one respectively",
+		"four and one respectively",
+		"equal members for both the Houses"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The new committee system constitutes an improvement over the earlier committee system in so far as  ' ,
+	answer: 'it enables the Parliament to examine the grants of all the ministries and departments in detail' ,
+	options: [
+		"it assures representation to all the political parties in proportion to their strength in the Parlia",
+		"it enables the Parliament to examine the grants of all the ministries and departments in detail",
+		"it enables the Parliament to accept the demands of various ministries without scrutiny",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The parliament can legislate on the subject in the state list  ' ,
+	answer: 'if the Rajya Sabha passes a resolution by two-third of its to legislate on a state matter in the nat' ,
+	options: [
+		"if the President issues an order authorizing it to do so",
+		"if the Supreme Court of India gives authority to the Parliament of India in this regard",
+		"if the Rajya Sabha passes a resolution by two-third of its to legislate on a state matter in the nat",
+		"None of the above"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The preamble to our constitution provided that India is  ' ,
+	answer: 'a sovereign, socialist, secular and democratic republic' ,
+	options: [
+		"a sovereign, socialist and democratic republic",
+		"a sovereign, socialist, secular and democratic republic",
+		"a sovereign republic with a socialist pattern of society",
+		"a socialist, secular and democratic republic"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The minimum age required to become the prime minister of India is  ' ,
+	answer: '25 years' ,
+	options: [
+		"25 years",
+		"30 years",
+		"40 years",
+		"35 years"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The Nagaland State of India cannot be termed as a state because it lacks  ' ,
+	answer: 'sovereignty' ,
+	options: [
+		"sovereignty",
+		"bicameral legislature",
+		"a high court exclusively of its own",
+		"None of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The parliament works through committees which  ' ,
+	answer: 'exercise effective control over government on a regular and continuing basis' ,
+	options: [
+		"help the government in the formulation of policy",
+		"exercise effective control over government on a regular and continuing basis",
+		"ensure that the parliament strictly adheres to the provision of the constitution and the prescribed",
+		"both (a) and (b)"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The members of Parliament can express themselves in the House in  ' ,
+	answer: 'English, Hindi or mother tongue' ,
+	options: [
+		"English only",
+		"Hindi only",
+		"English or Hindi",
+		"English, Hindi or mother tongue"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The national anthem was written by  ' ,
+	answer: 'Rabindranath Tagore' ,
+	options: [
+		"Bankim Chandra Chatterjee",
+		"Rabindranath Tagore",
+		"Sarat Chandra Chatterjee",
+		"Aurobindo Ghosh"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The members of the state legislative assemblies are elected for a period of  ' ,
+	answer: '5 years' ,
+	options: [
+		"2 years",
+		"6 years",
+		"5 years",
+		"3 years"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The Muslim League as a political party was founded in  ' ,
+	answer: '1906' ,
+	options: [
+		"1906",
+		"1909",
+		"1915",
+		"1919"
+		]
+	},
+]</script><script src="./script.js"></script></html>

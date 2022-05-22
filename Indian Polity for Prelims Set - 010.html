@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 010'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who is the constitutional head of the Indian government?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Chief justice of India",
+		"Attorney general"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the follwing non-members of Parliament has the right to address it?  ' ,
+	answer: 'Attorney General of India' ,
+	options: [
+		"Attorney General of India",
+		"Solicitor General of India",
+		"Chief Justice of India",
+		"Chief Election Commissoner"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Supreme Court has the right to mitigate the dispute regarding the election of President and Vice-President. It is-  ' ,
+	answer: 'Fundamental right' ,
+	options: [
+		"Fundamental right",
+		"Discretionary right",
+		"Advisory right",
+		"Multifaceted right"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who among the following is the executive head of state in India?  ' ,
+	answer: 'President' ,
+	options: [
+		"Prime Minister",
+		"President",
+		"Cabinet Secretary",
+		"Finance Secretary"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The power to grant pardon or suspend or remit the sentence of any convicted person is vested in the-  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Vice President",
+		"Supreme Court Judge",
+		"Defence Minister"
+		]
+	},
+	{
+	numb: 6,
+	question: ' What is the salary per month of the President of India in 2015?  ' ,
+	answer: 'Rs 1,50,000' ,
+	options: [
+		"Rs 1,50,000",
+		"Rs 1,00,000",
+		"Rs 75,000",
+		"Rs 50,000"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Rashtrapati Bhavan was completed in  ' ,
+	answer: '1929' ,
+	options: [
+		"1852",
+		"1910",
+		"1947",
+		"1929"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following can bring the impeachment process of Vice-President?  ' ,
+	answer: 'Rajya Sabha' ,
+	options: [
+		"Legislative Council",
+		"Legislative Assembly",
+		"Rajya Sabha",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 9,
+	question: 'What is the meaning of "Judicial Review" of Supreme Court-  ' ,
+	answer: 'Review of constitutional validity of laws' ,
+	options: [
+		"Review of its own verdict",
+		"Review of the functioning of judiciary in country",
+		"Review of constitutional validity of laws",
+		"Timely review of constitution"
+		]
+	},
+	{
+	numb: 10,
+	question: 'According to the Indian Constitution, the vacancy in the office of the President of India shall be filled within-  ' ,
+	answer: '3 months' ,
+	options: [
+		"1 month",
+		"6 months",
+		"3 months",
+		"1 year"
+		]
+	},
+	{
+	numb: 11,
+	question: 'A Presidential Ordinance can remain in force-  ' ,
+	answer: 'For six months' ,
+	options: [
+		"For three months",
+		"For six months",
+		"For nine months",
+		"Indefinitely"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Who was the first deputy Prime Minister of India?  ' ,
+	answer: 'Sardar Vallabh Bhai Patel' ,
+	options: [
+		"Sardar Vallabh Bhai Patel",
+		"Maulana Abul Kalam Azad",
+		"Jawaharlal Nehru",
+		"Guljari Lal Nanda"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What is the minimum age for the post of Prime Minister of India?  ' ,
+	answer: '25' ,
+	options: [
+		"18",
+		"21",
+		"25",
+		"35"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The ordinance issued by president is applicable for the period of-  ' ,
+	answer: '6 months' ,
+	options: [
+		"3 months",
+		"6 months",
+		"9 months",
+		"Uncertain time"
+		]
+	},
+	{
+	numb: 15,
+	question: 'What is the maximum age limit for the President post of India?  ' ,
+	answer: 'No age limit' ,
+	options: [
+		"58 years",
+		"60 years",
+		"62 years",
+		"No age limit"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who can displace the Judge of High Court-  ' ,
+	answer: 'President on a proposal passed by majority in parliament' ,
+	options: [
+		"President on a proposal passed by majority in parliament",
+		"President",
+		"Chief Minister in consultation with Governor",
+		"President in consultation with Chief Justice of India"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who can be invited to the Parliament for any suggestion or advice?  ' ,
+	answer: 'Attorney General of India' ,
+	options: [
+		"Attorney General of India",
+		"Chief Justice of India",
+		"Chief Election Commissioner of India",
+		"Comptroller and Auditor General of India"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Under which pardoning power of the President, duration of sentence is reduced without changing its character?  ' ,
+	answer: 'Remission' ,
+	options: [
+		"Commutation",
+		"Remission",
+		"Respite",
+		"Reprieve"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The Electoral College that elects the President of India consists of-  ' ,
+	answer: 'Elected members of the Lok Sabha, Rajya Sabha and State Assemblies' ,
+	options: [
+		"Elected members of all the State Legislatures",
+		"Members of the Lok Sabha and State Assemblies",
+		"Elected members of the Lok Sabha, Rajya Sabha and State Assemblies",
+		"Elected members of the Rajya Sabha and State Legislatures"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following does not hold his post after the approval of the President?  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"Prime Minister",
+		"Governor",
+		"Election Commission",
+		"Speaker of Lok Sabha"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Howmany members can be nominated for both houses of parliament by the president?  ' ,
+	answer: '14' ,
+	options: [
+		"16",
+		"10",
+		"12",
+		"14"
+		]
+	},
+	{
+	numb: 22,
+	question: 'How is the President of India elected?  ' ,
+	answer: 'By single transferable vote' ,
+	options: [
+		"Directly by public voting",
+		"By single transferable vote",
+		"By secondary voting system",
+		"All options are correct"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The President can dismiss a member of the Council of Ministers-  ' ,
+	answer: 'on the recommendation of the Prime Minister' ,
+	options: [
+		"with the consent of the Speaker",
+		"only under emergency conditions",
+		"on the recommendation of the Prime Minister",
+		"on his own"
+		]
+	},
+	{
+	numb: 24,
+	question: 'If the Prime Minister of India submits his resignation to the President, it will mean the resignation of the-  ' ,
+	answer: 'Entire Council of Ministers' ,
+	options: [
+		"Prime Minister only",
+		"Prime Minister and the Cabinet Ministers",
+		"Entire Council of Ministers",
+		"Prime Minister, Cabinet Ministers and the Speaker"
+		]
+	},
+	{
+	numb: 25,
+	question: 'What is the maximum period for which the Vice President can act as the President in case of vacancy in the the President&apos;s office?  ' ,
+	answer: '6 months' ,
+	options: [
+		"3 months",
+		"6 months",
+		"1 year",
+		"2 year"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The winning candidate in the Election of President of India should secure-  ' ,
+	answer: 'More than fifty percent and majority of the total votes polled' ,
+	options: [
+		"Majority number of votes polled",
+		"Sixty six percent of votes polled",
+		"Fifty percent of votes polled",
+		"More than fifty percent and majority of the total votes polled"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Under which pardoning power of the President, one form of punishment is substituted by a lighter from?  ' ,
+	answer: 'Commutation' ,
+	options: [
+		"Commutation",
+		"Remission",
+		"Respite",
+		"Reprieve"
+		]
+	},
+	{
+	numb: 28,
+	question: 'In parliamentary democracy "he is the first among all". Who is he-  ' ,
+	answer: 'Prime Minister' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Leader of opposition",
+		"Chairman of lower house"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who appoints and dismisses the gazetted officials of the Union Government?  ' ,
+	answer: 'The President of India' ,
+	options: [
+		"The President of India",
+		"The Prime Minister of India",
+		"The Home Minister of India",
+		"The Finance Minister of India"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who was the first Non-Political President of India?  ' ,
+	answer: 'A.P.J. Abdul Kalam' ,
+	options: [
+		"Jakir Hussain",
+		"A.P.J. Abdul Kalam",
+		"S.Radhakrishanan",
+		"Rajendra Prasad"
+		]
+	},
+]</script><script src="./script.js"></script></html>

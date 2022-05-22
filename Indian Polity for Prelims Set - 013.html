@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 013'
+let questions = [
+	{
+	numb: 1,
+	question: 'For how much time Financial Emergency can be proclaimed?  ' ,
+	answer: 'No maximum period' ,
+	options: [
+		"6 months",
+		"24 months",
+		"12 months",
+		"No maximum period"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of th e following amendment act is related to goods and services tax (GST)?  ' ,
+	answer: '101st' ,
+	options: [
+		"101st",
+		"118th",
+		"257th",
+		"94th"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the sets of Articles deal with &apos;Emergency Provision&apos;?  ' ,
+	answer: 'Articles 352, 356 and 360' ,
+	options: [
+		"Articles 32 and 226",
+		"Articles 350 and 351",
+		"Articles 352, 356 and 360",
+		"Articles 335, 336 and 337"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In which year did the first amendment of Indian Constitution take place?  ' ,
+	answer: '1951' ,
+	options: [
+		"1951",
+		"1950",
+		"1948",
+		"1949"
+		]
+	},
+	{
+	numb: 5,
+	question: ' The President&apos;s Rule is imposed on a State in India, when-  ' ,
+	answer: 'There is a Constitutional breakdown' ,
+	options: [
+		"The State Cabinet&apos; of Ministers resigns",
+		"The Governor of the State dies",
+		"The elections are announced",
+		"There is a Constitutional breakdown"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The first General Election in India and first Amendment to the Constitution was held in-  ' ,
+	answer: '1951' ,
+	options: [
+		"1949",
+		"1950",
+		"1951",
+		"1952"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Article 368 of the Indian Constitution deals with-  ' ,
+	answer: 'Amending Procedure' ,
+	options: [
+		"Emergency Provisions",
+		"Right to primary Education",
+		"Right to Information",
+		"Amending Procedure"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The President of India enjoys emergency powers of-  ' ,
+	answer: 'three types' ,
+	options: [
+		"four types",
+		"two types",
+		"five types",
+		"three types"
+		]
+	},
+	{
+	numb: 9,
+	question: ' During an emergency all of the fol.owing fundamental rights are suspended, except-  ' ,
+	answer: 'Personal liberty' ,
+	options: [
+		"Freedom of association",
+		"Freedom of speech and Expression",
+		"Personal liberty",
+		"Freedom of assembly without arms"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Under which of the following articles, president can make the proclamation of emergency in failure of constitutional machinery in any state-  ' ,
+	answer: '356' ,
+	options: [
+		"352",
+		"356",
+		"360",
+		"350"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which type of emergency has not been declared so far in India?  ' ,
+	answer: 'Financial Emergency' ,
+	options: [
+		"Internal emergency caused due to internal disturbances",
+		"External emergency caused due to external threat",
+		"State emergency caused due to failure of constitutional machinery in the state",
+		"Financial Emergency"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which among the following Article of the Indian Constitution provides for State emergency and suspends constitutional arrangement in a State?  ' ,
+	answer: 'Article-356' ,
+	options: [
+		"Article-352",
+		"Article-356",
+		"Article-389",
+		"Article-392"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following can be amended by special majority?  ' ,
+	answer: 'Directive Principles of State Policy' ,
+	options: [
+		"Directive Principles of State Policy",
+		"Rules of Procedure in Parliament",
+		"Admission of new state",
+		"Use of English language in Parliament"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which among the following can be amended only by special majority in India?  ' ,
+	answer: 'Amendment of the Constitution via article' ,
+	options: [
+		"Admission of New State",
+		"Salaries and allowances of Member of Parliament",
+		"Allowances of the President",
+		"Amendment of the Constitution via article"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The President of India can issue a proclamation of National Emergency only on the written recommendation of-  ' ,
+	answer: 'The Cabinet consisting of only Cabinet Ministers of the Union' ,
+	options: [
+		"The Prime Minister",
+		"The Cabinet consisting of only Cabinet Ministers of the Union",
+		"The Council of Ministers of the Union",
+		"Parliament"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following constitutional Amendment is known as "Mini constitution"-  ' ,
+	answer: '42nd Constitutional Amendment Act 1976' ,
+	options: [
+		"7th Constitutional Amendment Act 1956",
+		"24th Constitutional Amendment Act 1971",
+		"42nd Constitutional Amendment Act 1976",
+		"44th Constitutional Amendment Act 1978"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which article specifies Imposition of President&apos;s Rule in States?  ' ,
+	answer: 'Article 356' ,
+	options: [
+		"Article 356",
+		"Article 343",
+		"Article 51(A)",
+		"Article 80"
+		]
+	},
+	{
+	numb: 18,
+	question: 'How many types of emergency is provisioned in the constitution-  ' ,
+	answer: '3' ,
+	options: [
+		"1",
+		"2",
+		"3",
+		"4"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which Constitutional Amendment Act deals with the disqualification of MPs and MLAs?  ' ,
+	answer: '52nd Amendment Act' ,
+	options: [
+		"42nd Amendment act",
+		"52nd Amendment Act",
+		"62nd Amendment Act",
+		"32nd Amendment Act"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Under which of the following jurisdiction can any individual, whose fundamental right has been violated, can directly move the Supreme Court for remedy?  ' ,
+	answer: 'Writ Jurisdiction' ,
+	options: [
+		"Original Jurisdiction",
+		"Writ Jurisdiction",
+		"Appellate Jurisdiction",
+		"Advisory Jurisdiction"
+		]
+	},
+	{
+	numb: 21,
+	question: 'During Financial Emergency all money bills passed by the state legislature are to be reserved for the consideration of the-  ' ,
+	answer: 'President' ,
+	options: [
+		"Governor",
+		"Prime Minister",
+		"Parliament",
+		"President"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following constitutional Amendment Act, deals with the Elementary Education as a Fundamental Right?  ' ,
+	answer: '86th Amendment Act' ,
+	options: [
+		"84th Amendment Act",
+		"85th Amendment Act",
+		"86th Amendment Act",
+		"87th Amendment Act"
+		]
+	},
+	{
+	numb: 23,
+	question: 'An amendment of the constitution may be initiated-  ' ,
+	answer: 'By the introduction of a bill in either House of Parliament' ,
+	options: [
+		"By introduction by the President of India",
+		"By introduction of a Bill in Rajya Sabha",
+		"By the Governors of States",
+		"By the introduction of a bill in either House of Parliament"
+		]
+	},
+	{
+	numb: 24,
+	question: 'According to the Indian Constitution, who has the power to declare emergency ?  ' ,
+	answer: 'President' ,
+	options: [
+		"Prime Minister",
+		"President",
+		"Chief Justice",
+		"Parliament"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Indian Constitution can be amended according to the procedure laid down in the following Article-  ' ,
+	answer: 'Article 368' ,
+	options: [
+		"Article 368",
+		"Article 345",
+		"Article 351",
+		"Article 333"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which article of Indian constitution has the provision for National Emergency?  ' ,
+	answer: 'Article 352' ,
+	options: [
+		"Article 350",
+		"Article 352",
+		"Article 312",
+		"Article 280"
+		]
+	},
+	{
+	numb: 27,
+	question: 'During emergency imposed under Article-352, which of the following constitutional provisions stands suspended?  ' ,
+	answer: 'Fundamental Rights' ,
+	options: [
+		"Directive Principles of State Policy",
+		"Amendment Procedures",
+		"Fundamental Rights",
+		"Judicial Review"
+		]
+	},
+	{
+	numb: 28,
+	question: 'A law can be enacted, or executive order issued, even contrary to Article-19, during proclamation of emergency-  ' ,
+	answer: 'Casued by war or external aggression' ,
+	options: [
+		"Casued by war or external aggression",
+		"Caused by internal armed rebellion",
+		"Casued by constitutional breakdown",
+		"Caused by financial crisis"
+		]
+	},
+	{
+	numb: 29,
+	question: 'In India, how many times has the President declared financial emergency-  ' ,
+	answer: 'Never' ,
+	options: [
+		"Never",
+		"Two times",
+		"Three times",
+		"Once"
+		]
+	},
+	{
+	numb: 30,
+	question: 'By which Constitutional Amendment Bill, did the Parliament lower the voting age from 21 to 18 years?  ' ,
+	answer: '61st' ,
+	options: [
+		"42nd",
+		"44th",
+		"61st",
+		"73rd"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,311 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 054'
+let questions = [
+	{
+	numb: 1,
+	question: 'What is the criteria for allocation of seats in Lok Sabha?  ' ,
+	answer: 'Population' ,
+	options: [
+		"Area",
+		"Language",
+		"Poverty",
+		"Population"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which Act mandated the Government of India to construct and maintain a National Register of Citizens?  ' ,
+	answer: 'Citizenship (Amendment) Act, 2003' ,
+	options: [
+		"Citizenship (Amendment) Act, 1986",
+		"Citizenship (Amendment) Act, 2003",
+		"Citizenship (Amendment) Act, 2005",
+		"Citizenship (Amendment) Act, 2019"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The rights of forest dwellers are stated in which section of the Scheduled Tribes and Other Traditional Forest Dwellers (Recognition of Forest Rights) Act, 2006?  ' ,
+	answer: 'Section 3(1)' ,
+	options: [
+		"Section 3",
+		"Section 3(1)",
+		"Section 3(2)",
+		"Section 3(3)"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following holds control over district courts and other subordinate courts?  ' ,
+	answer: 'High Court' ,
+	options: [
+		"Supreme Court",
+		"Prliament",
+		"High Court",
+		"Governor"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following countries have Procurator System of grievance redressal?  ' ,
+	answer: 'Czechoslovakia' ,
+	options: [
+		"Czechoslovakia",
+		"France",
+		"India",
+		"All of the above"
+		]
+	},
+	{
+	numb: 7,
+	question: 'In which year, Constituent Assembly ratified India’s membership to the Commonwealth?  ' ,
+	answer: '1949' ,
+	options: [
+		"1948",
+		"1949",
+		"1950",
+		"1951"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The Central Vigilance Commission (CVC) can consist of maximum how many members including the chairman?  ' ,
+	answer: '3' ,
+	options: [
+		"2",
+		"3",
+		"4",
+		"5"
+		]
+	},
+	{
+	numb: 9,
+	question: 'In which year, hindi names ‘Rajya Sabha’ and ‘Lok Sabha’ were adopted for the Council of States and the House of People respectively?  ' ,
+	answer: '1954' ,
+	options: [
+		"1950",
+		"1947",
+		"1954",
+		"1962"
+		]
+	},
+	{
+	numb: 10,
+	question: 'On whose recommendation was the Committee on Public Undertakings created?  ' ,
+	answer: 'Krishna Menon Committee' ,
+	options: [
+		"Punchi Commission",
+		"Sarkaria Commission",
+		"Krishna Menon Committee",
+		"Fazl Ali Commission"
+		]
+	},
+	{
+	numb: 11,
+	question: 'A resolution for creation of a new all India service requires how much majority in Rajya Sabha?  ' ,
+	answer: '2/3' ,
+	options: [
+		"1/3",
+		"1/4",
+		"2/3",
+		"2/4"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following schedules of the Wildlife Protection Act, 1972 includes the animals which may be hunted?  ' ,
+	answer: 'Schedule V' ,
+	options: [
+		"Schedule III",
+		"Schedule IV",
+		"Schedule V",
+		"Schedule VI"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Animal Welfare Board was established in which year?  ' ,
+	answer: '1962' ,
+	options: [
+		"1962",
+		"1963",
+		"1964",
+		"1965"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who headed the commission to report on the administration of the scheduled areas and the welfare of the scheduled tribes in the states, constituted in 1960?  ' ,
+	answer: 'U.N.Dhebar' ,
+	options: [
+		"Ajit Kumar",
+		"Bimal Julka",
+		"Dilip Singh Bhuria",
+		"U.N.Dhebar"
+		]
+	},
+	{
+	numb: 15,
+	question: 'For the exercise of the powers of his office, President as been made answerable to __?  ' ,
+	answer: 'None of the above' ,
+	options: [
+		"Only Supreme Court",
+		"Only Chief Justice of India",
+		"Either Supreme Court or High Court",
+		"None of the above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which Constitutional Amendment abolished the existing classification of states into four categories?  ' ,
+	answer: '7th Amendment' ,
+	options: [
+		"1st Amendment",
+		"5th Amendment",
+		"7th Amendment",
+		"14th Amendment"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who has been given the power to enforce the Fundamental Rights by the Constitution of India?  ' ,
+	answer: 'Supreme Court and High Courts' ,
+	options: [
+		"Parliament",
+		"President",
+		"Supreme Court and High Courts",
+		"All Courts of India"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which Article of the Constitution deals with the property, contracts, rights, liabilities, obligations and suits of the Union and the states?  ' ,
+	answer: 'Articles 294 to 300' ,
+	options: [
+		"Articles 264 to 84",
+		"Articles 294 to 300",
+		"Articles 314 to 335",
+		"Articles 360 to 375"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Drugs and Cosmetics Act, 1940 was prepared on the recommendations of which committee?  ' ,
+	answer: 'Chopra Committee' ,
+	options: [
+		"Hartog Committee",
+		"Fazl Ali Committee",
+		"Chopra Committee",
+		"None of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following statements are correct about CBI’s association with Interpol?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"CBI acts as the National Central Bureau of Interpol",
+		"Interpol Wing of the CBI coordinates requests for investigation originating from Indian law enforcement agencies",
+		"Interpol Wing of the CBI coordinates requests for investigation from the member countries of the Interpol",
+		"All of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Delhi was called national Capital Territory by which amendment Act ?  ' ,
+	answer: '69th' ,
+	options: [
+		"63rd",
+		"69th",
+		"91st",
+		"93rd"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The District Consumer Disputes Redressal Commission will entertain complaints when the value of goods or service is upto how much?  ' ,
+	answer: 'Rs 1 crore' ,
+	options: [
+		"Rs 1 lakh",
+		"Rs 1 crore",
+		"Rs 5 crore",
+		"Rs 10 crore"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which amendment replaced the term ‘internal disturbance’ by ‘armed rebellion’ in respect of national emergency?  ' ,
+	answer: '44th Amendmet' ,
+	options: [
+		"38th Amendment",
+		"42nd Amendment",
+		"44th Amendmet",
+		"48th Amendment"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which Constitutional Amendment extended the reservation of seats for the SCs and STs, and special representation for the Anglo-Indians in the Lok Sabha and the state legislative assemblies for a further period of ten years?  ' ,
+	answer: '23rd Amendment Act, 1969' ,
+	options: [
+		"22nd Amendment Act, 1969",
+		"23rd Amendment Act, 1969",
+		"24th Amendment Act, 1971",
+		"25th Amendment Act, 1971"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Pre-natal diagnostic techniques like ultrasound and amniocentesis can be only used in which of the following cases according to Pre-Conception and Pre-Natal Diagnostic Techniques (PCPNDT) Act, 1994?1. Genetic abnormalities2. Metabolic disorders3. Chromosomal abnormalitiesSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2 & 3",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following article deals with citizenship at the time of commencement of the constitution?  ' ,
+	answer: 'Article 5' ,
+	options: [
+		"Article 5",
+		"Article 6",
+		"Article 7",
+		"Article 8"
+		]
+	},
+	{
+	numb: 27,
+	question: 'What is the meaning of ‘locus standi’?  ' ,
+	answer: 'A person whose rights are infringed alone can move the court' ,
+	options: [
+		"Anybody can move the court on someone\’s behalf",
+		"A person whose rights are infringed alone can move the court",
+		"No one can move the court without proper justification",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'In how much the High Court has to conclude an election petition?  ' ,
+	answer: 'Within six months from the date of petition' ,
+	options: [
+		"Within one month from the date of petition",
+		"Within two months from the date of petition",
+		"Within three months from the date of petition",
+		"Within six months from the date of petition"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The word ‘Cabinet’ is mentioned in which Article of the Constitution of India?  ' ,
+	answer: 'Article 352' ,
+	options: [
+		"Article 350",
+		"Article 352",
+		"Article 74",
+		"Article 76"
+		]
+	},
+]</script><script src="./script.js"></script></html>

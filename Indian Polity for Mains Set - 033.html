@@ -1,0 +1,311 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 033'
+let questions = [
+	{
+	numb: 1,
+	question: 'Where is the headquarters of Food Safety and Standards Authority of India (FSSAI)?  ' ,
+	answer: 'New Delhi' ,
+	options: [
+		"Mumbai",
+		"New Delhi",
+		"Amravati",
+		"Hyderabad"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which act during British India provided financial grant for encouragement of Indian literature and promotion of science?  ' ,
+	answer: 'Charter Act of 1813' ,
+	options: [
+		"Amendment Act of 1781",
+		"Charter Act of 1813",
+		"Charter Act of 1833",
+		"Charter Act of 1853"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which Article of the Constitution state that all executive action of the Government of a State shall be expressed to be taken in the name of theGovernor?  ' ,
+	answer: 'Article 166' ,
+	options: [
+		"Article 163",
+		"Article 164",
+		"Article 165",
+		"Article 166"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The Human Immunodeficiency Virus and Acquired Immune Deficiency Syndrome (Prevention and Control) Act was enacted in which year?  ' ,
+	answer: '2017' ,
+	options: [
+		"2016",
+		"2017",
+		"2018",
+		"2019"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who among the following is the ex-officio Chairman of the Council of States?  ' ,
+	answer: 'Vice President' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"President",
+		"Vice President"
+		]
+	},
+	{
+	numb: 6,
+	question: 'How many High Courts are there in India at present?  ' ,
+	answer: '25' ,
+	options: [
+		"25",
+		"24",
+		"23",
+		"22"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Janata Government appointed which committee on panchayati raj institutions?  ' ,
+	answer: 'Ashok Mehta Committee' ,
+	options: [
+		"Balwant Rai Mehta Committee",
+		"Ashok Mehta Committee",
+		"G.V.K. Rao Committee",
+		"Hanumantha Rao Committee"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The law relating to group liability has been elaborately dealt with and covered in which of the following sections of IPC?1. 34 2. 1493. 120 A 4. 120 BSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 2, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who announces the government policies in the legislative assembly?  ' ,
+	answer: 'Chief Minister' ,
+	options: [
+		"Chief Minister",
+		"Speaker of legislative assembly",
+		"Chairman of legislative council",
+		"Deputy Speaker"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following commissions recommended the establishment of the institution of Lokpal and Lokyukta?  ' ,
+	answer: 'Administrative Reforms Commission' ,
+	options: [
+		"Administrative Reforms Commission",
+		"Sarkaria Commission",
+		"Srikrishna Commission",
+		"None of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Where is the headquarters of Customs Excise and Service Tax Appellate Tribunal (CESTAT) located?  ' ,
+	answer: 'New Delhi' ,
+	options: [
+		"New Delhi",
+		"Mumbai",
+		"Kolkata",
+		"Dehradun"
+		]
+	},
+	{
+	numb: 13,
+	question: 'How are the members of a Port Trust selected?  ' ,
+	answer: 'Both of them' ,
+	options: [
+		"Election",
+		"Nomination",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which year the validity of the provisions in section 124A was upheld by a Constitution Bench of the Supreme Court in Kedarnath Singh vs State of Bihar case?  ' ,
+	answer: '1962' ,
+	options: [
+		"1960",
+		"1961",
+		"1962",
+		"1963"
+		]
+	},
+	{
+	numb: 15,
+	question: 'In which year the Competition Commission of India became fully functional?  ' ,
+	answer: '2009' ,
+	options: [
+		"2009",
+		"2011",
+		"2014",
+		"2018"
+		]
+	},
+	{
+	numb: 16,
+	question: 'How many members are there in the State Human Rights Commission including the chairman?  ' ,
+	answer: '3' ,
+	options: [
+		"2",
+		"3",
+		"4",
+		"5"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Where did the concept of judicial activism originate?  ' ,
+	answer: 'USA' ,
+	options: [
+		"India",
+		"USA",
+		"Germany",
+		"Britain"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following section of IPC will not apply to a criminal act done by one person even if there are a series of acts and applies to several people committing the act?  ' ,
+	answer: 'Section 34' ,
+	options: [
+		"Section 22",
+		"Section 24",
+		"Section 34",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'The Factories Act was passed in which year?  ' ,
+	answer: '1948' ,
+	options: [
+		"1948",
+		"1948",
+		"1950",
+		"1951"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which section of IPC states that any speech or written text or signs, which maliciously insults or attempts to insult and demean the religious beliefs of any class of people is punishable with imprisonment upto 4 years or fine or both?  ' ,
+	answer: 'Section 295A' ,
+	options: [
+		"Section 295A",
+		"Section 295B",
+		"Section 296",
+		"Section 297"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Who is the principal channel of communication between the governor and the council of ministers?  ' ,
+	answer: 'Chief Minister' ,
+	options: [
+		"Chief Minister",
+		"Speaker of legislative assembly",
+		"Chairman of legislative council",
+		"President"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Who among the following is not a memberof the committee which recommends the president of India regarding appointments of Chairperson and members of the National Human Rights Commission?  ' ,
+	answer: 'Union Law Minister' ,
+	options: [
+		"Speaker of Lok Sabha",
+		"Union Home Minister",
+		"Leader of Opposition in Lok Sabha",
+		"Union Law Minister"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who decides whether a juvenile criminal in the age group of 16–18 should be tried as an adult or not?  ' ,
+	answer: 'Juvenile Justice Board' ,
+	options: [
+		"Juvenile Justice Board",
+		"Supreme Court",
+		"Chief Justice of India",
+		"President"
+		]
+	},
+	{
+	numb: 24,
+	question: 'In which year was the Armed Forces Tribunal Act passed?  ' ,
+	answer: '2007' ,
+	options: [
+		"2001",
+		"2003",
+		"2005",
+		"2007"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following states have upalokayukta?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Rajasthan",
+		"Karnataka",
+		"Andhra Pradesh",
+		"All of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following articles of the constitution contains provisions for the reservation of seats for scheduled castes and scheduled tribes in the House of the people?  ' ,
+	answer: 'Article 330' ,
+	options: [
+		"Article 330",
+		"Article 335",
+		"Article 340",
+		"Article 346"
+		]
+	},
+	{
+	numb: 27,
+	question: 'On which date Indian Constitution was finally signed by the members of the constituent assembly ?  ' ,
+	answer: 'January 24, 1950' ,
+	options: [
+		"November 26, 1949",
+		"January 24, 1950",
+		"January 26, 1950",
+		"January 24, 1949"
+		]
+	},
+	{
+	numb: 28,
+	question: 'How many members the tribes advisory council consists to advise on welfare and advancement of the scheduled tribes?  ' ,
+	answer: '20' ,
+	options: [
+		"10",
+		"15",
+		"20",
+		"25"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The Indian Institute of Management Act was enacted in which year?  ' ,
+	answer: '2017' ,
+	options: [
+		"2016",
+		"2017",
+		"2018",
+		"2019"
+		]
+	},
+]</script><script src="./script.js"></script></html>

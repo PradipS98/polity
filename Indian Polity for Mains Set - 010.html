@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 010'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which article of the Constitution of India mentions about the language to be used in the Supreme Court and in the High Courts and for Acts, Bills?  ' ,
+	answer: 'Article 348' ,
+	options: [
+		"Article 347",
+		"Article 348",
+		"Article 349",
+		"Article 350"
+		]
+	},
+	{
+	numb: 2,
+	question: 'From which of the areas of special knowledge, the Governor nominates one-sixth of the members of the state legislative council?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Cooperative movement",
+		"Science",
+		"Literature",
+		"All of the above"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Who appoints the banking ombudsman?  ' ,
+	answer: 'Reserve Bank of India' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Reserve Bank of India",
+		"Parliament"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which among the following committees recommends allocation of time for discussion on various items in a house of Parliament?  ' ,
+	answer: 'Business Advisory Committee' ,
+	options: [
+		"Business Advisory Committee",
+		"Rules Committee",
+		"Committee on Subordinate Legislation",
+		"Committee on Papers Laid on the Table"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following launched a robust Election Expenditure Monetary System mechanism to curb the influence of money power in elections?  ' ,
+	answer: 'Election Commission' ,
+	options: [
+		"Election Commission",
+		"Parliament",
+		"President",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Mines and Minerals (Regulation and Development) Act, 1957 is applicable to which of the following?1. Minor minerals2. Atomic minerals3. Iron ore4. LimestoneSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which Constitutional Amendment Act restricted the power of Parliament to extend a proclamation of President’s Rule beyond one year?  ' ,
+	answer: '44th' ,
+	options: [
+		"42nd",
+		"44th",
+		"46th",
+		"48th"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What is the sanctioned strength of Central Administrative Tribunal (CAT) excluding the chairman?  ' ,
+	answer: '65' ,
+	options: [
+		"64",
+		"65",
+		"66",
+		"67"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which group of central services consists of clerical personnel?  ' ,
+	answer: 'Group C' ,
+	options: [
+		"Group A",
+		"Group B",
+		"Group C",
+		"Group D"
+		]
+	},
+	{
+	numb: 10,
+	question: 'In which of the following cases the property accrues to the government as there is no rightful owner?1. Escheat2. Lapse3. Bona vacantiaSelect the correct option from the codes given below:  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following statements is an incorrect statement about Finance Commission?  ' ,
+	answer: 'It sets interest rates, which determine the cost of borrowing and the return on savings' ,
+	options: [
+		"It lays down the principles that govern the grants-in-aid to the states by the Centre",
+		"It suggest the measures needed to augment the consolidated fund of a state and to supplement the resources of the panchayats and the Municipalities in the state",
+		"It sets interest rates, which determine the cost of borrowing and the return on savings",
+		"The Chairperson and four other members of Finance Commission are appointed by the President"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which article contains provisions regarding removal and suspension of a member of a Public Service Commission?  ' ,
+	answer: 'Article 317' ,
+	options: [
+		"Article 317",
+		"Article 318",
+		"Article 319",
+		"Article 320"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which section of Indian Penal Code relates to Sedition?  ' ,
+	answer: 'Section 124A' ,
+	options: [
+		"Section 123",
+		"Section 124A",
+		"Section 125",
+		"Section 126"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who administers oath of office and secrecy to the Chief Minister?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Governor",
+		"Chief Justice of India",
+		"Chief Justice of concerned High Court"
+		]
+	},
+	{
+	numb: 15,
+	question: 'In which year was the Real Estate (Regulation and Development) Act enacted?  ' ,
+	answer: '2016' ,
+	options: [
+		"2015",
+		"2016",
+		"2017",
+		"2018"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who among the following has been given the power by the Constitution of India to “Impose Reasonable Restrictions” on the fundamental rights?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Parliament",
+		"Supreme Court",
+		"Both Parliament & Supreme Court"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who among the following determines the qualifications which shall be requisite for appointment as members of the Finance Commission in India?  ' ,
+	answer: 'Parliament by an act' ,
+	options: [
+		"President of India",
+		"Council of Ministers",
+		"Parliament by an act",
+		"Union Cabinet"
+		]
+	},
+	{
+	numb: 18,
+	question: 'How much deposit has to be made by a candidate contesting election to Lok Sabha as security?  ' ,
+	answer: 'Rs. 25,000' ,
+	options: [
+		"Rs. 10,000",
+		"Rs. 15,000",
+		"Rs. 20,000",
+		"Rs. 25,000"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following act had set provisions for Electoral Trusts under the Income Tax Act 1961?  ' ,
+	answer: 'Finance Act of 2009' ,
+	options: [
+		"Finance Act of 2006",
+		"Finance Act of 2009",
+		"Finance Act of 2011",
+		"Finance Act of 2015"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who determines the conditions of service and tenure of office of the election commissioners and the regional commissioners of Election Commission of India?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Prime Minister",
+		"Speaker"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Who decides the salary and allowances of the Chief Minister?  ' ,
+	answer: 'State Legislature' ,
+	options: [
+		"President",
+		"Governor",
+		"Parliament",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 22,
+	question: 'In which year a committee was constituted under U.N. Dhebar to report on the administration of the scheduled areas and the welfare of the STs in the states?  ' ,
+	answer: '1960' ,
+	options: [
+		"1955",
+		"1960",
+		"1965",
+		"1970"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which among the following freedoms guaranteed by Constitution of India includes the right to know and the right to be informed as implied rights?  ' ,
+	answer: 'Freedom of speech and expression' ,
+	options: [
+		"Freedom of speech and expression",
+		"Freedom to practise any profession",
+		"Freedom of assembly",
+		"Freedom to move freely throughout the territory of India"
+		]
+	},
+	{
+	numb: 24,
+	question: 'In which of the following cases the governor has situational discretion?1. Appointment of chief minister when no party has a clear-cut majority.2. Dismissal of the council of ministers when it cannot prove the confidence of the state legislative assembly.3. Dissolution of the state legislative assembly even if the council of ministers has majority.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Dr. BR Ambedkar was elected to constituent assembly of undivided India from which among the following ?  ' ,
+	answer: 'West Bengal' ,
+	options: [
+		"United provinces",
+		"West Bengal",
+		"The Bombay Presidency",
+		"Punjab"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The IPC which was passed in year 1860 consisted of how many chapters?  ' ,
+	answer: '23' ,
+	options: [
+		"23",
+		"24",
+		"25",
+		"26"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who can revoke National Emergency?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Council of MInisters",
+		"None of the above"
+		]
+	},
+	{
+	numb: 28,
+	question: 'In which year Supreme Court ruled that the bodily autonomy has within its ambit sexual orientation of an individual and comes under right to privacy?  ' ,
+	answer: '2017' ,
+	options: [
+		"2015",
+		"2016",
+		"2017",
+		"2018"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The concept of Judicial Review in India is adopted from the Constitution of which country?  ' ,
+	answer: 'USA' ,
+	options: [
+		"USA",
+		"Germany",
+		"USSR",
+		"Australia"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who among the following was the first chairman of the National Commissionfor Women?  ' ,
+	answer: 'Jayanti Patnaik' ,
+	options: [
+		"Mohini Giri",
+		"Dr. Poornima Advani",
+		"Dr. Girija Vyas",
+		"Jayanti Patnaik"
+		]
+	},
+]</script><script src="./script.js"></script></html>

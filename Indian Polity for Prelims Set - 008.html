@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 008'
+let questions = [
+	{
+	numb: 1,
+	question: 'By which of the following method, Prime Minister of India is selected?  ' ,
+	answer: 'Appointment' ,
+	options: [
+		"Election",
+		"Appointment",
+		"Nomination",
+		"Selection"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following subjects are not included in concurrent list orour&apos;constitution-  ' ,
+	answer: 'Share market and future market' ,
+	options: [
+		"Labor union",
+		"Share market and future market",
+		"Conservation of wild animals and birds",
+		"Forest"
+		]
+	},
+	{
+	numb: 3,
+	question: 'At the time of enactment of the Constitution, which one of the following ideals was not included in the preamble?  ' ,
+	answer: 'Socialist' ,
+	options: [
+		"Liberty",
+		"Equality",
+		"Socialist",
+		"Justice"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who is the Supreme Commander in Chief of Defence Forces of the country?  ' ,
+	answer: 'President' ,
+	options: [
+		"Defence Minister",
+		"Prime Minister",
+		"Senior of all three forces",
+		"President"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who organizes the election process for the post of President of India?  ' ,
+	answer: 'Election Commission of India' ,
+	options: [
+		"Vice-President of India",
+		"Election Commission of India",
+		"Chief Justice of India",
+		"Attorney General of India"
+		]
+	},
+	{
+	numb: 6,
+	question: '"United Nations Organization" is listed in the ________ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Union' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 7,
+	question: '"Trade unions" is listed in the,______ list given in the Seventh Scliedule of the Constitution of India.  ' ,
+	answer: 'Concurrent' ,
+	options: [
+		"Union",
+		"Global",
+		"State",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What is meant when the Constitution declare India "Secular State"?  ' ,
+	answer: 'The state regards religions as a private affairs of the citizen and does not discriminate on this basis' ,
+	options: [
+		"Religious worship is not allowed",
+		"Religions are patronised by the State",
+		"The state regards religions as a private affairs of the citizen and does not discriminate on this basis",
+		"None of these"
+		]
+	},
+	{
+	numb: 9,
+	question: 'In which Amendment, the words &apos;Socialist&apos;, Secular&apos; and &apos;Unity and Integrity of the Nation wereadded to the Premable of constitution of India?  ' ,
+	answer: '42nd' ,
+	options: [
+		"42nd",
+		"44th",
+		"52nd",
+		"None of them"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which of these is not a language in India?  ' ,
+	answer: 'Sikh' ,
+	options: [
+		"Sindhi",
+		"Sikh",
+		"Kannada",
+		"Konkani"
+		]
+	},
+	{
+	numb: 11,
+	question: 'What is the retirement age of the President?  ' ,
+	answer: 'No age limit' ,
+	options: [
+		"70 years",
+		"75 years",
+		"80 years",
+		"No age limit"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Vice-President is-  ' ,
+	answer: 'Not a member of any house' ,
+	options: [
+		"Member of Lok Sabha",
+		"Member of Rajya Sabha",
+		"Member of any house",
+		"Not a member of any house"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which item out of the following is contained in the concurrent list?  ' ,
+	answer: 'Trade Unions' ,
+	options: [
+		"Trade Unions",
+		"Agriculture",
+		"Tolls",
+		"Markets and Fairs"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who proposed the Preamble before the drafting committe of the Constitution?  ' ,
+	answer: 'Jawaharlal Nehru' ,
+	options: [
+		"Jawaharlal Nehru",
+		"B.R. Ambedkar",
+		"B.N. Rao",
+		"Mahatma Gandhi"
+		]
+	},
+	{
+	numb: 15,
+	question: '"Reserve Bank of India" is listed in the _______ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Union' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The first country which adopted Preamble for its written constitution-  ' ,
+	answer: 'USA' ,
+	options: [
+		"USA",
+		"India",
+		"Britain",
+		"Canada"
+		]
+	},
+	{
+	numb: 17,
+	question: 'A Secular State is one which-  ' ,
+	answer: 'Has no religion of its own' ,
+	options: [
+		"Has no religion of its own",
+		"Is irreligious",
+		"Is anti-religion",
+		"Takes into consideration the religious sentiments of the people"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following schedules contains special provisions for the administration of tribal areas in the four north-eastern states of Assam, Meghalaya, Tripura and Mizoram-  ' ,
+	answer: 'Sixth schedule' ,
+	options: [
+		"First schedule",
+		"Second schedule",
+		"Third schedule",
+		"Sixth schedule"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who administers the oath of office to the President?  ' ,
+	answer: 'Chief Justice of India' ,
+	options: [
+		"Chief Justice of India",
+		"Speaker of Lok Sabha",
+		"Vice-President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Seventh schedule of the Constitution of India deals with-  ' ,
+	answer: 'Distribution of power between the Union and the States' ,
+	options: [
+		"Allocation of Seats in the Council of States",
+		"Distribution of power between the Union and the States",
+		"Power and Authority of the Municipalities",
+		"Powers of the Governor of the State"
+		]
+	},
+	{
+	numb: 21,
+	question: '"Prevention of cruelty to animals" is listed in the ________ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Concurrent' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 22,
+	question: '"Relief of the disabled and unemployable" is listed in the ________ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'State' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Article-60 of the Indian Constitution refers to-  ' ,
+	answer: 'Oath of the President' ,
+	options: [
+		"Election of the president of India",
+		"Oath of the President",
+		"Impeachment of the President",
+		"Vice President of India"
+		]
+	},
+	{
+	numb: 24,
+	question: '"Taxes on lands and buildings" is listed in the ______ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'State' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Who appoints the Attorney General of India?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Chief Minister of India",
+		"President of India",
+		"Law Minister",
+		"Prime Minister of India"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who chairs the meeting of Council of Ministers?  ' ,
+	answer: 'Prime Minister' ,
+	options: [
+		"Prime Minister",
+		"President",
+		"Cabinet Secretary",
+		"Speaker of Lok Sabha"
+		]
+	},
+	{
+	numb: 27,
+	question: 'In India, Prime Minister can hold his post till, he has-  ' ,
+	answer: 'Confidence of Lok Sabha' ,
+	options: [
+		"Support of armed forces",
+		"Confidence of Rajya Sabha",
+		"Confidence of Lok Sabha",
+		"Support of people"
+		]
+	},
+	{
+	numb: 28,
+	question: 'What is the age limit to contest for the post of the president of India?  ' ,
+	answer: '35 years' ,
+	options: [
+		"25 years",
+		"30 years",
+		"35 years",
+		"18 years"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Where can we see the values of Indian democracy in the constitution?  ' ,
+	answer: 'Preamble' ,
+	options: [
+		"Preamble",
+		"Part-3",
+		"Part-4",
+		"Part-1"
+		]
+	},
+	{
+	numb: 30,
+	question: 'What is the term of the appointment of Comptroller and Auditor General of India?  ' ,
+	answer: '6 years or upto the age of 65 years whichever is earlier' ,
+	options: [
+		"6 years",
+		"Upto the age of 65 years",
+		"6 years or upto the age of 65 years whichever is earlier",
+		"Upto the age of 64 years"
+		]
+	},
+]</script><script src="./script.js"></script></html>

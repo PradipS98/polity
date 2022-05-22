@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 023'
+let questions = [
+	{
+	numb: 1,
+	question: 'In the Constitution of which country the residuary powers are left with the States?  ' ,
+	answer: 'US' ,
+	options: [
+		"Canada",
+		"India",
+		"US",
+		"None of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following is not a member of the Zonal Councils?  ' ,
+	answer: 'Members of State Legislative Council' ,
+	options: [
+		"Home minister of Central government",
+		"Chief ministers of all the States in the zone",
+		"Administrator of each union territory in the zone",
+		"Members of State Legislative Council"
+		]
+	},
+	{
+	numb: 3,
+	question: 'With reference to the Scheduled areas, who among the following is empowered to direct that an act of Parliament does not apply to a scheduled area?  ' ,
+	answer: 'Governor of the state' ,
+	options: [
+		"President of India",
+		"Governor of the state",
+		"Parliament of India",
+		"Legislature of the State"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Using powers enshrined in Articles 2 and 3 of the Constitution, the parliament can do which of the following?  ' ,
+	answer: 'All of above' ,
+	options: [
+		"Admit new territories as new state of India",
+		"Split or merge existing Indian states",
+		"Alter the names and boundaries of existing Indian States",
+		"All of above"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which act extended the principle of communal representation by providing separate electorates for depressed classes?  ' ,
+	answer: 'Government of India Act, 1935' ,
+	options: [
+		"Indian Councils Act, 1909",
+		"Government of India Act, 1919",
+		"Indian Independence Act, 1947",
+		"Government of India Act, 1935"
+		]
+	},
+	{
+	numb: 6,
+	question: 'What is the maximum period of operation of a Financial Emergency?  ' ,
+	answer: 'Indefinitely till it is revoked' ,
+	options: [
+		"Three months",
+		"Six months",
+		"One year",
+		"Indefinitely till it is revoked"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who coined the term judicial activism?  ' ,
+	answer: 'Arthur Schlesinger Jr.' ,
+	options: [
+		"Montesquieu",
+		"Justice V.R. Krishna Iyer",
+		"Arthur Schlesinger Jr.",
+		"None of the above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following features of the Indian Constitution is not borrowed from Canadian Constitution?  ' ,
+	answer: 'Impeachment of the President' ,
+	options: [
+		"Federation with a strong Centre",
+		"Residuary powers with the Centre",
+		"Advisory Jurisdiction of Supreme Court",
+		"Impeachment of the President"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following statements are correct with respect to ministers of state?1. There is no provision in the Constitution for the system of legal responsibility of the minister in the states.2. Courts are barred from enquiring into the nature of advice rendered by the ministers to the governor.Select the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The doctrine of harmonious construction was propounded by Supreme Court in which of the following cases?  ' ,
+	answer: 'Kerala Education Bill (1957) Case' ,
+	options: [
+		"Kerala Education Bill (1957) Case",
+		"Venkataraman v. State of Madras (1966) Case",
+		"Golaknath & Ors vs State Of Punjab (1967) Case",
+		"Kesavananda Bharati vs the State of Kerala (1973) Case"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Economic and social planning comes under which of the following?  ' ,
+	answer: 'Concurrent List' ,
+	options: [
+		"Union List",
+		"State List",
+		"Concurrent List",
+		"None of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Goods and Services Tax (GST) was introduced through which amendment?  ' ,
+	answer: '101st' ,
+	options: [
+		"100th",
+		"101st",
+		"102nd",
+		"103rd"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The residuary powers under the Government of India Act, 1935 were given to?  ' ,
+	answer: 'Governor General / Viceroy' ,
+	options: [
+		"Secretary of the State",
+		"Governor General / Viceroy",
+		"Central Legislature",
+		"British Monarch"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who does the Governor consult for the disqualification of a members of the state legislature?  ' ,
+	answer: 'Election Commission' ,
+	options: [
+		"Prime Minister",
+		"Chief Minister",
+		"Election Commission",
+		"Chief Justice of the state high court"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who held the portfolio of External Affairs and Commonwealth relations in the first cabinet of free India?  ' ,
+	answer: 'Jawaharlal Nehru' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Sardar Vallabhbhai Patel",
+		"Dr. Rajendra Prasad",
+		"Maulana Abdul Kalam Azad"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who among the following was the first president of Constituent Assembly of India?  ' ,
+	answer: 'Dr. Sachchidananda Sinha' ,
+	options: [
+		"Dr. Sachchidananda Sinha",
+		"Dr. Rajendra Prasad",
+		"Professor Harendra Coomar Mookerjee",
+		"Dr. B R Ambedkar"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which article of the Indian Constitution provides for a Governor?  ' ,
+	answer: 'Article 153' ,
+	options: [
+		"Article 152",
+		"Article 153",
+		"Article 154",
+		"Article 156"
+		]
+	},
+	{
+	numb: 18,
+	question: 'How many Departmentally-Related Standing Committees (DRSCs) were created on the recommendation of the Rules Committee of the Lok Sabha in 1993?  ' ,
+	answer: '17' ,
+	options: [
+		"17",
+		"18",
+		"21",
+		"25"
+		]
+	},
+	{
+	numb: 19,
+	question: 'How many subjects are present in the State List of the Indian Constitution?  ' ,
+	answer: '61' ,
+	options: [
+		"58",
+		"59",
+		"60",
+		"61"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who is the is the ex officio president of the Indian Parliamentary Group?  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Chairman of Rajya Sabha",
+		"Speaker of Lok Sabha"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following amendment of the Constitution provided for alternative scheme of devolution of revenue between the Centre and states?  ' ,
+	answer: 'Constitution (80th) Amendment Act' ,
+	options: [
+		"Constitution (65th) Amendment Act",
+		"Constitution (80th) Amendment Act",
+		"Constitution (85th) Amendment Act",
+		"Constitution (89th) Amendment Act"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which among the following was not a Union Territory before it was accorded the status of Full Fledged state ?  ' ,
+	answer: 'Sikkim' ,
+	options: [
+		"Himachal Pradesh",
+		"Manipur",
+		"Tripura",
+		"Sikkim"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following form of justice is not mentioned in the Preamble of the Constitution of India?  ' ,
+	answer: 'Religious' ,
+	options: [
+		"Social",
+		"Economic",
+		"Religious",
+		"Political"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which among the following is correct regarding Directive Principles?  ' ,
+	answer: 'Positive Injunctions' ,
+	options: [
+		"Positive Injunctions",
+		"Negative Injunctions",
+		"Justifiable Injunctions",
+		"None of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following acts later led to creation of Zonal councils?  ' ,
+	answer: 'States Reorganization Act 1956' ,
+	options: [
+		"Government of India Act 1935",
+		"Indian Independence Act 1947",
+		"People’s Representation Act 1950",
+		"States Reorganization Act 1956"
+		]
+	},
+	{
+	numb: 26,
+	question: 'In which year was the Anandpur Sahib Resolution adopted by Akali Dal?  ' ,
+	answer: '1973' ,
+	options: [
+		"1970",
+		"1971",
+		"1972",
+		"1973"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who can promulgate ordinances for the governance of the state when the Parliament is not in session during President’s Rule?  ' ,
+	answer: 'The President' ,
+	options: [
+		"The Chief Justice of India",
+		"The Attorney General",
+		"The President",
+		"The Governor"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which amendment has provision for the reservation of up to 10% of seats for economically weaker sections of citizens?  ' ,
+	answer: '103rd' ,
+	options: [
+		"100th",
+		"101st",
+		"102nd",
+		"103rd"
+		]
+	},
+	{
+	numb: 29,
+	question: 'How many subjects are there in the Concurrent List of the Constitution of India?  ' ,
+	answer: '52' ,
+	options: [
+		"52",
+		"53",
+		"54",
+		"56"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Who is the is the constitutional head of the state?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Governor",
+		"Chief Minister",
+		"Chief Justice of High Court",
+		"President"
+		]
+	},
+]</script><script src="./script.js"></script></html>

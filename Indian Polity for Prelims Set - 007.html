@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 007'
+let questions = [
+	{
+	numb: 1,
+	question: 'Where is the objective of "Social justice" articulated in constitution?  ' ,
+	answer: 'Preamble' ,
+	options: [
+		"Article-14",
+		"Article-15",
+		"Article-16",
+		"Preamble"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Part-IV of Constitution of India deals with-  ' ,
+	answer: 'Directive Principles of State Policy' ,
+	options: [
+		"Fundamental Right",
+		"Citizenship",
+		"Directive Principles of State Policy",
+		"Union executive"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following term is not used in the preamble of the constitution-  ' ,
+	answer: 'Federal' ,
+	options: [
+		"Sovereign Democratic Republic",
+		"Socialist",
+		"Secular",
+		"Federal"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following is not mentioned in The Preamble of our constitution-  ' ,
+	answer: 'Adult suffrage' ,
+	options: [
+		"Justice",
+		"Fraternity",
+		"Equality of dignity",
+		"Adult suffrage"
+		]
+	},
+	{
+	numb: 5,
+	question: 'How many times has The Preamble for the constitution been amended-  ' ,
+	answer: '1 times' ,
+	options: [
+		"3 times",
+		"2 times",
+		"1 times",
+		"Never amended"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following is described as the &apos;Soul of the constitution&apos;?  ' ,
+	answer: 'Preamble' ,
+	options: [
+		"Fundamental Right",
+		"Fundamental Duties",
+		"Directive Principles for state Policy",
+		"Preamble"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following languages were added in 8th schedule later-  ' ,
+	answer: 'Sindhi, Konkani, Manipuri, Nepali' ,
+	options: [
+		"English, Sindhi, Marathi, Sanskrit",
+		"Sanskrit, Sindhi, Konkani, Manipuri",
+		"Sindhi, Konkani, Manipuri, Nepali",
+		"Marathi, Oriya, Konkani, Nepali"
+		]
+	},
+	{
+	numb: 8,
+	question: '_______ makes laws on matters included in Union List and Concurrent List.  ' ,
+	answer: 'Lok Sabha' ,
+	options: [
+		"Lok Sabha",
+		"Ministry of Defence",
+		"Prime Minister&apos;s Office",
+		"Securities and Exchange Board of India"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The term &apos;We&apos; in preamble means-  ' ,
+	answer: 'The People of India' ,
+	options: [
+		"Indian Gevernment",
+		"Supreme Court",
+		"Indian Parliament",
+		"The People of India"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which Schedule contains provisions regarding allocation of seats in Rajya Sabha?  ' ,
+	answer: 'Fourth Schedule' ,
+	options: [
+		"Fourth Schedule",
+		"Fifth Schedule",
+		"Ninth Schedule",
+		"Eleventh Schedule"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Match List-I (Parts of the Indian Constitution) with List-II (Provisions) and select the correct answer using the codes given below-<br>List I &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; List II<br>A. Part-IV(A)  &nbsp;&nbsp;&nbsp;&nbsp; 1. The Fundamental Duties<br>B. Part-VIII &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. The Union Territories<br>C. Part-IX &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3. The Panchayats<br>D. Part-IX(A) &nbsp;&nbsp;&nbsp; 4. The Municipalities  ' ,
+	answer: 'A-1, B-2, C-3, D-4' ,
+	options: [
+		"A-1, B-2, C-3, D-4",
+		"A-2, B-1, C-3, D-4",
+		"A-4, B-3, C-1, D-2",
+		"A-4, B-3, C-2, D-1"
+		]
+	},
+	{
+	numb: 12,
+	question: 'For which one of the following judgements of Supreme Court of India, the Kesavananda Bharti Vs State of India case is considered a landmark?  ' ,
+	answer: 'The basic structure of the Constitution, as defined in the Preamble, cannot be changed' ,
+	options: [
+		"The religion cannot be mobilised for political ends",
+		"Abolishing untouchability from the country",
+		"Right of life and liberty cannot be suspended under any circumstance",
+		"The basic structure of the Constitution, as defined in the Preamble, cannot be changed"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following subject is not in Union list-  ' ,
+	answer: 'Labor Union' ,
+	options: [
+		"Census",
+		"Banking",
+		"Labor Union",
+		"Foreign Debt"
+		]
+	},
+	{
+	numb: 14,
+	question: 'What is Popular Sovereignty-  ' ,
+	answer: 'Domination of representative of people' ,
+	options: [
+		"Domination of people",
+		"Domination of representative of people",
+		"Domination of Judiciary",
+		"Domination of Legislative"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Indian Constitution has how many Parts?  ' ,
+	answer: '22' ,
+	options: [
+		"22",
+		"32",
+		"42",
+		"52"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The Philosophy and values of the makers of constitution are reflected in-  ' ,
+	answer: 'The preamble' ,
+	options: [
+		"Fundamental rights",
+		"Directive principles of state policy",
+		"The preamble",
+		"Fundamental duties"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The term &apos;Fraternity&apos; in the Preamble of the Indian Constitution means a sense of-  ' ,
+	answer: 'Brotherhood' ,
+	options: [
+		"Friendliness",
+		"Statehood",
+		"Love and affection",
+		"Brotherhood"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following forms are/is described for India in the preamble of constitution-  ' ,
+	answer: 'A Sovereign, Socialist, Secular Democratic Republic' ,
+	options: [
+		"A Sovereign, Democratic, Republic",
+		"A Socialist, Democratic, Republic",
+		"A Sovereign, Socialist, Secular Democratic Republic",
+		"A Republic"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Liberalism is a symbol of-  ' ,
+	answer: 'Freedom of Social,Political and Economic aspects' ,
+	options: [
+		"Liberalization",
+		"Nature and Behaviour",
+		"Freedom of Social,Political and Economic aspects",
+		"Religious conservationism"
+		]
+	},
+	{
+	numb: 20,
+	question: '"Foreign jurisdiction" is listed in the ______ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Union' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 21,
+	question: '"Forests" is listed in the ________ list given in the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Concurrent' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 22,
+	question: 'In which part of the Constitution, details of citizenship are mentioned?  ' ,
+	answer: 'II' ,
+	options: [
+		"I",
+		"II",
+		"III",
+		"IV"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following item is in "concurrent list"-  ' ,
+	answer: 'Labor Union' ,
+	options: [
+		"Inter-state rivers",
+		"Labor Union",
+		"Citizenship",
+		"Local Govenance"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following attribute in the preamble states that No one should treat a fellow ciizen as inferior?  ' ,
+	answer: 'Fraternity' ,
+	options: [
+		"Justice",
+		"Liberty",
+		"Equality",
+		"Fraternity"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Indian Constitution has how many Articles?  ' ,
+	answer: '395' ,
+	options: [
+		"101",
+		"195",
+		"295",
+		"395"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which part of the Indian Constitution deals with Fundamental Rights?  ' ,
+	answer: 'Part-III' ,
+	options: [
+		"Part-I",
+		"Part-II",
+		"Part-III",
+		"Part-IV"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which Amendment Act introduced changes in the Preamble to the Indian Constitution?  ' ,
+	answer: 'The 42nd Amendment Act, 1976' ,
+	options: [
+		"The 3rd Amendment Act, 1975",
+		"The 40th Amendment Act, 1976",
+		"The 42nd Amendment Act, 1976",
+		"The 4th Amendment Act, 1979"
+		]
+	},
+	{
+	numb: 28,
+	question: 'According to our Constitution, India is-  ' ,
+	answer: 'A Secular State' ,
+	options: [
+		"A Religious State",
+		"A Secular State",
+		"A Capitalist State",
+		"A plutocratic State"
+		]
+	},
+	{
+	numb: 29,
+	question: '"Population control and family planning" is listed in the list given in the________ list of the Seventh Schedule in the Constitution of India.  ' ,
+	answer: 'Concurrent' ,
+	options: [
+		"Union",
+		"State",
+		"Global",
+		"Concurrent"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The order of the following words seen in Preamble is-<br> 1. DEMOCRATIC,<br> 2. SOCIALIST,<br> 3. SOVEREIGN,<br> 4. SECULAR,<br> 5. REPUBLIC  ' ,
+	answer: '3,2,4,1,5' ,
+	options: [
+		"3,2,4,1,5",
+		"2,3,4,1,5",
+		"3,2,1,4,5",
+		"3,1,2,5,4"
+		]
+	},
+]</script><script src="./script.js"></script></html>

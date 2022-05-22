@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 018'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which article of the Indian Constitution provides for the institution of Panchayati Raj?  ' ,
+	answer: 'Article-40' ,
+	options: [
+		"Artilce-36",
+		"Article-39",
+		"Article-40",
+		"Article-48"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The Panchayati Raj was first adopted by which of the following states?  ' ,
+	answer: 'Rajasthan' ,
+	options: [
+		"Haryana",
+		"Rajasthan",
+		"Madhya Pradesh",
+		"Karnataka"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Separation of the judiciary from the executive has been provided in one of the following parts of the Indian Constitution-  ' ,
+	answer: 'The Directive Principles of State Policy' ,
+	options: [
+		"The Preamble",
+		"The Fundamental Right",
+		"The Directive Principles of State Policy",
+		"The Seventh Schedule"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which Article of the Indian Constitution directs the State Governments to organise Village Panchayats?  ' ,
+	answer: 'Article-41' ,
+	options: [
+		"Article-32",
+		"Article-37",
+		"Article-41",
+		"Article-51"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following state had implemented the provision of removal of the elected members of local self-governance institutions-  ' ,
+	answer: 'Madhya Pradesh' ,
+	options: [
+		"Madhya Pradesh",
+		"Kerala",
+		"Haryana",
+		"Bihar"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Article-41 of the Indian Constitution "Right to work to education and to public assistance in certain cases" deals with?  ' ,
+	answer: 'The directive principles of state policy' ,
+	options: [
+		"The Union Government",
+		"The directive principles of state policy",
+		"The State Government",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Democratic Decentralization means-  ' ,
+	answer: 'Local Government' ,
+	options: [
+		"Union Government",
+		"Parliamentary Government",
+		"Democratic Government",
+		"Local Government"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The "Recall Provision" to removethe elected office bearers from the Local Self Government institution has been executed in-  ' ,
+	answer: 'Madhya Pradesh' ,
+	options: [
+		"Bihar",
+		"Kerala",
+		"Haryana",
+		"Madhya Pradesh"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Article-44 of the Indian Constitution "Uniform civil code for the citizens" deals with-  ' ,
+	answer: 'The directive principles of state policy' ,
+	options: [
+		"The directive principles of state policy",
+		"The Union Government",
+		"The State Government",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Which constitutional amendment has made Directive principles of state policy more important than fundamental rights?  ' ,
+	answer: '42nd' ,
+	options: [
+		"42nd",
+		"44rd",
+		"52th",
+		"56th"
+		]
+	},
+	{
+	numb: 11,
+	question: 'What is the structure of panchayati Raj?  ' ,
+	answer: 'Zilla Panchayat t Block Panchayat + Gram Panchayat Gram Sabha' ,
+	options: [
+		"Zilla Panchayat t Block Panchayat + Gram Panchayat Gram Sabha",
+		"Khap Panchayat + Zilla Panchayat t Block Panchayat + Gram Panchayat + Gram Sabha",
+		"Khap Panchayat + Zilla Panchayat + Block Panchayat t Gram Panchayat",
+		"Nagar Panchayat + Zilla Panchayat t Block Panchayat + Gram Panchayat + Gram Sabha"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Article-48(A) of the Indian Constitution "Protection and improvement of environment and safeguarding of forests and wild life" deals with?  ' ,
+	answer: 'the directive principles of state poli' ,
+	options: [
+		"The state Government",
+		"The Union Government",
+		"The fundamental rights of the Indian Citizen",
+		"the directive principles of state poli"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following article of Indian constitution is related with the declaration of a welfare state?  ' ,
+	answer: 'Article-39' ,
+	options: [
+		"Article-99",
+		"Article-39",
+		"Article-59",
+		"Article-69"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the article ensures that Directive principles of state policy cannot be enforced by any court?  ' ,
+	answer: 'Article-37' ,
+	options: [
+		"Article-31",
+		"Article-38",
+		"Article-37",
+		"Article-39"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which of the following ensures grassroot democracy in India-  ' ,
+	answer: 'Panchayati raj' ,
+	options: [
+		"Panchayati raj",
+		"Interstate council",
+		"President",
+		"CAG"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Under the Directive Principles of State Policy up to what age of the children they are expected to be provided free and compulsory education?  ' ,
+	answer: '14 years' ,
+	options: [
+		"14 years",
+		"15 years",
+		"16 years",
+		"18 years"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following Indian States first adopted the 3-tier Panchayati Raj system?  ' ,
+	answer: 'Rajasthan' ,
+	options: [
+		"Bihar",
+		"Uttar Pradesh",
+		"Rajasthan",
+		"Madhya Pradesh"
+		]
+	},
+	{
+	numb: 18,
+	question: ' Article-43(A) of the Indian Constitution "Participation of workers in management of industries" deals with?  ' ,
+	answer: 'The directive principles of state policy' ,
+	options: [
+		"The State Government",
+		"The Union Government",
+		"The directive principles of state policy",
+		"The fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 19,
+	question: 'If the Directive principles of state policy would have not been enforced by government where can the citizens go?  ' ,
+	answer: 'None of these' ,
+	options: [
+		"High court",
+		"Supreme court",
+		"National human rights commission",
+		"None of these"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Who is the head of Municipal Corporation?  ' ,
+	answer: 'Mayor' ,
+	options: [
+		"Prime Minister",
+		"Sarpanch",
+		"Governor",
+		"Mayor"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which of the following matter the Supreme Court upheld the importance of fundamental rights over directive principles of state policy?  ' ,
+	answer: 'Minerava Mills Case' ,
+	options: [
+		"Golaknath case",
+		"Keshavananda Bharti case",
+		"Minerava Mills Case",
+		"All of these"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Reservation for the Scheduled Castes andScheduled Tribes in the services has been provided in the Indian Constitution under-  ' ,
+	answer: 'Article-335' ,
+	options: [
+		"Article-375",
+		"Article-315",
+		"Article-335",
+		"Article-365"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Where is the Constitutional power located enabling the Central Government to legislate on cow slaughter?  ' ,
+	answer: 'Article-48 in the Directive Principles' ,
+	options: [
+		"Entry 17, List III in Schedule VII Prevention of Cruelty to Animals",
+		"Residuary Powers under Article 248",
+		"Emergency Powers",
+		"Article-48 in the Directive Principles"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who made this statement that "the Directive Principles of State Policy are like Bank Cheque whose payment is done by bank at his own will"?  ' ,
+	answer: 'K.T.Shah' ,
+	options: [
+		"K.T.Shah",
+		"K.M.Munshi",
+		"B.R.Ambedkar",
+		"Austin"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the followingis not an administrative function of a Village Panchayat?  ' ,
+	answer: 'Providing college education' ,
+	options: [
+		"Providing sanitation and drainage",
+		"Providing burial and cremation grounds",
+		"Providing college education",
+		"Maintenance of road"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Article-39(A) of the Indian Constitution "Equal justice and free legal aid" deals with?  ' ,
+	answer: 'the directive principles of state policy' ,
+	options: [
+		"the State Government",
+		"the directive principles of state policy",
+		"the Union Government",
+		"the fundamental rights of the Indian Citizen"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Uniform Civil Code is mentioned in which article of Indian Constitution?  ' ,
+	answer: '44' ,
+	options: [
+		"44",
+		"4",
+		"14",
+		"34"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which Article of the Indian constitution provides for the employer to give maternity benefits to its employees?  ' ,
+	answer: 'Article-42' ,
+	options: [
+		"Article-14",
+		"Article-42",
+		"Article-43",
+		"Article-44"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Programme for capacity building of Elected Women Representatives (EWRs)of panchayats has been launched at_____ .  ' ,
+	answer: 'Ranchi, Jharkhand' ,
+	options: [
+		"Nagaur, Rajasthan",
+		"Ranchi, Jharkhand",
+		"Patna, Bihar",
+		"Lucknow, Uttar Pradesh"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which directive principle has the direct impact of the moral philosophy of Mahatma Gandhi?  ' ,
+	answer: 'Ban on Cow Slaughter' ,
+	options: [
+		"Equal pay for equal work",
+		"Free Legal Aid and Advice",
+		"Ban on Cow Slaughter",
+		"Conservation of Historical Monuments"
+		]
+	},
+]</script><script src="./script.js"></script></html>

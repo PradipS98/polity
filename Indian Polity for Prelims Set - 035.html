@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 035'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following has the feature of dual citizenship?  ' ,
+	answer: 'Federal Government' ,
+	options: [
+		"Unitary Government",
+		"Federal Government",
+		"Parliamentary Government",
+		"President Ruled Government"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following is an Example of Unitary and Presidential system of governance Government?  ' ,
+	answer: 'France' ,
+	options: [
+		"USA",
+		"Canada",
+		"India",
+		"France"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The drafting committee wrote the Indian Constitution in which language ?  ' ,
+	answer: 'Only English' ,
+	options: [
+		"English and Hindi",
+		"Only English",
+		"English and Urdu",
+		"English,Hindi and Urdu"
+		]
+	},
+	{
+	numb: 4,
+	question: ' "Persons may change but rules should not change" is the principle of-  ' ,
+	answer: 'Constitutional Government' ,
+	options: [
+		"Absolute Monarchy",
+		"Constitutional Government",
+		"Unwritten Constitution",
+		"Republic"
+		]
+	},
+	{
+	numb: 5,
+	question: 'In a federal Government the states enjoy-  ' ,
+	answer: 'Powers given by the Constitution' ,
+	options: [
+		"Original powers",
+		"Powers delegated by the Centre",
+		"Powers given by the Constitution",
+		"Powers given by the people"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following is a feature of Presidential form of government?  ' ,
+	answer: 'All of these' ,
+	options: [
+		"It protects the freedom of people",
+		"It ensures the speedy execution of policies",
+		"Fix term stabilizes the system",
+		"All of these"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Indian Constitution is made up of how many words?  ' ,
+	answer: '80000' ,
+	options: [
+		"40000",
+		"60000",
+		"80000",
+		"120000"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Members of the Executive under Presidential System of Government-  ' ,
+	answer: 'Are not members of either House of Legislalure' ,
+	options: [
+		"Are drawn from both the Houses of Legislature",
+		"Are only form the popular House",
+		"Are not members of either House of Legislalure",
+		"Become members of Legislature after their appointment"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Local governance is the foundation of-  ' ,
+	answer: 'Democracy' ,
+	options: [
+		"Elite system",
+		"Secular state",
+		"Democracy",
+		"Reservation"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The Constituent Assembly of India was constituted on the scheme of-  ' ,
+	answer: 'Cabinet mission' ,
+	options: [
+		"Wavell plan",
+		"Cripps mission",
+		"August offer",
+		"Cabinet mission"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which of the following elements are necessary for a democratic system-  ' ,
+	answer: 'All of these' ,
+	options: [
+		"Free and unbiased election",
+		"Equality of opportunity",
+		"Protection of rights",
+		"All of these"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which among the following Articles came into force on 26th November 1949, the day the Indian Constitution was adopted?  ' ,
+	answer: 'Article 388' ,
+	options: [
+		"Article 388",
+		"Article 390",
+		"Article 387",
+		"Article 386"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who was the chairman of the Constituent Assembly of India-  ' ,
+	answer: 'Dr.Rajendra Prasad' ,
+	options: [
+		"Dr. B.Rambedkar",
+		"Dr.Rajendra Prasad",
+		"Dr. B.N. Rao",
+		"Pandit Jawaharlal Nehru"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following is not considered a Democracy?  ' ,
+	answer: 'China' ,
+	options: [
+		"USA",
+		"Norway",
+		"India",
+		"China"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which type of democracy do we follow in India?  ' ,
+	answer: 'Representative' ,
+	options: [
+		"Direct",
+		"Presidential",
+		"Representative",
+		"Dictatorship"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Democratic Socialism aims at-  ' ,
+	answer: 'bringing about Socialism through democratic' ,
+	options: [
+		"bringing about Socialism through peaceful means",
+		"bringing about Socialism through violent and peaceful means",
+		"bringing about Socialismthrough violent means",
+		"bringing about Socialism through democratic"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who presided over the first meeting of Indian constituent Assembly?  ' ,
+	answer: 'Saehehidandada Sinha' ,
+	options: [
+		"Dr. Rajendra Prasad",
+		"Saehehidandada Sinha",
+		"B.R Ambedkar",
+		"H.V. Kamath"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Emergency provisions in Indian Constitution has been taken from-  ' ,
+	answer: 'Government of India Act 1935' ,
+	options: [
+		"British constitution",
+		"Government of India Act 1935",
+		"Irish constitution",
+		"Japanese constitution"
+		]
+	},
+	{
+	numb: 19,
+	question: 'From where did India adopted the federal system with a strong centre?  ' ,
+	answer: 'Canada' ,
+	options: [
+		"United States of America",
+		"Canada",
+		"United Kingdom",
+		"France"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The convention that "once a speaker always a speaker" is followed in-  ' ,
+	answer: 'UK' ,
+	options: [
+		"UK",
+		"USA",
+		"France",
+		"India"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Who among the following was the Chairman of Fundamental Rights sub-Committee of the Constitutent Assembly?  ' ,
+	answer: 'J. B. Kripalani' ,
+	options: [
+		"J. B. Kripalani",
+		"Rajendra Prasad",
+		"B. R. Arnbedkar",
+		"Gopinath Bardoloi"
+		]
+	},
+	{
+	numb: 22,
+	question: 'When was the first Central Legislative Assembly constituted-  ' ,
+	answer: '1921' ,
+	options: [
+		"1922",
+		"1923",
+		"1921",
+		"1920"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Indian federalism is closer to-  ' ,
+	answer: 'Canada' ,
+	options: [
+		"Nigeria",
+		"Australia",
+		"Canada",
+		"USA"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The division of power and Independence of judiciary are two important features of-  ' ,
+	answer: 'Federal character of government' ,
+	options: [
+		"Democratic character of government",
+		"Federal character of government",
+		"Socialist character of government",
+		"Unitary character of government"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The Indian constitution came into force on-  ' ,
+	answer: '26 January, 1950' ,
+	options: [
+		"26 January, 1950",
+		"26 January, 1952",
+		"15 August, 1948",
+		"31 Novembar,1949"
+		]
+	},
+	{
+	numb: 26,
+	question: 'January 26 selected as the date for the inauguration of the Constitution, because-  ' ,
+	answer: 'The Congress had observed it as the Independence Day in 1930' ,
+	options: [
+		"It was considered to be an auspicious day",
+		"On that day the Quit India Movement was started in 1942",
+		"The Congress had observed it as the Independence Day in 1930",
+		"None of these"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The serious fault in federal form of govemment is-  ' ,
+	answer: 'The Threat of separatism' ,
+	options: [
+		"The Threat of separatism",
+		"Authoritarian Governance",
+		"Ignorance to Local Issues",
+		"Inefficient Administration"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Where do we find the ideals of Indian democracy in the constitution?  ' ,
+	answer: 'The Preamble' ,
+	options: [
+		"The Preamble",
+		"Part III",
+		"Part IV",
+		"Part I"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The system of Budget was introduced in India during the Viceroyalty of-  ' ,
+	answer: 'Canning' ,
+	options: [
+		"Canning",
+		"Dalhousie",
+		"Ripon",
+		"Elgin"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following is not a feature of Indian Constituion?  ' ,
+	answer: 'Presidential form of Government' ,
+	options: [
+		"Parliamentary form of Government",
+		"Independence of Judiciary",
+		"Presidential form of Government",
+		"Federal Government"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 022'
+let questions = [
+	{
+	numb: 1,
+	question: 'The members of the Rajya Sabha are  ' ,
+	answer: 'elected by the members of the state legislative assemblies' ,
+	options: [
+		"directly elected by the people on the basis of universal adult franchise",
+		"elected by the members of the state legislative assemblies",
+		"elected by the members of the state legislative councils",
+		"elected by the members of the state legislative councils and state legislative assemblies"
+		]
+	},
+	{
+	numb: 2,
+	question: 'The president addresses both the Houses of Parliament assembled together  ' ,
+	answer: 'first session after each general election and the first session of each year' ,
+	options: [
+		"during emergency session summoned for the purpose",
+		"every session",
+		"first session after each general election and the first session of each year",
+		"any session"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The oath of office is administered to the Governor by the  ' ,
+	answer: 'The Chief justice of high court' ,
+	options: [
+		"The Chief justice of India",
+		"The President",
+		"The Chief justice of high court",
+		"The Speaker of legislative assembly"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The powers to legislate with respect to any matter not enumerated in any of the three lists are mentioned as residuary powers. Which of the following is empowered to determine finally as to whether or not a particular matter falls in this category?  ' ,
+	answer: 'Lok Sabha' ,
+	options: [
+		"Lok Sabha",
+		"Judiciary",
+		"Rajya Sabha",
+		"Parliament"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The position of a chief minister is  ' ,
+	answer: 'similar to that of the prime minister' ,
+	options: [
+		"similar to that of the prime minister",
+		"identical to that of the president",
+		"a combination of the position of the prime minister and president",
+		"not constitutional"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The power of Supreme Court of India to decide the dispute between the centre and states falls under its  ' ,
+	answer: 'original jurisdiction' ,
+	options: [
+		"advisory jurisdiction",
+		"appellate jurisdiction",
+		"original jurisdiction",
+		"constitutional jurisdiction"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Parliament can restrict or abrogate by law, fundamental rights with respect to  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"the members of the armed forces",
+		"the forces charged with the maintenance of public order",
+		"the persons employed in any bureau or other organization established by the state for purpose of int",
+		"All of the above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The president can dissolve the Lok Sabha on  ' ,
+	answer: 'advice of the prime minister' ,
+	options: [
+		"advice of the prime minister",
+		"advice of the chief justice of India",
+		"recommendation of Lok Sabha",
+		"recommendation of the Rajya Sabha"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The parliament can legislate on a subject in the state list  ' ,
+	answer: 'All the above' ,
+	options: [
+		"if the Rajya Sabha passes a resolution by two-third majority declaring the subject in state list of",
+		"if the legislatures of two or more states recommend to the Parliament to legislate on such a subject",
+		"for the implementation of treaties and agreements with foreign powers",
+		"All the above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The president can advance money to meet unforeseen expenses, pending authorization by Parliament, from  ' ,
+	answer: 'the Contingency Fund' ,
+	options: [
+		"the Consolidated Fund of India",
+		"the Contingency Fund",
+		"both the above funds",
+		"None of the above"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The position of the president which was undermined by the 42nd amendment was subsequently somewhat retrieved by the  ' ,
+	answer: '44th amendment' ,
+	options: [
+		"44th amendment",
+		"45th amendment",
+		"26th amendment",
+		"None of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The members of the parliamentary committee  ' ,
+	answer: 'are taken from various groups and parties in Parliament in proportion to their respective strength' ,
+	options: [
+		"are appointed by the president in consultation with the prime minister",
+		"are appointed by the president on the recommendation of the speaker",
+		"are taken from various groups and parties in Parliament in proportion to their respective strength",
+		"both (b) and (c)"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The office of the prime minister of India  ' ,
+	answer: 'has a constitutional basis' ,
+	options: [
+		"has a constitutional basis",
+		"has a statutory basis",
+		"has conventional basis",
+		"None of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The minimum age of the voter in India is  ' ,
+	answer: '18 years' ,
+	options: [
+		"15 years",
+		"18 years",
+		"21 years",
+		"25 years"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The office of the president can fall vacant due to  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"resignation",
+		"death",
+		"removal",
+		"All of the above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The president demand for further reforms, attended with the dislocation caused by the non-cooperation movement, led the British government to appoint a Statutory Commission in 1927. This commission was headed by  ' ,
+	answer: 'Sir John Simon' ,
+	options: [
+		"Sir John Simon",
+		"Lord Chelmsford",
+		"Lord Minto",
+		"E.S. Montague"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The pre-requisite for the enforcement of directive principles of the state policy is  ' ,
+	answer: 'adequate resources' ,
+	options: [
+		"an effective, hones government",
+		"socialist government",
+		"active opposition",
+		"adequate resources"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The members of the Rajya Sabha are elected for a term  ' ,
+	answer: 'of six years' ,
+	options: [
+		"of six years",
+		"determined by the state legislative assembly of a state",
+		"of four years",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Preamble enshrines the ideals of liberty, equality and fraternity - ideals inspired by the  ' ,
+	answer: 'French Revolution' ,
+	options: [
+		"Russian Revolution",
+		"Irish Revolution",
+		"French Revolution",
+		"US Constitution"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The members of a State Commission can be removed by the  ' ,
+	answer: 'president on a report by the Supreme Court' ,
+	options: [
+		"governor on a report by the Supreme Court",
+		"governor on a resolution passed by Parliament",
+		"president on a report by the Supreme Court",
+		"president on a resolution passed by Parliament"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The president can expend out of the Contingency Fund of India  ' ,
+	answer: 'without the approval of the Parliament' ,
+	options: [
+		"only with the approval of the Parliament",
+		"without the approval of the Parliament",
+		"only in the case of the national calamities",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The power to prorogue the Lok Sabha rests with  ' ,
+	answer: 'the president' ,
+	options: [
+		"the speaker",
+		"the president",
+		"the prime minister",
+		"the minister for parliamentary affairs"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The Parliament enjoys legislative power over subjects in  ' ,
+	answer: 'both union and concurrent list' ,
+	options: [
+		"the union list only",
+		"the concurrent list only",
+		"both union and concurrent list",
+		"all the three lists, viz. union list, state list and the concurrent list"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The phrase &apos;bicameral legislature&apos; means  ' ,
+	answer: 'a legislature consisting of a lower and an upper chamber' ,
+	options: [
+		"a single assembly",
+		"an elected legislature",
+		"a legislature consisting of a lower and an upper chamber",
+		"parliamentary system of government"
+		]
+	},
+	{
+	numb: 25,
+	question: 'The name of a candidate for the office of president of India may be proposed by  ' ,
+	answer: 'any ten members of the Electoral College' ,
+	options: [
+		"any five citizens of India",
+		"any five members of the Parliament",
+		"any one member of the Electoral College",
+		"any ten members of the Electoral College"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The Objectives Resolution which laid down the main objectives to guide the deliberations of the Assembly was moved by  ' ,
+	answer: 'Jawaharlal Nehru' ,
+	options: [
+		"Sardar Patel",
+		"Jawaharlal Nehru",
+		"K.M. Munshi",
+		"B.R. Ambedkar"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The minimum number of members that must be present to hold the meeting of the Lok Sabha is  ' ,
+	answer: 'one-tenth of the total membership of the Houses' ,
+	options: [
+		"one-fourth of the total membership",
+		"one-tenth of the total membership of the Houses",
+		"50 percent strength of the Lok Sabha",
+		"at least 100 members"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The members of Lok Sabha are  ' ,
+	answer: 'directly elected by the people' ,
+	options: [
+		"directly elected by the people",
+		"indirectly elected",
+		"nominated",
+		"partly elected and partly nominated"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The oath of office is administered to the members of state council of ministers by  ' ,
+	answer: 'the governor' ,
+	options: [
+		"the governor",
+		"the chief minister",
+		"chief justice of the state high court",
+		"speaker of legislative assembly"
+		]
+	},
+	{
+	numb: 30,
+	question: 'The president can dismiss a member of the council of ministers  ' ,
+	answer: 'on the recommendation of the prime ministers' ,
+	options: [
+		"on his own",
+		"on the recommendation of the prime ministers",
+		"only under emergency conditions",
+		"with the consent of the speaker"
+		]
+	},
+]</script><script src="./script.js"></script></html>

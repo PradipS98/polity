@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 028'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which type of government is based on free and fair election where those currently in power have a fair chance of losing?  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Democratic",
+		"Autocratic",
+		"Monarchic",
+		"Authoritarian"
+		]
+	},
+	{
+	numb: 2,
+	question: 'In which of the following system, few rules over all-  ' ,
+	answer: 'Oligarchy' ,
+	options: [
+		"Plutocracy",
+		"Oligarchy",
+		"Autocracy",
+		"Democracy"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Who said "Adolf Hitler is Germany and Getmany is Adolf Hitler. He who is committed to Hitler is committed to Germany"-  ' ,
+	answer: 'R.Hess' ,
+	options: [
+		"R.Hess",
+		"Mussolini",
+		"Hitler",
+		"Communist international"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Planning Commission of India was-  ' ,
+	answer: 'A Non-Constitutional Body' ,
+	options: [
+		"A Constitutional Body",
+		"A Free and Autonomous Body",
+		"A Statutory Body",
+		"A Non-Constitutional Body"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following High Court had, legalized the homosexual relations in India in 2009-  ' ,
+	answer: 'Delhi' ,
+	options: [
+		"Mizoram",
+		"Goa",
+		"Delhi",
+		"Chandigarh"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which among the following describes Public Interest group?  ' ,
+	answer: 'Organisation that promote common interest' ,
+	options: [
+		"Organizations that promote interest of particular section of group",
+		"Organisation that promote common interest",
+		"A Struggle launched for resolution of a social problem",
+		"Organisation that mobilizes people with a view to win political power"
+		]
+	},
+	{
+	numb: 7,
+	question: '"Liberty consists in obedience to the general will" whose statement is this-  ' ,
+	answer: 'Rousseau' ,
+	options: [
+		"Hobbs",
+		"Rousseau",
+		"Green",
+		"Laski"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following is necessary for the development of Democratic Institutions-  ' ,
+	answer: 'Respect to Individual Rights' ,
+	options: [
+		"Agricultural Economy",
+		"Single-Party System",
+		"Armed Forces",
+		"Respect to Individual Rights"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following body was not set up by constitutional provisions-  ' ,
+	answer: 'Planning Commission' ,
+	options: [
+		"Finance Commission",
+		"Planning Commission",
+		"Union Public Service Commission",
+		"Election Commission"
+		]
+	},
+	{
+	numb: 10,
+	question: 'What is the meaning of ordinary law-  ' ,
+	answer: 'Law made and enforced by government' ,
+	options: [
+		"Law made by High Court",
+		"Law made by common people",
+		"Law made by Supreme Court",
+		"Law made and enforced by government"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Whose statement is this "Man is born free but always in shackles"-  ' ,
+	answer: 'Rousseau' ,
+	options: [
+		"Locke",
+		"Rousseau",
+		"Bentham",
+		"Robert mill"
+		]
+	},
+	{
+	numb: 12,
+	question: 'When was the Planning Commission set up-  ' ,
+	answer: '1950' ,
+	options: [
+		"1950",
+		"1951",
+		"1952",
+		"1949"
+		]
+	},
+	{
+	numb: 13,
+	question: 'When did Sri Lank, ganed its independence?  ' ,
+	answer: '4 February, 1948' ,
+	options: [
+		"4 February, 1948",
+		"16 March, 1962",
+		"26 March, 1972",
+		"15 February, 1938"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who among the following is the ex-officio chairman of the NITI Aayog in India?  ' ,
+	answer: 'Prime Minister' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Vice President",
+		"Finance Minister"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who said this "Good citizen makes good state and bad citizen makes bad state"-  ' ,
+	answer: 'Plato' ,
+	options: [
+		"Plato",
+		"Rousseau",
+		"Aristotle",
+		"Laski"
+		]
+	},
+	{
+	numb: 16,
+	question: 'What is the meaning of &apos;Right to Vote&apos;-  ' ,
+	answer: 'Right to vote to elect a representative in election' ,
+	options: [
+		"To pass such laws which can punish people",
+		"Right to vote to elect a representative in election",
+		"Right to vote rich",
+		"Right to vote poor only"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who among the following is constitutionallyempowered to alter Scheduled Area?  ' ,
+	answer: 'President of India' ,
+	options: [
+		"Supreme Court of India",
+		"High Court of State",
+		"Prime Minister of India",
+		"President of India"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The form of power structure in which power effectively rests with a faction of persons or families is called-  ' ,
+	answer: 'Oligarchy' ,
+	options: [
+		"Tyranny",
+		"Fascism",
+		"Oligarchy",
+		"Plutocracy"
+		]
+	},
+	{
+	numb: 19,
+	question: 'In which of the following American President had visited to China in 1972 to strengthen diplomatic relations-  ' ,
+	answer: 'Richard Nixon' ,
+	options: [
+		"Richard Nixon",
+		"George Bush (senior)",
+		"D.Eisenhower",
+		"J.F. Kennady"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the following countries is governed by a King-  ' ,
+	answer: 'Saudi Arabia' ,
+	options: [
+		"Afghanistan",
+		"Iran",
+		"Iraq",
+		"Saudi Arabia"
+		]
+	},
+	{
+	numb: 21,
+	question: '"Man is a social animal" whose statement is this-  ' ,
+	answer: 'Aristotle' ,
+	options: [
+		"Plato",
+		"Aristotle",
+		"Rousseau",
+		"Laski"
+		]
+	},
+	{
+	numb: 22,
+	question: '"Oh! Disrespectable democracy! I love you" whose statement is this-  ' ,
+	answer: 'Carpentar' ,
+	options: [
+		"G.B.Shaw",
+		"Carpentar",
+		"Lord Bryce",
+		"Appa Dorai"
+		]
+	},
+	{
+	numb: 23,
+	question: 'In which country political theory of &apos;Fascism&apos; started?  ' ,
+	answer: 'Russia' ,
+	options: [
+		"Japan",
+		"Italy",
+		"Russia",
+		"China"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who was in favour of a democracy without parties-  ' ,
+	answer: 'Jay Prakash Narayan' ,
+	options: [
+		"Jay Prakash Narayan",
+		"Bhupendra Nath Dutta",
+		"M.N.Roy",
+		"Jawaharlal Nehru"
+		]
+	},
+	{
+	numb: 25,
+	question: 'What is multiple voting system-  ' ,
+	answer: 'Registered voter votes once and other special eligible voters vote more than once' ,
+	options: [
+		"Every citizen votes three different votes",
+		"Only high officials vote for more than once",
+		"Candidates vote more than one",
+		"Registered voter votes once and other special eligible voters vote more than once"
+		]
+	},
+	{
+	numb: 26,
+	question: 'When power is shared among different organs of government, then it known as-  ' ,
+	answer: 'Separation of powers' ,
+	options: [
+		"Community Government",
+		"Separation of powers",
+		"Coalition Government",
+		"Amalgamation of powers"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following is a Political right-  ' ,
+	answer: 'Right to vote' ,
+	options: [
+		"Right to work",
+		"Right to education",
+		"Right to expression",
+		"Right to vote"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following sections of Indian penal code is related with lesbian gay bisexual community (LGST)-  ' ,
+	answer: '377' ,
+	options: [
+		"377",
+		"376",
+		"370",
+		"None of these"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The &apos;Right to Vote&apos; in elections of the parliament is a-  ' ,
+	answer: 'Legal Right' ,
+	options: [
+		"Fundamental Right",
+		"Constitutional Right",
+		"Legal Right",
+		"Natural Right"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which Country has the first woman Prime Minister in the world-  ' ,
+	answer: 'Sri Lanka' ,
+	options: [
+		"India",
+		"Sri Lanka",
+		"Israel",
+		"Pakistan"
+		]
+	},
+]</script><script src="./script.js"></script></html>

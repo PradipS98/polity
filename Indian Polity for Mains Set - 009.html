@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 009'
+let questions = [
+	{
+	numb: 1,
+	question: 'What are Dilatory motions in context with the procedure in parliament?  ' ,
+	answer: 'Adjournment or delay of the debate on Bills' ,
+	options: [
+		"General discussion on budget",
+		"Discussion on cut motions",
+		"Adjournment or delay of the debate on Bills",
+		"Deletion of words, phrases and expressions from the records of procedure"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who allocates and reshuffles various portfolios among the ministers?  ' ,
+	answer: 'The Prime Minister' ,
+	options: [
+		"The Parliament",
+		"The Lok Sabha",
+		"The Prime Minister",
+		"The Cabinet"
+		]
+	},
+	{
+	numb: 3,
+	question: 'In which year, Daman & Diu were separated from Goa?  ' ,
+	answer: '1985' ,
+	options: [
+		"1968",
+		"1973",
+		"1985",
+		"1987"
+		]
+	},
+	{
+	numb: 4,
+	question: 'To whom does the President of India addresses his resignation?  ' ,
+	answer: 'Vice President of India' ,
+	options: [
+		"Prime Minister",
+		"Speaker of Lok Sabha",
+		"Chief Justice of India",
+		"Vice President of India"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following UTs has its own high court?  ' ,
+	answer: 'Delhi' ,
+	options: [
+		"Chandigarh",
+		"Delhi",
+		"Puducherry",
+		"Daman and Diu"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which schedule was added to the constitution by 73rd Amendment Act, 1992?  ' ,
+	answer: '11th' ,
+	options: [
+		"10th",
+		"11th",
+		"12th",
+		"None of the above"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The illegal migrants of which country are not eligible for citizenship under Citizenship Amendment Act 2019?  ' ,
+	answer: 'Myanmar' ,
+	options: [
+		"Myanmar",
+		"Afghanistan",
+		"Bangladesh",
+		"Pakistan"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following does not form a part of the directives outside Part IV of the Constitution of India ?  ' ,
+	answer: 'Promotion of cottage industries' ,
+	options: [
+		"Claims of SCs and STs to services",
+		"Instruction in mother tongue",
+		"Development of Hindi language",
+		"Promotion of cottage industries"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which among the following act was known as the Anarchical and Revolutionary Crime act 1919?  ' ,
+	answer: 'Rowlatt Act' ,
+	options: [
+		"Indian Arms Act",
+		"Pitts India Act",
+		"Ilbert Bill",
+		"Rowlatt Act"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who said that – India is an indestructible Union of destructible states?  ' ,
+	answer: 'B R Ambedkar' ,
+	options: [
+		"Jawaharlal Nehru",
+		"B R Ambedkar",
+		"B N Rau",
+		"Dr. Rajendra Prasad"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who decides what constitutes the office of profit?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"President",
+		"Parliament",
+		"Supreme Court",
+		"Governor"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following state took steps to revitalize the panchayati raj after the recommendations of Ashok Mehta Committee?1. Karnataka2. West Bengal3. Andhra Pradesh4. MaharashtraSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 13,
+	question: 'What happens if the Lok Sabha passes a no-confidence motion against the council of ministers?  ' ,
+	answer: 'All the ministers have to resign' ,
+	options: [
+		"Only ministers from Lok Sabha resign",
+		"Only ministers from Rajya Sabha Resign",
+		"All the ministers have to resign",
+		"None of the above"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Where was the first municipal corporation set in India?  ' ,
+	answer: 'Madras' ,
+	options: [
+		"Madras",
+		"Calcutta",
+		"Bombay",
+		"Delhi"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who elects the state election commissioner?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Parliament",
+		"Governor",
+		"State legislature"
+		]
+	},
+	{
+	numb: 16,
+	question: 'The 73rd Constitutional Amendment Act, 1992 came into force on which date?  ' ,
+	answer: '24 April, 1993' ,
+	options: [
+		"23 April, 1992",
+		"25 April, 1992",
+		"24 April, 1993",
+		"25 April, 1993"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which among the following article is specifically excluded from the purview of theprocedure of amendmentas prescribed in Article 368?  ' ,
+	answer: 'Article 169' ,
+	options: [
+		"Article 54",
+		"Article 154",
+		"Article 169",
+		"Article 214"
+		]
+	},
+	{
+	numb: 18,
+	question: 'What kind of urban areas are administered by the municipalities?  ' ,
+	answer: 'Towns and smaller cities' ,
+	options: [
+		"Big cities",
+		"Towns and smaller cities",
+		"Notified area",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following Articles directs the state to protect and improve the environment?  ' ,
+	answer: 'Article 48A' ,
+	options: [
+		"Article 44",
+		"Article 45",
+		"Article 48",
+		"Article 48A"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which committee recommended for penalty or punishment for the non-performance of Fundamental Duties?  ' ,
+	answer: 'Swaran Singh Committee' ,
+	options: [
+		"Verma Committee",
+		"Sarkaria Commission",
+		"Swaran Singh Committee",
+		"Rajmanar Committee"
+		]
+	},
+	{
+	numb: 21,
+	question: 'When can the Speaker use his power of casting vote?  ' ,
+	answer: 'In case of a tie when votes are equally divided' ,
+	options: [
+		"In case of a Constitutional Amendment",
+		"In case of Emergency",
+		"To save the existing government",
+		"In case of a tie when votes are equally divided"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following Articles directs the State government to organize Village Panchayats?  ' ,
+	answer: 'Article 40' ,
+	options: [
+		"Article 39",
+		"Article 48",
+		"Article 40",
+		"Article 47"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which part of the Constitution is described as the ‘Magna Carta’ of India?  ' ,
+	answer: 'Part III' ,
+	options: [
+		"Part I",
+		"Part II",
+		"Part III",
+		"Part IV"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which Constitutional Amendment provided that the election of the president or vice-president cannot be challenged on the ground of any vacancy in the appropriate electoral college?  ' ,
+	answer: '11th Amendment Act, 1961' ,
+	options: [
+		"11th Amendment Act, 1961",
+		"12th Amendment Act, 1962",
+		"13th Amendment Act, 1962",
+		"14th Amendment Act, 1962"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Who was the first chairman of Press Council of India?  ' ,
+	answer: 'J R Mudholkar' ,
+	options: [
+		"J R Mudholkar",
+		"Chandramauli Kumar Prasad",
+		"M. Katju",
+		"None of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who appoints the presiding officer of Gram Nyayalaya?  ' ,
+	answer: 'State Government' ,
+	options: [
+		"State Government",
+		"Governor",
+		"Chief Minister",
+		"None of the above"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who became the first Governor General of the new dominion of India?  ' ,
+	answer: 'Lord Mountbatten' ,
+	options: [
+		"C. Rajagopalachari",
+		"Lord Mountbatten",
+		"Clement Attlee",
+		"Rajendra Prasad"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which committee recommended for the establishment of a State Finance Commission for the allocation of finances to the Panchayats?  ' ,
+	answer: 'Gadgil Committee' ,
+	options: [
+		"Dantwala Committee",
+		"Gadgil Committee",
+		"Hanumantha Rao Committee",
+		"L M Singhvi Committee"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who elects the members of the Council of States?  ' ,
+	answer: 'Members of Legislative Assembly of States' ,
+	options: [
+		"Members of Municipalities",
+		"Members of Panchayats",
+		"Members of Legislative Assembly of States",
+		"Members of Legislative Council of States"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following are the features of parliamentary form of government?1. Dual executive2. Political homogeneity3. Single membership4. Dissolution of Lower HouseSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 3",
+		"Only 1, 2 & 4",
+		"All of the above"
+		]
+	},
+]</script><script src="./script.js"></script></html>

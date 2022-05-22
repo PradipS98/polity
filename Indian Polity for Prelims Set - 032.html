@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 032'
+let questions = [
+	{
+	numb: 1,
+	question: 'Who was the first Deputy Speaker of Lok Sabha?  ' ,
+	answer: 'M. Ananthasayanam Ayyangar' ,
+	options: [
+		"G. V. Mavalankar",
+		"Sarvepalli Radhakrishnan",
+		"M. Ananthasayanam Ayyangar",
+		"Dr. P.V. Cherian"
+		]
+	},
+	{
+	numb: 2,
+	question: 'What is the gap period between first no-confidence motion and second no-confidence motion-  ' ,
+	answer: '6 months' ,
+	options: [
+		"12 months",
+		"3 months",
+		"6 months",
+		"9 months"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The number of parliamentary seats (Lok Sabha) of Maharashtra is-  ' ,
+	answer: '26' ,
+	options: [
+		"10",
+		"26",
+		"28",
+		"48"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Which of the following committee is not a permanent committee of the Parliament-  ' ,
+	answer: 'Advisory committee of finance ministry' ,
+	options: [
+		"Public accounts committee",
+		"Estimates committee",
+		"Committee on public undertaking",
+		"Advisory committee of finance ministry"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who among the following is not a member of any of the two houses of our country?  ' ,
+	answer: 'President' ,
+	options: [
+		"Prime Minister",
+		"Finance Minister",
+		"President",
+		"Railway Minister"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following makes law in India-  ' ,
+	answer: 'President and both houses of Parliament' ,
+	options: [
+		"President and Council of Ministers",
+		"High Court and Supreme Court",
+		"President and both houses of Parliament",
+		"Lok Sabha and Rajya Sabha"
+		]
+	},
+	{
+	numb: 7,
+	question: 'If the Parliament has to appoint a committee for a specific task, it is known as-  ' ,
+	answer: 'Adh-oc committee' ,
+	options: [
+		"Standing committee",
+		"Adh-oc committee",
+		"Joint committee",
+		"Permanent committee"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What is the minimum age to become the Prime Minister of India if he or she is a member of Rajya Sabha?  ' ,
+	answer: '30' ,
+	options: [
+		"18",
+		"25",
+		"30",
+		"35"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which article of the Constitution deals with money bills-  ' ,
+	answer: 'Article-110' ,
+	options: [
+		"Article-130",
+		"Article-110",
+		"Article-120",
+		"Article-100"
+		]
+	},
+	{
+	numb: 10,
+	question: 'What is the minimum number of members required to be present in any one of the two houses of Parliament for its functioning?  ' ,
+	answer: 'One tenth of total members' ,
+	options: [
+		"One fifth of total members",
+		"One sixth of total members",
+		"One seventh of total members",
+		"One tenth of total members"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Speaker of the Lok Sabha serves fora maximum term of _____ years.  ' ,
+	answer: '5' ,
+	options: [
+		"3",
+		"4",
+		"5",
+		"7"
+		]
+	},
+	{
+	numb: 12,
+	question: 'There are total parliamentary seats (Rajya Sabha constituency) in Maharashtra-  ' ,
+	answer: '19' ,
+	options: [
+		"11",
+		"19",
+		"10",
+		"1"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following provision needs a special majority in Parliament?  ' ,
+	answer: 'Cange in Fundamental Rights' ,
+	options: [
+		"Cange in Fundamental Rights",
+		"Creation of New States",
+		"Abolition of Legislative Councils in State",
+		"Rules and Procedures in Parliament"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who among the following issues a notification for prorogation of legislative session?  ' ,
+	answer: 'President' ,
+	options: [
+		"Speaker",
+		"Chairman",
+		"President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 15,
+	question: 'In which year,"House of People" was named as Lok Sabha-  ' ,
+	answer: '1954' ,
+	options: [
+		"1954",
+		"1964",
+		"1974",
+		"1984"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following is the first woman speaker of Lok Sabha-  ' ,
+	answer: 'Meera Kumar' ,
+	options: [
+		"Meera Kumar",
+		"Sonia Gandhi",
+		"Sushma Swaraj",
+		"Margret Alva"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following is not correct-  ' ,
+	answer: 'Person should have completed age of 21 years to elect as member of Legislative Council' ,
+	options: [
+		"Person should have completed age of 30 years to elect as a member of Rajya Sabha",
+		"Person should have completed age of 25 years to elect as a member of Lok Sabha",
+		"Person should have completed age of 21 years to elect as member of Legislative Council",
+		"Person eligible to vote in panchayat election should have completed age of 18 years"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which Article gives the power to the Parliament to make law on subjects of state list-  ' ,
+	answer: '249' ,
+	options: [
+		"115",
+		"183",
+		"221",
+		"249"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who among the following is a part of political executive?  ' ,
+	answer: 'Finance Minister' ,
+	options: [
+		"District Magistrate",
+		"Secretary of Ministry of defence",
+		"Finance Minister",
+		"Superintendent of Police"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which of the followings are currect about "no-confidence motion" in Parliament-1. It is not mentioned in the constitution2. The gap between two noconfidence motion should be six months3. It should be supported by at least 100 members of house4. It can only be presented in Lok Sabha  ' ,
+	answer: '1,2 and 4' ,
+	options: [
+		"2 and 4",
+		"1,2,3 and 4",
+		"1,2 and 4",
+		"1 and 4"
+		]
+	},
+	{
+	numb: 21,
+	question: 'A motion moved by Member of Parliament when he feels a minister has committed a breach of privilege of the House is called-  ' ,
+	answer: 'Privilege motion' ,
+	options: [
+		"No confidence motion",
+		"Censure motion",
+		"Privilege motion",
+		"Cut motion"
+		]
+	},
+	{
+	numb: 22,
+	question: '_____ elects the President and the Vice President and removes judges of Supreme Court and High Court.  ' ,
+	answer: 'Prime Minister&apos;S Office' ,
+	options: [
+		"Ministry of Defence",
+		"Prime Minister&apos;S Office",
+		"Lok Sabha",
+		"Securities and Exchange Board of India"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which house of the Indian parliament is a house elected by the people-  ' ,
+	answer: 'Lok Sabha' ,
+	options: [
+		"Rajya Sabha",
+		"Lok Sabha",
+		"Lok Sabha and Rajya Sabha both",
+		"None of these"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which of the following statements is correct about the President of India?  ' ,
+	answer: 'None of the above' ,
+	options: [
+		"Addresses first session of Parliament after each General Election",
+		"Addresses first session of Parliament at the beginning of each year",
+		"Addresses every session of Parliament",
+		"None of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'If Parliament has to legislate with respect to a matter in the state list, the proposal for such is to be approved by-  ' ,
+	answer: 'Rajya Sabha' ,
+	options: [
+		"Lok Sabha, Rajya Sabha and Legislature of related State",
+		"Lok Sabha and Rajya Sabha both",
+		"Rajya Sabha",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 26,
+	question: 'The initial tenure of member of Lok Sabha was 5 years, it was changed by 42nd amendment to-  ' ,
+	answer: '6 years' ,
+	options: [
+		"9 years",
+		"7 years",
+		"6 years",
+		"8 years"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The most important feature of Indian Parliament is-  ' ,
+	answer: 'It includes the President' ,
+	options: [
+		"It is the union legislature in India",
+		"It includes the President",
+		"It is bicameral",
+		"Its Upper house never dissolves"
+		]
+	},
+	{
+	numb: 28,
+	question: 'How many times, the tenure of Lok Sabha was increased for 6 years-  ' ,
+	answer: '1' ,
+	options: [
+		"1",
+		"2",
+		"3",
+		"Never"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The tenure of the members of Lok Sabha is for how many years?  ' ,
+	answer: '5' ,
+	options: [
+		"11",
+		"9",
+		"7",
+		"5"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Parliament conducts sessions each year-  ' ,
+	answer: '3' ,
+	options: [
+		"1",
+		"2",
+		"3",
+		"4"
+		]
+	},
+]</script><script src="./script.js"></script></html>

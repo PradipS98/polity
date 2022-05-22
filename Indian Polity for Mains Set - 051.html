@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 051'
+let questions = [
+	{
+	numb: 1,
+	question: 'For how many years, a person of Indian origin must have been an ordinary resident of India before making application towards getting citizenship by registration?  ' ,
+	answer: 'Kerala Education Bill (1957) Case' ,
+	options: [
+		"Kerala Education Bill (1957) Case",
+		"Venkataraman v. State of Madras (1966) Case",
+		"Golaknath & Ors vs State Of Punjab (1967) Case",
+		"Kesavananda Bharati vs the State of Kerala (1973) Case"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following is correct regarding Union Public Service Commission?1. It is the ‘watch-dog of merit system’ in India.2. Conducts recruitment to the all-India services and Central services–group A and group B.3. Involved in classification of services, pay and service conditions, cadre management & training.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 3,
+	question: 'The chairman of Union Public Service Commission submits his resignation to?  ' ,
+	answer: 'President' ,
+	options: [
+		"Chief Justice of India",
+		"President",
+		"Vice-President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who was the chairman of Delimitation Commission constituted in July 2002?  ' ,
+	answer: 'Justice Kuldeep Singh' ,
+	options: [
+		"Justice Deepak Mishra",
+		"Justice Kuldeep Singh",
+		"Justice Ranganath Mishra",
+		"None of the above"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which among the following goods are exempted from levying GST as of now?1. Alcoholic liquor for human consumption2. Natural gas and aviation turbine fuel3. Supply of petroleum crude4. Medical kitChoose the correct option from the codes given below :  ' ,
+	answer: '1, 2 & 3' ,
+	options: [
+		"1 & 2",
+		"1, 2 & 3",
+		"1, 3 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which year National Commission for Backward Classes (NCBC) was set up?  ' ,
+	answer: '1993' ,
+	options: [
+		"1991",
+		"1992",
+		"1993",
+		"1994"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Several features of the Constitution of India have been borrowed from different sources. Which of the following is not a correct match in this context?  ' ,
+	answer: 'British Constitution – Concurrent List' ,
+	options: [
+		"Government of India Act, 1935 – Federal Scheme",
+		"British Constitution – Concurrent List",
+		"US Constitution – Fundamental Rights",
+		"Japanese Constitution – Procedure established by Law"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Who appoints the chairman op UPSC?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Parliament",
+		"Cabinet"
+		]
+	},
+	{
+	numb: 9,
+	question: 'What can be the maximum number of members in a legislative assembly of a state in India?  ' ,
+	answer: '500' ,
+	options: [
+		"400",
+		"500",
+		"450",
+		"550"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The constitution of India does not provide for impeachment of which of the following?  ' ,
+	answer: 'Governor of an Indian State' ,
+	options: [
+		"Chief Justice of India",
+		"President of India",
+		"Vice President of India",
+		"Governor of an Indian State"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who determines the conditions of service of the chairman and members of the State Public Service Commission?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Parliament",
+		"Council of Ministers",
+		"President",
+		"Governor"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Supreme Court has declared Right to Privacy as fundamental right under which article of Constitution of India?  ' ,
+	answer: 'Article 21' ,
+	options: [
+		"Article 18",
+		"Article 19",
+		"Article 20",
+		"Article 21"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which article of the Constitution protects the President or Governor of a state against criminal proceedings in any court, during the time they hold office?  ' ,
+	answer: 'Article 361 (2)' ,
+	options: [
+		"Article 360",
+		"Article 361",
+		"Article 361 (1)",
+		"Article 361 (2)"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following are the functions of National Commission for women?1. Review the Constitutional and Legal safeguards for women.2. Recommend remedial legislative measures.3. Facilitate redressal of grievances.4. Advise the Government on all policy matters affecting women.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1 & 4",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which article of the constitution gave constitutional status and protection to co-operative societies?  ' ,
+	answer: '97th Constitutional Amendment Act' ,
+	options: [
+		"95th Constitutional Amendment Act",
+		"96th Constitutional Amendment Act",
+		"97th Constitutional Amendment Act",
+		"98th Constitutional Amendment Act"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Where was the principal bench of Central Administrative Tribunal (CAT) set up in 1985?  ' ,
+	answer: 'Delhi' ,
+	options: [
+		"Delhi",
+		"Hyderabad",
+		"Mumbai",
+		"Bhopal"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who has the power to make laws with respect to residuary subjects?  ' ,
+	answer: 'The Parliament' ,
+	options: [
+		"The President",
+		"The Parliament",
+		"The Prime Minister",
+		"The Vice President"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Narcotics Drug Control Bureau was established in which year?  ' ,
+	answer: '1986' ,
+	options: [
+		"1981",
+		"1983",
+		"1986",
+		"1989"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following UTs have been created for their cultural distinctiveness?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Puducherry",
+		"Daman and Diu",
+		"Dadra and Nagar Haveli",
+		"All of the above"
+		]
+	},
+	{
+	numb: 20,
+	question: 'With which of the following countries National People’s Congress is related to ?  ' ,
+	answer: 'China' ,
+	options: [
+		"USA",
+		"UK",
+		"China",
+		"Germany"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following official is appointed to maintain discipline, secure attendance of, and give necessary information to the members of his party?  ' ,
+	answer: 'Whip' ,
+	options: [
+		"Leader",
+		"Speaker",
+		"Whip",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'What is the maximum time period for which President’s Rule can be extended?  ' ,
+	answer: 'Three years' ,
+	options: [
+		"One year",
+		"Two years",
+		"Three years",
+		"None of the above"
+		]
+	},
+	{
+	numb: 23,
+	question: 'In which year a Central Public Service Commission was set up and entrusted with the task of recruiting civil servants?  ' ,
+	answer: '1926' ,
+	options: [
+		"1926",
+		"1930",
+		"1944",
+		"1949"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What is the term of Chief Election Commissioner?  ' ,
+	answer: '6 years' ,
+	options: [
+		"4 years",
+		"5 years",
+		"6 years",
+		"10 years"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following types of emergency is stipulated in the Constitution of India?1. National Emergency2. Constitutional Emergency3. Financial Emergency4. Environmental EmergencySelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"Only 1, 2 & 3",
+		"All of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Via which among the following amendments of the Constitution of India, Delhi was designated as National Capital Territory (NCT)?  ' ,
+	answer: '69th Amendment Act' ,
+	options: [
+		"63rd Amendment Act",
+		"69th Amendment Act",
+		"74th Amendment Act",
+		"76th Amendment Act"
+		]
+	},
+	{
+	numb: 27,
+	question: 'What type of body is the Indian Parliamentary Group?  ' ,
+	answer: 'Autonomous' ,
+	options: [
+		"Constitutional",
+		"Legal",
+		"Autonomous",
+		"Statutory"
+		]
+	},
+	{
+	numb: 28,
+	question: 'President’s Rule can be imposed under which Article of the Constitution of India?  ' ,
+	answer: 'Article 356' ,
+	options: [
+		"Article 356",
+		"Article 357",
+		"Article 358",
+		"Article 359"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Who appoints the chairperson and members of State Human Rights Commission?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"Governor",
+		"State Legislature",
+		"President",
+		"Cabinet"
+		]
+	},
+	{
+	numb: 30,
+	question: 'To whom the judge of the Supreme Court submit his resignation?  ' ,
+	answer: 'President' ,
+	options: [
+		"Prime Minister",
+		"Supreme Court of India",
+		"Parliament",
+		"President"
+		]
+	},
+]</script><script src="./script.js"></script></html>

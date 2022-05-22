@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 001'
+let questions = [
+	{
+	numb: 1,
+	question: 'The disqualification of the Members of Parliament and state legislatures on the ground of defection has been provided in :  ' ,
+	answer: 'Tenth schedule of the Constitution.' ,
+	options: [
+		"Tenth schedule of the Constitution.",
+		"Eleventh schedule of the Constitution.",
+		"Seventh schedule of the Constitution.",
+		"Twelfth schedule of the Constitution."
+		]
+	},
+	{
+	numb: 2,
+	question: 'The main duty of the Speaker Pro-tem of Lok Sabha is :  ' ,
+	answer: 'To administer oath to the new members.' ,
+	options: [
+		"To unite the Cabinet",
+		"To administer oath to the new members.",
+		"To end the session",
+		"To break the deadlock"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Article 169 of the Constitution makes the provision for the abolition or creation of :  ' ,
+	answer: 'Legislative Councils in States' ,
+	options: [
+		"Specifies the number of seats for the Lok Sabha",
+		"Specifies the number of seats for the Rajya Sabha",
+		"Specifies Fundamental Duties",
+		"Legislative Councils in States"
+		]
+	},
+	{
+	numb: 4,
+	question: 'By which Constitutional Amendment Act was the elementary education made a fundamental right under Article 21-A?  ' ,
+	answer: 'The 86th Constitutional Amendment Act 2002' ,
+	options: [
+		"The 81th Constitutional Amendment Act 2000",
+		"The 86th Constitutional Amendment Act 2002",
+		"The 88th Constitutional Amendment Act 2004",
+		"The 96th Constitutional Amendment Act 2011"
+		]
+	},
+	{
+	numb: 5,
+	question: 'A governor, though he remains in office at the pleasure of the President is an integral part of :  ' ,
+	answer: 'State Legislature' ,
+	options: [
+		"Lok Shabha",
+		"State Legislature",
+		"Raj Shabha",
+		"None of Above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which articles of the Constitution of India explicitly confer the power of judicial review on a High Court ?  ' ,
+	answer: 'Article 13 and Article 226' ,
+	options: [
+		"Article 335",
+		"Article 336",
+		"Article 13 and Article 226",
+		"Article 35"
+		]
+	},
+	{
+	numb: 7,
+	question: 'The Comptroller and Auditor General of India can be removed from office in like manner and on like grounds as :  ' ,
+	answer: 'Supreme Court Judge' ,
+	options: [
+		"High Court Judge",
+		"Prime Minister",
+		"Supreme Court Judge",
+		"None of Above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'The Chairman of Rajya sabha can be removed from his office only if he is removed from :  ' ,
+	answer: 'The office of Vice-President' ,
+	options: [
+		"Removed from Lok Shaba",
+		"The office of President",
+		"The office of Vice-President",
+		"None of Above"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Under the Chapter Fundamental Rights, rights under Article 15, 16, 19, 29 and 30 have been denies the same to :  ' ,
+	answer: 'The Aliens' ,
+	options: [
+		"The NRI",
+		"The Aliens",
+		"Children under age 18 years",
+		"None of Above"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The constitution of India deals with the organization, composition, duration, officers, procedures, privileges, power of the parliament under:  ' ,
+	answer: 'Article 79 to 122 in Part V' ,
+	options: [
+		"Article 79 to 122 in Part V",
+		"Article 36 to 51 in Part IV",
+		"Article 152 to 237 in Part VI",
+		"Article 239 to 242 in Part VII"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The Inter State Council was established in 1990 in pursuance of the recommendation made by :  ' ,
+	answer: 'Sarkaria Commission (1983-87).' ,
+	options: [
+		"Mukherjee Commission (1999)",
+		"Sarkaria Commission (1983-87).",
+		"Mandal Commission (1980).",
+		"Khosla Commission (1990)"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Sikkim was made the full fledged state of Union of India by :  ' ,
+	answer: 'The 36th constitutional Amendment Act (1975).' ,
+	options: [
+		"The 35th constitutional Amendment Act (1975).",
+		"The 37th constitutional Amendment Act (1975).",
+		"The 38th constitutional Amendment Act (1975).",
+		"The 36th constitutional Amendment Act (1975)."
+		]
+	},
+	{
+	numb: 13,
+	question: 'When was the second Backward Class Commission under the Chairmanship of B.P. Mandal appointed ?  ' ,
+	answer: 'The year 1979' ,
+	options: [
+		"The year 1953",
+		"The year 1967",
+		"The year 1979",
+		"The year 1990"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which article of Constitution declares that the council of ministers is collectively responsible to state legislative assembly?  ' ,
+	answer: 'Article 164' ,
+	options: [
+		"Article 164",
+		"Article 168",
+		"Article 188",
+		"Article 189"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Article 359 of the Constitution authorizes the president of India to suspend the right to move any court for the enforcement of Fundamental Rights during :  ' ,
+	answer: 'A National Emergency' ,
+	options: [
+		"A National Emergency",
+		"A failure of constitutional machinery in States",
+		"A financial emergency",
+		"None of Above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'When any House of Parliament (Lok Sabha or Rajya Sabha ) is adjourned without naming a day for reassembly it is known as :  ' ,
+	answer: 'Adjournment Sine die' ,
+	options: [
+		"Demand for Grants",
+		"Adjournment of Debate",
+		"Adjournment of the sitting of the House",
+		"Adjournment Sine die"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which Article of the Constitution provides freedom to manage religious affairs ?  ' ,
+	answer: 'Article 26.' ,
+	options: [
+		"Article 25.",
+		"Article 26.",
+		"Article 27.",
+		"Article 28."
+		]
+	},
+	{
+	numb: 18,
+	question: 'By which Constitutional Amendment Act was the number of Lok sabha seats increased from 525 to 545 ?  ' ,
+	answer: 'Thirty-first Constitutional Amendment Act, 1973.' ,
+	options: [
+		"The Twentieth Amendment Act, 1966.",
+		"The Forty-second Amendment Act, 1976.",
+		"The Forty-fourth Amendment Act, 1978.",
+		"Thirty-first Constitutional Amendment Act, 1973."
+		]
+	},
+	{
+	numb: 19,
+	question: 'A procedure whereby a proposed legislation is referred to the electorates for settlement by their direct votes is called :  ' ,
+	answer: 'Referendum' ,
+	options: [
+		"Referendum",
+		"Repatriation",
+		"Representative democracy",
+		"Republic"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The correct chronological order of the formation of Haryana, Sikkim, Arunanchal Pradesh and Nagaland as full states of Indian Union is :  ' ,
+	answer: 'Nagaland-Haryana-Sikkim-Arunachal Pradesh' ,
+	options: [
+		"Haryana-Sikkim-Arunachal Pardesh-Nagaland",
+		"Nagaland-Arunachal Pradesh- Haryana-Sikkim",
+		"Nagaland-Haryana-Arunachal Pradesh-Sikkim",
+		"Nagaland-Haryana-Sikkim-Arunachal Pradesh"
+		]
+	},
+	{
+	numb: 21,
+	question: 'The parliamentary form of government as prevalent in India emphasizes the interdependence between :  ' ,
+	answer: 'The Legislative and Executive Organs.' ,
+	options: [
+		"Social Justice & Empowerment.",
+		"Urban Development and Rural Development.",
+		"Urban Employment and Poverty.",
+		"The Legislative and Executive Organs."
+		]
+	},
+	{
+	numb: 22,
+	question: 'The provisions of Concurrent List, freedom of trade, commerce and intercourse and joint sitting of two Houses of Parliament are borrowed from :  ' ,
+	answer: 'Australian Constitution.' ,
+	options: [
+		"UK Constitution",
+		"Australian Constitution.",
+		"US Constitution",
+		"Irish Constitution"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which part of the Constitution of India deals with special provisions to SCs, STs, OBCs and Anglo-Indians ?  ' ,
+	answer: 'Part 16 (Article 330 to 342).' ,
+	options: [
+		"Part 16 (Article 330 to 342).",
+		"Part 6 (Article 152 to 237).",
+		"Part 18 (Article 352 to 360).",
+		"Part 14A (Article 323A to 323B)."
+		]
+	},
+	{
+	numb: 24,
+	question: 'The highest law officer in the state is :  ' ,
+	answer: 'Advocate General' ,
+	options: [
+		"Attorney General",
+		"Advocate General",
+		"Additional General",
+		"None of Above."
+		]
+	},
+	{
+	numb: 25,
+	question: 'The last session of the existing Lok Sabha after a new Lok Sabha has been elected is called :  ' ,
+	answer: 'Lame Duck Session.' ,
+	options: [
+		"Under Duck Session.",
+		"Outer Duck Session.",
+		"Lame Duck Session.",
+		"None of Above."
+		]
+	},
+	{
+	numb: 26,
+	question: 'The first Backward Class commission was appointed in 1953 under the chairmanship of :  ' ,
+	answer: 'Kaka Kalelkar' ,
+	options: [
+		"Deepak Katole",
+		"S.K.Kharventhan",
+		"Kaka Kalelkar",
+		"Shakeel-uz-Zaman Ansari"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The states of Manipur, Tripura and Meghalaya were formed in :  ' ,
+	answer: 'The year 1972.' ,
+	options: [
+		"The year 1972.",
+		"The year 1975.",
+		"The year 1976",
+		"The year 1977."
+		]
+	},
+	{
+	numb: 28,
+	question: 'Fazl Ali Commission appointed in December 1953 to consider the question of state reorganization accepted :  ' ,
+	answer: 'Language as the basis of reorganization of states' ,
+	options: [
+		"Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth",
+		"Equality of opportunity in matters of public employment",
+		"Language as the basis of reorganization of states",
+		"None of Above"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The speaker of the Lok Sabha can ask a member of the house to stop speaking and let another member speak. This phenomenon is known as :  ' ,
+	answer: 'Yielding the floor' ,
+	options: [
+		"Crossing the floor",
+		"Yielding the floor",
+		"Point of Order",
+		"Calling Attention Motion"
+		]
+	},
+	{
+	numb: 30,
+	question: 'When was reservation of 27% government jobs for other Backward Classes declared for the first time in Independent India?  ' ,
+	answer: 'In the year 1990' ,
+	options: [
+		"In the year 1990",
+		"In the year 1988",
+		"In the year 1985",
+		"In the year 1982"
+		]
+	},
+]</script><script src="./script.js"></script></html>

@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 017'
+let questions = [
+	{
+	numb: 1,
+	question: 'The Balwant Rai Mehta Committee was associated with-  ' ,
+	answer: 'Panchayati Raj' ,
+	options: [
+		"Industrial Policy",
+		"Banking Reforms",
+		"Panchayati Raj",
+		"Centre-State relations"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following state has 4 legislative council-  ' ,
+	answer: 'Andhra Pradesh' ,
+	options: [
+		"Madhya Pradesh",
+		"Tamilnadu",
+		"Kerala",
+		"Andhra Pradesh"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Rajasthan is the first state which-  ' ,
+	answer: 'Implemented Local Self Governance' ,
+	options: [
+		"Implemented Local Self Governance",
+		"Started Mandal System",
+		"Started direct election of chairperson",
+		"Started indirect election of chairperson"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Panchayati Raj system has an Intermediate tier known as-  ' ,
+	answer: 'Panchayat Samiti' ,
+	options: [
+		"Gram Panchayat",
+		"Zila Parishad",
+		"Sarpanch Panchayat",
+		"Panchayat Samiti"
+		]
+	},
+	{
+	numb: 5,
+	question: '73rd Constitutional amendment is related to-  ' ,
+	answer: 'Panchayati Raj' ,
+	options: [
+		"Panchayati Raj",
+		"Currency Exchange",
+		"Finance Commission",
+		"RBI"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which is an example of direct democracy in India?  ' ,
+	answer: 'Gram Sabha' ,
+	options: [
+		"Zila Panchayat",
+		"Nagar Panchayat",
+		"Gram Sabha",
+		"Kshetra Panchayat"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Panchayati Raj system is based on the principle of-  ' ,
+	answer: 'Decentralisation' ,
+	options: [
+		"Centralisation",
+		"Decentralisation",
+		"Both of these",
+		"None of these"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Name the first woman Chief Minister of Jammu and Kashmir?  ' ,
+	answer: 'Mehbooba Mufti' ,
+	options: [
+		"Sakina Itoo",
+		"Mehbooba Mufti",
+		"Asiya Naqash",
+		"Hina Shafi Bhat"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The term "Gram Sabha" denotes-  ' ,
+	answer: 'Electoral college for Panchayat' ,
+	options: [
+		"Senior citizens of a Village",
+		"Population of a Village",
+		"Electoral college for Panchayat",
+		"Elected members of Panchayat"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who was the first woman governor in Independent India-  ' ,
+	answer: 'Sarojini Naidu' ,
+	options: [
+		"Sarojini Naidu",
+		"Sucheta Kriplani",
+		"Indira Gandhi",
+		"Vijaya Lakshmi Pandit"
+		]
+	},
+	{
+	numb: 11,
+	question: 'What is the system of Local Self Government in the Panchayati Raj set up?  ' ,
+	answer: 'Three tier structure at village, block and district level' ,
+	options: [
+		"Four tier system at the village, block, district and State level",
+		"Three tier structure at village, block and district level",
+		"Two tier system at village and block level",
+		"Single tier set up at village level"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The State Election Commission conducts, controls and supervises Municipal elections under-  ' ,
+	answer: 'Article-243(ZA)' ,
+	options: [
+		"Article-240(1)",
+		"Article-243(ZA)",
+		"Article-243(K)",
+		"Article-245(D)"
+		]
+	},
+	{
+	numb: 13,
+	question: 'State Highways are maintained by-  ' ,
+	answer: 'Individual state' ,
+	options: [
+		"Centre and state governments jointly",
+		"Private companies preferred by state government",
+		"Individual state",
+		"Central government"
+		]
+	},
+	{
+	numb: 14,
+	question: 'The 3-tier of the Panchayati Raj System consists of-  ' ,
+	answer: 'Gram Panchayat,Block and Panchayat Samiti, Zilla Parishad' ,
+	options: [
+		"Gram Sabha, Anchal Panchayat, Panchayat Samiti",
+		"Janapad Panchayat, Taluka Panchayat, Anchal Panchayat",
+		"Gram Panchayat,Block and Panchayat Samiti, Zilla Parishad",
+		"Gram Sabha, Panchayat Samiti, Zilla Parishad"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who had proposed the idea of three Tier Panchayati Raj system-  ' ,
+	answer: 'Balwant Rai Mehta Committee' ,
+	options: [
+		"Balwant Rai Mehta Committee",
+		"Ashok Mehta Committee",
+		"Royal Commission",
+		"None of these"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which of the following is not a Panchayati Raj Institution?  ' ,
+	answer: 'Gram Cooperative society' ,
+	options: [
+		"Gram Sabha",
+		"Gram Panchayat",
+		"Gram Cooperative society",
+		"Nyaya Panchayat"
+		]
+	},
+	{
+	numb: 17,
+	question: ' Which of the following constitutional Amendments gave a constitutional status to Urban Bodies-  ' ,
+	answer: '74th' ,
+	options: [
+		"71st",
+		"72nd",
+		"73rd",
+		"74th"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the two states had firstly implemented Panchayati Raj System-  ' ,
+	answer: 'Andhra Pradesh and Rajasthan' ,
+	options: [
+		"Andhra Pradesh and Rajasthan",
+		"Assam and Bihar",
+		"Arunachal Pradesh and Uttar Pradesh",
+		"Punjab and Chandigarh"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following is exercised by Local Government in relation with state government?  ' ,
+	answer: 'Delegated Authority' ,
+	options: [
+		"Delegated Authority",
+		"Higher Authority",
+		"Independent Authority",
+		"Equivalent Authority"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which state assembly has the maximum number of members-  ' ,
+	answer: 'Uttar Pradesh' ,
+	options: [
+		"Uttar Pradesh",
+		"Maharashtra",
+		"West Bengal",
+		"Andhra Pradesh"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following is related with the Panchayati Raj-  ' ,
+	answer: 'Balwant Rai Mehta Committee' ,
+	options: [
+		"Shah Commission",
+		"Nanavati Commission",
+		"Balwant Rai Mehta Committee",
+		"Librahan Commission"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The discretionary powers of a Governor is limited in-  ' ,
+	answer: 'Assent to Bills' ,
+	options: [
+		"Appointment of Chief Minister",
+		"Dismissal of the Ministry",
+		"Dissolution of the Legislative Assembly",
+		"Assent to Bills"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following is not a matter of Local Government?  ' ,
+	answer: 'Law and order' ,
+	options: [
+		"Public health",
+		"Cleanliness",
+		"Law and order",
+		"Public utility services"
+		]
+	},
+	{
+	numb: 24,
+	question: 'By wich of the following Amendment act of the Indian Constitution, the Panchayati Raj System got the constitutional status-  ' ,
+	answer: '73rd' ,
+	options: [
+		"71st",
+		"72nd",
+		"73rd",
+		"74th"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Three Tier Panchayati Raj System includes-  ' ,
+	answer: 'Village Level Panchayat, Block Level Panchayat and District Level Panchayat' ,
+	options: [
+		"Village Level Panchayat, Zone Level Panchayat and Panchayat committee",
+		"District Panchayat, SubDistrict Panchayat and Zone Level Panchayat",
+		"Village Level Panchayat, Block Level Panchayat and District Level Panchayat",
+		"Village Level Panchayat, Panchayat Committee and District Council"
+		]
+	},
+	{
+	numb: 26,
+	question: 'By which of the following articles, the Panchayati Raj system was started in India-  ' ,
+	answer: '40' ,
+	options: [
+		"32",
+		"40",
+		"45",
+		"51"
+		]
+	},
+	{
+	numb: 27,
+	question: 'How many legislative assembly seats are in Delhi-  ' ,
+	answer: '70' ,
+	options: [
+		"60",
+		"70",
+		"40",
+		"50"
+		]
+	},
+	{
+	numb: 28,
+	question: 'The Committee appointed in 1977 to review working of the Panchayati Raj was chaired by-  ' ,
+	answer: 'K.N. Katju' ,
+	options: [
+		"Balwant Rai Mehta",
+		"Ashok Mehta",
+		"K.N. Katju",
+		"Jagjivan Ram"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following is not a Panchayati raj institution-  ' ,
+	answer: 'Village Co-Operative Society' ,
+	options: [
+		"Village Council",
+		"Village Panchayat",
+		"Village Co-Operative Society",
+		"Judicial Panchayat"
+		]
+	},
+	{
+	numb: 30,
+	question: 'An Ordinary bill passed by the State Assembly can be delayed by the Legislative Counell for maximum period of-  ' ,
+	answer: '4 month' ,
+	options: [
+		"1 month",
+		"6 month",
+		"3 month",
+		"4 month"
+		]
+	},
+]</script><script src="./script.js"></script></html>

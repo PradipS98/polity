@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 007'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which committee recommended the reorganization of States on the basis of administrative convenience?  ' ,
+	answer: 'SK Dhar Commission' ,
+	options: [
+		"JVP Committee",
+		"SK Dhar Commission",
+		"Fazl Ali Commission",
+		"Sarkaria Commission"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following is the main objective of Parliamentary Language Committee?  ' ,
+	answer: 'Recommend on making the progressive use of the Hindi language for the official purposes of the union' ,
+	options: [
+		"Recommend on making the progressive use of the Hindi language for the official purposes of the union",
+		"Looking into the linguistic demands for new states and make suggestions in that regard",
+		"Identify the endangered languages and make recommendations to protect and preserve them",
+		"Examine the vernacular education and make recommendations for effective implementation of three language formula"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following is not punishable under Penal Code?  ' ,
+	answer: 'Mens rea' ,
+	options: [
+		"Actus reus",
+		"Mens rea",
+		"Both of them",
+		"None of them"
+		]
+	},
+	{
+	numb: 4,
+	question: 'Who is authorized to determine the qualifications of members of the finance commission and the manner in which they should be selected?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Supreme Court",
+		"Parliament",
+		"Prime Minister",
+		"President"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Where is the headquarters of National Green Tribunal?  ' ,
+	answer: 'New Delhi' ,
+	options: [
+		"Mumbai",
+		"Chandigarh",
+		"Jaipur",
+		"New Delhi"
+		]
+	},
+	{
+	numb: 6,
+	question: 'In which year the Modi Government scrapped the Planning Commission of India?  ' ,
+	answer: '2014' ,
+	options: [
+		"2013",
+		"2014",
+		"2015",
+		"2016"
+		]
+	},
+	{
+	numb: 7,
+	question: 'National Voters Day is celebrated on?  ' ,
+	answer: '25th January' ,
+	options: [
+		"25th January",
+		"25th March",
+		"23rd July",
+		"25th September"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which articles of the Constitution contain provisions with regard to all-India services, Central services and state services?  ' ,
+	answer: 'Articles 308 to 314' ,
+	options: [
+		"Articles 308 to 314",
+		"Articles 315 to 318",
+		"Articles 320 to 325",
+		"Articles 357 to 378"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who appoints the chairman of National Commission for Scheduled Tribes?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"President",
+		"Rajya Sabha",
+		"Governor"
+		]
+	},
+	{
+	numb: 10,
+	question: 'What is the number of items in 12th schedule added by 74th Amendment of the Constitution?  ' ,
+	answer: '18' ,
+	options: [
+		"11",
+		"16",
+		"18",
+		"20"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which committee recommended the establishment of the CBI?  ' ,
+	answer: 'Santhanam Committee' ,
+	options: [
+		"Rangarajan Committee",
+		"Vijay Kelkar Committee",
+		"Santhanam Committee",
+		"None of the above"
+		]
+	},
+	{
+	numb: 12,
+	question: 'How many Insurance Ombudsman are there at present?  ' ,
+	answer: '17' ,
+	options: [
+		"15",
+		"16",
+		"17",
+		"20"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who among the following was not a female member of the Constituent Assembly?  ' ,
+	answer: 'Nellie Sengupta' ,
+	options: [
+		"Dakshayani Velayudhan",
+		"Begum Aizaz Rasul",
+		"Leela Roy",
+		"Nellie Sengupta"
+		]
+	},
+	{
+	numb: 14,
+	question: 'In which judgment Supreme Court held that Preamble is not part of the Constitution?  ' ,
+	answer: 'Berubari Union Case' ,
+	options: [
+		"Berubari Union Case",
+		"Kesavananda Bharti Case",
+		"LIC of India Case",
+		"Golaknath Case"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Central Information Commission falls under which of the following ministries?  ' ,
+	answer: 'Ministry of Personnel' ,
+	options: [
+		"Ministry of Finance",
+		"Ministry of Social Justice & Empowerment",
+		"Ministry of Home Affairs",
+		"Ministry of Personnel"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Institute of Applied Manpower Research (IAMR) was renamed as National Institute of Labour Economics Research and Development (NILERD) in which year?  ' ,
+	answer: '2014' ,
+	options: [
+		"2012",
+		"2013",
+		"2014",
+		"2015"
+		]
+	},
+	{
+	numb: 17,
+	question: 'What was the Constitutional status of India when the Constitution of India came into force on 26th January, 1950?  ' ,
+	answer: 'A Sovereign Democratic Republic' ,
+	options: [
+		"A Secular Republic",
+		"A Socialist Secular Democratic Republic",
+		"A Sovereign Democratic Republic",
+		"A Sovereign Socialist Secular Democratic Republic"
+		]
+	},
+	{
+	numb: 18,
+	question: 'In which state Electronic Voting Machines (EVM) were used first?  ' ,
+	answer: 'Kerala' ,
+	options: [
+		"Kerala",
+		"Maharashtra",
+		"Tamil Nadu",
+		"Gujarat"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Which of the following language was added in the eight schedule through 71st Amendment Act of 1992?  ' ,
+	answer: 'Manipuri' ,
+	options: [
+		"Bodo",
+		"Manipuri",
+		"Dongri",
+		"Santhali"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which states do not allow lokayukta to start a suo moto investigation?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Uttar Pradesh",
+		"Himachal Pradesh",
+		"Assam",
+		"All of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'What all crimes can NIA investigate?  ' ,
+	answer: 'Terrorist attacks' ,
+	options: [
+		"Terrorist attacks",
+		"Corruption",
+		"Economic offences",
+		"None of the above"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following statements are correct with respect to National Human Rights Commission?1.It is vested with thepower to regulate its own procedure.2. It has all the powers of a civil court.3. It has all the powers of a criminal court.Select the correct option from codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 23,
+	question: 'In which year was the Whistle Blowers Protection Act enacted?  ' ,
+	answer: '2014' ,
+	options: [
+		"2013",
+		"2014",
+		"2015",
+		"2016"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Which among the following Union Territory had a Judicial Commissioner’s Court?  ' ,
+	answer: 'Daman & Diu' ,
+	options: [
+		"Pondicherry",
+		"Andaman & Nicobar Islands",
+		"Daman & Diu",
+		"Lakshadweep"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which article of the Constitution of India mentions the powers, privileges and immunities of Attorney-General of India?  ' ,
+	answer: '105' ,
+	options: [
+		"101",
+		"103",
+		"104",
+		"105"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who among the following nominates the chairman of Public Accounts committee of India?  ' ,
+	answer: 'Speaker of Lok Sabha' ,
+	options: [
+		"Prime Minister",
+		"President",
+		"Speaker of Lok Sabha",
+		"Chairman of Rajya Sabha"
+		]
+	},
+	{
+	numb: 27,
+	question: 'The Comptroller and Auditor General of India is responsible to which of the following?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"President",
+		"Prime Minister",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Where is the headquarters of Central Vigilance Commission?  ' ,
+	answer: 'New Delhi' ,
+	options: [
+		"New Delhi",
+		"Mumbai",
+		"Lucknow",
+		"Jaipur"
+		]
+	},
+	{
+	numb: 29,
+	question: 'When was the institution of Electricity Ombudsman created?  ' ,
+	answer: '2003' ,
+	options: [
+		"2002",
+		"2003",
+		"2004",
+		"2005"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Independence of India Act was result of which of the following plans / pacts?  ' ,
+	answer: 'Mountbatten Plan' ,
+	options: [
+		"Mountbatten Plan",
+		"Lucknow Pact",
+		"Delhi Manifesto",
+		"Delhi Pact"
+		]
+	},
+]</script><script src="./script.js"></script></html>

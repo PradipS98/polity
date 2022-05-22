@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 045'
+let questions = [
+	{
+	numb: 1,
+	question: 'To enforce the fundamental rights, which among the following court(s) has / have authority to issuewrits?Supreme CourtHigh CourtsDistrict CourtsSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who can appoint a judge of a high court as an acting chief justice of the high court?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"Chief Justice of India",
+		"President",
+		"Governor"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which year is related to the formation of Rajya Sabha for the first time?  ' ,
+	answer: '1952' ,
+	options: [
+		"1949",
+		"1950",
+		"1951",
+		"1952"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In how many categories are the parliamentary standing committees classified?  ' ,
+	answer: '6' ,
+	options: [
+		"4",
+		"5",
+		"6",
+		"7"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Who said that the “emergency financial provisions pose a serious threat to the financial autonomy of the States”?  ' ,
+	answer: 'H.N. Kunzru' ,
+	options: [
+		"T.T. Krishnamachari",
+		"K.T. Shah",
+		"H.V. Kamath",
+		"H.N. Kunzru"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which among the following is a correct function of Public Accounts Committee?  ' ,
+	answer: 'It is a parliamentary committee which scrutinizes the report of the Comptroller & Auditor General of India' ,
+	options: [
+		"It works under President of India and creates accounts for various ministries",
+		"It works under Comptroller and Auditor General of India and prepares accounts",
+		"It is a parliamentary committee which gives report on nonplan expenditures of the government",
+		"It is a parliamentary committee which scrutinizes the report of the Comptroller & Auditor General of India"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following are the sources of income for the urban local bodies?  ' ,
+	answer: 'All of them' ,
+	options: [
+		"Tax Revenue",
+		"Grants",
+		"Loans",
+		"All of them"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Within how many days an elected candidate needs to submit the declaration of his assets and liabilities after taking oath?  ' ,
+	answer: '90 days' ,
+	options: [
+		"60 days",
+		"90 days",
+		"100 days",
+		"120 days"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The Aadhaar (Targeted Delivery of Financial and other Subsidies, benefits and services) Act was enacted in which year?  ' ,
+	answer: '2016' ,
+	options: [
+		"2016",
+		"2017",
+		"2018",
+		"2019"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who is authorized to dissolve the state legislative assembly even before the completion of its term?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Prime Minister",
+		"Parliament",
+		"Governor"
+		]
+	},
+	{
+	numb: 11,
+	question: 'A separate National Commission for Scheduled Tribes came into existence in which year?  ' ,
+	answer: '2004' ,
+	options: [
+		"2004",
+		"2005",
+		"2006",
+		"2007"
+		]
+	},
+	{
+	numb: 12,
+	question: 'The Mental Healthcare Act was passed in which year?  ' ,
+	answer: '2017' ,
+	options: [
+		"2015",
+		"2016",
+		"2017",
+		"2018"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Emergency Provisions are contained in which part of the Constitution of India?  ' ,
+	answer: 'Part XVIII' ,
+	options: [
+		"Part XVIII",
+		"Part XVII",
+		"Part XVI",
+		"Part XV"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which articles of the Constitution also deal with the composition, appointment and removal of members, power and functions and independence of a State Public Service Commission?  ' ,
+	answer: 'Articles 315 to 323' ,
+	options: [
+		"Articles 315 to 323",
+		"Articles 343 to 355",
+		"Article 365 to 378",
+		"Articles 380 to 392"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Who administers oath to the Prime Minister of India?  ' ,
+	answer: 'President' ,
+	options: [
+		"Chief Justice of India",
+		"President",
+		"A Judge of Supreme Court",
+		"The Speaker"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Who among the following persons doesn’t take oath of the office?  ' ,
+	answer: 'Speaker' ,
+	options: [
+		"Speaker",
+		"President",
+		"Vice-President",
+		"Prime Minister"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following does the appointment, posting and promotion of district judges in a state?  ' ,
+	answer: 'Governor of the state in consultation with the high court' ,
+	options: [
+		"Governor",
+		"Governor of the state in consultation with the high court",
+		"High Court",
+		"Supreme Court"
+		]
+	},
+	{
+	numb: 18,
+	question: 'The 73rd amendment act provides for the reservation of seats for scheduled castes and scheduled tribes at which of the following levels?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Village",
+		"Intermediate",
+		"District",
+		"All of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'National Judicial Appointments Commission was established by which amendment act?  ' ,
+	answer: '99th Amendment Act, 2014' ,
+	options: [
+		"91st Amendment Act, 2003",
+		"96th Amendment Act, 2011",
+		"99th Amendment Act, 2014",
+		"101st Amendment Act, 2016"
+		]
+	},
+	{
+	numb: 20,
+	question: 'Which amendment of the constitution added Administrative Tribunals?  ' ,
+	answer: '42nd amendment act' ,
+	options: [
+		"42nd amendment act",
+		"44th amendment act",
+		"46th amendment act",
+		"49th amendment act"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Writ jurisdiction of the high court is not exclusive but concurrent with the writ jurisdiction of the Supreme Court under which article?  ' ,
+	answer: 'Article 32' ,
+	options: [
+		"Article 32",
+		"Article 56",
+		"Article 64",
+		"Article 84"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following is the voting weightage of the Central Government when the decisions are taken by the GST Council?  ' ,
+	answer: '1/3' ,
+	options: [
+		"1/3",
+		"2/3",
+		"2/5",
+		"3/5"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who conducts elections to panchayats and municipalities in the states?  ' ,
+	answer: 'State Election Commission' ,
+	options: [
+		"Election Commission of India",
+		"State Election Commission",
+		"District Election Commission",
+		"None of the above"
+		]
+	},
+	{
+	numb: 24,
+	question: 'According to which Constitutional Amendment Act the ministerial advice has been made binding on the Governor of state?  ' ,
+	answer: 'None of the above' ,
+	options: [
+		"42nd",
+		"44th",
+		"46th",
+		"None of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which among the following are other names for the municipality?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Borough municipality",
+		"Municipal committee",
+		"City municipality",
+		"All of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'What is the maximum number of members that a Parliamentary Forum can have?  ' ,
+	answer: '31' ,
+	options: [
+		"21",
+		"25",
+		"30",
+		"31"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which of the following are the grounds for removal of a High Court judge?1. Proved misbehaviour2. Incapacity3. InsolvencySelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 28,
+	question: 'In which article of the Constitution of India the office of the Attorney General for India provided?  ' ,
+	answer: 'Article 76' ,
+	options: [
+		"Article 75",
+		"Article 76",
+		"Article 77",
+		"Article 78"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The Fourteenth Amendment Act, 1962 incorporated which of the following in the Indian Union?  ' ,
+	answer: 'Puducherry' ,
+	options: [
+		"Andaman & Nicobar",
+		"Daman & Diu",
+		"Lakshadweep",
+		"Puducherry"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which section of IPC states that if any person of unsound mind or mentally ill person commits any offence due to his unsoundness of mind notcapable of knowing the nature of the act having no knowledge of wrong or right or Law is no offence?  ' ,
+	answer: 'Section 84' ,
+	options: [
+		"Section 82",
+		"Section 83",
+		"Section 84",
+		"Section 85"
+		]
+	},
+]</script><script src="./script.js"></script></html>

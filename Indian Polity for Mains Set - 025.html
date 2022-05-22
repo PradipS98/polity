@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 025'
+let questions = [
+	{
+	numb: 1,
+	question: 'Which of the following Constitution Amendment Act grants citizens a fundamental right to form cooperative societies?  ' ,
+	answer: '97th' ,
+	options: [
+		"95th",
+		"96th",
+		"97th",
+		"98th"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following are the conditions for acquiring Indian Citizenship?  ' ,
+	answer: 'Domicile, Descent & Registration' ,
+	options: [
+		"Domicile and Descent",
+		"Domicile, Descent & Registration",
+		"Domicile, Decent , Registration and Holding property",
+		"None of the above"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Althing is the national parliament of:  ' ,
+	answer: 'Iceland' ,
+	options: [
+		"Ireland",
+		"Iceland",
+		"Portugal",
+		"Spain"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In which year National Register of Citizens was first prepared?  ' ,
+	answer: '1951' ,
+	options: [
+		"1949",
+		"1950",
+		"1951",
+		"1952"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following Article prohibits the employment of children in factories and hazardous industries?  ' ,
+	answer: 'Article 24' ,
+	options: [
+		"Article 22",
+		"Article 23",
+		"Article 24",
+		"Article 25"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Who among the following is appointed as the Returning Officer in President Elections?  ' ,
+	answer: 'Lok Sabha Secretary General' ,
+	options: [
+		"Election Commissioner",
+		"Lok Sabha Secretary General",
+		"Lok Sabha speaker",
+		"A person nominated by Election Commission"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which article of the Indian Constitution provides the right to constitutional remedies, that allows Indian citizens to stand up for their rights against anybody – even the government of India?  ' ,
+	answer: 'Article 32' ,
+	options: [
+		"Article 31",
+		"Article 32",
+		"Article 33",
+		"Article 34"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which of the following depicts correct sequence in the context of Preamble of the Constitution of India?  ' ,
+	answer: 'Sovereign – Socialist – Secular – Democratic – Republic' ,
+	options: [
+		"Democratic – Secular – Sovereign – Republic – Socialist",
+		"Sovereign – Socialist – Democratic – Republic – Secular",
+		"Sovereign – Socialist – Democratic –Secular – Republic",
+		"Sovereign – Socialist – Secular – Democratic – Republic"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Which of the following President has appeared for hearing before the Supreme Court for election dispute?  ' ,
+	answer: 'V.V. Giri' ,
+	options: [
+		"Gyani Zail Singh",
+		"Dr. Zakir Hussain",
+		"V.V. Giri",
+		"Fakharuddin Ali Ahmad"
+		]
+	},
+	{
+	numb: 10,
+	question: 'which among the following articles of Constitution of India deals with “Prohibition of Traffic in Human beings”, ?  ' ,
+	answer: 'Article 23' ,
+	options: [
+		"Article 21",
+		"Article 22",
+		"Article 23",
+		"Article 24"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Who among the following was the chairperson of the Provincial Constitution Committee of the Constituent Assembly?  ' ,
+	answer: 'Sardar Vallabhbhai Patel' ,
+	options: [
+		"Jawaharlal Nehru",
+		"Sardar Vallabhbhai Patel",
+		"Dr. B.R. Ambedkar",
+		"J.B. Kripalani"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following was made a Union Territory by 14th Constitutional Amendment Act?  ' ,
+	answer: 'Puducherry' ,
+	options: [
+		"Sikkim",
+		"Puducherry",
+		"Goa",
+		"Chandigarh"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Which of the following article prohibits the consumption of intoxicating drinks and drugs?  ' ,
+	answer: 'Article 47' ,
+	options: [
+		"Article 43 B",
+		"Article 46",
+		"Article 47",
+		"Article 48"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following country follows the model of presidential form of government?  ' ,
+	answer: 'USA' ,
+	options: [
+		"Britain",
+		"Japan",
+		"India",
+		"USA"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Indian constitution is the world’s longest for a sovereign nation. Which of the following did not contribute its large size?  ' ,
+	answer: 'Inclusion of ideals of various Social Reformers in Constitution' ,
+	options: [
+		"Inputs from Government of India Act 1935",
+		"Geographical and Historical Factors",
+		"Inclusion of ideals of various Social Reformers in Constitution",
+		"Single Constitution for Union and States"
+		]
+	},
+	{
+	numb: 16,
+	question: '73rd Amendment of the Constitution of India, is related to which among the following?  ' ,
+	answer: 'Panchayats' ,
+	options: [
+		"Townships",
+		"Panchayats",
+		"Municipalities",
+		"District Boards"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Who decides the salary and allowances of the Prime Minister?  ' ,
+	answer: 'By Parliament' ,
+	options: [
+		"By Parliament",
+		"By Lok Sabha",
+		"By Rajya Sabha",
+		"By Council of Ministers"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which Constitutional amendment stated that a member of either house of Parliamentwho is disqualified on the ground of defection shall also be disqualified to be appointed as a minister?  ' ,
+	answer: '91st Amendment Act' ,
+	options: [
+		"91st Amendment Act",
+		"92nd Amendment Act",
+		"93rd Amendment Act",
+		"94th Amendment Act"
+		]
+	},
+	{
+	numb: 19,
+	question: 'How many sections are there in the Prohibition of Child Marriage Act, 2006?  ' ,
+	answer: '21' ,
+	options: [
+		"15",
+		"17",
+		"19",
+		"21"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The firstsession of constituent assemblytook place on which of the following dates?  ' ,
+	answer: '9-23 December 1946' ,
+	options: [
+		"9-23 December 1946",
+		"9-23 December 1947",
+		"20-25 January 1947",
+		"20-25 January 1950"
+		]
+	},
+	{
+	numb: 21,
+	question: 'According to theTransgender Persons (Protection of Rights) Act, 2019 a transgender person can apply to which of the following for a transgender person certificate?  ' ,
+	answer: 'District Magistate' ,
+	options: [
+		"District Collector",
+		"District Magistate",
+		"Session’s Judge",
+		"Munsif"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The makers of Constitution of India chose the scheme of federation of India, as prevalent in which among the following countries?  ' ,
+	answer: 'United kingdom' ,
+	options: [
+		"United states",
+		"United kingdom",
+		"Australia",
+		"Canada"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The Prohibition of Child Marriage Act was passed in which year?  ' ,
+	answer: '2006' ,
+	options: [
+		"2005",
+		"2006",
+		"2007",
+		"2008"
+		]
+	},
+	{
+	numb: 24,
+	question: 'The ideals of liberty, equality and fraternity in the Preamble are borrowed from the Constitution of which country?  ' ,
+	answer: 'French Constitution' ,
+	options: [
+		"French Constitution",
+		"Australian Constitution",
+		"British Constitution",
+		"USSR Constitution"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Which of the following statements is incorrect about a Constitutional Amendment Bill?  ' ,
+	answer: 'President can withhold his assent to the bill but cannot return the bill for reconsideration of the parliament' ,
+	options: [
+		"President can withhold his assent to the bill but cannot return the bill for reconsideration of the parliament",
+		"There is no provision for joint sitting of the two Houses of parliament for passage of the bill",
+		"A constitutional amendment bill sometimes requires to be ratified by the state legislatures",
+		"A bill which seeks to amend the constitution does not require prior permission of president to be introduced in the parliament"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following Articles of the Indian Constitution provides protection to the accused regarding conviction from double-bar and self-incrimination?  ' ,
+	answer: 'Article 20' ,
+	options: [
+		"Article 19",
+		"Article 20",
+		"Article 21",
+		"Article 22"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who was the first Indian to join the Viceroy’s executive council?  ' ,
+	answer: 'Satyendra Prasad Sinha' ,
+	options: [
+		"G.K. Gokhale",
+		"Mahatma Gandhi",
+		"Satyendra Prasad Sinha",
+		"Ambika Charan Majumdar"
+		]
+	},
+	{
+	numb: 28,
+	question: 'For how long can the Vice President act as the President when the President is not able to perform his duties due to his resignation, removal, death or otherwise?  ' ,
+	answer: '6 months' ,
+	options: [
+		"1 year",
+		"9 months",
+		"6 months",
+		"3 months"
+		]
+	},
+	{
+	numb: 29,
+	question: 'National Food Security Act was passed in which year?  ' ,
+	answer: '2013' ,
+	options: [
+		"2011",
+		"2012",
+		"2013",
+		"2014"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following is not one of the grounds for disqualification for being elected as a Member of Parliament?If the person holds an office of profit under the State Government.If the person has voluntarily acquired citizenship of a foreign State.If a person is so disqualified under the Tenth Schedule.If the person has/had been detained under the Preventive Detention Law.Choose the correct option:  ' ,
+	answer: 'Only 4' ,
+	options: [
+		"Only 2",
+		"Only 4",
+		"1 and 4",
+		"1,2 and 4"
+		]
+	},
+]</script><script src="./script.js"></script></html>

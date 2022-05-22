@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Prelims Set - 024'
+let questions = [
+	{
+	numb: 1,
+	question: 'In ______ government each adult citizen must have one vote and each vote must have one value-  ' ,
+	answer: 'Democratic' ,
+	options: [
+		"Democratic",
+		"Autocratic",
+		"Monarchic",
+		"Authoritarian"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Who said that "I don&apos;t accept a politics without religion"-  ' ,
+	answer: 'Mahatma Gandhi' ,
+	options: [
+		"Jawahar Lal Nehru",
+		"Mahatma Gandhi",
+		"Vinoba Bhave",
+		"Jaiprakash Narayan"
+		]
+	},
+	{
+	numb: 3,
+	question: 'In which year was the Capital of India moved from Calcutta to Delhi?  ' ,
+	answer: '1911' ,
+	options: [
+		"1910",
+		"1911",
+		"1912",
+		"1913"
+		]
+	},
+	{
+	numb: 4,
+	question: 'The members of the State Public Service Commission are appointed by the  ' ,
+	answer: 'governor' ,
+	options: [
+		"chief minister",
+		"chief justice",
+		"governor",
+		"vice-president"
+		]
+	},
+	{
+	numb: 5,
+	question: 'The Number of Spokes in the CHAKRA in Indian National flag is:  ' ,
+	answer: '24' ,
+	options: [
+		"20",
+		"33",
+		"24",
+		"40"
+		]
+	},
+	{
+	numb: 6,
+	question: 'The Lok Sabha elections are held after every:  ' ,
+	answer: '5 years' ,
+	options: [
+		"3 years",
+		"4 years",
+		"5 years",
+		"7 years"
+		]
+	},
+	{
+	numb: 7,
+	question: '"Person, who do not live in any state is either a Saint or an Animal" whose statement is this-  ' ,
+	answer: 'Aristotle' ,
+	options: [
+		"Montesquieu",
+		"Angles",
+		"Sophists",
+		"Aristotle"
+		]
+	},
+	{
+	numb: 8,
+	question: ' Who was the leader of Russia at the time of signing of The Indo-Soviet Treaty of Peace, Friendship and Cooperation-  ' ,
+	answer: 'Leonid Brezhnev' ,
+	options: [
+		"Nikita Khrushchev",
+		"Leonid Brezhnev",
+		"Yuri Andropov",
+		"Mikhail gorbachev"
+		]
+	},
+	{
+	numb: 9,
+	question: 'The president can assign any of the functions of the union government to the state government  ' ,
+	answer: 'in consultation with the government of the state' ,
+	options: [
+		"in consultation with the chief justice of India",
+		"in consultation with the state governor",
+		"in his discretion",
+		"in consultation with the government of the state"
+		]
+	},
+	{
+	numb: 10,
+	question: 'Who among the following gave the concept of &apos;Distributive Justice&apos;?  ' ,
+	answer: 'Aristotle' ,
+	options: [
+		"Aristotle",
+		"Plato",
+		"Hegel",
+		"Ritchie"
+		]
+	},
+	{
+	numb: 11,
+	question: 'Which among the following country is not a part of &apos;Second World Countries&apos;?  ' ,
+	answer: 'Argentina' ,
+	options: [
+		"Russia",
+		"China",
+		"Mongolia",
+		"Argentina"
+		]
+	},
+	{
+	numb: 12,
+	question: 'English is the official language of-  ' ,
+	answer: 'Meghalaya' ,
+	options: [
+		"Chhattisgarh",
+		"Meghalaya",
+		"Assam",
+		"Goa"
+		]
+	},
+	{
+	numb: 13,
+	question: 'The concept of Lokpal has been taken from-  ' ,
+	answer: 'Scandinavian countries' ,
+	options: [
+		"Britain",
+		"America",
+		"Scandinavian countries",
+		"France"
+		]
+	},
+	{
+	numb: 14,
+	question: 'How many members are in United Nation general assembly-  ' ,
+	answer: '193' ,
+	options: [
+		"190",
+		"191",
+		"192",
+		"193"
+		]
+	},
+	{
+	numb: 15,
+	question: 'The Look East Policy in India was started by which of the following Prime Minister?  ' ,
+	answer: 'P.V. Narasimha Rao' ,
+	options: [
+		"Rajiv Gandhi",
+		"Atal Bihari Vajpayee",
+		"P.V. Narasimha Rao",
+		"Manmohan Singh"
+		]
+	},
+	{
+	numb: 16,
+	question: 'According to Indian constitution, which of the following is a Constitutional Body-  ' ,
+	answer: 'Finance Commission' ,
+	options: [
+		"Finance Commission",
+		"National Development Council",
+		"Planning Commission",
+		"None of these"
+		]
+	},
+	{
+	numb: 17,
+	question: 'The Chief Election Commissioner of India holds office for a period of-  ' ,
+	answer: 'for six years or till the age of 65 years, whichever is earlier' ,
+	options: [
+		"six years",
+		"during the pleasure of the President",
+		"for five years or till the age of 60 years, whichever is earlier",
+		"for six years or till the age of 65 years, whichever is earlier"
+		]
+	},
+	{
+	numb: 18,
+	question: 'For Rajya Sabha, how many members are nominated by President?  ' ,
+	answer: '12' ,
+	options: [
+		"7",
+		"10",
+		"12",
+		"15"
+		]
+	},
+	{
+	numb: 19,
+	question: 'In which year, the Anti-Defection Law was passed by Indian parliament-  ' ,
+	answer: '1985' ,
+	options: [
+		"1984",
+		"1985",
+		"1986",
+		"1988"
+		]
+	},
+	{
+	numb: 20,
+	question: 'What is the full form of the Indian Political Party, "AITC"?  ' ,
+	answer: 'All India Trinamool Congress' ,
+	options: [
+		"All India Trinamool Congress",
+		"All India Telugu Congress",
+		"All India Telugu Communist",
+		"All India Trinamool Communist"
+		]
+	},
+	{
+	numb: 21,
+	question: 'How many Schedules are there in the Constitution of India?  ' ,
+	answer: '12' ,
+	options: [
+		"9",
+		"10",
+		"11",
+		"12"
+		]
+	},
+	{
+	numb: 22,
+	question: 'The Prime Minister of India is-  ' ,
+	answer: 'Appointed' ,
+	options: [
+		"Elected",
+		"Selected",
+		"Nominated",
+		"Appointed"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Who has propounded term "Rainbow Coalition" originated from politics and policies-  ' ,
+	answer: 'Barack Obama' ,
+	options: [
+		"Pranav Mukharji",
+		"Barack Obama",
+		"Mitt Romney",
+		"A.B.Vajpayee"
+		]
+	},
+	{
+	numb: 24,
+	question: 'To whom, "The Union Public Service Commission presents its report"-  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Parliament",
+		"Lok Sabha",
+		"Rajya Sabha"
+		]
+	},
+	{
+	numb: 25,
+	question: 'All India Trinamool Congress was founded in the year-  ' ,
+	answer: '1998' ,
+	options: [
+		"1925",
+		"1955",
+		"1984",
+		"1998"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Which of the following statement(s) is/are CORRECT?I. In federal government, power is distributed among the legislature, executive and judiciary.II. Due to political competition in a democracy, social divisions get reflected in politics.III. Communal politics is based on the belief that one religion is superior to that of others.  ' ,
+	answer: 'I, II and III' ,
+	options: [
+		"I and II",
+		"I, II and III",
+		"I and III",
+		"II and III"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Who among the following is not a part of political executive?  ' ,
+	answer: 'Secretary of Ministry of Defence' ,
+	options: [
+		"Finance Minister",
+		"Defence Minister",
+		"Foreign Minister",
+		"Secretary of Ministry of Defence"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Who is the former body builder, who became a film star and a Governor?  ' ,
+	answer: 'Arnold Schwarzenegger' ,
+	options: [
+		"Sylvester Stallone",
+		"Dwayne Johnson",
+		"Arnold Schwarzenegger",
+		"Steve Austin"
+		]
+	},
+	{
+	numb: 29,
+	question: ' Bureaucarcy performs-  ' ,
+	answer: 'Administrative, Quasi-Judicial and Quasi-Legislative Acts' ,
+	options: [
+		"Only Administrative Acts",
+		"Only Judicial Acts",
+		"Only Legislative Acts",
+		"Administrative, Quasi-Judicial and Quasi-Legislative Acts"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which among the following in our constitution is called " Magna carta"?  ' ,
+	answer: 'Fundamental Rights' ,
+	options: [
+		"Directive principles of state policy",
+		"Fundamental Duties",
+		"Preamble",
+		"Fundamental Rights"
+		]
+	},
+]</script><script src="./script.js"></script></html>

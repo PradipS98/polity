@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 012'
+let questions = [
+	{
+	numb: 1,
+	question: 'Indelible ink which is applied to fingers of voters during elections to prevent double voting contains which of the following?  ' ,
+	answer: 'Silver nitrate' ,
+	options: [
+		"Chromite",
+		"Potassium nitrate",
+		"Silver nitrate",
+		"None of the above"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following statements are correct regarding Fundamental Duties?1. Some of them are moral duties while others are civic duties2. Parliament is free to enforce them by suitable legislationSelect the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following countries follow federal model of government?  ' ,
+	answer: 'Argentina' ,
+	options: [
+		"Britain",
+		"Argentina",
+		"Japan",
+		"China"
+		]
+	},
+	{
+	numb: 4,
+	question: 'How many members are nominated by the President to Rajya Sabha?  ' ,
+	answer: '12' ,
+	options: [
+		"2",
+		"6",
+		"10",
+		"12"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which of the following committees is related to Fundamental Duties in the Constitution of India?  ' ,
+	answer: 'Verma Committee' ,
+	options: [
+		"Verma Committee",
+		"Sarkaria Commisssion",
+		"Punchi Commission",
+		"None of the above"
+		]
+	},
+	{
+	numb: 6,
+	question: 'What is the purpose of inclusion of Directive Principles of State Policy in the Constitution of India?  ' ,
+	answer: 'To establish social and economic democracy' ,
+	options: [
+		"To establish social and religious democracy",
+		"To establish political democracy",
+		"To establish social and economic democracy",
+		"To establish Gandhian democracy"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Which of the following is the purpose of Banking Ombudsman Scheme?  ' ,
+	answer: 'To strengthen the grievance redressal mechanism for customers' ,
+	options: [
+		"To strengthen the grievance redressal mechanism for banks employees",
+		"To strengthen the grievance redressal mechanism for customers",
+		"To strengthen the grievance redressal mechanism for female emolyees",
+		"None of the above"
+		]
+	},
+	{
+	numb: 8,
+	question: 'Which amendment empowered the Centre to deploy its armed forces in any state to deal with a grave situation of law and order?  ' ,
+	answer: '42nd Amendment, 1976' ,
+	options: [
+		"42nd Amendment, 1976",
+		"44th Amendment, 1978",
+		"46th Amendment, 1982",
+		"48th Amendment, 1984"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who can remove the chairperson and members of a State Human Rights Commission?  ' ,
+	answer: 'President' ,
+	options: [
+		"Parliament",
+		"Supreme Court",
+		"President",
+		"Governor"
+		]
+	},
+	{
+	numb: 10,
+	question: 'The family courts are established by state governments in consultation with?  ' ,
+	answer: 'High Court' ,
+	options: [
+		"Supreme Court",
+		"Chief Justice of India",
+		"High Court",
+		"Cabinet"
+		]
+	},
+	{
+	numb: 11,
+	question: 'When was the Parliamentary Forum on Millennium Development Goals created?  ' ,
+	answer: '2013' ,
+	options: [
+		"2000",
+		"2010",
+		"2013",
+		"2015"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following is not a part of the Union executive?  ' ,
+	answer: 'Chief Justice of India' ,
+	options: [
+		"The President",
+		"The Vice President",
+		"The Attorney General of India",
+		"Chief Justice of India"
+		]
+	},
+	{
+	numb: 13,
+	question: 'A motion for removal of judge of High Court should be signed by how many members in case of Rajya Sabha?  ' ,
+	answer: '50' ,
+	options: [
+		"40",
+		"50",
+		"60",
+		"70"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Which of the following Commissions accepted language as the basis of reorganization of States?  ' ,
+	answer: 'Fazl Ali Commission' ,
+	options: [
+		"Punchhi Commission",
+		"JVP Committee",
+		"Fazl Ali Commission",
+		"SK Dhar Commission"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Which committee was set up to examine the political and administrative structure in the district for the purpose of district planning?  ' ,
+	answer: 'Thungon Committee' ,
+	options: [
+		"Gadgil Committee",
+		"L M Singhvi Committee",
+		"Thungon Committee",
+		"None of the above"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Fourth Schedule of Indian Constitution deals with which of the following?  ' ,
+	answer: 'Allocation of seats for the Council of States' ,
+	options: [
+		"Panchayat Raj System",
+		"Schedule Tribes",
+		"Allocation of seats for the Council of States",
+		"Anti-defection Law"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Which of the following is the consequence if NOTA votes exceeds 50%?  ' ,
+	answer: 'It does not affect the election results' ,
+	options: [
+		"Elections are cancelled",
+		"It does not affect the election results",
+		"Election is again organised in constituencies where NOTA vote was more than 50%",
+		"None of the above"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following Fundamental Right cannot be suspended even during National Emergency?  ' ,
+	answer: 'Right to life and personal liberty' ,
+	options: [
+		"Right to life and personal liberty",
+		"Right to move freely through out the territory of India",
+		"Right to reside and settle in any part of the country",
+		"Right to carry on any profession or business"
+		]
+	},
+	{
+	numb: 19,
+	question: 'How many high court judges have been impeached so far?  ' ,
+	answer: 'None' ,
+	options: [
+		"1",
+		"2",
+		"4",
+		"None"
+		]
+	},
+	{
+	numb: 20,
+	question: 'The units of a federation are known by various names in different countries. Which of the following are correctly matched?    X             Y1. States           US2. Cantons         Canada3. Republics       Russia4. Provinces       SwitzerlandSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 3",
+		"Only 2 & 4",
+		"All of the above"
+		]
+	},
+	{
+	numb: 21,
+	question: 'In which year was the National Biodiversity Authority (NBA) established?  ' ,
+	answer: '2003' ,
+	options: [
+		"2001",
+		"2002",
+		"2003",
+		"2004"
+		]
+	},
+	{
+	numb: 22,
+	question: 'Which of the following are the merits of Lok Adalats?1. There is no court fee and if court fee is already paid the amount will be refunded if the dispute is settled at Lok Adalat.2. The parties to the dispute cannot directly interact with the judge through their counsel.3. The award by the Lok Adalat is binding on the parties.Select the correct option from the codes given below:  ' ,
+	answer: 'Only 1 & 3' ,
+	options: [
+		"Only 1",
+		"Only 1 & 2",
+		"Only 1 & 3",
+		"1, 2 & 3"
+		]
+	},
+	{
+	numb: 23,
+	question: 'The 25th Amendment Act, 1971 provided that any law made to give effect to the Directive Principles contained in Article 39 (b) or (c) cannot be challenged on the ground of violation of the rights guaranteed under which of the following articles?  ' ,
+	answer: 'Article 14, 19 & 31' ,
+	options: [
+		"Article 15, 20 & 32",
+		"Article 16, 18 & 29",
+		"Article 14, 19 & 31",
+		"Article 19, 24 & 26"
+		]
+	},
+	{
+	numb: 24,
+	question: 'What is the maximum strength of Rajya Sabha?  ' ,
+	answer: '250' ,
+	options: [
+		"250",
+		"238",
+		"263",
+		"249"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Who has the power to enforce prohibition or to regulate or restrict the sale and consumption of any intoxicant in tribal areas?  ' ,
+	answer: 'Gram Sabha' ,
+	options: [
+		"Gram Sabha",
+		"State Legislature",
+		"National Commission for Scheduled Tribes",
+		"None of the above"
+		]
+	},
+	{
+	numb: 26,
+	question: 'From which date the President of India holds office for a term of five years?  ' ,
+	answer: 'The date on which he enters upon his office' ,
+	options: [
+		"The date on which he enters upon his office",
+		"The date on which he/she is elected",
+		"The date decided by Parliament",
+		"The date decided by Election Commission"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which Constitutional Amendment empowered the administrators of certain union territories to promulgate ordinances?  ' ,
+	answer: '27th' ,
+	options: [
+		"24th",
+		"27th",
+		"29th",
+		"31st"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following statement is correct regarding Fundamental Rights?  ' ,
+	answer: 'The Nehru Report of 1928 included Fundamental Rights' ,
+	options: [
+		"The Cripps Mission of 1942 included Fundamental Rights",
+		"The August Offer of 1940 Included Fundamental Rights",
+		"The Nehru Report of 1928 included Fundamental Rights",
+		"The Government of India Act,1935 referred to Fundamental Rights"
+		]
+	},
+	{
+	numb: 29,
+	question: 'Which of the following are the reasons for the adoption of parliamentary form of government?1. Constitution-makers were familiar with the parliamentary system.2. Preference to responsibility.3. Avoid the conflicts between the legislature and the executive.4. Greater scope for giving representation to various section, interests and regions in the government.Select the correct option from the codes given below:  ' ,
+	answer: '1, 2, 3 & 4' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Where can be the impeachment charges initiated against the President of India?  ' ,
+	answer: 'Either of the house of Parliament' ,
+	options: [
+		"Lok Sabha",
+		"Rajya Sabha",
+		"Supreme Court",
+		"Either of the house of Parliament"
+		]
+	},
+]</script><script src="./script.js"></script></html>

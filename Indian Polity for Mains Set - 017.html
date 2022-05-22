@@ -1,0 +1,333 @@
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz | Amlan</title><link rel="stylesheet" href="style.css"><script src="https://kit.fontawesome.com/a076d05399.js"></script></head><body><div class="start_btn"><button>Start Quiz</button></div><div class="info_box"><div class="info-title"><span>Some Rules of this Quiz</span></div><div class="info-list"><div class="info">1. You will have only<span>20 seconds</span>per each question.</div><div class="info">2. Once you select your answer, it can&apos;t be undone.</div><div class="info">3. You can&apos;t select any option once time goes off.</div><div class="info">4. You can&apos;t exit from the Quiz while you&apos;re playing.</div><div class="info">5. You&apos;ll get points on the basis of your correct answers.</div></div><div class="buttons"><button class="quit">Exit Quiz</button><button class="restart">Continue</button></div></div><div class="quiz_box"><header><div class="title" id="quiztitle">Quiz</div><div class="timer"><div class="time_left_txt">Time Left</div><div class="timer_sec">20</div></div><div class="time_line"></div></header><section><div class="que_text"></div><div class="option_list"></div></section><footer><div class="total_que"></div><button class="next_btn">Next</button></footer></div><div class="result_box"><div class="icon"><i class="fas fa-crown"></i></div><div class="complete_text">You&apos;ve completed the Quiz!</div><div class="score_text"></div><div class="buttons"><button class="restart">Replay Quiz</button><button class="quit">Quit Quiz</button></div></div></body><script>let title = 'Indian Polity for Mains Set - 017'
+let questions = [
+	{
+	numb: 1,
+	question: 'The Central Information Commission can consist of how many Information Commissioners apart from a Chief Information Commissioner?  ' ,
+	answer: '10' ,
+	options: [
+		"5",
+		"7",
+		"9",
+		"10"
+		]
+	},
+	{
+	numb: 2,
+	question: 'Which of the following Articles have never been implemented in India?  ' ,
+	answer: 'Article 360' ,
+	options: [
+		"Article 352",
+		"Article 260",
+		"Article 360",
+		"Article 60"
+		]
+	},
+	{
+	numb: 3,
+	question: 'Which of the following ministries deal with the subject of ‘urban local government’ at the Centre?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Ministry of Housing and Urban Affairs",
+		"Ministry of Home Affairs",
+		"Ministry of Defence",
+		"All of the above"
+		]
+	},
+	{
+	numb: 4,
+	question: 'In which year was the first inter-state council formed?  ' ,
+	answer: '1990' ,
+	options: [
+		"1987",
+		"1988",
+		"1989",
+		"1990"
+		]
+	},
+	{
+	numb: 5,
+	question: 'Which constitutional amendment added the provision that a member of either House of state legislature belonging to any political party who is disqualified on the ground of defection shall also be disqualified to be appointed as a minister?  ' ,
+	answer: '91st' ,
+	options: [
+		"90th",
+		"91st",
+		"92nd",
+		"93rd"
+		]
+	},
+	{
+	numb: 6,
+	question: 'Which of the following schedules of the Constitution of India contains provisions regarding defection?  ' ,
+	answer: '10th schedule' ,
+	options: [
+		"9th schedule",
+		"10th schedule",
+		"11th schedule",
+		"12th schedule"
+		]
+	},
+	{
+	numb: 7,
+	question: 'Who is authorized to remove a minister of state from office?  ' ,
+	answer: 'Governor on the advice of Chief Minister' ,
+	options: [
+		"President",
+		"Parliament",
+		"Governor",
+		"Governor on the advice of Chief Minister"
+		]
+	},
+	{
+	numb: 8,
+	question: 'What is the tenure of a judge of a high court in India?  ' ,
+	answer: 'None' ,
+	options: [
+		"25 years",
+		"30 years",
+		"35 years",
+		"None"
+		]
+	},
+	{
+	numb: 9,
+	question: 'Who has both original and appellate jurisdiction in both civil as well as criminal matters at district level?  ' ,
+	answer: 'District Judge' ,
+	options: [
+		"Supreme Court Judge",
+		"High Court Judge",
+		"District Judge",
+		"Subordinate Judge"
+		]
+	},
+	{
+	numb: 10,
+	question: 'How many members are nominated by the governor in the state legislative council?  ' ,
+	answer: '1/6' ,
+	options: [
+		"1/6",
+		"1/3",
+		"1/5",
+		"1/4"
+		]
+	},
+	{
+	numb: 11,
+	question: 'The 73rd Constitutional Amendment Act does not apply to which of the following states?1. Nagaland2. Meghalaya3. Mizoram4. Madhya PradeshSelect the correct option from the codes given below:  ' ,
+	answer: 'Only 1, 2 & 3' ,
+	options: [
+		"Only 1 & 2",
+		"Only 2 & 3",
+		"Only 1, 2 & 3",
+		"1, 2, 3 & 4"
+		]
+	},
+	{
+	numb: 12,
+	question: 'Which of the following Amendment to the Constitution of India added public order, friendly relations with foreign states and incitement to an offence as additional grounds to put curbs on freedom of speech?  ' ,
+	answer: '1st Amendment Act, 1951' ,
+	options: [
+		"1st Amendment Act, 1951",
+		"2nd Amendment Act, 1952",
+		"3rd Amendment Act, 1954",
+		"4th Amendment Act, 1955"
+		]
+	},
+	{
+	numb: 13,
+	question: 'Who makes recommendation about the distribution of the net proceeds of taxes to be shared between the Centre and the states, and the allocation between the states of the respective shares of such proceeds?  ' ,
+	answer: 'Finance Commission' ,
+	options: [
+		"Lok Sabha",
+		"Rajya Sabha",
+		"President",
+		"Finance Commission"
+		]
+	},
+	{
+	numb: 14,
+	question: 'Who is the Chairman of Inter-State Council?  ' ,
+	answer: 'The Prime Minister' ,
+	options: [
+		"The President",
+		"The Vice President",
+		"The Prime Minister",
+		"The Governor"
+		]
+	},
+	{
+	numb: 15,
+	question: 'Gram Nyayalaya is guided by which of the following?  ' ,
+	answer: 'Principles of natural justice' ,
+	options: [
+		"Indian Evidence Act, 1872",
+		"Principles of natural justice",
+		"Indian Penal Code",
+		"Indian Evidence Act, 1888"
+		]
+	},
+	{
+	numb: 16,
+	question: 'Which Article states that a regional council consisting of 35 members should be established for the Tuensang district?  ' ,
+	answer: 'Article 371 A' ,
+	options: [
+		"Article 371",
+		"Article 371 A",
+		"Article 371 B",
+		"Article 371 C"
+		]
+	},
+	{
+	numb: 17,
+	question: 'Where was the first Lok Adalat camp in the post independence era organised?  ' ,
+	answer: 'Gujarat' ,
+	options: [
+		"Andhra Pradesh",
+		"Karataka",
+		"Gujarat",
+		"Tamil Nadu"
+		]
+	},
+	{
+	numb: 18,
+	question: 'Which of the following statements are correct regarding Union Public Service Commission?  ' ,
+	answer: 'It’s recommendations are advisory in nature.' ,
+	options: [
+		"It’s recommendations are binding in nature.",
+		"It’s recommendations are advisory in nature.",
+		"It is a non government organisation.",
+		"None of the above"
+		]
+	},
+	{
+	numb: 19,
+	question: 'Who appoints the judges of a high court?  ' ,
+	answer: 'President' ,
+	options: [
+		"Supreme Court",
+		"Chief Justice of India",
+		"President",
+		"Parliament"
+		]
+	},
+	{
+	numb: 20,
+	question: 'What is the maximum age until a judge of High Court can hold office?  ' ,
+	answer: '62' ,
+	options: [
+		"60",
+		"62",
+		"65",
+		"70"
+		]
+	},
+	{
+	numb: 21,
+	question: 'Which of the following conditions are correct with respect to extension of President’s Rule?1. a proclamation of National Emergency should be in operation in the whole of India, or in the whole or any part of the   state2. Election Commission must certify that the general elections to the legislative assembly of the concerned state cannot    be held on account of difficultiesSelect the correct option from the codes given below:  ' ,
+	answer: 'Both 1 & 2' ,
+	options: [
+		"Only 1",
+		"Only 2",
+		"Both 1 & 2",
+		"Neither 1 & 2"
+		]
+	},
+	{
+	numb: 22,
+	question: 'A judge of High Court submits his resignation to?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Parliament",
+		"Supreme Court",
+		"State Legislature"
+		]
+	},
+	{
+	numb: 23,
+	question: 'Which of the following may not constitute panchayats at the intermediate level?  ' ,
+	answer: 'State having population less than 20 lakhs' ,
+	options: [
+		"Hilly states",
+		"State having population less than 10 lakhs",
+		"State having population less than 20 lakhs",
+		"States having fifty percent tribal population"
+		]
+	},
+	{
+	numb: 24,
+	question: 'Who determines the salaries, allowances, privileges, leave and pension of the judges of a high court?  ' ,
+	answer: 'Parliament' ,
+	options: [
+		"Parliament",
+		"Rajya Sabha",
+		"State Legislature",
+		"None of the above"
+		]
+	},
+	{
+	numb: 25,
+	question: 'Where did the doctrine of judicial review originate?  ' ,
+	answer: 'USA' ,
+	options: [
+		"Britain",
+		"India",
+		"USA",
+		"France"
+		]
+	},
+	{
+	numb: 26,
+	question: 'Who administers oath to a judge of a high court?  ' ,
+	answer: 'Governor' ,
+	options: [
+		"President",
+		"Chief Justice of India",
+		"Attorney General",
+		"Governor"
+		]
+	},
+	{
+	numb: 27,
+	question: 'Which article empowers the appropriate legislature (Parliament or state legislature) to establish a tribunal for the adjudication of election disputes?  ' ,
+	answer: 'Article 323B' ,
+	options: [
+		"Article 323A",
+		"Article 323B",
+		"Article 324",
+		"Article 325"
+		]
+	},
+	{
+	numb: 28,
+	question: 'Which of the following are the functions of the Central Council of Local Government?  ' ,
+	answer: 'All of the above' ,
+	options: [
+		"Making proposals for legislation",
+		"Recommending Central financial assistance",
+		"Examining the possibility of cooperation between the Centre and the states",
+		"All of the above"
+		]
+	},
+	{
+	numb: 29,
+	question: 'The National Commission for Scheduled Tribes presents an annual report to which of the following?  ' ,
+	answer: 'President' ,
+	options: [
+		"President",
+		"Supreme Court",
+		"High Court",
+		"Lok Sabha"
+		]
+	},
+	{
+	numb: 30,
+	question: 'Which of the following Prime Minister of India never attended the Parliament during his tenure?  ' ,
+	answer: 'Chudhari Charan Singh' ,
+	options: [
+		"Chudhari Charan Singh",
+		"Atal Bihari Vajpayee",
+		"V.P. Singh",
+		"Chandra Shekhar"
+		]
+	},
+]</script><script src="./script.js"></script></html>
